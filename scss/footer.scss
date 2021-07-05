@@ -1,0 +1,137 @@
+footer{
+    background-color: #181f28;
+    color: #ddd;
+     .widget {
+		margin-bottom: 30px;
+		 @media (max-width: 991px)
+		 {
+		  margin-bottom:15px;
+		 }
+		 h4{
+			 color: #fff;
+			font-size: 18px;
+			font-weight: 700;
+			margin-bottom: 32px;
+			 @media (max-width: 991px)
+			 {
+			  margin-bottom:15px;
+			 }
+		 }
+		 p{
+			margin:0 0 10px 0;
+            line-height: 24px;
+			color:#fff;
+			font-size: 14px;
+			 @media (max-width: 991px)
+			 {
+			  font-size:13px;
+			  line-height:22px;
+			 }
+		 }
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			li{
+			    border-bottom: 1px solid #3c3c3c;
+                padding: 12px 0 12px;	
+				font-size: 14px;
+				 @media (max-width: 991px)
+				  {
+                  font-size:12px;
+				  padding:6px 0;
+				 }
+				 @media (max-width: 576px)
+				 {
+				  font-size:14px;	 
+				}
+				&:last-child{
+				border-bottom: 0px solid #3c3c3c;	
+				}
+				a{
+				  color: #ddd;
+					i{
+					  padding-right: 14px;
+					}
+					&:hover{
+						text-decoration:none;
+						color: #155a9f;
+					}
+				}
+			}
+		  }
+		 .widget-contact
+		 {
+			 ul{
+				 li{
+				   border-bottom:0px solid #3c3c3c;	 
+				   position:relative;
+				   padding: 0 0 15px 25px;
+					 span{
+					   position: absolute;
+					   left:0;
+					   top:0px;
+					 }
+				 }
+			 }
+		 }
+	   }
+	.copy-right {
+       padding: 15px 0px; 
+		 @media (max-width: 640px)
+		 {
+		  padding:5px 0px; 	 
+		}
+		p{
+		  font-size: 12px;
+         line-height: 24px;
+		 color:#fff;
+		 letter-spacing:1px;
+		   @media (max-width: 640px)
+			 {
+			 text-align:center; 
+			}
+		}
+		ul{
+		  margin:0px;
+	      padding:0px;
+          list-style:none;
+		  text-align:right;
+			 @media (max-width: 640px)
+			 {
+			 text-align:center; 
+			}
+			li{
+			  display: inline-block;
+              font-size: 12px;
+			  margin:0 10px 0 0;
+			  position: relative;
+			  letter-spacing:1px;
+			 	&:last-child{
+				margin:0;
+				}
+				a{
+				color:#fff;
+					&:hover{
+						text-decoration:none;
+						color: #155a9f;
+					}
+				}
+				&:before{
+					content: "";
+					height: 100%;
+					width: 1px;
+					background: rgba(255,255,255,0.1);
+					position: absolute;
+					right: -8px;
+					
+				}
+				&:last-child{
+					&:before{
+						width:0px;
+					}
+		         }
+			}
+		}
+   }
+}
