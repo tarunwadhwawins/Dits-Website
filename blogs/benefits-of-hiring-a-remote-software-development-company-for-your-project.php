@@ -25,12 +25,16 @@
                   <div class="row">
                      <div class="col-sm-12">
                         <h1>7 Benefits Of Hiring A Remote Software <br> Development Company For Your Project </h1>
+                                              <div class="bannerButton mt-3" id="bannerExtFour" data-toggle="modal" data-target="#exampleModal"> <a href="javascript:void(0);" class="btn btn-custom blueBtn siteBtn addCountry">Contact Form</a> </div>
                      </div>
                   </div>
                </div>
             </div>
          </div>
       </section>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         <?php include_once('../common/popup-form.php'); ?>
+      </div>
       <section class="blogInnerPage">
          <div class="container">
             <div class="row">
@@ -92,6 +96,20 @@
    <div class="recentPosts">
       <h2>Recent Posts</h2>
       <ul>
+           <li>
+            <a class="blogImage" href="/blogs/how-the-salon-industry-is-picking-up-with-innovative-technology-and-systems"><img src="../assets/images/how-the-salon-industry-is-picking-up-with-innovative-technology-and-systems.jpg" title="Open Source And Its Importance " alt="image"/></a>
+            <div class="blogContent">
+               <div class="blogInnerContent"><a class="active" href="/blogs/how-the-salon-industry-is-picking-up-with-innovative-technology-and-systems" target="_self">How The Salon Industry Is Picking Up With Innovative Technology And Systems?</a></div>
+               <div class="srpw-meta">06 August , 2021</div>
+            </div>
+         </li>
+           <li>
+            <a class="blogImage" href="/blogs/open-source-and-its-importance"><img src="../assets/images/open-source-and-its-importance.jpg" title="COpen Source And Its Importance " alt="image"/></a>
+            <div class="blogContent">
+               <div class="blogInnerContent"><a class="active" href="/blogs/open-source-and-its-importance" target="_self">Open Source And Its Importance</a></div>
+               <div class="srpw-meta">22 July , 2021</div>
+            </div>
+         </li>
            <li>
             <a class="blogImage" href="/blogs/5-top-internet-of-things-iot-trends-in-2021"><img src="../assets/images/5-top-internet-of-things-iot-trends-in-2021.jpg" title="Custom Software Development " alt="image"/></a>
             <div class="blogContent">

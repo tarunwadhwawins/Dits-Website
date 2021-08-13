@@ -7,19 +7,17 @@
             <h4>Contact us now and get consult for your project absolutely free</h4>
         </div>
         <div class="contact-form-main">
-            <div class="col-sm-12">
                 <div id='quotesmessage'></div>
-            </div>
             <form name="quoteForm" method="POST" id="quoteForm">
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="First Name" name="contact_first_name" id="contactFirstName">
+                            <input type="text" class="form-control" placeholder="Name" name="quotes_first_name" id="quotesFirstName">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Email Address" name="contact_email" id="contactEmail">
+                            <input type="text" class="form-control" placeholder="Email Address" name="quotes_email" id="quotesEmail">
                         </div>
                         <!-- <div class="form-group">
                           <input type="text" class="form-control" placeholder="Last Name" name="contact_last_name" id="contactLastName">
@@ -27,28 +25,28 @@
                     </div>
                     <div class="col-sm-4">
                         <div class="form-group">
-                            <select class="quotecountries form-control" id="quotecountryId" name="quote-country">
+                            <select class="quotecountries form-control" id="quotecountryId" name="country">
                                 <option value="">Select Country</option>
                             </select>
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <div class="form-group">
-                            <select class="quotestates form-control" id="quotestateId" name="quote-state">
+                            <select class="quotestates form-control" id="quotestateId" name="state">
                                 <option value="">Select State</option>
                             </select>
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <div class="form-group">
-                            <select class="quotecities form-control" id="quotecityId" name="quote-city">
+                            <select class="quotecities form-control" id="quotecityId" name="city">
                                 <option value="">Select City</option>
                             </select>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Mobile Number" name="contact_phone" id="contactPhone" maxlength="10">
+                            <input type="text" class="form-control" placeholder="Mobile Number" name="quotes_phone" id="quotesPhone" maxlength="10">
                         </div>
                     </div>
                     <!-- <div class="col-sm-6">
@@ -59,7 +57,7 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                            <!-- <select class="form-control" id="sel1"> -->
-                            <select class="form-control" name="contact_findUs" id="contactFindUs">
+                            <select class="form-control" name="quotes_findUs" id="quotesFindUs">
                                 <option value="" selected>How did you find us?</option>
                                 <option value="Website">Website</option>
                                 <option value="Portals">Portals</option>
@@ -71,7 +69,7 @@
                     </div>
                     <div class="col-sm-12">
                         <div class="form-group">
-                            <textarea class="form-control" rows="3" placeholder="Message" name="contact_message" id="contactMessage"></textarea>
+                            <textarea class="form-control" rows="3" placeholder="Message" name="quotes_message" id="quotesMessage"></textarea>
                         </div>
                     </div>
                     <div class="col-6">
@@ -223,7 +221,7 @@ $current_page = $_SERVER['REQUEST_URI'];
                                                                 </div>	
                                                                 <div class="item">
                                                                     <div class="blogBox">
-                                                                        <img class="img-fluid" src="../assets/images/virtual-learning-platform.png" alt="image">
+                                                                        <img class="img-fluid" src="../assets/images/virtual-learning-platform.jpg" alt="image">
                                                                         <h6><a href="/portfolios/virtual-learning-platform">Virtual Learning Platform</a></h6>
                                                                     </div>
                                                                 </div>
@@ -272,11 +270,10 @@ $current_page = $_SERVER['REQUEST_URI'];
                                 <li class="nav-item <?php echo $current_page == '/technology' ? 'active' : '' ?>">
                                     <a class="nav-link" href="/technology" title="Technology">Technology</a>
                                 </li>
-								 <li class="nav-item <?php echo $current_page == '/domain' ? 'active' : '' ?>">
-                                  <a class="nav-link" href="/domain" title="Domain">Domain</a>
-                               </li>
-                                <li class="nav-item <?php echo $current_page == '/blog' ? 'active' : '' ?>">
-                                    <a class="nav-link" href="/blog" title="Blog">Blog</a>
+								 <li class="nav-item <?php echo $current_page == '/industries' ? 'active' : '' ?>">
+                                <a class="nav-link" href="/industries" title="Industries">Industries</a> </li>
+                                <li class="nav-item <?php echo $current_page == '/blogs' ? 'active' : '' ?>">
+                                    <a class="nav-link" href="/blogs" title="Blogs">Blogs</a>
                                 </li>
                                 <li class="nav-item <?php echo $current_page == '/portfolio' ? 'active' : '' ?>">
                                     <a class="nav-link" href="/portfolio" title="Portfolio">Portfolio</a>
@@ -325,6 +322,7 @@ $current_page = $_SERVER['REQUEST_URI'];
                 </ul>
             </li> 
             <li class="nav-item <?php echo $current_page == '/technology' ? 'active' : '' ?>"><a class="nav-link" href="/technology" title="Technology">Technology</a> </li>
+            	 <li class="nav-item <?php //echo $current_page == '/industries' ? 'active' : '' ?>"> <a class="nav-link" href="/industries" title="Industries">Industries</a> </li>
             <li class="nav-item <?php echo $current_page == '/blog' ? 'active' : '' ?>"><a class="nav-link" href="/blog" target="_blank">Blogs</a></li>
             <li class="nav-item <?php echo $current_page == '/portfolio' ? 'active' : '' ?>"><a class="nav-link" href="/portfolio">Portfolio</a></li>
 

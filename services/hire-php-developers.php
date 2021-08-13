@@ -8,8 +8,8 @@
       <meta name="keywords" content="Hire PHP developers, Hire PHP programmers, Hire PHP developers India, Hire PHP programmers India, Offshore PHP developers, Remote PHP programmers, Remote PHP developers India, Offshore PHP programmers India, Dedicated PHP developers, dedicated PHP Programmers,Dedicated remote web developers,hire remote php developers"/>
       <meta name="author" content="Dits"/>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     
        <!--common css-->
+       <link href="https://www.ditstek.com/services/hire-php-developers" rel="canonical"/>
        <?php include_once('../common/commoncss.php'); ?>
 	  <!---->
    </head>
@@ -46,7 +46,7 @@
 							   <p class="mb-3">DITS is committed to creating unconventional yet highly sophisticated and dynamic PHP solutions for our clients worldwide. Hire our best-in-class PHP developers that are adept with robust PHP framework and related applied technologies. </p>
 							   <p>The PHP framework is flexible, dynamic and high-performing. Our developers leverage these elements of the framework to build scalable, secure, enterprise-class web solutions that contribute to the client’s daily workflow and overcomes various business challenges in a seamless manner. </p>
 							   
-							   <a href="../contact" class="btn btn-custom siteBtn blueBtn mt-5 mb-5">Get A Free Quote</a>
+							  <a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal" class="btn btn-custom siteBtn blueBtn mt-5 mb-5 addCountry">Get A Free Quote</a>
 
 							</div>
 						</div>	
@@ -159,7 +159,7 @@
 						</div>
 						<div class="col-sm-12">
 							<div class="uxUiCtaBtn">
-								<a href="../contact" class="btn btn-custom siteBtn">Get A Free Quote</a>
+							<a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal" class="btn btn-custom siteBtn addCountry">Get A Free Quote</a>
 								<a href="../portfolio" class="btn btn-custom siteBtn">View our work</a>
 							</div>
 						</div>

@@ -1,5 +1,59 @@
 $(function () {
+    $('input').on('click', function(){
+        $(this).focus();
+    })
+    $('#quoteForm').validate({
+        rules: {
+            quotes_first_name: { 
+                required: true
+            },
+            quotes_email: {
+                required: true,
+                email: true
+            },
+            quotes_phone: {
+                required: true,
+                number: true,
+                minlength: 10,
+                maxlength: 10
+            },
+            quotes_findUs: {
+                required: true
+            },
+            quotes_message: {
+                required: true
+            }
+        },
+        messages: {
     
+        },
+        submitHandler: function(form) {
+            var base_url = window.location.origin;
+            $.ajax({
+                url: base_url+"/core/general?action=QuotesFormSave",
+                type: "POST",
+                data: $(form).serialize(),
+                success: function (response) {
+                    var $messageDiv = $('#quotesmessage')
+                    $messageDiv.hide().html(response.Message);          
+                    if(response.Success == true) {
+                        $messageDiv.text('Thank You! Our Team Will Get Back To You Soon!!');
+                        document.getElementById("quoteForm").reset();
+                        $messageDiv.addClass('alert alert-success').fadeIn(1500);
+                    } else {
+                        $messageDiv.text('Error');
+                        $messageDiv.addClass('alert alert-danger').fadeIn(1500);
+                    }
+
+                    setTimeout(function(){
+                        $messageDiv.fadeOut(1500);
+                    }, 3000);
+                }
+            });
+            return false;
+        }
+       });
+
     $('.addQuote').click(function(){
         getQuoteCountries();
     })

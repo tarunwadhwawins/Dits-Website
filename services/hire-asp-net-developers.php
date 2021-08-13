@@ -8,8 +8,8 @@
       <meta name="keywords" content="Top .NET  Development Company, Best .NET Development Services, Remote .net Development , Full Stack ASP.NET Development Company, Web Application Development Services"/>
       <meta name="author" content="Dits"/>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     
        <!--common css-->
+       <link href="https://www.ditstek.com/services/hire-asp-net-developers" rel="canonical"/>
        <?php include_once('../common/commoncss.php'); ?>
 	  <!---->
    </head>
@@ -43,7 +43,7 @@
 					<div class="col-sm-12">
 						<div class="portfolioDesc text-center">
 						   <p class="mb-3">Need ASP.NET developers for hire to build scalable, high-performing websites and digital products that will make you stand out? DITS houses industry’s finest ASP.NET developers who are certified and highly qualified with diverse Microsoft technologies, including the .NET framework. Our experts are skilled in .NET development, which includes all versions of ASP.NET 2.0, 3.0, 4.0, 4.5, 4.5.1, Web Services, MVVM, WCF, WPF etc. DITS’ forward-thinking approach to development facilitates us to create progressive websites and web apps. </p>						   
-						   <a href="../contact" class="btn btn-custom siteBtn blueBtn mt-3 mb-5">Get A Free Quote</a>
+						   <a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal" class="btn btn-custom siteBtn blueBtn mt-3 mb-5 addCountry">Get A Free Quote</a>
 						</div>
 					</div>	
 					<div class="col-sm-12 emptySpace mt-2 mb-2"></div>	
@@ -102,7 +102,7 @@
 						</div>
 						<div class="col-sm-12">
 							<div class="uxUiCtaBtn">
-								<a href="../contact"  class="btn btn-custom siteBtn">Get A Free Quote</a>
+								 <a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal" class="btn btn-custom siteBtn addCountry">Get A Free Quote</a>
 								<a href="../portfolio" class="btn btn-custom siteBtn">View our work</a>
 							</div>
 						</div>

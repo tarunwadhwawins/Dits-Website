@@ -3,19 +3,19 @@
    <head>
       <meta charset="utf-8">
       <meta http-equiv="pragma" content="no-cache" />
-      <meta name="description" content="Looking for the right full stack development company that can work on your project may be challenging. DITS provides best and skilled full-stack developers who are always in demand at the groundbreaking marketplace."/>
+      <meta name="description" content="The Internet of Things (IoT) is one of the most pre-eminent tech trends to have arisen in recent times."/>
       <meta name="keywords" content="Remote Custom Software Development, Custom Web Application Development Company, custome software development, web application development services, outsource web development company"/>
       <meta name="author" content="Ditstek">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>5 Top Internet Of Things (IoT) Trends In 2021 - Ditstek Innovations</title>
       
       
-<meta property="og:title" content="10 Benefits Of Hiring Full Stack Developers For Your Projects - Ditstek Innovations"/>
+<meta property="og:title" content="5 Top Internet Of Things (IoT) Trends In 2021 - Ditstek Innovations"/>
 <meta property="og:site_name" content="Dits Innovations"/>
-<meta property="og:url" content="https://ditstek.com/blogs/10-benefits-of-hiring-full-stack-developers-for-your-projects"/>
-<meta property="og:description" content="Full stack developers are like celebrities who can do anything having a breadth of experience. These full stack developers can develop full-fledged applications, including web, mobile, and desktop."/>
+<meta property="og:url" content="https://www.ditstek.com/blogs/5-top-internet-of-things-iot-trends-in-2021"/>
+<meta property="og:description" content="The Internet of Things (IoT) is one of the most pre-eminent tech trends to have arisen in recent times."/>
 <meta property="og:type" content="article"/>
-<meta property="og:image" content="https://ditstek.com/assets/images/why-to-outsource-your-project-to-a-custom-software-development-company.jpg"/>
+<meta property="og:image" content="https://www.ditstek.com/assets/images/5-top-internet-of-things-iot-trends-in-2021.jpg"/>
 
 
       <!--common css-->
@@ -36,7 +36,7 @@
                   <div class="row">
                      <div class="col-sm-12">
                         <h1>5 Top Internet Of Things <br>(IoT) Trends In 2021 </h1>
-                        <!--<div class="bannerButton mt-3" id="bannerExtFour" data-toggle="modal" data-target="#exampleModal"> <a href="javascript:void(0);" class="btn btn-custom siteBtn addCountry">Contact Form</a> </div>-->
+                        <div class="bannerButton mt-3" id="bannerExtFour" data-toggle="modal" data-target="#exampleModal"> <a href="javascript:void(0);" class="btn btn-custom blueBtn siteBtn addCountry">Contact Form</a> </div>
                      </div>
                   </div>
                </div>
@@ -97,6 +97,20 @@
    <div class="recentPosts">
       <h2>Recent Posts</h2>
       <ul>
+           <li>
+            <a class="blogImage" href="/blogs/how-the-salon-industry-is-picking-up-with-innovative-technology-and-systems"><img src="../assets/images/how-the-salon-industry-is-picking-up-with-innovative-technology-and-systems.jpg" title="Open Source And Its Importance " alt="image"/></a>
+            <div class="blogContent">
+               <div class="blogInnerContent"><a class="active" href="/blogs/how-the-salon-industry-is-picking-up-with-innovative-technology-and-systems" target="_self">How The Salon Industry Is Picking Up With Innovative Technology And Systems?</a></div>
+               <div class="srpw-meta">06 August , 2021</div>
+            </div>
+         </li>
+           <li>
+            <a class="blogImage" href="/blogs/open-source-and-its-importance"><img src="../assets/images/open-source-and-its-importance.jpg" title="COpen Source And Its Importance " alt="image"/></a>
+            <div class="blogContent">
+               <div class="blogInnerContent"><a class="active" href="/blogs/open-source-and-its-importance" target="_self">Open Source And Its Importance</a></div>
+               <div class="srpw-meta">22 July , 2021</div>
+            </div>
+         </li>
          
           <li>
             <a class="blogImage" href="/blogs/reasons-why-customer-centricity-is-important-for-every-businesses"><img src="../assets/images/reasons-why-customer-centricity-is-important-for-every-businesses.jpg" title="Custom Software Development " alt="image"/></a>

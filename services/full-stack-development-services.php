@@ -8,8 +8,8 @@
       <meta name="keywords" content="full stack remote development, remote full stack developer, full stack developer remote, Hire full  stack developer, Remmote full stack developer"/>
       <meta name="author" content="Dits"/>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     
       <!--common css-->
+      <link href="https://www.ditstek.com/services/full-stack-development-services" rel="canonical"/>
        <?php include_once('../common/commoncss.php'); ?>
 	  <!---->
    </head>
@@ -148,7 +148,7 @@
 						</div>
 						<div class="col-sm-12">
 							<div class="uxUiCtaBtn">
-								<a href="../contact" class="btn btn-custom siteBtn">Get A Free Quote</a>
+									<a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal" class="btn btn-custom siteBtn addCountry">Get A Free Quote</a>
 								<a href="../portfolio" class="btn btn-custom siteBtn">View our work</a>
 							</div>
 						</div>

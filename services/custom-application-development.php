@@ -8,8 +8,8 @@
       <meta name="keywords" content="Remote Custom Software Development, Custom Web Application Development Company, custome software development, web application development services, outsource web development company"/>
       <meta name="author" content="Dits"/>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
        <!--common css-->
+       <link href="https://www.ditstek.com/services/custom-application-development" rel="canonical"/>
        <?php include_once('../common/commoncss.php'); ?>
 	  <!---->
    </head>
@@ -87,9 +87,8 @@
 								<p>Many industries deal with personal and financial information. Finance, healthcare, banking, real-estate are a few industries that handle extremely sensitive information. For such industries, it is pertinent that the right software is in place- one that is compliant with strict industry regulations. DITS developers have experience in creating software that follows tight security and privacy regulations- making sure all the protocols are followed. </p>
 							</div>
 						</div>
-						
 						<div class="col-sm-12 text-center"> 
-							<a href="../contact" class="btn btn-custom siteBtn blueBtn mt-3 ">Get A Free Quote</a>
+							<a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal" class="btn btn-custom siteBtn blueBtn mt-3 addCountry">Get A Free Quote</a>
 						</div>
 					
 					</div>
@@ -104,7 +103,7 @@
 						</div>
 						<div class="col-sm-12">
 							<div class="uxUiCtaBtn">
-								<a href="../contact" class="btn btn-custom siteBtn">Get A Free Quote</a>
+									<a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal" class="btn btn-custom siteBtn  addCountry">Get A Free Quote</a>
 								<a href="../portfolio" class="btn btn-custom siteBtn">View our work</a>
 							</div>
 						</div>

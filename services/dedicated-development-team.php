@@ -8,8 +8,8 @@
       <meta name="keywords" content="Dedicated Software Development Team, Dedicated Offshore Developers, Dedicated Remote Development Team, Dedicated remote developers, web development company"/>
       <meta name="author" content="Dits">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     
        <!--common css-->
+       <link href="https://www.ditstek.com/services/dedicated-development-team" rel="canonical"/>
        <?php include_once('../common/commoncss.php'); ?>
 	  <!---->
    </head>
@@ -54,8 +54,7 @@
 								<li>Complete Team Control </li>
 								<li>No Contract Lock-ins </li>
 						   </ul>					   						   
-						   
-
+						  
 						</div>
 					</div>	
 					<div class="col-sm-5">	
@@ -83,7 +82,7 @@
 						<div class="hdDecription">
 							<p class="mb-4 mt-3">At DITS, we offer our expertise across several technologies including but not limited to .NET Developers for hire, Node JS developers for hire, PHP developers for hire, Laravel developers for hire, Angular developers for hire, React developers for hire, Vue JS developers for hire etc.</p>
 							
-							<a href="../contact" class="btn btn-custom siteBtn blueBtn mt-3 ">Get A Free Quote</a>
+								<a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal" class="btn btn-custom siteBtn blueBtn addCountry">Get A Free Quote</a>
 							
 							
 						</div>
@@ -158,7 +157,7 @@
 						</div>
 						<div class="col-sm-12">
 							<div class="uxUiCtaBtn">
-								<a href="../contact" class="btn btn-custom siteBtn">Get A Free Quote</a>
+									<a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal" class="btn btn-custom siteBtn addCountry">Get A Free Quote</a>
 								<a href="../portfolio" class="btn btn-custom siteBtn">View our work</a>
 							</div>
 						</div>

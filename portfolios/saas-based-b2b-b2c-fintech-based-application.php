@@ -30,13 +30,16 @@
                   <div class="row">
                      <div class="col-sm-12">
                         <h1>SAAS BASED B2B<br> B2C FINTECH<br> APPLICATION</h1>
-                       
+                       <div class="bannerButton mt-3" id="bannerExtFour" data-toggle="modal" data-target="#exampleModal"> <a href="javascript:void(0);" class="btn btn-custom blueBtn siteBtn addCountry">Contact Form</a> </div> 
                      </div>
                   </div>
                </div>
             </div>
          </div>
       </section>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         <?php include_once('../common/popup-form.php'); ?>
+      </div>
 	   <section class="portfolioInner">
 	     <div class="container">
 		   <div class="row">

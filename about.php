@@ -9,6 +9,7 @@
       <meta name="author" content="Dits"/>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <!--common css-->
+        <link href="https://www.ditstek.com/about" rel="canonical"/>
        <?php include_once('common/commoncss.php'); ?>
 	  <!---->
    </head>

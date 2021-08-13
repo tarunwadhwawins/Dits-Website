@@ -7536,6 +7536,11 @@ textarea {
         padding: 0 10px 0 0; }
         .get-a-quote .contact-us .contact-form-main .form-group .form-control::placeholder {
           color: #000; }
+      .get-a-quote .contact-us .contact-form-main .form-group label.error {
+        position: absolute;
+        bottom: -8px;
+        font-size: 10px;
+        color: #ff0000; }
       .get-a-quote .contact-us .contact-form-main .contactUsForm {
         text-align: right; }
         .get-a-quote .contact-us .contact-form-main .contactUsForm .siteBtn {

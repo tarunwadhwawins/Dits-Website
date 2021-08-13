@@ -9,6 +9,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Contact Us - Ditstek Innovations</title>
       <!--common css-->
+      <link href="https://www.ditstek.com/contact" rel="canonical"/>
       <?php include_once('common/commoncss.php'); ?>
       <!---->
    </head>
@@ -50,7 +51,7 @@
 						 <div class="row">
                         <div class="col-sm-6">
                            <div class="contactForm">
-                              <input type="text" class="form-control" name="contact_first_name" id="contactFirstName" placeholder="First Name" />  
+                              <input type="text" class="form-control" name="contact_first_name" id="contactFirstName" placeholder="Name" />  
                            </div>
                         </div>
                         <div class="col-sm-6">

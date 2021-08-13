@@ -56,7 +56,7 @@
                            <a href="/about" title="About Us"><i class="feather icon-arrow-right"></i>About Us </a>
                         </li>
                         <li class="border-widget">
-                           <a href="/blog" title="Blog" target="_blank"><i class="feather icon-arrow-right"></i>Blogs </a>
+                           <a href="/blogs" title="Blogs" target="_blank"><i class="feather icon-arrow-right"></i>Blogs </a>
                         </li>
                         <li class="border-widget">
                            <a href="/portfolio" title="Portfolio "><i class="feather icon-arrow-right"></i>Portfolio </a>

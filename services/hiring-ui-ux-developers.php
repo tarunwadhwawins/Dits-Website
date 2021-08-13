@@ -8,8 +8,8 @@
       <meta name="keywords" content="Hire UI and UX Developers, top graphic design companies, best graphic design companies, top UI UX developers, UI UX Development agency"/>
       <meta name="author" content="Dits"/>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      
        <!--common css-->
+       <link href="https://www.ditstek.com/services/hiring-ui-ux-developers" rel="canonical"/>
        <?php include_once('../common/commoncss.php'); ?>
 	  <!---->
    </head>
@@ -45,7 +45,7 @@
 							<div class="portfolioDesc text-center">
 							   <p>DITS always inspires to create classic yet sophisticatedly experimental and original user interfaces. Our UI/UX developers are highly passionate about delivering a highly personalized, result-oriented user experience and thus are always committed to the same cause. Revolutionary in their vision, DITS’ UI/UX designers offer solutions that ensure the client’s online success.</p>
 							   
-							   <a href="../contact"  class="btn btn-custom siteBtn blueBtn mt-5">Get A Free Quote</a>
+							   <a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal" class="btn btn-custom siteBtn blueBtn mt-3 mb-5 addCountry">Get A Free Quote</a>
 							</div>
 						</div>
 					</div>               
@@ -107,7 +107,7 @@
 						</div>
 						<div class="col-sm-12">
 							<div class="uxUiCtaBtn">
-								<a href="../contact" class="btn btn-custom siteBtn">Get A Free Quote</a>
+								 <a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal" class="btn btn-custom siteBtn addCountry">Get A Free Quote</a>
 								<a href="../portfolio" class="btn btn-custom siteBtn">View our work</a>
 							</div>
 						</div>

@@ -25,6 +25,7 @@
       <!-- Clarity tracking code for https://ditstek.com/ --><script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "6o3xa9tkvm");</script>
 
       <!--common css-->
+      <link href="https://www.ditstek.com/" rel="canonical"/>
       <?php include_once('common/commoncss.php'); ?>
       <!---->
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -226,141 +227,59 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <div class="logoTitle">
                      <h2>Technologies We Use</h2>
                   </div>
-<!--
                   <div class="logoCarousel">
                      <div class="owl-carousel owl-theme" id="logoCarousel">
-                        <div class="item">
-                           <div class="thumbImage"><img src="assets/svg/ajax.svg" alt="ajax" title="ajax"/></div>
+						 <div class="item">
+                           <div class="thumbImage"><img src="assets/technology/amazon-db.png" alt="image" title="Amazon Db"/></div>
                         </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/android.svg" alt="android" title="android"/></div>
+						 <div class="item">
+                           <div class="thumbImage"><img src="assets/technology/ant-design.png" alt="image" title="Ant Design"/></div>
                         </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/angular.svg" alt="angular" title="angular"/></div>
+						  <div class="item">
+                           <div class="thumbImage"><img src="assets/technology/asp.net-webform.png" alt="image" title="Asp.net Webform"/></div>
                         </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/asp-net.svg" alt="asp-net" title="asp-net"/></div>
+						 <div class="item">
+                           <div class="thumbImage"><img src="assets/technology/boilerplate.png" alt="image" title="boilerplate"/></div>
                         </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/azure.svg" alt="azure" title="azure"/></div>
+						  <div class="item">
+                           <div class="thumbImage"><img src="assets/technology/cordova.png" alt="image" title="Cordova"/></div>
                         </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/bootstrap.svg" alt="bootstrap" title="bootstrap"/></div>
+						 <div class="item">
+                           <div class="thumbImage"><img src="assets/technology/c-sharp.png" alt="image" title="c-sharp"/></div>
                         </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/codeigniter.svg" alt="codeigniter" title="codeigniter"/></div>
+						  <div class="item">
+                           <div class="thumbImage"><img src="assets/technology/cypruss.png" alt="image" title="cypruss"/></div>
                         </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/corel.svg" alt="corel" title="corel"/></div>
+						 <div class="item">
+                           <div class="thumbImage"><img src="assets/technology/indesign.png" alt="image" title="InDesign"/></div>
                         </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/cosmosdb.svg" alt="cosmosdb" title="cosmosdb"/></div>
+						  <div class="item">
+                           <div class="thumbImage"><img src="assets/technology/invision.png" alt="image" title="Invision"/></div>
                         </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/css.svg" alt="css" title="css"/></div>
+						 <div class="item">
+                           <div class="thumbImage"><img src="assets/technology/ionic.png" alt="image" title="Ionic"/></div>
                         </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/cypress.svg" alt="cypress" title="cypress"/></div>
+						  <div class="item">
+                           <div class="thumbImage"><img src="assets/technology/amazon-db.png" alt="image" title="Amazon Db"/></div>
                         </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/devops.svg" alt="devops" title="devops"/></div>
+						 <div class="item">
+                           <div class="thumbImage"><img src="assets/technology/iot.png" alt="image" title="Iot"/></div>
                         </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/figma.svg" alt="figma" title="figma"/></div>
+						  <div class="item">
+                           <div class="thumbImage"><img src="assets/technology/nebular.png" alt="image" title="Nebular"/></div>
                         </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/html.svg" alt="html" title="html"/></div>
+						  <div class="item">
+                           <div class="thumbImage"><img src="assets/technology/polymer.png" alt="image" title="Polymer"/></div>
                         </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/illustrator.svg" alt="illustrator" title="illustrator"/></div>
+						  <div class="item">
+                           <div class="thumbImage"><img src="assets/technology/semantic.png" alt="image" title="Semantic"/></div>
                         </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/iot.svg" alt="iot" title="iot"/></div>
+						  <div class="item">
+                           <div class="thumbImage"><img src="assets/technology/sketch.png" alt="image" title="Sketch"/></div>
                         </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/jason.svg" alt="json" title="json"/></div>
+						  <div class="item">
+                           <div class="thumbImage"><img src="assets/technology/sql-lite.png" alt="image" title="sql-lite"/></div>
                         </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/javascrpt.svg" alt="javascript" title="javascript"/></div>
-                        </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/jenkins.svg" alt="jenkins" title="jenkins"/></div>
-                        </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/jquary.svg" alt="jquery" title="jquery"/></div>
-                        </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/laravel.svg" alt="laravel" title="laravel"/></div>
-                        </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/less.svg" alt="less" title="less"/></div>
-                        </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/mangodb.svg" alt="mangodb" title="mangodb"/></div>
-                        </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/material-design.svg" alt="material-design" title="material-design"/></div>
-                        </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/my-sql.svg" alt="my-sql" title="my-sql"/></div>
-                        </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/net-core.svg" alt="net-core" title="net-core"/></div>
-                        </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/net-mvc.svg" alt="net-mvc" title="net-mvc"/></div>
-                        </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/node.svg" alt="node" title="node"/></div>
-                        </div>						
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/photoshop.svg" alt="photoshop" title="photoshop"/></div>
-                        </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/php.svg" alt="php" title="php"/></div>
-                        </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/postgre.svg" alt="postgre" title="postgre"/></div>
-                        </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/python.svg" alt="python" title="python"/></div>
-                        </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/react.svg" alt="react" title="react"/></div>
-                        </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/sass.svg" alt="sass" title="sass"/></div>
-                        </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/scss.svg" alt="scss" title="scss"/></div>
-                        </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/semantic-ui.svg" alt="semantic ui" title="semantic ui"/></div>
-                        </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/sketch.svg" alt="sketch" title="sketch"/></div>
-                        </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/sql-server.svg" alt="sql-server" title="sql-server"/></div>
-                        </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/typescript.svg" alt="typescript" title="typescript"/></div>
-                        </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/vue.svg" alt="vue" title="vue"/></div>
-                        </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/web-api.svg" alt="web-api" title="web-api"/></div>
-                        </div>
-						<div class="item">
-                           <div class="thumbImage"><img src="assets/svg/xd.svg" alt="xd" title="xd"/></div>
-                        </div>
-						
-                     </div>
-                  </div>
--->
-				   <div class="logoCarousel">
-                     <div class="owl-carousel owl-theme" id="logoCarousel">
                         <div class="item">
                            <div class="thumbImage"><img src="assets/technology/Net-MVC.png" alt="image" title="Net-MVC"/></div>
                         </div>
@@ -452,7 +371,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 						<div class="item">
                            <div class="thumbImage"><div class="javascript commonImage"></div>
 							</div>
-                        </div>
                      </div>
                   </div>
                </div>

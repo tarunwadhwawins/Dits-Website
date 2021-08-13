@@ -1,15 +1,31 @@
 <IfModule mod_rewrite.c>
 
 RewriteEngine On 
-#RewriteCond %{HTTPS} off 
-#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 
+
+
+
+DirectorySlash Off
+RewriteRule ^blogs$ /blogs/index.php [L,E=LOOP:1]
 
 RewriteCond %{THE_REQUEST} /([^.]+)\.php [NC]
 RewriteRule ^ /%1 [NC,L,R]
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^ %{REQUEST_URI}.php [NC,L]
 RewriteRule ^core/general/(.*)$ core/general.php?action=$1 [QSA,L]
+
+
+
+Options +FollowSymlinks
+RewriteEngine on
+rewriterule ^blogs/the-new-era-of-custom-application-development-services–2021-and-beyond(.*)$ https://www.ditstek.com/blogs/the-new-era-of-custom-application-development-services-2021-and-beyond$1 [r=301,nc]
+
+</IfModule>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+
 </IfModule>
 
 <IfModule mod_expires.c>

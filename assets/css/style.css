@@ -1740,11 +1740,13 @@
       .portfolio .potfolioDiv .thumbImage.thumbImage15 {
         background-image: url("../images/practice-management.jpg"); }
       .portfolio .potfolioDiv .thumbImage.thumbImage16 {
-        background-image: url("../images/virtual-learning-platform.png"); }
+        background-image: url("../images/virtual-learning-platform.jpg"); }
       .portfolio .potfolioDiv .thumbImage.thumbImage17 {
         background-image: url("../images/affiliate-marketing.jpg"); }
       .portfolio .potfolioDiv .thumbImage.thumbImage18 {
         background-image: url("../images/sass-based-b2b-b2c-fintech-based-application-banner.jpg"); }
+      .portfolio .potfolioDiv .thumbImage.thumbImage19 {
+        background-image: url("../images/saas-based-asset-management-reporting-tool-banner.jpg"); }
     .portfolio .potfolioDiv .thumbDesc {
       border: 1px solid #eee;
       padding: 15px;
@@ -1760,7 +1762,9 @@
           min-height: inherit; } }
       .portfolio .potfolioDiv .thumbDesc h2 {
         font-size: 20px;
-        margin: 0 0 10px 0; }
+        margin: 0 0 10px 0;
+        text-transform: capitalize;
+        font-family: 'dosissemibold'; }
       .portfolio .potfolioDiv .thumbDesc p {
         font-size: 14px;
         margin: 0 0 10px 0;
@@ -2916,7 +2920,8 @@
     .domain .heading p {
       font-size: 40px;
       margin: 0 auto;
-      color: #3095fb; }
+      color: #3095fb;
+      text-transform: capitalize; }
       @media (max-width: 767px) {
         .domain .heading p {
           font-size: 20px; } }
@@ -2930,68 +2935,90 @@
     @media (max-width: 767px) {
       .domain .whiteBg {
         padding: 25px 15px; } }
-    .domain .whiteBg .nav-tabs {
-      display: flex;
-      border-bottom: 0px solid #dee2e6;
-      margin: 0 0 20px 0; }
-      .domain .whiteBg .nav-tabs .nav-item .nav-link {
-        background-color: #3095fb;
-        color: #fff;
-        border-radius: 4px;
-        margin: 0 2px 0 0;
-        transition: all 0.35s ease 0s; }
-        .domain .whiteBg .nav-tabs .nav-item .nav-link.active {
-          background-color: #193370;
-          transition: all 0.35s ease 0s; }
-        .domain .whiteBg .nav-tabs .nav-item .nav-link:hover {
-          background-color: #193370;
-          transition: all 0.35s ease 0s; }
-    @media (max-width: 767px) {
-      .domain .whiteBg .tab-content .card {
-        margin: 0 0 5px 0; } }
-    .domain .whiteBg .tab-content .card .card-body {
-      padding: 1.25rem 0; }
-      @media (max-width: 767px) {
-        .domain .whiteBg .tab-content .card .card-body {
-          padding: 15px; } }
-      .domain .whiteBg .tab-content .card .card-body .thumbImage img {
-        max-width: 100%;
-        box-shadow: 0 0 20px #d1d1d1; }
-      @media (max-width: 767px) {
-        .domain .whiteBg .tab-content .card .card-body .thumbImage {
-          margin: 0 0 15px 0; } }
-      .domain .whiteBg .tab-content .card .card-body .thumbDesc .innerThumbDesc h2 {
-        font-size: 18px;
-        text-transform: capitalize;
-        margin: 0 0 5px 0; }
-      .domain .whiteBg .tab-content .card .card-body .thumbDesc .innerThumbDesc h3 {
-        font-size: 16px;
-        margin: 30px 0 5px 0; }
-      .domain .whiteBg .tab-content .card .card-body .thumbDesc .innerThumbDesc ul {
-        padding: 15px 0 0 24px; }
-        .domain .whiteBg .tab-content .card .card-body .thumbDesc .innerThumbDesc ul li {
-          font-size: 15px;
-          line-height: 30px;
-          font-weight: 500; }
-          .domain .whiteBg .tab-content .card .card-body .thumbDesc .innerThumbDesc ul li a {
-            color: #155a9f; }
-    .domain .whiteBg .tab-content .card.active .card-header {
+
+.tabs .nav-tabs {
+  display: flex;
+  border-bottom: 0px solid #dee2e6;
+  margin: 0 0 20px 0; }
+  .tabs .nav-tabs .nav-item .nav-link {
+    background-color: #3095fb;
+    color: #fff;
+    border-radius: 0;
+    margin: 0 2px 0 0;
+    transition: all 0.35s ease 0s; }
+    .tabs .nav-tabs .nav-item .nav-link.active {
       background-color: #193370;
-      border: 1px solid #193370; }
-      .domain .whiteBg .tab-content .card.active .card-header h5 a {
-        color: #fff; }
-    .domain .whiteBg .tab-content .card:hover .card-header {
+      transition: all 0.35s ease 0s; }
+    .tabs .nav-tabs .nav-item .nav-link:hover {
       background-color: #193370;
-      border: 1px solid #193370; }
-      .domain .whiteBg .tab-content .card:hover .card-header h5 a {
-        color: #fff; }
-    .domain .whiteBg .tab-content .card .card-header {
-      background-color: #3095fb;
-      border: 1px solid #3095fb; }
-      .domain .whiteBg .tab-content .card .card-header h5 {
-        font-size: 18px; }
-        .domain .whiteBg .tab-content .card .card-header h5 a {
-          color: #fff; }
+      transition: all 0.35s ease 0s; }
+
+@media (max-width: 767px) {
+  .tabs .tab-content .card {
+    margin: 0 0 5px 0; } }
+
+.tabs .tab-content .card .card-body {
+  padding: 1.25rem 0; }
+  @media (max-width: 767px) {
+    .tabs .tab-content .card .card-body {
+      padding: 15px; } }
+  .tabs .tab-content .card .card-body .thumbImage img {
+    max-width: 100%;
+    box-shadow: 0 0 20px #d1d1d1; }
+  @media (max-width: 767px) {
+    .tabs .tab-content .card .card-body .thumbImage {
+      margin: 0 0 15px 0; } }
+  .tabs .tab-content .card .card-body .thumbDesc .innerThumbDesc h2 {
+    font-size: 20px;
+    margin: 0 0 5px 0; }
+  .tabs .tab-content .card .card-body .thumbDesc .innerThumbDesc h3 {
+    font-size: 16px;
+    margin: 15px 0 5px 0; }
+  .tabs .tab-content .card .card-body .thumbDesc .innerThumbDesc p {
+    margin: 0 0 15px 0; }
+  .tabs .tab-content .card .card-body .thumbDesc .innerThumbDesc ul {
+    padding: 15px 0 15px 24px; }
+    .tabs .tab-content .card .card-body .thumbDesc .innerThumbDesc ul li {
+      font-size: 15px;
+      line-height: 30px;
+      font-weight: 500; }
+      .tabs .tab-content .card .card-body .thumbDesc .innerThumbDesc ul li a {
+        color: #000;
+        cursor: default; }
+
+.tabs .tab-content .card.active .card-header {
+  background-color: #193370;
+  border: 1px solid #193370; }
+  .tabs .tab-content .card.active .card-header h5 a {
+    color: #fff; }
+
+.tabs .tab-content .card:hover .card-header {
+  background-color: #193370;
+  border: 1px solid #193370; }
+  .tabs .tab-content .card:hover .card-header h5 a {
+    color: #fff; }
+
+.tabs .tab-content .card .card-header {
+  background-color: #3095fb;
+  border: 1px solid #3095fb; }
+  .tabs .tab-content .card .card-header h5 {
+    font-size: 18px; }
+    .tabs .tab-content .card .card-header h5 a {
+      color: #fff; }
+
+.tags {
+  display: block;
+  margin: 0 0 5px 0; }
+  .tags span {
+    color: #155a9f;
+    font-size: 16px;
+    border-right: 1px solid #ddd;
+    padding: 0 8px;
+    font-weight: 500; }
+    .tags span:first-child {
+      padding-left: 0; }
+    .tags span:last-child {
+      border: 0; }
 
 /*  404 Page  */
 .notFoundArea {

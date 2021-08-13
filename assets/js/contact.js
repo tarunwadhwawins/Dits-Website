@@ -31,8 +31,9 @@ $(document).ready(function () {
     
         },
         submitHandler: function(form) {
+            var base_url = window.location.origin;
             $.ajax({
-                url: "core/general?action=ConactFormSave",
+                url: base_url+"/core/general?action=ConactFormSave",
                 type: "POST",
                 data: $(form).serialize(),
                 success: function (response) {

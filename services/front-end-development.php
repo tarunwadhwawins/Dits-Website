@@ -8,8 +8,8 @@
       <meta name="keywords" content="Front End Development Company , Hire Angular Developers , Hire React JS Developers, Front End Development Services, Front End Development"/>
       <meta name="author" content="Dits">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     
       <!--common css-->
+      <link href="https://www.ditstek.com/services/front-end-development" rel="canonical"/>
       <?php include_once('../common/commoncss.php'); ?>
       <!---->
    </head>
@@ -45,7 +45,7 @@
                   <div class="portfolioDesc text-center">
                      <p class="mb-3">DITS is a progressive frontend development company- delivering excellent user experience, providing high-quality services and dedicated remote frontend developers for your projects. We blend skill, creativity, imagination and expertise to create grand yet practical and user-focused interfaces.</p>
                      <p class="mb-4 mt-3">It doesn’t even take a second for an average user to form an opinion of a business based on their web performance. This is why, design, functionality and navigation experience- all of which constitute the front-end, can make or break your online business. With professional frontend development services, you can receive easy-to-use, robust applications with intuitive features and visually appealing composition..</p>
-                     <a href="../contact" class="btn btn-custom siteBtn blueBtn">Get A Free Quote</a>
+                       <a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal" class="btn btn-custom siteBtn blueBtn mt-3 mb-3 addCountry">Get A Free Quote</a>
                   </div>
                </div>
             </div>
@@ -132,7 +132,7 @@
                </div>
                <div class="col-sm-12">
                   <div class="uxUiCtaBtn">
-                     <a href="../contact"  class="btn btn-custom siteBtn">Get A Free Quote</a>
+                     <a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal" class="btn btn-custom siteBtn addCountry">Get A Free Quote</a>
                      <a href="../portfolio" class="btn btn-custom siteBtn">View our work</a>
                   </div>
                </div>

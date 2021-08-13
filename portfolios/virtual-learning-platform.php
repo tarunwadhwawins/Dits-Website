@@ -25,18 +25,21 @@
          <?php include_once('../common/header.php'); ?>
          <!---->
          <div class="bannerMain">
-            <img src="../assets/images/virtual-learning-platform.png" alt="image"/>
+            <img src="../assets/images/virtual-learning-platform.jpg" alt="image"/>
 			    <div class="bannerDesc inner">
                <div class="container">
                   <div class="row">
                      <div class="col-sm-12">
-                        <h1></h1>
-                     </div>
+                        <h1 style="color: #155a9f;">VIRTUAL LEARNING <br> PLATFORM</h1>
+                        <div class="bannerButton mt-3" id="bannerExtFour" data-toggle="modal" data-target="#exampleModal"> <a href="javascript:void(0);" class="btn btn-custom blueBtn siteBtn addCountry">Contact Form</a> </div>
                   </div>
                </div>
             </div>
          </div>
       </section>
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         <?php include_once('../common/popup-form.php'); ?>
+      </div>
 	   <section class="portfolioInner">
 	     <div class="container">
 		   <div class="row">

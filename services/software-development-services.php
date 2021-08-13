@@ -8,8 +8,8 @@
       <meta name="keywords" content="Software Development, Custom Software Development, Offshore Software Development, Remote software development, SAAS software Development, Custom sofware Development Company, Remote Software Development Compnay, Best Offshore Software Development"/>
       <meta name="author" content="Dits"/>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     
       <!--common css-->
+      <link href="https://www.ditstek.com/services/software-development-services" rel="canonical"/>
       <?php include_once('../common/commoncss.php'); ?>
       <!---->
    </head>
@@ -48,7 +48,7 @@
                      <h2>Custom Software Development Services</h2>
                      <p><img class="hostSoft" src="../assets/images/hos-soft.png" alt="Custom Software Development Services" title="Custom Software Development Services"> We are a leading provider of highly adaptable, agile, scalable and custom software development services and solutions to empower your business. It is backed by a strong workforce of expert software developers that have been delivering result-oriented software development solutions from startups to well-established product and service based companies across the globe.</p>
                      <p>DITS offers robust and scalable software development solutions across various platforms and industry verticals. We provide complete end-to-end software services for mission-critical software applications demanding superior performance. Our software development services mount across industries, encouraging businesses to formulate an imperative vision and assure its attainment by settling in place a workable &amp; result-oriented technology framework.</p>
-                    <a class="btn btn-custom siteBtn" href="../contact" >Get A Free Quote </a>
+                   	<a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal" class="btn btn-custom siteBtn addCountry">Get A Free Quote </a>
                   </div>
                </div>
             </div>
@@ -94,7 +94,7 @@
                   <div class="clientDesc">
                      <h3>We Care About Our Clients</h3>
                      <p>At DITS, we are providing software development services to develop custom software based on the necessity of clients. The client comes to us with a complex business challenge, we provide software consulting, software development, deployment and software maintenance services based on the nature of requirement. </p>
-                     <div class="at-btn-wrap"><a class="btn btn-custom siteBtn" href="../contact" >Get A Free Quote </a></div>
+                     <div class="at-btn-wrap">	<a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal" class="btn btn-custom siteBtn addCountry">Get A Free Quote </a></div>
                   </div>
                </div>
             </div>
@@ -184,7 +184,7 @@
                </div>
                <div class="col-sm-12">
                   <div class="uxUiCtaBtn">
-                     <a href="../contact" class="btn btn-custom siteBtn">Get A Free Quote</a>
+                     	<a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal" class="btn btn-custom siteBtn addCountry">Get A Free Quote</a>
                      <a href="../portfolio" class="btn btn-custom siteBtn">View our work</a>
                   </div>
                </div>

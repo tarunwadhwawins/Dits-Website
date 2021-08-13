@@ -339,7 +339,14 @@ textarea {
 					&::placeholder {
 						color: #000;
 					}
-				
+				}
+				label{
+					&.error{
+						position: absolute;
+						bottom: -8px;
+						font-size: 10px;
+						color: #ff0000;	
+					}
 				}
 			}
 			.contactUsForm {
