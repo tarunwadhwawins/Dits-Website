@@ -144,65 +144,11 @@ $get_portfolio=get_portfolio($conn);
       $(document).ready(function() {
          $('.tabs-domain label:first').addClass('active');
          InitialCall();
-         var x, size_li;
-
-         function changeLoadCount(media) {
-            if (media.matches) {
-               x = 6; // no. of items per click mobile <= 767
-               $(".moreBox").hide();
-               setTimeout(function(){
-                  $(".moreBox").hide();
-                  $(".moreBox:lt(6)").show();
-               }, 600);
-               size_li = $(".moreBox").length;
-               if (x == size_li) {
-                  $(".load-more").hide();
-               } else {
-                  $(".load-more").show();
-               }
-            } else {
-               x = 6; // no. of items per click in desktop >= 768
-               $(".moreBox").hide();
-               setTimeout(function(){
-                  $(".moreBox").hide();
-                  $(".moreBox:lt(6)").show();
-               }, 300);
-               // $(".moreBox:lt(" + x + ")").show();
-               size_li = $(".moreBox").length;
-               if (x == size_li) {
-                  $(".load-more").hide();
-               } else {
-                  $(".load-more").show();
-               }
-            }
-         }
-
-         var media = window.matchMedia("(max-width: 767px)");
-         changeLoadCount(media);
-         media.addListener(changeLoadCount);
-         window.addEventListener("load resize", function() {
-            changeLoadCount(media);
-            media.addListener(changeLoadCount);
-         });
-
-         function loadMore() {
-            $(".moreBox").hide();
-            var size_li = $(".moreBox").length;
-            $(".moreBox:lt(" + x + ")").show();
-           
-         }
-         loadMore();
          $(".load-more-button").click(function() {
             
             loadPortfolio(selected_category,selected_tag);
          });
       });
-
-      // function loadDomain(DomainID) {
-      //    $('.commonPortfolio').hide();
-      //    $("#" + DomainID).show();
-      //    $("#" + DomainID).addClass('activeDomain');
-      // }
 
       function InitialCall()
       {
@@ -236,7 +182,7 @@ $get_portfolio=get_portfolio($conn);
       function loadPortfolio(CategoryID, Tag )
       {
          jQuery.ajax({
-            url: '/core/ajax',
+            url: '<?php echo $url; ?>core/ajax',
             method: "GET",
             headers: {
                "content-type": "application/x-www-form-urlencoded"

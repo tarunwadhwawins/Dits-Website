@@ -12,27 +12,21 @@
         }
         $limit = 6;
         $offset = ($page-1)*$limit;
-        If($CategoryID == 'All')
+        
+        $CategoryQuery = "";
+        if($CategoryID != 'All')
         {   
-            $CategoryQuery = "";
-        }
-        else
-        {
-            $CategoryQuery = "AND category_id='$CategoryID'";
+        
+            $CategoryQuery .= " AND category_id='$CategoryID'";
         }
 
-        if($TagName == 'All')
+        if($TagName != 'All')
         {
-            $sql = "SELECT portfolio.*,category.name FROM portfolio,category WHERE
-            portfolio.category_id=category.id $CategoryQuery AND portfolio.status=1 ";
+            $CategoryQuery .= " AND FIND_IN_SET('$TagName',tags)";
         }
-        else
-        {  
-            $sql = "SELECT portfolio.*,category.name FROM portfolio,category WHERE
-            portfolio.category_id=category.id $CategoryQuery AND FIND_IN_SET('$TagName',tags) AND portfolio.status=1 ";
-            
-        }
-        
+
+         
+        $sql = "SELECT portfolio.*,category.name FROM portfolio,category WHERE portfolio.category_id=category.id $CategoryQuery  AND portfolio.status=1 ";
         $res=mysqli_query($conn,$sql);
         $total_record = $res->num_rows;
 
@@ -46,12 +40,11 @@
             $Output .= "<div class='row'>";
             while($row = mysqli_fetch_assoc($res))
             {
-            $str = $row['short_desc'];
-            if( strlen( $row['short_desc']) >200) 
-           {
-              $str = explode( "\n", wordwrap( $row['short_desc'], 200));
-              $str = $str[0] . '<div class="readMore">Read More ...</div>';
-           }
+                $str = $row['short_desc'];
+                if( strlen( $row['short_desc']) >200) {
+                    $str = explode( "\n", wordwrap( $row['short_desc'], 200));
+                    $str = $str[0] . '<div class="readMore">Read More ...</div>';
+                }
           
                 $TagsHTML = "";
                 $Tags = explode(',', $row['tags']);
