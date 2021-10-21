@@ -140,7 +140,7 @@ require_once('core/ajax.php');
     function loadPortfolio()
     {
         jQuery.ajax({
-            url: './core/ajax',
+            url: '<?php echo $url; ?>/core/ajax',
             method: "GET",
             headers: {
                "content-type": "application/x-www-form-urlencoded"
