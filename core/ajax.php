@@ -1,7 +1,7 @@
 <?php
     require_once('dbconnection.php');
 
-    if(isset($_GET['Action']) && $_GET['Action']='getPortfolio')
+    if(isset($_GET['Action']) && $_GET['Action']=='getPortfolio')
     {
         
         $CategoryID = $_GET['CategoryID'];
@@ -36,7 +36,7 @@
         $res=mysqli_query($conn,$sql);
         $total_record = $res->num_rows;
 
-        $sql.="limit ".$offset.",".$limit;
+        $sql.=" limit ".$offset.",".$limit;
         $res=mysqli_query($conn,$sql);
         $Response = array();
         $Output = "";
@@ -75,6 +75,81 @@
                                     </a>
                                 </div>
                             </div>";
+            }
+            $Output .= "</div>";
+        }
+        else
+        {
+            $Output = "<center>No Result Found.</center>";
+        }
+
+        $total_page = ceil($total_record/$limit);
+        $Response['Output'] = $Output;
+        if($total_page > $page){
+            $Response['next'] = true;
+        }else{
+            $Response['next'] = false;
+        }
+        
+        $Response=json_encode($Response);
+        echo $Response; exit;
+    }
+
+    if(isset($_GET['Action']) && $_GET['Action']=='getBlog')
+    {
+        
+        $page = @$_GET['page'];
+        if(empty($page)){
+            $page = 1;
+        }
+        $limit = 4;
+        $offset = ($page-1)*$limit;
+        
+        $sql = "SELECT * FROM blogs WHERE status=1 ORDER BY date desc";
+        
+        $res=mysqli_query($conn,$sql);
+        $total_record = $res->num_rows;
+
+        $sql.=" limit ".$offset.",".$limit; 
+        $res=mysqli_query($conn,$sql);
+        $Response = array();
+        $Output = "";
+        if(mysqli_num_rows($res) > 0)
+        {
+
+            $Output .= "<div class='row'>";
+            while($row = mysqli_fetch_assoc($res))
+            {
+                $time  = strtotime($row['date']);
+                $day   = date('d',$time);
+                $month = date('M',$time);
+                $year  = date('Y',$time);
+                $str = $row['short_desc'];
+                if( strlen( $row['short_desc']) > 200) 
+                {
+                    $str = explode( "\n", wordwrap( $row['short_desc'], 200));
+                    $str = $str[0] . '<div class="readMore">Read More ...</div>';
+                }
+                $Output .='
+                <div class="col-lg-6 col-md-6 col-sm-6 blogBox moreBox">
+                    <div class="blogDiv">
+                        <a href="blog/'.$row['slug'].'"  target="_blank">
+                            <div class="thumbImage">
+                                <img src="assets/blogimages/'.$row['image'].'" alt="image"/> 
+                                <span class="dayMonth"> <span class="day">'.$day.'</span>
+                                <span class="month">'.strtoupper($month).'</span>
+                                <span class="day">'.$year.'</span> </span> 
+                            </div>
+                            <div class="thumbDesc">
+                                <h2>'.$row['title'].'</h2>
+                                <span class="adminBlogs"> 
+                                    <span class="admin"><i class="fa fa-user"></i>Ditstek</span> 
+                                    <span class="blogsIcon"><i class="fa fa-folder-o"></i>Blogs</span> 
+                                </span><p>'.$str.'</p>
+                            </div>
+                        </a> 
+                    </div>
+                </div>';
             }
             $Output .= "</div>";
         }

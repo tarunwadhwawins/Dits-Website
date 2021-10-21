@@ -51,62 +51,19 @@ require_once('core/ajax.php');
         </div>
 
         <div class="row quotes">
-        <?php
-        $sql= "SELECT * FROM blogs WHERE status=1 ORDER BY date desc";
-        $res=mysqli_query($conn,$sql);
-        if($res->num_rows>0)
-        {
-            while($row=$res->fetch_assoc()){
-            $time  = strtotime($row['date']);
-            $day   = date('d',$time);
-            $month = date('M',$time);
-            $year  = date('Y',$time);
-            ?>
-                <div class="col-lg-6 col-md-6 col-sm-6 blogBox moreBox">
-                    <div class="blogDiv">
-                        <a href="blog/<?php echo $row['slug'] ?>"  target="_blank">
-                            <div class="thumbImage">
-                                <img src="assets/blogimages/<?php echo $row['image'] ?>" alt="image"/> 
-                                <span class="dayMonth"> <span class="day"><?php echo $day ?></span>
-                                <span class="month"><?php echo strtoupper($month) ?></span>
-                                <span class="day"><?php echo $year ?></span> </span> 
-                            </div>
-                            <div class="thumbDesc">
-                                <h2><?php echo $row['title'] ?></h2>
-                                <span class="adminBlogs"> 
-                                    <span class="admin"><i class="fa fa-user"></i>Ditstek</span> 
-                                    <span class="blogsIcon"><i class="fa fa-folder-o"></i>Blogs</span> 
-                                </span>
-                                <?php
-                                  $str = $row['short_desc'];
-                                  if( strlen( $row['short_desc']) > 200) 
-                                {
-                                    $str = explode( "\n", wordwrap( $row['short_desc'], 200));
-                                    $str = $str[0] . '<div class="readMore">Read More ...</div>';
-                                }
-                                ?>
-                                <p><?php echo $str; ?></p>
-                            </div>
-                        </a> 
-                    </div>
-                </div>
-            <?php } 
-            if($res->num_rows>4)
-            { ?>
+        
+            
+            <div id='BlogContent'>
+
+            </div>
             <div class="col-sm-12">
                 <div class="load-more">
                     <div class="load-more-button">Load More</div>
                 </div>
             </div>
-            <?php } ?>
-        <?php }
-        else { ?>
-            <div class="col-sm-12">
-                <span>No Blog Found.</span>
-            </div>
-        <?php } ?>
+           
+        </div>
     </div>
-  </div>
 </section>
 	<style>
 	 
@@ -170,60 +127,41 @@ require_once('core/ajax.php');
 <!-- <script src="assets/js/app.js"></script> -->
 
 <script>
-	$(document).ready(function () {
-  var x, size_li;
-  function changeLoadCount(media) {
-    if (media.matches) {
-      x = 4; // no. of items per click mobile <= 767
-      $(".moreBox").hide();
-      $(".moreBox:lt(" + x + ")").show();
-      size_li = $(".moreBox").length;
-      if (x == size_li) {
-        $(".load-more").hide();
-      } else {
-        $(".load-more").show();
-      }
-    } else {
-      x = 4; // no. of items per click in desktop >= 768
-      $(".moreBox").hide();
-      $(".moreBox:lt(" + x + ")").show();
-      size_li = $(".moreBox").length;
-      if (x == size_li) {
-        $(".load-more").hide();
-      } else {
-        $(".load-more").show();
-      }
-    }
-  }
-
-  var media = window.matchMedia("(max-width: 767px)");
-  changeLoadCount(media);
-  media.addListener(changeLoadCount);
-  window.addEventListener("load resize", function () {
-    changeLoadCount(media);
-    media.addListener(changeLoadCount);
-  });
-
-  function loadMore() {
-    $(".moreBox").hide();
-    size_li = $(".moreBox").length;
-    $(".moreBox:lt(" + x + ")").show();
-    $(".load-more-button").click(function () {
-      if (media.matches) {
-        x = x + 4 <= size_li ? x + 4 : size_li;
-      } else {
-        x = x + 4 <= size_li ? x + 4 : size_li;
-      }
-      $(".moreBox:lt(" + x + ")").show();
-      if (x == size_li) {
-        $(".load-more").hide();
-      } else {
-        $(".load-more").show();
-      }
+    var page = 1;
+    $(document).ready(function () {
+  
+        $(".load-more-button").click(function () {
+           
+            loadPortfolio();
+        });
+  
     });
-  }
-  loadMore();
-});
+    
+    function loadPortfolio()
+    {
+        jQuery.ajax({
+            url: './core/ajax',
+            method: "GET",
+            headers: {
+               "content-type": "application/x-www-form-urlencoded"
+            },
+            data: {
+               "Action": 'getBlog',
+               "page": page
+            },
+            success: function(response) {
+               var response = JSON.parse(response);
+               $("#BlogContent").html( $("#BlogContent").html()+response.Output);
+               if(response.next){
+                  $(".load-more").show();
+               }else{
+                  $(".load-more").hide();
+               }
+               page++;
+            }
+        });
+    }
+    loadPortfolio();
 </script> 
 
 <!---->
