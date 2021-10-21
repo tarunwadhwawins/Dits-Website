@@ -1,7 +1,8 @@
 {
   "name": "ditsphp",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,10 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^4.5.0",
-    "gulp": "^4.0.2"
-  },
-  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-install": "^1.1.0",
     "gulp-sass": "^4.1.0"
-  },
-  "description": ""
+  }
 }

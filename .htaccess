@@ -2,24 +2,23 @@
 
 RewriteEngine On 
 
-
-
-
 DirectorySlash Off
-RewriteRule ^blogs$ /blogs/index.php [L,E=LOOP:1]
-
 RewriteCond %{THE_REQUEST} /([^.]+)\.php [NC]
 RewriteRule ^ /%1 [NC,L,R]
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^ %{REQUEST_URI}.php [NC,L]
 RewriteRule ^core/general/(.*)$ core/general.php?action=$1 [QSA,L]
+RewriteRule ^blogs$ /blogs.php [L,E=LOOP:1]
+RewriteRule ^blog/([^/]+)/?$ /inner_blog_page.php?title=$1 [NC,L]
+
+RewriteRule ^portfolio$ /core/ajax.php [L,E=LOOP:1]
+RewriteRule ^portfolios/([^/]+)/?$ /inner_portfolio_page.php?title=$1 [NC,L]
 
 
 
 Options +FollowSymlinks
 RewriteEngine on
 rewriterule ^blogs/the-new-era-of-custom-application-development-services–2021-and-beyond(.*)$ https://www.ditstek.com/blogs/the-new-era-of-custom-application-development-services-2021-and-beyond$1 [r=301,nc]
-
 </IfModule>
 
 <IfModule mod_rewrite.c>

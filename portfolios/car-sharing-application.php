@@ -1,3 +1,11 @@
+<?php
+require_once('../core/dbconnection1.php');
+require_once('../core/portfolio_function.php');
+
+$portfolio_id=mysqli_real_escape_string($conn,$_GET['id']);
+$get_portfolio=get_portfolio($conn,'',$portfolio_id);
+//prx($get_portfolio)
+?>
 <!doctype html>
 <html lang="en">
    <head>
@@ -41,13 +49,15 @@
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
          <?php include_once('../common/popup-form.php'); ?>
       </div>
+      
+
       <section class="portfolioInner">
          <div class="container">
             <div class="row">
                <div class="col-sm-6">
                   <div class="portfolioInnerDesc">
-                     <h2>Peer to Peer Car Sharing Application</h2>
-                     <p>The proposed application is a peer-to-peer car-sharing application that allows car owners to list a car and renters to rent a desired and available.<br><b>There are two main user groups related to this application.</b><br>
+                     <h2><?php echo $get_portfolio[0]['title'] ?></h2>
+                     <p><?php echo $get_portfolio[0]['short_desc'] ?></b><br>
                       Car Owner <br>Car Renter</p>
                      <h3>USP/Features</h3>
                     <ul>

@@ -28,13 +28,3 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 
 </script>
-	   <!--<script src="/ditsproject/assets/js/jquery.min.js"></script>-->
-	   <!--<script src="/ditsproject/assets/js/jquery.counterup.min.js"></script>-->
-	   <!--<script src="/ditsproject/assets/js/bootstrap.min.js"></script>-->
-	   <!--<script src="/ditsproject/assets/js/popper.min.js"></script>-->
-	   <!--<script src="/ditsproject/assets/js/wow.min.js"></script>-->
-    <!--   <script src="/ditsproject/assets/js/owl.carousel.js"></script>-->
-    <!--   <script src="/ditsproject/assets/js/jquery.nicescroll.min.js"></script>-->
-    <!--   <script src="/ditsproject/assets/js/custom.js"></script>-->
-    <!--   <script src="/ditsproject/assets/js/jquery.validate.js"></script>-->
-	   <!--<script src="/ditsproject/assets/js/contact.js"></script>-->

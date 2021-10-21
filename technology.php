@@ -7,7 +7,7 @@
       <meta name="keywords" content=".NET DEVELOPMENT, full-stack developers, Hire front-end developers, Hire php developers, remote custom software development, custom web application development company, web application development services, outsource web development company"/>
       <meta name="author" content="Ditstek Innovations"/>
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <title>Technology - Ditstek Innovations</title>
+      <title>Custom Software Solutions - Ditstek Innovations</title>
       <!--common css-->
       <link href="https://www.ditstek.com/technology" rel="canonical"/>
       <?php include_once('common/commoncss.php'); ?>

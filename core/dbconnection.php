@@ -1,7 +1,15 @@
 <?php
+session_start();
+// For Live
+// $servername = "localhost";
+// $username = "ditstek";
+// $password = "ditstekdb@9876";
+// $dbname = "ditstekdb";
+
+// For Local
 $servername = "localhost";
-$username = "ditstek";
-$password = "ditstekdb@9876";
+$username = "root";
+$password = "";
 $dbname = "ditstekdb";
 
 // Create connection

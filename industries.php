@@ -7,7 +7,7 @@
     <meta name="keywords" content="Healthcare development services, fintech software development company, IoT development company, Real Estate App Development, EdTech software development, custom retail software, workflow automation company">
 	<meta name="description" content="DITS specializes in offering custom software development solutions for industries like Healthcare, Fintech, Retail, Business Workflow Automation, Ed-Tech, IOT & Real Estate.">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Industries - Ditstek Innovations</title>
+	<title>Software Solutions for Industries - Ditstek Innovations</title>
 	<link href="http://demo1.ditstek.com/domain" rel="canonical"/>
 	<!--common css-->
 	<?php include_once('common/commoncss.php'); ?>
@@ -42,9 +42,10 @@
 								<li class="nav-item">
 									<a id="tab-C" href="#pane-C" class="nav-link" data-toggle="tab" role="tab">Business and Workflow Automation</a>
 								</li>
-									<li class="nav-item">
+								<li class="nav-item">
 									<a id="tab-B" href="#pane-B" class="nav-link" data-toggle="tab" role="tab">Retail</a>
 								</li>
+							
 								<li class="nav-item">
 									<a id="tab-D" href="#pane-D" class="nav-link" data-toggle="tab" role="tab">Ed-Tech</a>
 								</li>
@@ -79,7 +80,7 @@
 													<div class="thumbDesc">
 														<div class="innerThumbDesc">
 															<h2>Custom Healthcare Software Development Company: Right From Ideation To Launch And Its Maintenance</h2>
-															<p>Healthcare companies thrive to provide the best possible healthcare, but the unprecedented hurdles they face in terms of improving the quality of care delivered in fragmented supply chains, reduced cost margins, sky-high R&D costs, and compliance constraints at the same time is inevitable. The importance of modifying healthcare operations as more dynamic, agile, and affordable has been duly emphasized. We have developed solutions from scratch, maintained and enhanced solutions as per the state and federal regulations and compliances while supporting all primary interoperability standards, including <strong>HL7, ICD-9, ICD-10, CDA, CCR, Third Party Integrations and Compliances (HIPAA)</strong> and more</p>
+															<p>Healthcare companies thrive to provide the best possible healthcare, but the unprecedented hurdles they face in terms of improving the quality of care delivered in fragmented supply chains, reduced cost margins, sky-high R&D costs, and compliance constraints at the same time is inevitable. The importance of modifying healthcare operations as more dynamic, agile, and affordable has been duly emphasized. We have developed solutions from scratch, maintained and enhanced solutions as per the state and federal regulations and compliances while supporting all primary interoperability standards, including <strong>HL7, ICD-9, ICD-10, CDA, CCR, Third Party Integrations and Compliances (HIPAA)</strong> and more.</p>
 														</div>
 													</div>
 												</div>
@@ -88,7 +89,7 @@
 												<div class="col-md-12">
 													<div class="thumbDesc">
 														<div class="innerThumbDesc">
-															<h3>Our Healthcare Software Solutions</h3>
+														<h3>Our Healthcare Software Solutions</h3>
 															<p>We strive to build robust, <strong>custom-built healthcare software solutions </strong> and <strong>healthcare mobile applications </strong> while operating as a digital consultant for health institutions to accomplish digital transformation initiatives to deliver secure, business-centric, user-friendly services seamlessly.</p>
 															<ul>
 																<li><a href="#">Electronic Medical Record(EMR)</a></li>
@@ -132,8 +133,8 @@
 												<div class="col-md-7">
 													<div class="thumbDesc">
 														<div class="innerThumbDesc">
-											<h2>Retail</h2>
-															<p><strong>DITS</strong> offers custom retail software development services for brick and mortar, e-commerce, c-store & grocery, web, and mobile systems. We also provide brick-and-mortar POS integrations built with automated invoicing, payment processing, and security features that work flawlessly with all payment forms, such as bank cards, checks, and mobile payments.</p>
+															 <h2>Retail</h2>
+															<p><strong>DITS</strong> offers custom retail software development services for brick and mortar, e-commerce, c-store & grocery, web, and mobile systems. We also provide brick-and-mortar <strong>POS</strong> integrations built with automated invoicing, payment processing, and security features that work flawlessly with all payment forms, such as bank cards, checks, and mobile payments.</p>
 															<ul style="padding: 0px 0 15px 24px;"> 
 															   <li><a href="#">Virtual Storefronts</a></li>
 															   <li><a href="#">B2C & B2B </a></li>
@@ -147,9 +148,9 @@
 											<div class="row">
 												<div class="col-md-12">
 													<div class="thumbDesc">
-														<div class="innerThumbDesc">
-														<p>We blend payment and order processing systems into your virtual storefronts for more secure transaction processing and conventional billing automation and have developed feature-rich, sophisticated B2B, B2C, C2C, B2B2C marketplaces that bring vendors, distributors, and customers together in a centralized platform.</p>
-														    <p>Our highly dedicated developers also design unique e-commerce websites and applications that are mobile-friendly and provide the ultimate shopping experiences for customers. We also engineer mobile-responsive e-commerce software solutions and retail management systems that allow Ecommerce portal development with automated synchronization of your physical catalog with your e-commerce store.</p>
+														<div class="innerThumbDesc" style="padding:20px 0 0 0;">
+														  <p>We blend payment and order processing systems into your virtual storefronts for more secure transaction processing and conventional billing automation and have developed feature-rich, sophisticated <strong>B2B, B2C, C2C, B2B2C marketplaces</strong> that bring vendors, distributors, and customers together in a centralized platform.</p>
+														    <p>Our <strong>highly dedicated developers</strong> also design unique e-commerce websites and applications that are mobile-friendly and provide the ultimate shopping experiences for customers. We also engineer mobile-responsive e-commerce software solutions and <strong>retail management systems</strong> that allow Ecommerce portal development with automated synchronization of your physical catalog with your e-commerce store.</p>
 														</div>
 													</div>
 												</div>
@@ -177,8 +178,21 @@
 													<div class="thumbDesc">
 														<div class="innerThumbDesc">
 															<h2>Business And Workflow Automation</h2>
-															<p><b>Business And Workflow Automation</b> is the automation of business processes through technology, empowering businesses to curtail expenses and enhance productivity. Rather than hiring employees doing repeated and menial jobs, the businesses can let the software handle these tasks.  Approval management, Employee onboarding, Customer support, evaluation of examinations are examples of business process automation.  Supply Chain, HR, Financial & Legal, Management Procurement, Sales & Marketing, Production, Banking, finance, insurance, education, sales, marketing are some of the domains which are reaping the rewards of business process automation </p>
-															<p>Business processes that are either repetitive or involve a series of predictable steps are the perfect suitor of automation. Automation improves employees' productivity as they are no longer required to perform repetitive tasks. It also enhances the quality of service as chances of human errors are eliminated</p>
+															<p><strong>Business And Workflow Automation</strong> is the automation of business processes through technology, empowering businesses to curtail expenses and enhance productivity. Rather than hiring employees doing repeated and menial jobs, the businesses can let the software handle these tasks.  <strong>Approval management, Employee onboarding, Customer support,</strong> evaluation of examinations are examples of business process automation.  </p>
+															<h3>Here are some of the domains which are reaping the rewards of business process automation:</h3>
+															<ul class="d-flex flex-wrap flow">
+														     	<li><a href="#">Supply Chain</a></li>
+																<li><a href="#">HR</a></li>
+																<li><a href="#">Financial & Legal</a></li>
+																<li><a href="#">Management Procurement</a></li>
+																<li><a href="#">TeleHealth and TeleMedicine</a></li>
+																<li><a href="#">Sales & Marketing</a></li>
+																<li><a href="#">Production </a></li>
+																<li><a href="#">Banking</a></li>
+																<li><a href="#">Finance</a></li>
+																<li><a href="#">Insurance</a></li>
+																<li><a href="#">Education</a></li>
+															</ul>
 														</div>
 													</div>
 												</div>
@@ -187,9 +201,8 @@
 												<div class="col-md-12">
 													<div class="thumbDesc">
 														<div class="innerThumbDesc">
-															<p><b>DITS</b> provides business automation applications outsourcing services to startups and business automation product development companies. We understand the technology, business, and automation domain and experience delivering business automation products. We also provide business automation application outsourcing services, business automation web application development services and business automation application developers for hire</p>
-															
-															<p>If you are a startup or an enterprise-level company that requires automating your business process, we can help you with mobile application development, web application development, API integration,  quality assurance or any other custom requirement.
+														<p><strong>DITS</strong> provides <strong>business automation applications outsourcing services</strong> to <strong>startups </strong> and <strong>business automation product development companies.</strong> We understand the technology, business, and automation domain and experience delivering business automation products. We also provide business automation application outsourcing services, business automation web application development services and business automation application developers for hire.</p>
+															<p>If you are a <strong>startup</strong> or an <strong>enterprise-level company</strong> that requires automating your business process, we can help you with <strong>Mobile Application Development, Web Application Development, API Integration, Quality Assurance</strong> or any other custom requirement.
 															</p>
 														</div>
 													</div>
@@ -218,9 +231,9 @@
 													<div class="thumbDesc">
 														<div class="innerThumbDesc">
 															<h2>Ed-Tech</h2>
-															<p><strong>DITS</strong> offers custom-tailored EdTech software development services for educational institutions and companies of nearly all sizes, introducing modern learning practices powered by the latest technology. We are competent to provide a personalized elearning experience through cutting-edge EdTech software.</p>
-															<p>Whether you are looking for eLearning software for businesses or any educational establishments, our team comes to help. We rigorously evaluate your requirements and industry specifics to develop a fully-featured EdTech development solution corresponding to your needs. In addition, our engineers build the functionality that delivers value to your users from simple eLearning portals to complex administration software.</p>
-															<p>As an expert in <b>EdTech software development</b>, <b>DITS </b> helps businesses and educational institutions enhance employee and student engagement in the learning process. Embrace the advantages of our sophisticated eLearning solutions.</p>
+															<p><strong>DITS</strong> offers custom-tailored <strong>EdTech software development services</strong> for educational institutions and companies of nearly all sizes, introducing modern learning practices powered by the latest technology. We are competent to provide a personalized elearning experience through cutting-edge <strong>EdTech software.</strong></p>
+															<p>Whether you are looking for <strong>eLearning software</strong> for businesses or any educational establishments, our team comes to help. We rigorously evaluate your requirements and industry specifics to develop a fully-featured EdTech development solution corresponding to your needs. In addition, our engineers build the functionality that delivers value to your users from simple eLearning portals to complex administration software.</p>
+															<p>As an expert in <strong>EdTech software development</strong>, <strong>DITS </strong> helps businesses and educational institutions enhance employee and student engagement in the learning process. Embrace the advantages of our sophisticated eLearning solutions.</p>
 														</div>
 													</div>
 												</div>
@@ -229,7 +242,7 @@
 												<div class="col-md-12">
 													<div class="thumbDesc">
 														<div class="innerThumbDesc">
-															<ul>
+														<ul>
 																<li><a href="#">Learning Management Solutions</a></li>
 																<li><a href="#">Virtual / Remote Learning Platform</a></li>
 																<li><a href="#">e-learning Application Development</a></li>
@@ -261,8 +274,8 @@
 												<div class="col-md-7">
 													<div class="thumbDesc">
 														<div class="innerThumbDesc">
-															<h2>IOT</h2>
-															<p><strong>The Internet of Things (IoT) </strong> has created a huge network of trillions of things that are interacting with each other and is deemed as a wave in the global information industry. As an IoT app development company, DITS aims and intends to provide solutions for all business concerns and provide insights by embracing innovative IoT ideas that allow devices to communicate. Our solutions ensure innovative business models that improve not only operational excellence but also achieve high business value.</p>
+														<h2>IOT</h2>
+															<p><strong>The Internet of Things (IoT) </strong> has created a huge network of trillions of things that are interacting with each other and is deemed as a wave in the global information industry. As an <strong>IoT app development company</strong>, <strong>DITS</strong>  aims and intends to provide solutions for all business concerns and provide insights by embracing innovative IoT ideas that allow devices to communicate. Our solutions ensure innovative business models that improve not only operational excellence but also achieve high business value.</p>
 														    <h3>Industrial Automation</h3>
 														    <p>The Industrial automation apps guarantee your assets are utilized optimally and run the preventive maintenance to augment the asset utilization by automating different processes and machinery</p>
 														</div>
@@ -316,7 +329,7 @@
 															<h2>Fintech Software Development</h2>
 															<p><strong>DITS </strong> aid companies to transform their financial services with emerging tech for improved operational efficiency, greater transparency, faster response times, and better customer experience. We connect financial expertise with innovative technologies to deliver outstanding fintech solutions while using the latest technology to develop smooth-running, user-friendly, and secure financial apps.</p>
 															<h3>FinTech Development Services</h3>
-															<p><b>DITS</b> has gained the trust of fintech MVPs and startups by providing robust and secure fintech products like e-wallet apps that enable users to top-up and pay bills with their phones and are powered by state-of-the-art technologies. Our inclusive expertise and extensive experience ensure the on-time delivery of next-generation fintech products. In addition, we also provide custom fintech software development services on both web and mobile platforms for better user engagement, custom reporting, and real-time data interaction.</p>
+															<p><strong>DITS</strong> has gained the trust of <strong>fintech MVPs</strong> and <strong>startups </strong> by providing robust and secure fintech products like <strong>e-wallet apps</strong> that enable users to top-up and pay bills with their phones and are powered by state-of-the-art technologies. Our inclusive expertise and extensive experience ensure the on-time delivery of next-generation fintech products. In addition, we also provide <strong>custom fintech software development services</strong> on both <strong>web and mobile platforms</strong> for better user engagement, custom reporting, and real-time data interaction.</p>
 														</div>
 													</div>
 												</div>
@@ -325,7 +338,7 @@
 												<div class="col-md-12">
 													<div class="thumbDesc">
 														<div class="innerThumbDesc">
-															<p>Here is a list of the fintech software development services we provide:</p>
+															<p>Here is a list of the <strong>fintech software development</strong> services we provide:</p>
 															<ul>
 																<li><a href="#">Startups / MVP Development</a></li>
 																<li><a href="#">FinTech Web App Development</a></li>
@@ -338,10 +351,8 @@
 																<li><a href="#">Fintech Payment Solutions</a></li>
 																<li><a href="#">Data Analytics in Fintech</a></li>
 															</ul>
-															<p>From simple mobile payment apps to complex enterprise-level financial platforms, we provide our in-depth
-																fintech expertise and efficient customer-oriented approach to assist our clients on their way to digital
-																transformation. Having great experience in banking and financial software development, we develop either
-																from scratch or enhance existing financial solutions for our clients. We are enthusiastic about analyzing
+															<p>From simple <strong>mobile payment apps</strong> to complex <strong>enterprise-level financial platforms,</strong> we provide our in-depth
+																fintech expertise and efficient customer-oriented approach to assist our clients on their way to digital transformation. Having great experience in banking and <strong> financial software development,</strong> we develop either from scratch or enhance existing financial solutions for our clients. We are enthusiastic about analyzing
 																the market and building an effective fintech solution for your business.
 															</p>
 														</div>
@@ -371,8 +382,8 @@
 													<div class="thumbDesc">
 														<div class="innerThumbDesc">
 															<h2>Real Estate App Development</h2>
-															<p>The brand reputation of your real estate business is not only reliant on the revenue but moves one step further. Web and Mobile app development form an intrinsic part of the solution, with more and more customers becoming app savvy. Drive user engagement and conversions with our real-estate apps, embedded with traits such as push notifications, Google Maps, and geolocation.</p></br>
-														    <p><strong>DITS</strong> develops innovative, higher-end real-estate apps that are compelled to provide an edge over your rivals. We offer custom solutions for your business as per your specifications.</p>
+															<p>The brand reputation of your real estate business is not only reliant on the revenue but moves one step further. Web and Mobile app development form an intrinsic part of the solution, with more and more customers becoming app savvy. Drive user engagement and conversions with our <strong>real-estate apps,</strong> embedded with traits such as push notifications, Google Maps, and geolocation.</p></br>
+														    <p><strong>DITS</strong> develops innovative, <strong>custom real-estate apps</strong> that are compelled to provide an edge over your rivals. We offer custom solutions for your business as per your specifications.</p>
 														</div>
 													</div>
 												</div>
@@ -381,7 +392,7 @@
 												<div class="col-md-12">
 													<div class="thumbDesc">
 														<div class="innerThumbDesc">
-															<h3>Real-estate App Development Solutions</h3>
+														<h3>Real-estate App Development Solutions</h3>
 															<p>We provide actionable insights with our apps by using tools that can gauge user sentiments. This sets a digital footprint for your real-estate business with our highly customized app development solutions</p>
 															<p>Our comprehensive solutions for your real estate business comprises:  </p>
 															<ul>
@@ -395,7 +406,7 @@
 															
 															</ul>
 															<p>
-															<strong>DITS</strong> can help to connect over the web and mobile app for faster decision-making and glassiness in the process. Power your real estate business with technology and scale with our Real Estate App Development Services.
+															<strong>DITS</strong> can help to connect over the web and mobile app for faster decision-making and glassiness in the process. Power your real estate business with technology and scale with our <strong>Real Estate App Development Services.</strong>
 																</p>
 														  	</div>
 													</div>
