@@ -10,7 +10,7 @@ session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "ditstek";
+$dbname = "ditstekdb";
 $url = "http://localhost/Dits-Website/";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
