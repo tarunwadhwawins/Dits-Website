@@ -53,16 +53,16 @@
                      <h4 class="widget-title">Quick Links</h4>
                      <ul>
                         <li class="border-widget">
-                           <a href="/about" title="About Us"><i class="feather icon-arrow-right"></i>About Us </a>
+                           <a href="<?php echo $url; ?>about" title="About Us"><i class="feather icon-arrow-right"></i>About Us </a>
                         </li>
                         <li class="border-widget">
-                           <a href="/blogs" title="Blogs" target="_blank"><i class="feather icon-arrow-right"></i>Blogs </a>
+                           <a href="<?php echo $url; ?>blogs" title="Blogs" target="_blank"><i class="feather icon-arrow-right"></i>Blogs </a>
                         </li>
                         <li class="border-widget">
-                           <a href="/portfolio" title="Portfolio "><i class="feather icon-arrow-right"></i>Portfolio </a>
+                           <a href="<?php echo $url; ?>portfolio" title="Portfolio "><i class="feather icon-arrow-right"></i>Portfolio </a>
                         </li>
                         <li class="border-widget">
-                           <a href="/contact" title=" Contact Us"><i class="feather icon-arrow-right"></i>Contact Us </a>
+                           <a href="<?php echo $url; ?>contact" title=" Contact Us"><i class="feather icon-arrow-right"></i>Contact Us </a>
                         </li>
                      </ul>
                   </div>
@@ -73,16 +73,16 @@
                      <h4 class="widget-title">Services</h4>
                      <ul>
                         <li class="border-widget">
-                           <a href="/services/software-development-services" title=" Software Development Services"><i class="feather icon-arrow-right"></i>Software Development Services </a>
+                           <a href="<?php echo $url; ?>services/software-development-services" title=" Software Development Services"><i class="feather icon-arrow-right"></i>Software Development Services </a>
                         </li>
                         <li class="border-widget">
-                           <a href="/services/full-stack-development-services" title="Full Stack  Development Services "><i class="feather icon-arrow-right"></i>Full Stack  Development Services </a>
+                           <a href="<?php echo $url; ?>services/full-stack-development-services" title="Full Stack  Development Services "><i class="feather icon-arrow-right"></i>Full Stack  Development Services </a>
                         </li>
 						  <li class="border-widget">
-                           <a href="/services/custom-application-development" title="Custom Application Development"><i class="feather icon-arrow-right"></i>Custom Application Development </a>
+                           <a href="<?php echo $url; ?>services/custom-application-development" title="Custom Application Development"><i class="feather icon-arrow-right"></i>Custom Application Development </a>
                         </li>
 						  <li class="border-widget">
-                           <a href="/services/hire-remote-developers" title="Hire Remote Developers"><i class="feather icon-arrow-right"></i>Hire Remote Developers</a>
+                           <a href="<?php echo $url; ?>services/hire-remote-developers" title="Hire Remote Developers"><i class="feather icon-arrow-right"></i>Hire Remote Developers</a>
                         </li>
                      </ul>
                   </div>
@@ -93,7 +93,7 @@
                      <div class="widget-contact">
 				       <ul>
 						 <li><span><i class="feather icon-map-pin"></i></span> SCO - 356 , First Floor, 44-D, Chandigarh, 160047</li> 
-						  <li><div class="mainClass"><a href="mailto:info@ditstek.com"><span><i class="feather icon-mail"></i></span><img src="/assets/images/Img-Bottom.png" alt="image"/></a></div></li>
+						  <li><div class="mainClass"><a href="mailto:info@ditstek.com"><span><i class="feather icon-mail"></i></span><img src="<?php echo $url; ?>assets/images/Img-Bottom.png" alt="image"/></a></div></li>
 						 <li><div class="mainClass"><a href="tel:+91-623-942-1395"><span><i class="feather icon-phone"></i></span> +91-623-942-1395 </a></div></li> 
 						<li><div class="mainClass"><a href="skype:-princy.dhupar-?chat"><span><i class="fa fa-skype"></i></span> princy.dhupar</a></div></li> 
 					   </ul> 
@@ -111,7 +111,7 @@
 				 <div class="col-sm-6 ">
                   <div class="copy-right">
                      <ul>
-					  <li><a href="/privacy-policy" title="Privacy Policy">Privacy Policy</a></li> 
+					  <li><a href="<?php echo $url; ?>privacy-policy" title="Privacy Policy">Privacy Policy</a></li> 
 					  <!-- <li><a href="#" title="Terms & Conditions">Terms & Conditions</a></li>  -->
 					 </ul>
                   </div>

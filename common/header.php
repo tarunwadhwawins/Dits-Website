@@ -102,7 +102,7 @@ $current_page = $_SERVER['REQUEST_URI'];
                 <div class="col-sm-6">
                     <div class="contactDetails">
                         <div class="phone"><a href="tel:+91-623-942-1395"><i class="feather icon-phone"></i>+91-623-942-1395</a></div>
-                        <div class="email"><a href="mailto:info@ditstek.com"><i class="feather icon-mail"></i><img src="/assets/images/Img-Top.png" alt="image"/></a></div>
+                        <div class="email"><a href="mailto:info@ditstek.com"><i class="feather icon-mail"></i><img src="<?php echo $url; ?>assets/images/Img-Top.png" alt="image"/></a></div>
                     </div>
                 </div>
                 <div class="col-sm-6">
@@ -125,7 +125,7 @@ $current_page = $_SERVER['REQUEST_URI'];
             <div class="row">
                 <div class="col-sm-12">
                     <nav class="navbar navbar-expand-md">
-                        <a class="navbar-brand" href="/"><img src="/assets/images/logo.png" title="Ditstek Innovations" alt="image"/></a>
+                        <a class="navbar-brand" href="<?php echo $url; ?>"><img src="<?php echo $url; ?>assets/images/logo.png" title="Ditstek Innovations" alt="image"/></a>
                         <button type="button" class="navbar-toggle hidden-lg" data-toggle="collapse" id="offcanvas-toggler">
                             <div class="menu-bar"></div>
           <!--                   <img src="/assets/images/menu-bar.png" alt="image"/>-->
@@ -133,10 +133,10 @@ $current_page = $_SERVER['REQUEST_URI'];
                         <div class="collapse navbar-collapse" id="collapsibleNavbar">
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item <?php echo $current_page == '/index' ? 'active' : '' ?>">
-                                    <a class="nav-link" href="/" title="Home">Home</a>
+                                    <a class="nav-link" href="<?php echo $url; ?>" title="Home">Home</a>
                                 </li>
                                 <li class="nav-item <?php echo $current_page == '/about' ? 'active' : '' ?>">
-                                    <a class="nav-link" href="/about" title="About Us">About Us</a>
+                                    <a class="nav-link" href="<?php echo $url; ?>about" title="About Us">About Us</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Services <i class="fa fa-angle-down" aria-hidden="true"></i></a>
@@ -176,10 +176,10 @@ $current_page = $_SERVER['REQUEST_URI'];
                                                             <div class="col-sm-6">
                                                                 <div class="serviceSubMenu">
                                                                     <ul>
-                                                                        <li class="nav-item <?php echo $current_page == '/services/custom-application-development' ? 'active' : '' ?>"><a class="nav-link" href="/services/custom-application-development"><i class="feather icon-arrow-right"></i>Custom application development</a></li>
-                                                                        <li class="nav-item <?php echo $current_page == '/services/software-development-services' ? 'active' : '' ?>"><a class="nav-link" href="/services/software-development-services"><i class="feather icon-arrow-right"></i>Software development services</a></li>
-                                                                        <li class="nav-item <?php echo $current_page == '/services/full-stack-development-services' ? 'active' : '' ?>"><a class="nav-link" href="/services/full-stack-development-services"><i class="feather icon-arrow-right"></i>Full-stack development Services</a></li>
-                                                                        <li class="nav-item  <?php echo $current_page == '/services/dedicated-development-team' ? 'active' : '' ?>"><a class="nav-link" href="/services/dedicated-development-team"><i class="feather icon-arrow-right"></i>Dedicated development team</a></li>
+                                                                        <li class="nav-item <?php echo $current_page == '/services/custom-application-development' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>services/custom-application-development"><i class="feather icon-arrow-right"></i>Custom application development</a></li>
+                                                                        <li class="nav-item <?php echo $current_page == '/services/software-development-services' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>services/software-development-services"><i class="feather icon-arrow-right"></i>Software development services</a></li>
+                                                                        <li class="nav-item <?php echo $current_page == '/services/full-stack-development-services' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>services/full-stack-development-services"><i class="feather icon-arrow-right"></i>Full-stack development Services</a></li>
+                                                                        <li class="nav-item  <?php echo $current_page == '/services/dedicated-development-team' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>services/dedicated-development-team"><i class="feather icon-arrow-right"></i>Dedicated development team</a></li>
                                                                         <!---->
                                                                     </ul>
                                                                 </div>
@@ -187,12 +187,12 @@ $current_page = $_SERVER['REQUEST_URI'];
                                                             <div class="col-sm-6">
                                                                 <div class="serviceSubMenu">
                                                                     <ul>
-                                                                        <li class="nav-item <?php echo $current_page == '/services/hire-remote-developers' ? 'active' : '' ?>"><a class="nav-link" href="/services/hire-remote-developers"><i class="feather icon-arrow-right"></i>Hire Remote Developers</a>
+                                                                        <li class="nav-item <?php echo $current_page == '/services/hire-remote-developers' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>services/hire-remote-developers"><i class="feather icon-arrow-right"></i>Hire Remote Developers</a>
                                                                             <ul>
-                                                                                <li class="nav-item <?php echo $current_page == '/services/hire-asp-net-developers' ? 'active' : '' ?>"><a class="nav-link" href="/services/hire-asp-net-developers">Hire Asp.Net Developers</a></li>
-                                                                                <li class="nav-item <?php echo $current_page == '/services/hire-php-developers' ? 'active' : '' ?>"><a class="nav-link" href="/services/hire-php-developers">Hire PHP Developers</a></li>
-                                                                                <li class="nav-item <?php echo $current_page == '/services/hiring-ui-ux-developers' ? 'active' : '' ?>"><a class="nav-link" href="/services/hiring-ui-ux-developers">Hire UI/UX Developers</a></li>
-                                                                                <li class="nav-item <?php echo $current_page == '/services/front-end-development' ? 'active' : '' ?>"><a class="nav-link" href="/services/front-end-development">Hire Front End Developers</a></li>
+                                                                                <li class="nav-item <?php echo $current_page == '/services/hire-asp-net-developers' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>services/hire-asp-net-developers">Hire Asp.Net Developers</a></li>
+                                                                                <li class="nav-item <?php echo $current_page == '/services/hire-php-developers' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>services/hire-php-developers">Hire PHP Developers</a></li>
+                                                                                <li class="nav-item <?php echo $current_page == '/services/hiring-ui-ux-developers' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>services/hiring-ui-ux-developers">Hire UI/UX Developers</a></li>
+                                                                                <li class="nav-item <?php echo $current_page == '/services/front-end-development' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>services/front-end-development">Hire Front End Developers</a></li>
                                                                                 <!--
                                                                                                                                             <li><a href="#">Hiring MEAN Developers</a></li>
                                                                                                                                             <li><a href="#">Hiring Angular Developers</a></li>
@@ -215,33 +215,33 @@ $current_page = $_SERVER['REQUEST_URI'];
                                                                 
                                                                 <div class="item">
                                                                     <div class="blogBox">
-                                                                        <img class="img-fluid" src="../assets/images/sass-based-b2b-b2c-fintech-based-application-banner.jpg" alt="image">
-                                                                        <h6><a href="/portfolios/saas-based-b2b-b2c-fintech-based-application">Fintech Based Application</a></h6>
+                                                                        <img class="img-fluid" src="<?php echo $url; ?>assets/images/sass-based-b2b-b2c-fintech-based-application-banner.jpg" alt="image">
+                                                                        <h6><a href="<?php echo $url; ?>portfolios/saas-based-b2b-b2c-fintech-based-application">Fintech Based Application</a></h6>
                                                                     </div>
                                                                 </div>	
                                                                 <div class="item">
                                                                     <div class="blogBox">
-                                                                        <img class="img-fluid" src="../assets/images/virtual-learning-platform.jpg" alt="image">
-                                                                        <h6><a href="/portfolios/virtual-learning-platform">Virtual Learning Platform</a></h6>
+                                                                        <img class="img-fluid" src="<?php echo $url; ?>assets/images/virtual-learning-platform.jpg" alt="image">
+                                                                        <h6><a href="<?php echo $url; ?>portfolios/virtual-learning-platform">Virtual Learning Platform</a></h6>
                                                                     </div>
                                                                 </div>
                                                                  <div class="item">
                                                                     <div class="blogBox">
-                                                                        <img class="img-fluid" src="../assets/images/practice-management.jpg" alt="image">
-                                                                        <h6><a href="/portfolios/practice-management">Practice Management System</a></h6>
+                                                                        <img class="img-fluid" src="<?php echo $url; ?>assets/images/practice-management.jpg" alt="image">
+                                                                        <h6><a href="<?php echo $url; ?>portfolios/practice-management">Practice Management System</a></h6>
                                                                     </div>
                                                                 </div>
                                                                 <div class="item">
                                                                     <div class="blogBox">
-                                                                        <img class="img-fluid" src="../assets/images/patient-engagement.jpg" alt="image">
-                                                                        <h6> <a href="/portfolios/patient-engagement">Patient Engagement Application </a></h6>
+                                                                        <img class="img-fluid" src="<?php echo $url; ?>assets/images/patient-engagement.jpg" alt="image">
+                                                                        <h6> <a href="<?php echo $url; ?>portfolios/patient-engagement">Patient Engagement Application </a></h6>
                                                                     </div>
                                                                 </div>	
                                                                
                                                                 <div class="item">
                                                                     <div class="blogBox">
-                                                                        <img class="img-fluid" src="../assets/images/form-builder.jpg" alt="image">
-                                                                        <h6><a href="/portfolios/form-builder">Component Form Builder</a></h6>
+                                                                        <img class="img-fluid" src="<?php echo $url; ?>assets/images/form-builder.jpg" alt="image">
+                                                                        <h6><a href="<?php echo $url; ?>portfolios/form-builder">Component Form Builder</a></h6>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -268,18 +268,18 @@ $current_page = $_SERVER['REQUEST_URI'];
                                     </ul>
                                 </li>
                                 <li class="nav-item <?php echo $current_page == '/technology' ? 'active' : '' ?>">
-                                    <a class="nav-link" href="/technology" title="Technology">Technology</a>
+                                    <a class="nav-link" href="<?php echo $url; ?>technology" title="Technology">Technology</a>
                                 </li>
 								 <li class="nav-item <?php echo $current_page == '/industries' ? 'active' : '' ?>">
-                                <a class="nav-link" href="/industries" title="Industries">Industries</a> </li>
+                                <a class="nav-link" href="<?php echo $url; ?>industries" title="Industries">Industries</a> </li>
                                 <li class="nav-item <?php echo $current_page == '/blogs' ? 'active' : '' ?>">
-                                    <a class="nav-link" href="/blogs" title="Blogs">Blogs</a>
+                                    <a class="nav-link" href="<?php echo $url; ?>blogs" title="Blogs">Blogs</a>
                                 </li>
                                 <li class="nav-item <?php echo $current_page == '/portfolio' ? 'active' : '' ?>">
-                                    <a class="nav-link" href="/portfolio" title="Portfolio">Portfolio</a>
+                                    <a class="nav-link" href="<?php echo $url; ?>portfolio" title="Portfolio">Portfolio</a>
                                 </li>
                                 <li class="nav-item <?php echo $current_page == '/contact' ? 'active' : '' ?>">
-                                    <a class="nav-link" href="/contact" title="Contact Us">Contact Us</a>
+                                    <a class="nav-link" href="<?php echo $url; ?>contact" title="Contact Us">Contact Us</a>
                                 </li>
                             </ul>
                         </div>
@@ -297,35 +297,35 @@ $current_page = $_SERVER['REQUEST_URI'];
     <button type="button" class="close-offcanvas"><i class="fa fa-remove"></i></button>
     <div class="offcanvas-inner">
         <ul>
-            <li class="nav-item <?php echo $current_page == '/index' ? 'active' : '' ?>"><a class="nav-link" href="/index">Home</a></li>
-            <li class="nav-item <?php echo $current_page == '/about' ? 'active' : '' ?>"><a class="nav-link" href="/about">About Us</a></li>
+            <li class="nav-item <?php echo $current_page == '/index' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>">Home</a></li>
+            <li class="nav-item <?php echo $current_page == '/about' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>about">About Us</a></li>
             <li><a href="#">Services </a>
                 <span role="button" class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-02265" aria-expanded="false" aria-controls="collapse-menu-02">
                     <i class="fa fa-plus"></i><i class="fa fa-minus"></i>
                 </span>
                 <ul class="collapse" id="collapse-menu-02265" aria-expanded="false">
-                    <li class="nav-item <?php echo $current_page == '/services/custom-application-development' ? 'active' : '' ?>"><a href="/services/custom-application-development">Custom application development</a></li>
-                    <li class="nav-item <?php echo $current_page == '/services/software-development-services' ? 'active' : '' ?>"><a href="/services/software-development-services">Software development services</a></li>
-                    <li class="nav-item <?php echo $current_page == '/services/full-stack-development-services' ? 'active' : '' ?>"><a href="/services/full-stack-development-services">Full-stack development Services</a></li>
-                    <li class="nav-item <?php echo $current_page == '/about' ? 'active' : '' ?>"><a href="/services/dedicated-development-team">Dedicated development team</a></li>
-                    <li class="nav-item <?php echo $current_page == '/services/hire-remote-developers' ? 'active' : '' ?>"><a href="/services/hire-remote-developers">Hire Remote Developers</a>
+                    <li class="nav-item <?php echo $current_page == '/services/custom-application-development' ? 'active' : '' ?>"><a href="<?php echo $url; ?>services/custom-application-development">Custom application development</a></li>
+                    <li class="nav-item <?php echo $current_page == '/services/software-development-services' ? 'active' : '' ?>"><a href="<?php echo $url; ?>services/software-development-services">Software development services</a></li>
+                    <li class="nav-item <?php echo $current_page == '/services/full-stack-development-services' ? 'active' : '' ?>"><a href="<?php echo $url; ?>services/full-stack-development-services">Full-stack development Services</a></li>
+                    <li class="nav-item <?php echo $current_page == '/about' ? 'active' : '' ?>"><a href="<?php echo $url; ?>services/dedicated-development-team">Dedicated development team</a></li>
+                    <li class="nav-item <?php echo $current_page == '/services/hire-remote-developers' ? 'active' : '' ?>"><a href="<?php echo $url; ?>services/hire-remote-developers">Hire Remote Developers</a>
                         <span role="button" class="offcanvas-menu-toggler collapsed" data-toggle="collapse" data-target="#collapse-menu-02266" aria-expanded="false" aria-controls="collapse-menu-02">
                             <i class="fa fa-plus"></i><i class="fa fa-minus"></i>
                         </span>
                         <ul class="collapse" id="collapse-menu-02266" aria-expanded="false">
-                            <li class="nav-item <?php echo $current_page == '/services/hire-asp-net-developers' ? 'active' : '' ?>"><a href="/services/hire-asp-net-developers">Hire Asp.Net Developers</a></li>
-                            <li class="nav-item <?php echo $current_page == '/services/hire-php-developers.php' ? 'active' : '' ?>"><a href="/services/hire-php-developers">Hire PHP Developers</a></li>
-                            <li class="nav-item <?php echo $current_page == '/services/hiring-ui-ux-developers' ? 'active' : '' ?>"><a href="/services/hiring-ui-ux-developers">Hire UI/UX Developers</a></li>
-                            <li class="nav-item <?php echo $current_page == '/services/front-end-development' ? 'active' : '' ?>"><a href="/services/front-end-development">Front End Development</a></li>
+                            <li class="nav-item <?php echo $current_page == '/services/hire-asp-net-developers' ? 'active' : '' ?>"><a href="<?php echo $url; ?>services/hire-asp-net-developers">Hire Asp.Net Developers</a></li>
+                            <li class="nav-item <?php echo $current_page == '/services/hire-php-developers.php' ? 'active' : '' ?>"><a href="<?php echo $url; ?>services/hire-php-developers">Hire PHP Developers</a></li>
+                            <li class="nav-item <?php echo $current_page == '/services/hiring-ui-ux-developers' ? 'active' : '' ?>"><a href="<?php echo $url; ?>services/hiring-ui-ux-developers">Hire UI/UX Developers</a></li>
+                            <li class="nav-item <?php echo $current_page == '/services/front-end-development' ? 'active' : '' ?>"><a href="<?php echo $url; ?>services/front-end-development">Front End Development</a></li>
                         </ul>
                     </li>
                 </ul>
             </li> 
-            <li class="nav-item <?php echo $current_page == '/technology' ? 'active' : '' ?>"><a class="nav-link" href="/technology" title="Technology">Technology</a> </li>
-            	 <li class="nav-item <?php //echo $current_page == '/industries' ? 'active' : '' ?>"> <a class="nav-link" href="/industries" title="Industries">Industries</a> </li>
-            <li class="nav-item <?php echo $current_page == '/blog' ? 'active' : '' ?>"><a class="nav-link" href="/blog" target="_blank">Blogs</a></li>
-            <li class="nav-item <?php echo $current_page == '/portfolio' ? 'active' : '' ?>"><a class="nav-link" href="/portfolio">Portfolio</a></li>
+            <li class="nav-item <?php echo $current_page == '/technology' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>technology" title="Technology">Technology</a> </li>
+            	 <li class="nav-item <?php //echo $current_page == '/industries' ? 'active' : '' ?>"> <a class="nav-link" href="<?php echo $url; ?>industries" title="Industries">Industries</a> </li>
+            <li class="nav-item <?php echo $current_page == '/blog' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>blog" target="_blank">Blogs</a></li>
+            <li class="nav-item <?php echo $current_page == '/portfolio' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>portfolio">Portfolio</a></li>
 
-            <li class="nav-item <?php echo $current_page == '/contact' ? 'active' : '' ?>"><a class="nav-link" href="/contact">Contact Us</a></li>
+            <li class="nav-item <?php echo $current_page == '/contact' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>contact">Contact Us</a></li>
     </div> 
 </div> 
