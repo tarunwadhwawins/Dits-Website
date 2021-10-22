@@ -56,9 +56,9 @@ require_once('core/ajax.php');
             <div id='BlogContent'>
 
             </div>
-            <div class="col-sm-12">
-                <div class="load-more">
-                    <div class="load-more-button">Load More</div>
+            <div class="col-sm-12" id="loading-element" style="height:50px;">
+                <div class="load-more" style="display: none;">
+                    <img src="<?php echo $url; ?>assets\images\loader.gif" style="height: 100px;"/>
                 </div>
             </div>
            
@@ -128,38 +128,57 @@ require_once('core/ajax.php');
 
 <script>
     var page = 1;
+    var has_more = true;
+    var ajax_load ;
     $(document).ready(function () {
   
         $(".load-more-button").click(function () {
-           
+            $(".load-more").show();
             loadPortfolio();
+        });
+
+        $(".load-more").hide();
+        
+        var element_position = $('#BlogContent');
+
+        $(window).on('scroll', function() {
+            var y_scroll_pos = $(this).scrollTop();
+            var scroll_pos_test = (element_position[0].offsetTop+element_position[0].offsetHeight)-300;
+            
+            if(y_scroll_pos > scroll_pos_test) {
+               
+                loadPortfolio();
+            }
         });
   
     });
     
     function loadPortfolio()
     {
-        jQuery.ajax({
-            url: '<?php echo $url; ?>/core/ajax',
-            method: "GET",
-            headers: {
-               "content-type": "application/x-www-form-urlencoded"
-            },
-            data: {
-               "Action": 'getBlog',
-               "page": page
-            },
-            success: function(response) {
-               var response = JSON.parse(response);
-               $("#BlogContent").html( $("#BlogContent").html()+response.Output);
-               if(response.next){
-                  $(".load-more").show();
-               }else{
-                  $(".load-more").hide();
-               }
-               page++;
+        if(has_more){
+            $(".load-more").show();
+            if(ajax_load){
+                ajax_load.abort();
             }
-        });
+            ajax_load = jQuery.ajax({
+                            url: '<?php echo $url; ?>/core/ajax',
+                            method: "GET",
+                            headers: {
+                               "content-type": "application/x-www-form-urlencoded"
+                            },
+                            data: {
+                               "Action": 'getBlog',
+                               "page": page
+                            },
+                            success: function(response) {
+                               var response = JSON.parse(response);
+                               $("#BlogContent").html( $("#BlogContent").html()+response.Output);
+                               has_more = response.next;
+                               $(".load-more").hide();
+                               page++;
+                            }
+                        });
+        }
     }
     loadPortfolio();
 </script> 
