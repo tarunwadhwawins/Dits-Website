@@ -8,7 +8,9 @@ if (isset($_POST['password'])) {
   if($password == $confirm_password){
     $sql = "UPDATE `admin` SET `password`='".$password."' WHERE `username` ='".$_SESSION['ADMIN_USERNAME']."'";
     $res = mysqli_query($conn, $sql);
-    header('Location:'. $url."admin/dashboard");
+    $success = "Password update successfully";
+  }else{
+    $error = "Confirm Password should same as password.";
   }
 }
 ?>
@@ -40,6 +42,7 @@ if (isset($_POST['password'])) {
                 <div class="row">
                     <div class="col-sm-12">
                         <form method="post" onsubmit="return validation();">
+                            <p class="alert alert-success" id="success"><?php echo @$success; ?></p>
                             <div class="form-group">
                                 <label>New Password</label>
                                 <input type="password" class="form-control" placeholder="New password" name="password" id="password"/>
@@ -49,7 +52,7 @@ if (isset($_POST['password'])) {
                                 <input type="password" class="form-control" placeholder="Confirm password" name="confirm_password" id="confirm_password"/>
                             </div>
                             <div class="form-group">
-                                <p class="error" id="error"></p>
+                                <p class="error" id="error"><?php echo @$error; ?></p>
                                 <button class="btn btn-primary" type="submit">Save </button>
                             </div>
                         </form>
@@ -62,7 +65,12 @@ if (isset($_POST['password'])) {
     <?php include_once('common/commonjs.php'); ?>
     <!---->
     <script>
+        setTimeout(function(){ 
+                $("#success").remove(); 
+                window.location = "<?php echo $url ?>admin/dashboard";
+        }, 3000);
         function validation(){
+            $("#error").text("");
             var password = $("#password").val();
             var confirm_password = $("#confirm_password").val();
             if(password == ''){
