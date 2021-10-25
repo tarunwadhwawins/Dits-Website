@@ -13,8 +13,7 @@ if (isset($_POST['submit'])) {
     $_SESSION['ADMIN_USERNAME'] = $username;
     $_SESSION['success_message'] = "Login successfully.";
    
-    $url = str_replace("index","", $_SERVER['HTTP_REFERER']);
-    header('Location:'. $url."dashboard");
+    header('Location:'. $url."admin/dashboard");
   } else {
     $msg = "Please enter correct login details";
   }

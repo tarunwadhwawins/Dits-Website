@@ -1,3 +1,17 @@
+<?php
+require_once('../core/dbconnection.php');
+require_once('function.inc.php');
+$msg = '';
+if (isset($_POST['password'])) {
+  $password = get_safe_value($conn, $_POST['password']);
+  $confirm_password = get_safe_value($conn, $_POST['confirm_password']);
+  if($password == $confirm_password){
+    $sql = "UPDATE `admin` SET `password`='".$password."' WHERE `username` ='".$_SESSION['ADMIN_USERNAME']."'";
+    $res = mysqli_query($conn, $sql);
+    header('Location:'. $url."admin/dashboard");
+  }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,17 +39,18 @@
             <div class="whiteBg">
                 <div class="row">
                     <div class="col-sm-12">
-                        <form>
+                        <form method="post" onsubmit="return validation();">
                             <div class="form-group">
                                 <label>New Password</label>
-                                <input type="text" class="form-control" placeholder="New password"/>
+                                <input type="password" class="form-control" placeholder="New password" name="password" id="password"/>
                             </div>
                             <div class="form-group">
                                 <label>Confirm Password</label>
-                                <input type="text" class="form-control" placeholder="Confirm password"/>
+                                <input type="password" class="form-control" placeholder="Confirm password" name="confirm_password" id="confirm_password"/>
                             </div>
                             <div class="form-group">
-                                <button class="btn btn-primary">Save </button>
+                                <p class="error" id="error"></p>
+                                <button class="btn btn-primary" type="submit">Save </button>
                             </div>
                         </form>
                     </div>
@@ -46,6 +61,24 @@
     <!---->
     <?php include_once('common/commonjs.php'); ?>
     <!---->
+    <script>
+        function validation(){
+            var password = $("#password").val();
+            var confirm_password = $("#confirm_password").val();
+            if(password == ''){
+                $("#error").text("Password is required.");
+                return false;
+            }
+            if(confirm_password == ''){
+                 $("#error").text("Confirm Password is required.");
+                return false;
+            }
+            if(confirm_password != password){
+                 $("#error").text("Confirm Password should same as password.");
+                return false;
+            }
+        }
+    </script>
 </body>
 
 </html>
