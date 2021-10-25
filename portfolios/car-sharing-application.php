@@ -1,5 +1,5 @@
 <?php
-require_once('../core/dbconnection1.php');
+require_once('../core/dbconnection.php');
 require_once('../core/portfolio_function.php');
 
 $portfolio_id=mysqli_real_escape_string($conn,$_GET['id']);

@@ -8,7 +8,7 @@
 
 	  function get_category($conn){
         
-		require_once('dbconnection1.php');
+		require_once('dbconnection.php');
 		$sql= "SELECT * FROM category where status=1";
         $res= mysqli_query($conn,$sql);
         $data=array();
@@ -20,7 +20,7 @@
 	 }
 
 	 function get_portfolio($conn,$cat_id='',$portfolio_id=''){
-		require_once('dbconnection1.php');
+		require_once('dbconnection.php');
 		$sql="SELECT * from portfolio where  status=1";
 		if($cat_id!=''){
         $sql.=" and category_id=$cat_id";

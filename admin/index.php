@@ -1,5 +1,5 @@
 <?php
-require_once('../core/dbconnection1.php');
+require_once('../core/dbconnection.php');
 require_once('function.inc.php');
 $msg = '';
 if (isset($_POST['submit'])) {

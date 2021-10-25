@@ -1,7 +1,7 @@
 
 <?php
 function get_safe_value($conn,$str){
-   require_once('../core/dbconnection1.php');
+   require_once('../core/dbconnection.php');
 
    if($str!=''){
       $str=trim($str);
