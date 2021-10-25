@@ -29,6 +29,7 @@ if (isset($_POST['submit'])) {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>login</title>
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png">
   <link rel="stylesheet" href="../admin/assets/css/style.css">
   <link rel="stylesheet" href="../admin/assets/css/common.css">
 </head>
@@ -39,7 +40,7 @@ if (isset($_POST['submit'])) {
     <div class="signInner">
       <div class="wrapper">
         <div class="leftWrapper">
-          <img src="../../../../assets/images/logo.png" alt="image" />
+          <img src="../assets/images/logo.png" alt="image" />
         </div>
         <div class="rightWrapper">
           <div class="innerWrapper">

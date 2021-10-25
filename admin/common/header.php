@@ -20,7 +20,7 @@ require_once('../core/dbconnection.php');
 
               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <a class="dropdown-item" href="#">My Profile</a>
-                <a class="dropdown-item" href="#">Forgot Password</a>
+                <a class="dropdown-item" href="change-password">Change Password</a>
                 <a class="dropdown-item" href="logout.php">Log Out</a>
               </div>
             </div>
