@@ -175,10 +175,14 @@ $get_portfolio=get_portfolio($conn);
       function loadCategoryWithTag(Tag,Category) {
          page=1;
          var Category = $(".tabs-domain label.active").attr('id');
+         if(!Category){
+            Category = "All";
+         }
          selected_category = Category;
          selected_tag = Tag;
          $("#PortfolioContent").html("");
          has_more = true;
+         console.log(Category);
          loadPortfolio(Category, Tag)
       }
 
