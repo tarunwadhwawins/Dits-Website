@@ -1,7 +1,6 @@
 <?php
 require_once('core/dbconnection.php');
 require_once('core/ajax.php');
-//$cat_id=mysqli_real_escape_string($conn,$_GET['id']);
 $get_portfolio=get_portfolio($conn);
 
 ?>
@@ -119,11 +118,10 @@ $get_portfolio=get_portfolio($conn);
                         <div id='PortfolioContent'>
 
                         </div>
-                 
-                        <div class="col-sm-12">
-                           <div class="load-more">
-                              <div class="load-more-button">Load More</div>
-                           </div>
+                        <div class="col-sm-12" id="loading-element" style="height:50px;">
+                            <div class="load-more" style="display: none;">
+                                <img src="<?php echo $url; ?>assets\images\loader.gif" style="height: 100px;"/>
+                            </div>
                         </div>
                      </div>
                   </div>
@@ -141,22 +139,25 @@ $get_portfolio=get_portfolio($conn);
       var selected_category = "All";
       var selected_tag = "All";
       var page = 1;
+      var has_more = true;
+      var ajax_load ;
+      var element_position = $('#PortfolioContent');
       $(document).ready(function() {
+         $(".load-more").hide();
          $('.tabs-domain label:first').addClass('active');
-         InitialCall();
-         $(".load-more-button").click(function() {
-            
-            loadPortfolio(selected_category,selected_tag);
-         });
-      });
-
-      function InitialCall()
-      {
-         page=1;
-         var CategoryID = $('.tabs-domain label:first').attr('id');
-         loadPortfolio('All', 'All');
          $("#PortfolioContent").html("");
-      }
+         loadPortfolio(selected_category,selected_tag);
+
+         $(window).on('scroll', function() {
+            var y_scroll_pos = $(this).scrollTop();
+            var scroll_pos_test = (element_position[0].offsetTop+element_position[0].offsetHeight)-300;
+            
+            if(y_scroll_pos > scroll_pos_test) {
+               
+                loadPortfolio(selected_category,selected_tag);
+            }
+        });
+      });
 
       function loadCategory(Slug, CategoryID='All') {
          page=1;
@@ -167,6 +168,7 @@ $get_portfolio=get_portfolio($conn);
          $("#PortfolioContent").html("");
          selected_category = CategoryID;
          selected_tag = "All";
+         has_more = true;
          loadPortfolio(CategoryID, 'All');
       }
       
@@ -176,34 +178,38 @@ $get_portfolio=get_portfolio($conn);
          selected_category = Category;
          selected_tag = Tag;
          $("#PortfolioContent").html("");
+         has_more = true;
          loadPortfolio(Category, Tag)
       }
 
       function loadPortfolio(CategoryID, Tag )
       {
-         jQuery.ajax({
-            url: '<?php echo $url; ?>core/ajax',
-            method: "GET",
-            headers: {
-               "content-type": "application/x-www-form-urlencoded"
-            },
-            data: {
-               "Action": 'getPortfolio',
-               "CategoryID": CategoryID,
-               "Tag": Tag,
-               "page": page
-            },
-            success: function(response) {
-               var response = JSON.parse(response);
-               $("#PortfolioContent").html( $("#PortfolioContent").html()+response.Output);
-               if(response.next){
-                  $(".load-more").show();
-               }else{
-                  $(".load-more").hide();
-               }
-               page++;
+         if(has_more){
+            $(".load-more").show();
+            if(ajax_load){
+                ajax_load.abort();
             }
-         });
+            ajax_load = jQuery.ajax({
+                              url: '<?php echo $url; ?>core/ajax',
+                              method: "GET",
+                              headers: {
+                                 "content-type": "application/x-www-form-urlencoded"
+                              },
+                              data: {
+                                 "Action": 'getPortfolio',
+                                 "CategoryID": CategoryID,
+                                 "Tag": Tag,
+                                 "page": page
+                              },
+                              success: function(response) {
+                                 var response = JSON.parse(response);
+                                 $("#PortfolioContent").html( $("#PortfolioContent").html()+response.Output);
+                                 has_more = response.next;
+                                 $(".load-more").hide();
+                                 page++;
+                              }
+                        });
+         }
       }
    </script>
 

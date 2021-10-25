@@ -1,6 +1,7 @@
 <?php
 require_once('core/dbconnection.php');
 require_once('core/ajax.php');
+
 ?>
 
 <!doctype html>
@@ -132,10 +133,7 @@ require_once('core/ajax.php');
     var ajax_load ;
     $(document).ready(function () {
   
-        $(".load-more-button").click(function () {
-            $(".load-more").show();
-            loadPortfolio();
-        });
+        
 
         $(".load-more").hide();
         
@@ -147,13 +145,13 @@ require_once('core/ajax.php');
             
             if(y_scroll_pos > scroll_pos_test) {
                
-                loadPortfolio();
+                loadBlog();
             }
         });
   
     });
     
-    function loadPortfolio()
+    function loadBlog()
     {
         if(has_more){
             $(".load-more").show();
@@ -180,7 +178,7 @@ require_once('core/ajax.php');
                         });
         }
     }
-    loadPortfolio();
+    loadBlog();
 </script> 
 
 <!---->
