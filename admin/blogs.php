@@ -1,5 +1,4 @@
 <?php
-require_once('../core/dbconnection.php');
 require_once('../core/ajax.php');
 if(isset($_GET['type']) && $_GET['type']!='')
 {

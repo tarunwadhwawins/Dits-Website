@@ -1,40 +1,42 @@
 <?php
-   $current_page = $_SERVER['REQUEST_URI']; 
+    require_once('../core/dbconnection.php');
+    $current_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    $current_page = str_replace($url."admin/", "", $current_url); 
    //echo $current_page; die;
 ?>
 
 <div class="sidebar-offcanvas">
   <a class="navbar-brand mb-2 px-2" href="#">
-    <img src="assets/images/logo.png" alt="image">
+    <img src="<?php echo $url; ?>admin/assets/images/logo.png" alt="image">
   </a>
   <div class="sidebar-menu">
     <ul class="nav flex-column">
-      <li class="nav-item <?php echo $current_page == '/Dits-Website/admin/dashboard' ? 'active':'' ?>">
-        <a class="nav-link" href="dashboard">
+      <li class="nav-item <?php echo $current_page == 'dashboard' ? 'active':'' ?>">
+        <a class="nav-link" href="<?php echo $url; ?>admin/dashboard">
           <i class="fa fa-tachometer"></i>
           <div class="text">Dashboard</div>
         </a>
       </li>
-       <li class="nav-item sub-menu <?php echo $current_page == '/Dits-Websiteadmin/portfolio' ? 'active':'' ?>">
+       <li class="nav-item sub-menu <?php echo $current_page == 'portfolio' ? 'active':'' ?>">
           <a class="nav-link" href=javascript:void(0)">
           <i class="fa fa-tty"></i>
             <div class="text">Portfolio</div>
             <span class="right"><i class="fa fa-angle-down"></i></span>
           </a>
           <ul class="innerMenus">
-              <li><a href="portfolio">Portfolio Listing</a></li>
-              <li><a href="category">Category</a></li>
-              <li><a href="tags">Tags</a></li>
+              <li><a href="<?php echo $url; ?>admin/portfolio">Portfolio Listing</a></li>
+              <li><a href="<?php echo $url; ?>admin/category">Category</a></li>
+              <li><a href="<?php echo $url; ?>admin/tags">Tags</a></li>
           </ul>
       </li>
-      <li class="nav-item <?php echo $current_page == '/Dits-Website/admin/blogs' ? 'active':'' ?>">
-        <a class="nav-link" href="blogs">
+      <li class="nav-item <?php echo $current_page == 'blogs' ? 'active':'' ?>">
+        <a class="nav-link" href="<?php echo $url; ?>admin/blogs">
           <i class="fa fa-file"></i>
           <div class="text">Blogs</div>
         </a>
       </li>
-      <li class="nav-item <?php echo $current_page == '/Dits-Website/admin/contact' ? 'active':'' ?>">
-        <a class="nav-link" href="contact">
+      <li class="nav-item <?php echo $current_page == 'contact' ? 'active':'' ?>">
+        <a class="nav-link" href="<?php echo $url; ?>admin/contact">
           <i class="fa fa-file"></i>
           <div class="text">Contact</div>
         </a>
