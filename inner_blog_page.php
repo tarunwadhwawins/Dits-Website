@@ -82,7 +82,7 @@ $get_blog=get_blog($conn,$slug);
                                 <?php
                                 $img = str_replace(".jpg","",$row['image']);
                                 ?>
-                                <img src="/assets/blogimages/<?php echo $row['image'] ?>" title="<?php echo $img ?> " alt="image" /></a>
+                                <img src="<?php echo $url; ?>/assets/blogimages/<?php echo $row['image'] ?>" title="<?php echo $img ?> " alt="image" /></a>
                                 <div class="blogContent">
                                 <div class="blogInnerContent"><a class="active" href="<?php echo $row['slug'] ?>" target="_self">
                                 <?php echo $row['title'] ?></a></div>

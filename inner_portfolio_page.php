@@ -73,7 +73,7 @@ $get_portfolio_details = get_portfolio_details($conn, $slug);
                   $section1Image  = (explode(',', $fa));
                   foreach ($section1Image as $list) {
                   ?>
-                     <img src="/assets/portfolioimage/<?php echo $list ?>" usemap="#image-map" alt="Addiction Substance Abuse Management" title="<?php echo str_replace(['.jpg', '.jpeg', '.png', '.gif'], '', $list) ?>">
+                     <img src="<?php echo $url; ?>/assets/portfolioimage/<?php echo $list ?>" usemap="#image-map" alt="Addiction Substance Abuse Management" title="<?php echo str_replace(['.jpg', '.jpeg', '.png', '.gif'], '', $list) ?>">
                   <?php } ?>
                </div>
             </div>
@@ -90,7 +90,7 @@ $get_portfolio_details = get_portfolio_details($conn, $slug);
                   $section2Image  = (explode(',', $ssImage));
                   foreach ($section2Image as $list) {
                   ?>
-                     <img src="/assets/portfolioimage/<?php echo $list ?>" alt="Technical Implementations" title="<?php echo str_replace(['.jpg', '.jpeg', '.png', '.gif'], '', $list) ?>">
+                     <img src="<?php echo $url; ?>/assets/portfolioimage/<?php echo $list ?>" alt="Technical Implementations" title="<?php echo str_replace(['.jpg', '.jpeg', '.png', '.gif'], '', $list) ?>">
                   <?php } ?>
                </div>
             </div>
@@ -119,7 +119,7 @@ $get_portfolio_details = get_portfolio_details($conn, $slug);
                   ?>
                      <div class="slide">
                         <div class="cl">
-                           <img src="/assets/portfolioimage/<?php echo $list ?>" alt="Peer to Peer Car Sharing Application" title="<?php echo str_replace(['.jpg', '.jpeg', '.png', '.gif'], '', $list) ?>">
+                           <img src="<?php echo $url; ?>/assets/portfolioimage/<?php echo $list ?>" alt="Peer to Peer Car Sharing Application" title="<?php echo str_replace(['.jpg', '.jpeg', '.png', '.gif'], '', $list) ?>">
 
                         </div>
                      </div>
