@@ -286,14 +286,14 @@
                 for($i = 1; $i <= $total_pages; $i++ ){
         ?>
                     <li class="page-item <?php if($pageno == $i) {echo 'active'; } ?>">
-                        <a class="page-link" href="contact?pageno=<?= $i; ?>"> <?= $i; ?> </a>
+                        <a class="page-link" href="?pageno=<?= $i; ?>"> <?= $i; ?> </a>
                     </li>
         <?php   } 
             }else{
                 for($i = 1; $i <= 3; $i++ ){
         ?>
                     <li class="page-item <?php if($pageno == $i) {echo 'active'; } ?>">
-                        <a class="page-link" href="contact?pageno=<?= $i; ?>"> <?= $i; ?> </a>
+                        <a class="page-link" href="?pageno=<?= $i; ?>"> <?= $i; ?> </a>
                     </li>
         <?php   
                 } 
@@ -303,23 +303,49 @@
                     </li>
         <?php
                 if($pageno > 3){
-                    for($i = $pageno-1; $i <= $pageno+1; $i++ ){
+                    if($pageno < $total_pages-2){
+                        for($i = $pageno-1; $i <= $pageno+1; $i++ ){
         ?>
-                        <li class="page-item <?php if($pageno == $i) {echo 'active'; } ?>">
-                            <a class="page-link" href="contact?pageno=<?= $i; ?>"> <?= $i; ?> </a>
-                        </li>
+                            <li class="page-item <?php if($pageno == $i) {echo 'active'; } ?>">
+                                <a class="page-link" href="?pageno=<?= $i; ?>"> <?= $i; ?> </a>
+                            </li>
         <?php   
-                    }
+                        }
         ?>
-                    <li class="page-item">
-                        <a class="page-link" href="#"> .... </a>
-                    </li>
-        <?php 
-                }
+                        <li class="page-item">
+                            <a class="page-link" href="#"> .... </a>
+                        </li>
+                        <li class="page-item <?php if($pageno == $total_pages) {echo 'active'; } ?>">
+                            <a class="page-link" href="?pageno=<?= $total_pages; ?>"> <?= $total_pages; ?> </a>
+                        </li>
+        <?php
+                    }elseif($pageno == $total_pages){
+                        for($i = $total_pages-2; $i <= $total_pages; $i++ ){
+        ?>
+                            <li class="page-item <?php if($pageno == $i) {echo 'active'; } ?>">
+                                <a class="page-link" href="?pageno=<?= $i; ?>"> <?= $i; ?> </a>
+                            </li>
+        <?php   
+                        }
+                   }else{
+                        for($i = $pageno-2; $i <= $total_pages; $i++ ){
+        ?>
+                            <li class="page-item <?php if($pageno == $i) {echo 'active'; } ?>">
+                                <a class="page-link" href="?pageno=<?= $i; ?>"> <?= $i; ?> </a>
+                            </li>
+        <?php   
+                        }
+                   } 
+         
+                }else{
         ?>
                     <li class="page-item <?php if($pageno == $total_pages) {echo 'active'; } ?>">
-                        <a class="page-link" href="contact?pageno=<?= $total_pages; ?>"> <?= $total_pages; ?> </a>
-                    </li>
+                            <a class="page-link" href="?pageno=<?= $total_pages; ?>"> <?= $total_pages; ?> </a>
+                        </li>
+        <?php
+                }
+        ?>
+                    
         <?php
             }
 

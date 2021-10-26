@@ -18,7 +18,7 @@
         </a>
       </li>
       <li class="nav-item <?php echo $current_page == 'metatags' ? 'active':'' ?>">
-        <a class="nav-link" href="metatags">
+        <a class="nav-link" href="<?php echo $url; ?>admin/metatags">
           <i class="fa fa-file"></i>
           <div class="text">Meta Tags</div>
         </a>
