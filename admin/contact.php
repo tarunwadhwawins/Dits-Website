@@ -88,7 +88,7 @@ require_once('../core/ajax.php');
                                                 <td><?php echo $row['FindUs']; ?></td>
                                                 <!-- <td><?php echo $row['Message']; ?></td> -->
                                                 <td class="text-nowrap">
-                                                    <a class="btn btn-primary mr-2 " data-toggle="modal" data-target="#myModal"><i class="fa fa-eye"></i></a>
+                                                    <a class="btn btn-primary mr-2 " onclick="contact_detail(this);" data-load='<?php echo str_replace("'", "",  json_encode($row)); ?>'><i class="fa fa-eye"></i></a>
                                                                             
                                                 </td>
                                             </tr>
@@ -107,11 +107,50 @@ require_once('../core/ajax.php');
                             <li class="<?php if($pageno <= 1){ echo 'disabled'; } ?>">
                             <a class="page-link" href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>">Previous</a></li>
                             
-                            <?php for($i = 1; $i <= $total_pages; $i++ ): ?>
-                            <li class="page-item <?php if($pageno == $i) {echo 'active'; } ?>">
-                             <a class="page-link" href="contact?pageno=<?= $i; ?>"> <?= $i; ?> </a>
-                            </li>
-                            <?php endfor; ?>
+                            <?php 
+                                if($total_pages < 4){
+
+                                    for($i = 1; $i <= $total_pages; $i++ ){
+                            ?>
+                                        <li class="page-item <?php if($pageno == $i) {echo 'active'; } ?>">
+                                            <a class="page-link" href="contact?pageno=<?= $i; ?>"> <?= $i; ?> </a>
+                                        </li>
+                            <?php   } 
+                                }else{
+                                    for($i = 1; $i <= 3; $i++ ){
+                            ?>
+                                        <li class="page-item <?php if($pageno == $i) {echo 'active'; } ?>">
+                                            <a class="page-link" href="contact?pageno=<?= $i; ?>"> <?= $i; ?> </a>
+                                        </li>
+                            <?php   
+                                    } 
+                            ?>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#"> .... </a>
+                                        </li>
+                            <?php
+                                    if($pageno > 3){
+                                        for($i = $pageno-1; $i <= $pageno+1; $i++ ){
+                            ?>
+                                            <li class="page-item <?php if($pageno == $i) {echo 'active'; } ?>">
+                                                <a class="page-link" href="contact?pageno=<?= $i; ?>"> <?= $i; ?> </a>
+                                            </li>
+                            <?php   
+                                        }
+                            ?>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#"> .... </a>
+                                        </li>
+                            <?php 
+                                    }
+                            ?>
+                                        <li class="page-item <?php if($pageno == $total_pages) {echo 'active'; } ?>">
+                                            <a class="page-link" href="contact?pageno=<?= $total_pages; ?>"> <?= $total_pages; ?> </a>
+                                        </li>
+                            <?php
+                                }
+
+                            ?>
                             <li class="<?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
                             <a class="page-link" href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1); } ?>">Next</a></li>
                             <li><a class="page-item page-link" href="?pageno=<?php echo $total_pages; ?>">Last</a></li>
@@ -124,13 +163,31 @@ require_once('../core/ajax.php');
         </div>
         <!---->
         <?php include_once('common/commonjs.php'); ?>
+        <script>
+            function contact_detail(ele){
+                var data = $(ele).data('load');
+                console.log(data);
+                $("#name").text(data.FirstName);
+                $("#email").text(data.Email);
+                $("#ip").text(data.IP);
+                $("#url").text(data.URL);
+                $("#county").text(data.Country);
+                $("#state").text(data.State);
+                $("#city").text(data.City);
+                $("#phone").text(data.Phone);
+                $("#find_us").text(data.FindUs);
+                $("#message").text(data.Message);
+
+                $("#contact_detail").modal("show");
+            }
+        </script>
         <!---->
 </body>
 
 </html>
 
 
-<div class="modal" id="myModal">
+<div class="modal" id="contact_detail">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
@@ -139,20 +196,26 @@ require_once('../core/ajax.php');
       </div>
       <div class="modal-body">
         <div class="row">
-            <div class="col-sm-6">Email Id</div>
-            <div class="col-sm-6">...</div>
+            <div class="col-sm-6">Ip Address</div>
+            <div class="col-sm-6" id="ip">...</div>
+            <div class="col-sm-6">URL</div>
+            <div class="col-sm-6" id="url">...</div>
+            <div class="col-sm-6">Name</div>
+            <div class="col-sm-6" id="name">...</div>
+            <div class="col-sm-6">Email</div>
+            <div class="col-sm-6" id="email">...</div>
             <div class="col-sm-6">Country</div>
-            <div class="col-sm-6">...</div>
+            <div class="col-sm-6" id="county">...</div>
             <div class="col-sm-6">State</div>
-            <div class="col-sm-6">...</div>
+            <div class="col-sm-6" id="state">...</div>
             <div class="col-sm-6">City</div>
-            <div class="col-sm-6">...</div>
+            <div class="col-sm-6" id="city">...</div>
             <div class="col-sm-6">Phone No</div>
-            <div class="col-sm-6">...</div>
+            <div class="col-sm-6" id="phone">...</div>
             <div class="col-sm-6">Find Us</div>
-            <div class="col-sm-6">...</div>
+            <div class="col-sm-6" id="find_us">...</div>
             <div class="col-sm-12">Message</div>
-            <div class="col-sm-12">...</div>
+            <div class="col-sm-12" id="message">...</div>
         </div>
       </div>
       <div class="modal-footer">
