@@ -19,9 +19,6 @@ RewriteRule ^portfolios/([^/]+)/?$ /inner_portfolio_page.php?title=$1 [NC,L]
 
 
 
-Options +FollowSymlinks
-RewriteEngine on
-rewriterule ^blogs/the-new-era-of-custom-application-development-services–2021-and-beyond(.*)$ https://www.ditstek.com/blogs/the-new-era-of-custom-application-development-services-2021-and-beyond$1 [r=301,nc]
 </IfModule>
 
 <IfModule mod_rewrite.c>

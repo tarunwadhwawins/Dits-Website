@@ -1,6 +1,6 @@
 <?php
    $current_page = $_SERVER['REQUEST_URI']; 
-   	//echo $current_page; die;
+   //echo $current_page; die;
 ?>
 
 <div class="sidebar-offcanvas">
@@ -9,13 +9,13 @@
   </a>
   <div class="sidebar-menu">
     <ul class="nav flex-column">
-      <li class="nav-item <?php echo $current_page == '/admin/dashboard' ? 'active':'' ?>">
+      <li class="nav-item <?php echo $current_page == '/Dits-Website/admin/dashboard' ? 'active':'' ?>">
         <a class="nav-link" href="dashboard">
           <i class="fa fa-tachometer"></i>
           <div class="text">Dashboard</div>
         </a>
       </li>
-      <li class="nav-item sub-menu <?php echo $current_page == '/admin/portfolio' ? 'active':'' ?>">
+       <li class="nav-item sub-menu <?php echo $current_page == '/Dits-Websiteadmin/portfolio' ? 'active':'' ?>">
           <a class="nav-link" href=javascript:void(0)">
           <i class="fa fa-tty"></i>
             <div class="text">Portfolio</div>
@@ -27,10 +27,16 @@
               <li><a href="tags">Tags</a></li>
           </ul>
       </li>
-      <li class="nav-item <?php echo $current_page == '/admin/blogs' ? 'active':'' ?>">
+      <li class="nav-item <?php echo $current_page == '/Dits-Website/admin/blogs' ? 'active':'' ?>">
         <a class="nav-link" href="blogs">
           <i class="fa fa-file"></i>
           <div class="text">Blogs</div>
+        </a>
+      </li>
+      <li class="nav-item <?php echo $current_page == '/Dits-Website/admin/contact' ? 'active':'' ?>">
+        <a class="nav-link" href="contact">
+          <i class="fa fa-file"></i>
+          <div class="text">Contact</div>
         </a>
       </li>
     </ul>
