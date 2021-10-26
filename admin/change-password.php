@@ -42,7 +42,9 @@ if (isset($_POST['password'])) {
                 <div class="row">
                     <div class="col-sm-12">
                         <form method="post" onsubmit="return validation();">
-                            <p class="alert alert-success" id="success"><?php echo @$success; ?></p>
+                        <?php if(@$success!=""){ ?>
+                                <p class="alert alert-success" id="success"><?php echo @$success; ?></p>
+                        <?php } ?>
                             <div class="form-group">
                                 <label>New Password</label>
                                 <input type="password" class="form-control" placeholder="New password" name="password" id="password"/>
@@ -65,10 +67,12 @@ if (isset($_POST['password'])) {
     <?php include_once('common/commonjs.php'); ?>
     <!---->
     <script>
-        setTimeout(function(){ 
-                $("#success").remove(); 
-                window.location = "<?php echo $url ?>admin/dashboard";
-        }, 3000);
+        <?php if(@$success!=""){ ?>
+            setTimeout(function(){ 
+                    $("#success").remove(); 
+                    window.location = "<?php echo $url ?>admin/dashboard";
+            }, 3000);
+        <?php } ?>
         function validation(){
             $("#error").text("");
             var password = $("#password").val();
