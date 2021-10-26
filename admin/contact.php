@@ -66,7 +66,7 @@ require_once('../core/ajax.php');
                                         <th>City</th>
                                         <th>Phone No.</th>
                                         <th>Find Us</th>
-                                        <th>Message</th>
+                                        <!-- <th>Message</th> -->
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
@@ -86,10 +86,10 @@ require_once('../core/ajax.php');
                                                 <td><?php echo $row['City']; ?></td>
                                                 <td><?php echo $row['Phone']; ?></td>
                                                 <td><?php echo $row['FindUs']; ?></td>
-                                                <td><?php echo $row['Message']; ?></td>
+                                                <!-- <td><?php echo $row['Message']; ?></td> -->
                                                 <td class="text-nowrap">
-                                                    <a class="btn btn-primary mr-2" href=""><i class="fa fa-edit"></i></a>
-                                                    <a class="btn btn-danger" href="#"><i class="fa fa-close"></i></a>                                
+                                                    <a class="btn btn-primary mr-2 " data-toggle="modal" data-target="#myModal"><i class="fa fa-eye"></i></a>
+                                                                            
                                                 </td>
                                             </tr>
                                     <?php 
@@ -128,3 +128,22 @@ require_once('../core/ajax.php');
 </body>
 
 </html>
+
+
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        Modal body..
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
