@@ -108,7 +108,7 @@ $res = mysqli_query($conn,$sql);
                                  while($row=mysqli_fetch_assoc($res)) {?>
                                 <tr>
                                     <td><?php echo $i ?></td>
-                                    <td><img src="../assets/portfolioimage/<?php echo $row['image'] ?>" width="70px" height="40px" /> </td> 
+                                    <td><img src="../assets/portfolioimage/<?php echo $row['image'] ?>" width="100px"  class="img-thumbnail"/> </td> 
                                     <td><?php echo $row['name'] ?></td>
                                     <td><?php echo $row['tags'] ?></td>
                                     <td><?php echo $row['title'] ?></td>
