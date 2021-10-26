@@ -92,6 +92,9 @@ $get_portfolio_details = get_portfolio_details($conn, $slug);
                   ?>
                      <img src="<?php echo $url; ?>/assets/portfolioimage/<?php echo $list ?>" alt="Technical Implementations" title="<?php echo str_replace(['.jpg', '.jpeg', '.png', '.gif'], '', $list) ?>">
                   <?php } ?>
+                  <map name="image-map">  
+                     <?php echo $get_portfolio_details[0]['image_text'] ?>  
+                    </map>
                </div>
             </div>
             <div class="col-sm-6">
