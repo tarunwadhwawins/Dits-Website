@@ -17,6 +17,12 @@
           <div class="text">Dashboard</div>
         </a>
       </li>
+      <li class="nav-item <?php echo $current_page == 'metatags' ? 'active':'' ?>">
+        <a class="nav-link" href="metatags">
+          <i class="fa fa-file"></i>
+          <div class="text">Meta Tags</div>
+        </a>
+      </li>
        <li class="nav-item sub-menu <?php echo $current_page == 'portfolio' ? 'active':'' ?>">
           <a class="nav-link" href=javascript:void(0)">
           <i class="fa fa-tty"></i>

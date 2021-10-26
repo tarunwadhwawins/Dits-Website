@@ -281,6 +281,8 @@ $current_page = $_SERVER['REQUEST_URI'];
                                 <li class="nav-item <?php echo $current_page == '/Dits-Website/contact' ? 'active' : '' ?>">
                                     <a class="nav-link" href="<?php echo $url; ?>contact" title="Contact Us">Contact Us</a>
                                 </li>
+                                
+                            </ul>
                             </ul>
                         </div>
                     </nav>

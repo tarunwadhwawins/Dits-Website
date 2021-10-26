@@ -67,6 +67,7 @@ require_once('../core/ajax.php');
                                         <th>Phone No.</th>
                                         <th>Find Us</th>
                                         <th>Message</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -86,6 +87,10 @@ require_once('../core/ajax.php');
                                                 <td><?php echo $row['Phone']; ?></td>
                                                 <td><?php echo $row['FindUs']; ?></td>
                                                 <td><?php echo $row['Message']; ?></td>
+                                                <td class="text-nowrap">
+                                                    <a class="btn btn-primary mr-2" href=""><i class="fa fa-edit"></i></a>
+                                                    <a class="btn btn-danger" href="#"><i class="fa fa-close"></i></a>                                
+                                                </td>
                                             </tr>
                                     <?php 
                                             $i++ ;
