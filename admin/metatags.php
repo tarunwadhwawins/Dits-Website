@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blogs</title>
+    <title>Meta Tags</title>
     <!---->
     <?php include_once('common/commoncss.php'); ?>
     <!---->
@@ -20,10 +20,13 @@
     <div class="main-content">
         <div class="inner-content">
             <div class="heading">
-                <h1>Contact</h1>
+                <h1>Meta Tags</h1>
+                <div class="addBtn">
+                    <a class="btn btn-primary" href="add-metatag.php">Add Meta Tags</a>
+                </div>
             </div>
             <div class="whiteBg">
-                <h2>Contact Listing</h2>
+                <h2>Meta Tags Listing</h2>
                 <div class="row">
                     <div class="col-sm-12 mb-2">
                         <div class="table-responsive">
@@ -31,32 +34,16 @@
                                 <thead>
                                     <tr>
                                         <th class="text-nowrap">Sr. No</th>
-                                        <th>Ip Address</th>
                                         <th>Url</th>
-                                        <th>Name</th>
-                                        <th>Email Id</th>
-                                        <th>Country </th>
-                                        <th>State</th>
-                                        <th>City</th>
-                                        <th>Phone No.</th>
-                                        <th>Find Us</th>
-                                        <th>Message</th>
+                                        <th>Page Name</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>01</td>
-                                        <td>192.168.0.1</td>
+                                        <td>...</td>
                                         <td>Home page</td>
-                                        <td>Tarun Wadhwa</td>
-                                        <td>tarunwadhwawins@gmail.com</td>
-                                        <td>India</td>
-                                        <td>Haryana</td>
-                                        <td>Kurukshetra</td>
-                                        <td>1234567890</td>
-                                        <td>Website</td>
-                                        <td>Testing</td>
                                         <td class="text-nowrap">
                                             <a class="btn btn-primary mr-2" href=""><i class="fa fa-edit"></i></a>
                                             <a class="btn btn-danger" href="#"><i class="fa fa-close"></i></a>                                </td>
