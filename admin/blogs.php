@@ -107,7 +107,7 @@ $res = mysqli_query($conn,$sql);
                                 <tr>
                                     <td><?php echo $i ?></td>
                                     <td><?php echo $row['title'] ?></td>
-                                    <td><img src="../assets/blogimages/<?php echo $row['image'] ?>" width="70px" height="50px" /> </td>
+                                    <td><img src="../assets/blogimages/<?php echo $row['image'] ?>" width="70px" height="50px" class="img-thumbnail"/> </td>
                                     <?php
                                         $str = $row['short_desc'];
                                         if( strlen( $row['short_desc']) > 100) 
