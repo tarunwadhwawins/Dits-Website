@@ -57,7 +57,7 @@ require_once('../core/ajax.php');
                                     <tr>
 
                                         <th class="text-nowrap">Sr. No</th>
-                                        <th>Ip Address</th>
+                                        <th class="text-nowrap">Ip Address</th>
                                         <th>URL</th>
                                         <th>Name</th>
                                         <th>Email Id</th>
@@ -131,14 +131,29 @@ require_once('../core/ajax.php');
 
 
 <div class="modal" id="myModal">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Modal Heading</h4>
+        <h4 class="modal-title">Name</h4>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
       <div class="modal-body">
-        Modal body..
+        <div class="row">
+            <div class="col-sm-6">Email Id</div>
+            <div class="col-sm-6">...</div>
+            <div class="col-sm-6">Country</div>
+            <div class="col-sm-6">...</div>
+            <div class="col-sm-6">State</div>
+            <div class="col-sm-6">...</div>
+            <div class="col-sm-6">City</div>
+            <div class="col-sm-6">...</div>
+            <div class="col-sm-6">Phone No</div>
+            <div class="col-sm-6">...</div>
+            <div class="col-sm-6">Find Us</div>
+            <div class="col-sm-6">...</div>
+            <div class="col-sm-12">Message</div>
+            <div class="col-sm-12">...</div>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
