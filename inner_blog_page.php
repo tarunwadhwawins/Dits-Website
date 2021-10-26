@@ -37,7 +37,7 @@ $get_blog=get_blog($conn,$slug);
         <?php include_once('common/header.php'); ?>
         <!---->
         <div class="bannerMain barkWrapper">
-            <img src="/assets/blogimages/<?php echo $get_blog[0]['image'] ?>" title="4 Reasons Why Offshore Development Is A Better Option Than The Onshore" alt="4 Reasons Why Offshore Development Is A Better Option Than The Onshore" />
+            <img src="<?php echo $url; ?>/assets/blogimages/<?php echo $get_blog[0]['image'] ?>" title="4 Reasons Why Offshore Development Is A Better Option Than The Onshore" alt="4 Reasons Why Offshore Development Is A Better Option Than The Onshore" />
             <div class="bannerDesc">
                 <div class="container">
                     <div class="row">

@@ -12,10 +12,10 @@ RewriteRule ^ %{REQUEST_URI}.php [NC,L]
 RewriteRule ^core/general/(.*)$ core/general.php?action=$1 [QSA,L]
 
 RewriteRule ^blogs$ /blogs.php [L,E=LOOP:1]
-RewriteRule ^blog/([^/]+)/?$ /inner_blog_page.php?title=$1 [NC,L]
+RewriteRule ^blog/([^/]+)/?$ inner_blog_page.php?title=$1 [NC,L]
 
 RewriteRule ^portfolio$ /core/ajax.php [L,E=LOOP:1]
-RewriteRule ^portfolios/([^/]+)/?$ /inner_portfolio_page.php?title=$1 [NC,L]
+RewriteRule ^portfolios/([^/]+)/?$ inner_portfolio_page.php?title=$1 [NC,L]
 
 
 
