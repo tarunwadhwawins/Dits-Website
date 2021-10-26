@@ -26,11 +26,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action']) && !empty($_
         if ($conn->query($sql) === TRUE) {
             
             // Contact Information to Client
-            //sendEmail('info@ditstek.com', "Contact Information", userInformationHtml($request));
+            sendEmail('info@ditstek.com', "Contact Information", userInformationHtml($request));
             
             // Thank you email to User
             $message = customerEmailData($request['quotes_first_name']);
-           // sendEmail($request['quotes_email'], 'Thank you for Contact', $message);
+            sendEmail($request['quotes_email'], 'Thank you for Contact', $message);
             $response = array('Success' => true, 'Message' => 'Thank you for contacting Ditstek Innovations. Our team will get back to you shortly with the next steps. ');
         } else {
             $response = array('Success' => false, 'Message' => 'Error while submitting information.');
