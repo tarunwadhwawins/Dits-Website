@@ -77,7 +77,14 @@ $res = mysqli_query($conn,$sql);
             </div>
             <div class="whiteBg">
                 <h2>Portfolio Listing</h2>
-            
+                <div class="form-group mb-2">
+                    <select class="form-control">
+                        <option value="0" selected>Choose Category</option>
+                        <option value="1">All</option>
+                        <option value="2">Health Care</option>
+                        <option value="3">Retail</option>
+                    </select>
+                </div>
              <div class="row">
                  <div class="col-sm-12">
                     <div class="table-responsive">
