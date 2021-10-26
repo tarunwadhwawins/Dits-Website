@@ -31,7 +31,6 @@ $(document).ready(function () {
     
         },
         submitHandler: function(form) {
-            var base_url = window.location.origin;
             $.ajax({
                 url: base_url+"/core/general?action=ConactFormSave",
                 type: "POST",

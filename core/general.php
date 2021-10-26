@@ -6,13 +6,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action']) && !empty($_
     $request = $_POST;
     switch($_GET['action']) {
         case 'ConactFormSave':
-        $sql = "INSERT INTO Contacts (FirstName, Email, Country, State, City, Phone, FindUs, Message) VALUES ('" .$request['contact_first_name'] . "', '" .$request['contact_email'] . "', '". $request['country'] . "', '". $request['state'] . "', '". $request['city'] . "', '". $request['contact_phone'] ."', '". $request['contact_findUs']."', '". $request['contact_message']."')";
+        $sql = "INSERT INTO Contacts (FirstName, Email, Country, State, City, Phone, FindUs, Message,IP,URL) VALUES ('" .mysqli_real_escape_string($conn,$request['contact_first_name']) . "', '" .mysqli_real_escape_string($conn,$request['contact_email']) . "', '". mysqli_real_escape_string($conn,$request['country']) . "', '". mysqli_real_escape_string($conn,$request['state']) . "', '".mysqli_real_escape_string($conn,$request['city'])  . "', '". mysqli_real_escape_string($conn,$request['contact_phone']) ."', '". mysqli_real_escape_string($conn,$request['contact_findUs'])."', '". mysqli_real_escape_string($conn,$request['contact_message'])."', '". mysqli_real_escape_string($conn,$_SERVER['HTTP_REFERER']) ."', '". mysqli_real_escape_string($conn,$_SERVER['REMOTE_ADDR']) ."')";
         
         if ($conn->query($sql) === TRUE) {
             
             // Contact Information to Client
             sendEmail('info@ditstek.com', "Contact Information", userInformationHtml($request));
-            //sendEmail('tarunwadhwawins@gmail.com', "Contact Information", userInformationHtml($request));
             
             // Thank you email to User
             $message = customerEmailData($request['contact_first_name']);
@@ -23,17 +22,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action']) && !empty($_
         }
         break;
         case 'QuotesFormSave':
-        $sql = "INSERT INTO Contacts (FirstName, Email, Country, State, City, Phone, FindUs, Message) VALUES ('" .$request['quotes_first_name'] . "', '" .$request['quotes_email'] . "', '". $request['country'] . "', '". $request['state'] . "', '". $request['city'] . "', '". $request['quotes_phone'] ."', '". $request['quotes_findUs']."', '". $request['quotes_message']."')";
-        
+        $sql = "INSERT INTO Contacts (FirstName, Email, Country, State, City, Phone, FindUs, Message,IP,URL) VALUES ('" .mysqli_real_escape_string($conn,$request['quotes_first_name']) . "', '" .mysqli_real_escape_string($conn,$request['quotes_email']) . "', '". mysqli_real_escape_string($conn,$request['country'])  . "', '". mysqli_real_escape_string($conn,$request['state'])  . "', '". mysqli_real_escape_string($conn,$request['city'])  . "', '". mysqli_real_escape_string($conn,$request['quotes_phone'])  ."', '". mysqli_real_escape_string($conn,$request['quotes_findUs']) ."', '". mysqli_real_escape_string($conn,$request['quotes_message']) ."', '". mysqli_real_escape_string($conn,$_SERVER['HTTP_REFERER']) ."', '". mysqli_real_escape_string($conn,$_SERVER['REMOTE_ADDR']) ."')";
         if ($conn->query($sql) === TRUE) {
             
             // Contact Information to Client
-            sendEmail('info@ditstek.com', "Contact Information", userInformationHtml($request));
-            //sendEmail('tarunwadhwawins@gmail.com', "Contact Information", userInformationHtml($request));
+            //sendEmail('info@ditstek.com', "Contact Information", userInformationHtml($request));
             
             // Thank you email to User
             $message = customerEmailData($request['quotes_first_name']);
-            sendEmail($request['quotes_email'], 'Thank you for Contact', $message);
+           // sendEmail($request['quotes_email'], 'Thank you for Contact', $message);
             $response = array('Success' => true, 'Message' => 'Thank you for contacting Ditstek Innovations. Our team will get back to you shortly with the next steps. ');
         } else {
             $response = array('Success' => false, 'Message' => 'Error while submitting information.');
