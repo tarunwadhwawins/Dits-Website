@@ -1,3 +1,6 @@
+<?php
+require_once('../core/ajax.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -67,7 +70,7 @@
             </div>
         </div>
     </div>
-    <!---->
+     <?php include_once('common/commonjs.php'); ?>
 </body>
 
 </html>
