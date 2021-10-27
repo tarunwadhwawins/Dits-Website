@@ -1,5 +1,4 @@
 <?php
-require_once('../core/dbconnection.php');
 require_once('../core/ajax.php');
 $category_id = $seo_title = $seo_keyword = $seo_desc = $title = $slug = $date = $tags = $image = $slider_image = $banner_heading =  $short_desc = $long_desc = $fs_heading = $fs_sub_heading = $fs_description = $fs_image = $image_text = $ss_description = $ss_image = $cat_link =  $msg = $extension = '';
 $tags = array();

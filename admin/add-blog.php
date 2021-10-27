@@ -1,7 +1,6 @@
 <?php
-require_once('../core/dbconnection.php');
 require_once('../core/ajax.php');
-$seo_title = $seo_keyword = $seo_desc = $title = $slug = $date = $short_desc = $desc1 = $image = $url = $msg = '';
+$seo_title = $seo_keyword = $seo_desc = $title = $slug = $date = $short_desc = $desc1 = $image = $Blogurl = $msg = '';
 $image_required = 'required';
 if (isset($_GET['id']) && $_GET['id'] != '') {
     $image_required = '';
@@ -20,7 +19,7 @@ if (isset($_GET['id']) && $_GET['id'] != '') {
         $desc1 = $row['desc1'];
         $date = $row['date'];
         $image = $row['image'];
-        $url = $row['url'];
+        $Blogurl = $row['url'];
     } else {
         header('location:blogs.php');
         die();
@@ -35,7 +34,7 @@ if (isset($_POST['submit'])) {
     $short_desc = get_safe_value($conn, $_POST['short_desc']);
     $desc1 = get_safe_value($conn, $_POST['editor1']);
     $date = get_safe_value($conn, $_POST['date']);
-    $url = get_safe_value($conn, $_POST['url']);
+    $Blogurl = get_safe_value($conn, $_POST['url']);
     $slug1 = str_replace(' ', '-', $title);
     $slug = trim(strtolower($slug1), "?");
 
@@ -73,17 +72,17 @@ if (isset($_POST['submit'])) {
         if (isset($_GET['id']) && $_GET['id'] != '') {
             if (isset($_FILES['image']) && $_FILES['image']['name'] != '') {
                 $update_sql = "update blogs set  seo_title='$seo_title', seo_keyword='$seo_keyword', seo_desc='$seo_desc', 
-                title='$title', slug='$slug', short_desc='$short_desc' , desc1='$desc1', date='$date', image='$image',  url='$url'  where id='$id'";
+                title='$title', slug='$slug', short_desc='$short_desc' , desc1='$desc1', date='$date', image='$image',  url='$Blogurl'  where id='$id'";
             } else {
                 $update_sql = "update blogs set  seo_title='$seo_title', seo_keyword='$seo_keyword', seo_desc='$seo_desc', 
-                title='$title', slug='$slug' , short_desc='$short_desc' ,desc1='$desc1', date='$date' ,  url='$url'  where id='$id'";
+                title='$title', slug='$slug' , short_desc='$short_desc' ,desc1='$desc1', date='$date' ,  url='$Blogurl'  where id='$id'";
             }
             mysqli_query($conn, $update_sql);
             session_start();
             $_SESSION['success_message'] = "Data Updated successfully.";
         } else {
             mysqli_query($conn, "insert into blogs (seo_title, seo_keyword, seo_desc, title, slug , short_desc ,desc1,  image, url , status, date) 
-            values('$seo_title', '$seo_keyword', '$seo_desc',  '$title', '$slug' , '$short_desc' ,'$desc1', '$image', '$url' , '1', '$date' )");
+            values('$seo_title', '$seo_keyword', '$seo_desc',  '$title', '$slug' , '$short_desc' ,'$desc1', '$image', '$Blogurl' , '1', '$date' )");
 
 
             session_start();
@@ -211,7 +210,7 @@ if (isset($_POST['submit'])) {
                         <!-- <div class="col-sm-12">
                         <div class="form-group">
                             <label>URL</label>
-                            <input type="text" name="url" id="url" value="<?php echo $url ?>" class="form-control" placeholder="Enter Url" required/>
+                            <input type="text" name="url" id="url" value="<?php echo $Blogurl ?>" class="form-control" placeholder="Enter Url" required/>
                         </div>
                     </div> -->
                         <div class="col-sm-12">
