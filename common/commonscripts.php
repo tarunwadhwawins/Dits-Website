@@ -16,7 +16,7 @@
     <script src="<?php echo $url; ?>assets/js/imageMapResizer.min.js"></script>
 	  <script type="text/javascript">
 
-		$('map').imageMapResize();
+		//$('map').imageMapResize();
 
 	</script>
 	   <script type="text/javascript">

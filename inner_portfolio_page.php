@@ -132,7 +132,7 @@ $get_portfolio_details = get_portfolio_details($conn, $slug);
       </div>
    </section>
    <div class="backPortfolio">
-      <a href="/portfolio">Back To Portfolio </a>
+      <a href="<?php echo $url; ?>/portfolio">Back To Portfolio </a>
    </div>
    <!--footer-->
    <?php include_once('common/footer.php'); ?>
