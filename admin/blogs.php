@@ -133,8 +133,8 @@ $res = mysqli_query($conn,$sql);
                                     <td class="text-nowrap">
                                     <?php
                                 
-                                echo "<a class='btn btn-primary mr-2' href='add-blog.php?id=".$row['id']."'><i class='fa fa-edit'></i></a>";
-                                echo "<a class='btn btn-danger' href='?type=delete&id=".$row['id']."'><i class='fa fa-close'></i></a>";
+                                echo "<a class='btn btn-primary mr-2' href='add-blog.php?id=".$row['id']."' onclick='return confirm_edit();'><i class='fa fa-edit'></i></a>";
+                                echo "<a class='btn btn-danger' href='?type=delete&id=".$row['id']."' onclick='return confirm_delete();'><i class='fa fa-close'></i></a>";
                                    ?>
                                     </td>
                                     
@@ -162,6 +162,18 @@ $res = mysqli_query($conn,$sql);
     <!---->
     <?php include_once('common/commonjs.php'); ?>
     <!---->
+    <script>
+        function confirm_delete()
+        {
+         return confirm("Are you sure want to delete ?");
+        }
+     
+        function confirm_edit()
+        {
+         return confirm("Are you sure want to edit ?");
+        }
+    
+    </script>
 </body>
 
 </html>
