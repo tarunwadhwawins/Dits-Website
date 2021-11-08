@@ -86,31 +86,31 @@ if (isset($_POST['submit'])) {
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Page Name</label>
-                                <input type="text" name="name" value="<?php echo @$name; ?>" class="form-control" placeholder="Enter page name" />
+                                <input type="text" name="name" value="<?php echo @$name; ?>" class="form-control" placeholder="Enter page name" data-validation="required"/>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Page Slug</label>
-                                <input type="text" name="slug" value="<?php echo @$slug; ?>" class="form-control" placeholder="Enter page slug" />
+                                <input type="text" name="slug" value="<?php echo @$slug; ?>" class="form-control" placeholder="Enter page slug" data-validation="required server" data-validation-url="<?php echo $url; ?>admin/metatags" data-validation-req-params='<?php if(!empty($_GET['id'])){ echo json_encode(array('id'=>$_GET['id'])); } ?>'  />
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Seo Title</label>
-                                <input type="text" name="title" value="<?php echo @$title; ?>" class="form-control" placeholder="Enter Seo Title" />
+                                <input type="text" name="title" value="<?php echo @$title; ?>" class="form-control" placeholder="Enter Seo Title" data-validation="required" />
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Seo Keyword</label>
-                                <input type="text" name="keyword" value="<?php echo @$keyword; ?>" class="form-control" placeholder="Enter Seo Title" />
+                                <input type="text" name="keyword" value="<?php echo @$keyword; ?>" class="form-control" placeholder="Enter Seo Title" data-validation="required" />
                             </div>
                         </div>
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label>Seo Description</label>
-                                <textarea class="form-control" name="description" placeholder="Enter Seo Description"><?php echo @$description; ?></textarea>
+                                <textarea class="form-control" name="description" placeholder="Enter Seo Description" data-validation="required"><?php echo @$description; ?></textarea>
                             </div>
                         </div>
                         <div class="col-sm-12">

@@ -11,6 +11,31 @@
         }
 
     }
+    if(isset($_POST['slug']) && $_POST['slug']!=''){
+        $slug=get_safe_value($conn,$_POST['slug']);
+        if(!isset($_POST['id'])){
+           $res = mysqli_query($conn, "select * from meta_tags where slug='$slug'");
+            $check = mysqli_num_rows($res);
+        }else{
+            $id=get_safe_value($conn,$_POST['id']);
+            $res = mysqli_query($conn, "select * from meta_tags where id='$id' and slug='$slug'");
+            $check = mysqli_num_rows($res);
+        }
+        if($check > 0){
+            $data = array(
+                            "valid" => false,
+                            "message" => "Slug already exist",
+            );
+        }else{
+            $data = array(
+                            "valid" => true,
+                            "message" => "Slug not exist",
+            );
+        }
+        echo json_encode($data);
+        die;
+
+    }
     $res = mysqli_query($conn, "select * from meta_tags");
     if (isset($_GET['pageno']))
     {
