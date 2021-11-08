@@ -6,12 +6,9 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="pragma" content="no-cache" />
-    <meta name="keywords" content="Healthcare development services, fintech software development company, IoT development company, Real Estate App Development, EdTech software development, custom retail software, workflow automation company">
-	<meta name="description" content="DITS specializes in offering custom software development solutions for industries like Healthcare, Fintech, Retail, Business Workflow Automation, Ed-Tech, IOT & Real Estate.">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Software Solutions for Industries - Ditstek Innovations</title>
-	<link href="http://demo1.ditstek.com/domain" rel="canonical"/>
+	<meta http-equiv="pragma" content="no-cache" />
+   <?php include_once('common/commonmeta.php'); ?>
 	<!--common css-->
 	<?php include_once('common/commoncss.php'); ?>
 	<!---->

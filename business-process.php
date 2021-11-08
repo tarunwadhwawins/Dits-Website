@@ -6,11 +6,8 @@
    <head>
       <meta charset="utf-8">
       <meta http-equiv="pragma" content="no-cache" />
-      <meta name="description" content="SaaS Based Process Management - Ditstek Innovations"/>
-      <meta name="keywords" content="SaaS Based Process Management"/>
-      <meta name="author" content="Dits"/>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>SaaS Based Process Management - Ditstek Innovations</title>
+      <?php include_once('common/commonmeta.php'); ?>
       <!--common css-->
       <?php include_once('common/commoncss.php'); ?>
       <!--slicl slider css-->

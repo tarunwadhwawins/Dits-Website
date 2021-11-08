@@ -12,12 +12,8 @@ $get_portfolio=get_portfolio($conn);
    <title>Custom Software Development Company | Dedicated Software Development Teams - Ditstek Innovations</title>
    <meta charset="utf-8">
    <meta http-equiv="pragma" content="no-cache" />
-   <meta name="description" content="Need Custom solutions for your business needs? We offer Solutions like Marketplace, SAAS Workflow Automation, Marketplaces, Cloud based,CRM etc. Hire us Today. " />
-   <meta name="keywords" content="Custom Software Development agency , Dedicated Software Development Teams, remote software development teams" />
-   <meta name="author" content="Dits" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!--common css-->
-   <link href="https://www.ditstek.com/portfolio" rel="canonical" />
+   <?php include_once('common/commonmeta.php'); ?>
    <?php include_once('common/commoncss.php'); ?>
    <!---->
 </head>

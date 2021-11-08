@@ -4,15 +4,12 @@
 <!doctype html>
 <html lang="en">
    <head>
-    <title>Web Application Development Services | SAAS Software Development Company | Ditstek Innovations</title>
       <meta charset="utf-8">
       <meta http-equiv="pragma" content="no-cache" />
-      <meta name="description" content="DITSTEK - A web application development company.Hire Full Stack developers and programmers to develop custom applications. Hire full stack software engineer as per your need – Hourly/Monthly basis.Our services include all types of frameworks and tools such as Full Stack, .Net core ,Node.js, Laravel, ReactJS, AngularJS. Lets Work together."/>
-      <meta name="keywords" content="Web Application Development Services, SAAS Software Development Company , custom web development services, web application development company, remote dot net developer, full stack development company."/>
-      <meta name="author" content="Dits"/>
+      <?php include_once('common/commonmeta.php'); ?>
+     
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <!--common css-->
-        <link href="https://www.ditstek.com/about" rel="canonical"/>
        <?php include_once('common/commoncss.php'); ?>
 	  <!---->
    </head>

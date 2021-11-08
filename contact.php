@@ -6,13 +6,8 @@
    <head>
       <meta charset="utf-8">
       <meta http-equiv="pragma" content="no-cache" />
-      <meta name="description" content="Get in touch with DITSTEK, a custom application development company operating across the globe."/>
-      <meta name="keywords" content="Contact Us"/>
-      <meta name="author" content="Dits"/>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Contact Us - Ditstek Innovations</title>
-      <!--common css-->
-      <link href="https://www.ditstek.com/contact" rel="canonical"/>
+      <?php include_once('common/commonmeta.php'); ?>
       <?php include_once('common/commoncss.php'); ?>
       <!---->
    </head>

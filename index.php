@@ -4,11 +4,9 @@
 <!doctype html>
 <html lang="en">
    <head>
-    <title>Remote Custom Software and Web Application Development Company - Ditstek Innovations</title>
       <meta charset="utf-8">
       <meta http-equiv="pragma" content="no-cache" />
-      <meta name="description" content="DITSTEK is a Top Rated IT Outsourcing company delivering custom software solutions  We are providers of outsourcing, offshore software development offering custom web app and software services along with full-stack remote development to global clients with flexible engagement models."/>
-      <meta name="keywords" content="remote custom software development, custom web application development company, custom software development, web application development services, outsource web development company"/>
+      <?php include_once('common/commonmeta.php'); ?>
       <meta name="author" content="Dits"/>
       <meta name="twitter:card" content="summary_large_image"/>
       <meta name="twitter:site" content="@ditstek"/>
