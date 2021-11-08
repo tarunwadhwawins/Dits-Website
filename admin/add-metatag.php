@@ -36,7 +36,7 @@ if (isset($_POST['submit'])) {
         session_start();
         $_SESSION['success_message'] = "Data updated successfully.";
     } else {
-        mysqli_query($conn, "INSERT INTO `meta_tags`(`page`, `slug`, `title`, `keyword`, `description`) VALUES ('".$name."','".$slug."','".$description."','".$keyword."','".$title."')");
+        mysqli_query($conn, "INSERT INTO `meta_tags`(`page`, `slug`, `title`, `keyword`, `description`) VALUES ('".$name."','".$slug."','".$title."','".$keyword."','".$description."')");
         $id = mysqli_insert_id($conn);
         session_start();
         $_SESSION['success_message'] = "Data inserted successfully.";
@@ -86,13 +86,13 @@ if (isset($_POST['submit'])) {
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Page Name</label>
-                                <input type="text" name="name" value="<?php echo @$name; ?>" class="form-control" placeholder="Enter page name" data-validation="required"/>
+                                <input type="text" name="name" value="<?php echo @$name; ?>" class="form-control" placeholder="Enter page name" data-validation="required" <?php if(!empty($_GET['id'])){ echo "readonly"; } ?>/>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Page Slug</label>
-                                <input type="text" name="slug" value="<?php echo @$slug; ?>" class="form-control" placeholder="Enter page slug" data-validation="required server" data-validation-url="<?php echo $url; ?>admin/metatags" data-validation-req-params='<?php if(!empty($_GET['id'])){ echo json_encode(array('id'=>$_GET['id'])); } ?>'  />
+                                <input type="text" name="slug" value="<?php echo @$slug; ?>" class="form-control" placeholder="Enter page slug" data-validation="required <?php if(empty($_GET['id'])){ ?> server <?php } ?>" data-validation-url="<?php echo $url; ?>admin/metatags"  <?php if(!empty($_GET['id'])){ echo "readonly"; } ?>/>
                             </div>
                         </div>
                         <div class="col-sm-6">
@@ -104,7 +104,7 @@ if (isset($_POST['submit'])) {
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Seo Keyword</label>
-                                <input type="text" name="keyword" value="<?php echo @$keyword; ?>" class="form-control" placeholder="Enter Seo Title" data-validation="required" />
+                                <input type="text" name="keyword" value="<?php echo @$keyword; ?>" class="form-control" placeholder="Enter Seo Keyword" data-validation="required" />
                             </div>
                         </div>
                         <div class="col-sm-12">

@@ -18,7 +18,7 @@
             $check = mysqli_num_rows($res);
         }else{
             $id=get_safe_value($conn,$_POST['id']);
-            $res = mysqli_query($conn, "select * from meta_tags where id='$id' and slug='$slug'");
+            $res = mysqli_query($conn, "select * from meta_tags where id!='$id' and slug='$slug'");
             $check = mysqli_num_rows($res);
         }
         if($check > 0){
@@ -104,7 +104,7 @@
                                         <td><?php echo $row['slug']; ?></td>
                                         <td><?php echo $row['page']; ?></td>
                                         <td class="text-nowrap">
-                                            <a class="btn btn-primary mr-2" href="<?php echo $url; ?>admin/add-metatag?id=<?php echo $index; ?>" onclick='return confirm_edit();'><i class="fa fa-edit"></i></a>
+                                            <a class="btn btn-primary mr-2" href="<?php echo $url; ?>admin/add-metatag?id=<?php echo $row['id']; ?>" onclick='return confirm_edit();'><i class="fa fa-edit"></i></a>
                                             <a class="btn btn-danger" href='?type=delete&id=<?php echo $row["id"]; ?>' onclick='return confirm_delete();'><i class="fa fa-close"></i></a>                                
                                         </td>
                                     </tr>
