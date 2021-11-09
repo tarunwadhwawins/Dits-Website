@@ -103,7 +103,7 @@ $get_portfolio = get_portfolio($conn);
 
                   <div class="mobileFilter">
                      <button class="btn btn-primary btn-block collapsed" id="tags-tabs" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
-                        <span class="tag-name">Tags</span><i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        <span class="tag-name">Tags - All</span><i class="fa fa-chevron-right" aria-hidden="true"></i>
                      </button>
                      <div class="collapse" id="collapseExample1">
                         <div class="card card-body">
