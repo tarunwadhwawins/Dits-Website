@@ -106,13 +106,8 @@ $get_portfolio=get_portfolio($conn);
                            </div>
                            <div id="collapse-ALL" class="collapse show" data-parent="#content" role="tabpanel" aria-labelledby="heading-ALL">
                            <div class="card-body">
-                                 <div class="row">
-                                 </div>
+                              <div id='PortfolioContent'> </div>
                            </div>
-                        </div>
-
-                        <div id='PortfolioContent'>
-
                         </div>
                         <div class="col-sm-12" id="loading-element" style="height:50px;">
                             <div class="load-more" style="display: none;">
