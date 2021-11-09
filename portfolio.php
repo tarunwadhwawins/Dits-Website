@@ -59,44 +59,75 @@ $get_portfolio = get_portfolio($conn);
             <div class="col-sm-12">
                <div class="whiteBg text-center">
                   <div class="mobileFilter">
-                     <button class="btn btn-primary btn-block collapsed" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                        <span>Category</span><i class="fa fa-chevron-right" aria-hidden="true"></i>
+                     <button class="btn btn-primary btn-block collapsed" id="cat-tabs" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        <span class="category-name">Category - All</span><i class="fa fa-chevron-right" aria-hidden="true"></i>
                      </button>
                      <div class="collapse" id="collapseExample">
                         <div class="card card-body">
-                           Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                           <div class="tabs-domain">
+                              <input type="radio" id="radio0" name="tabs" />
+                              <label class="tab category All" for="radio0" onclick="loadCategory('All', 'All', 'All')">All</label>
+                              <?php $get_category = get_category($conn);
+                              $i = 1;
+                              foreach ($get_category as $list) { ?>
+                                 <input type="radio" id="radio<?php echo $i ?>" name="tabs" />
+                                 <label class="tab category <?php echo $list['slug'] ?>" for="radio-1" onclick="loadCategory('<?php echo $list['slug'] ?>', '<?php echo $list['id'] ?>', '<?php echo $list['name'] ?>')" id="<?php echo $list['id'] ?>"><?php echo $list['name'] ?></label>
+                              <?php $i++; } ?>
+                              <span class="glider"></span>
+                           </div>
                         </div>
                      </div>
                   </div>
 
-                  <div class="tabs-domain">
-                     <input type="radio" id="radio0" name="tabs" />
-                     <label class="tab category All" for="radio0" onclick="loadCategory('All')">All</label>
-                     <?php
-                     $get_category = get_category($conn);
-                     $i = 1;
-                     foreach ($get_category as $list) {
-                     ?>
-                        <input type="radio" id="radio<?php echo $i ?>" name="tabs" />
-                        <label class="tab category <?php echo $list['slug'] ?>" for="radio-1" onclick="loadCategory('<?php echo $list['slug'] ?>', '<?php echo $list['id'] ?>')" id="<?php echo $list['id'] ?>"><?php echo $list['name'] ?></label>
+                  <div class="deskFilter">
+                     <div class="tabs-domain">
+                        <input type="radio" id="radio0" name="tabs" />
+                        <label class="tab category All active" for="radio0" onclick="loadCategory('All', 'All', 'All')">All</label>
+                        
                         <?php
-                        $i++;
+                        $get_category = get_category($conn);
+                        $i = 1;
+                        foreach ($get_category as $list) {
                         ?>
-                     <?php
-                     }
-                     ?>
-                     <span class="glider"></span>
+                           <input type="radio" id="radio<?php echo $i ?>" name="tabs" />
+                           <label class="tab category <?php echo $list['slug'] ?>" for="radio-1" onclick="loadCategory('<?php echo $list['slug'] ?>', '<?php echo $list['id'] ?>', '<?php echo $list['name'] ?>')" id="<?php echo $list['id'] ?>"><?php echo $list['name'] ?></label>
+                           <?php
+                           $i++;
+                           ?>
+                        <?php
+                        }
+                        ?>
+                        <span class="glider"></span>
+                     </div>
                   </div>
+
                   <div class="mobileFilter">
-                     <button class="btn btn-primary btn-block collapsed" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
-                        <span>Tags</span><i class="fa fa-chevron-right" aria-hidden="true"></i>
+                     <button class="btn btn-primary btn-block collapsed" id="tags-tabs" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+                        <span class="tag-name">Tags</span><i class="fa fa-chevron-right" aria-hidden="true"></i>
                      </button>
                      <div class="collapse" id="collapseExample1">
                         <div class="card card-body">
-                           Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                           <div class="tabs">
+                              <ul id="tabs" class="nav justify-content-center" role="tablist">
+
+                              <li class="nav-item">
+                                 <a id="tab-A" href="#pane-A" class="nav-link active" data-toggle="tab" role="tab" onclick="loadCategoryWithTag('All')">All</a>
+                              </li>
+
+                              <?php
+                              $get_tags = get_tags($conn);
+                              foreach ($get_tags as $tag) {
+                              ?>
+                                 <li class="nav-item">
+                                    <a id="tab-ALL" href="#pane-ALL" class="nav-link" data-toggle="tab" role="tab" onclick="loadCategoryWithTag('<?php echo $tag['tag'] ?>')"><?php echo $tag['tag'] ?></a>
+                                 </li>
+                              <?php } ?>
+                              </ul>
+                           </div>
                         </div>
                      </div>
                   </div>
+                  
                   <div class="tabs">
                      <ul id="tabs" class="nav nav-tabs justify-content-center" role="tablist">
 
@@ -116,13 +147,14 @@ $get_portfolio = get_portfolio($conn);
 
                      <div id="content" class="tab-content" role="tablist">
                         <div id="pane-ALL" class="card tab-pane fade show active" role="tabpanel" aria-labelledby="tab-ALL">
-                           <div class="card-header" role="tab" id="heading-ALL">
+                           <!-- <div class="card-header" role="tab" id="heading-ALL">
                               <h5 class="mb-0">
                                  <a data-toggle="collapse" href="#collapse-ALL" aria-expanded="true" aria-controls="collapse-ALL">
-                                    All Work
+                                    <span id="cat-name">All</span>
+                                    <span id="tag-name"></span>
                                  </a>
                               </h5>
-                           </div>
+                           </div> -->
                            <div id="collapse-ALL" class="collapse show" data-parent="#content" role="tabpanel" aria-labelledby="heading-ALL">
                            <div class="card-body">
                               <div id='PortfolioContent'> </div>
@@ -168,8 +200,11 @@ $get_portfolio = get_portfolio($conn);
          });
       });
 
-      function loadCategory(Slug, CategoryID = 'All') {
+      function loadCategory(Slug, CategoryID = 'All', CatName) {
          page = 1;
+         $("#cat-tabs").addClass('collapsed');
+         $("#collapseExample").removeClass('show');
+         $(".category-name").text('Category - '+CatName);
          $(".category").removeClass('active');
          $("." + Slug).addClass('active');
          $('.nav-link').removeClass('active');
@@ -183,6 +218,9 @@ $get_portfolio = get_portfolio($conn);
 
       function loadCategoryWithTag(Tag, Category) {
          page = 1;
+         $("#tags-tabs").addClass('collapsed');
+         $("#collapseExample1").removeClass('show');
+         $(".tag-name").text('Tags - '+Tag);
          var Category = $(".tabs-domain label.active").attr('id');
          if (!Category) {
             Category = "All";
