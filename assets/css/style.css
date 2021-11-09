@@ -2954,16 +2954,24 @@
       .domain .whiteBg {
         padding: 25px 15px; } }
 
-@media (min-width: 991px) {
-  .mobileFilter {
-    display: none; } }
+.mobileFilter {
+  margin: 0 0 15px 0; }
+  @media (min-width: 991px) {
+    .mobileFilter {
+      display: none; } }
+  .mobileFilter .btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .mobileFilter .btn.collapsed i {
+      transform: rotate(90deg); }
+  .mobileFilter .tabs-domain {
+    display: block;
+    border: 0px solid; }
 
-.mobileFilter .btn {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; }
-  .mobileFilter .btn.collapsed i {
-    transform: rotate(90deg); }
+@media (max-width: 991px) {
+  .deskFilter {
+    display: none; } }
 
 .tabs-domain {
   display: inline-flex;

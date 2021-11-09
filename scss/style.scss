@@ -3634,6 +3634,7 @@
 	}
 }
 .mobileFilter {
+	margin:0 0 15px 0;
 	@media (min-width:991px) {
 		display: none;
 	}
@@ -3646,6 +3647,15 @@
 				transform: rotate(90deg);
 			}
 		}
+	}
+	.tabs-domain{
+       display:block;
+	   border:0px solid;
+	}
+}
+.deskFilter {
+	@media (max-width:991px) {
+		display: none;
 	}
 }
 .tabs-domain {
