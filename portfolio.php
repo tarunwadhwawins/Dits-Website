@@ -160,11 +160,11 @@ $get_portfolio = get_portfolio($conn);
                               <div id='PortfolioContent'> </div>
                            </div>
                         </div>
-                        <div class="col-sm-12" id="loading-element" style="height:50px;">
+                        <!-- <div class="col-sm-12" id="loading-element" style="height:50px;">
                             <div class="load-more" style="display: none;">
                                 <img src="<?php echo $url; ?>assets\images\loader.gif" style="height: 100px;"/>
                             </div>
-                        </div>
+                        </div> -->
                      </div>
                   </div>
                </div>
