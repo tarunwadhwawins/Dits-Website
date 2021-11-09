@@ -2286,7 +2286,7 @@
 			list-style: none;
 			li {
 				position: relative;
-				padding: 0 0 30px 25px;
+				padding: 0 0 15px 25px;
 				color: #fff;
 				font-family: "dosisregular";
 				letter-spacing: 1.5px;
@@ -3652,7 +3652,37 @@
        display:block;
 	   border:0px solid;
 	}
-}
+	.btn-primary{
+	 &:focus{
+	  box-shadow:none;
+	 }
+	}
+	.tabs{
+	 ul{
+		 display:block;
+	   li{
+		   display:block;
+		a{
+			background-color:transparent;
+			color: #000;
+			border-radius: 0;
+			margin: 0 2px 0 0;
+			transition: all 0.35s ease 0s;
+			&:hover{
+				background-color: #193370;
+				transition: all 0.35s ease 0s;
+				color:#fff;
+			}
+			&.active{
+				background-color: #193370;
+				transition: all 0.35s ease 0s;
+				color:#fff;
+			}
+		  }	  
+		}
+	   }
+	 }
+   }
 .deskFilter {
 	@media (max-width:991px) {
 		display: none;
@@ -3837,6 +3867,7 @@
 		margin: 0 2px 2px 0;
 		color: #fff;
 		background-color: #193370;
+		display: inline-block;
 	}
 }
 /*  404 Page  */

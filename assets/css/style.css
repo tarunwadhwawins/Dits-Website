@@ -1890,7 +1890,7 @@
       list-style: none; }
       .contact .contactInfo ul li {
         position: relative;
-        padding: 0 0 30px 25px;
+        padding: 0 0 15px 25px;
         color: #fff;
         font-family: "dosisregular";
         letter-spacing: 1.5px; }
@@ -2968,6 +2968,26 @@
   .mobileFilter .tabs-domain {
     display: block;
     border: 0px solid; }
+  .mobileFilter .btn-primary:focus {
+    box-shadow: none; }
+  .mobileFilter .tabs ul {
+    display: block; }
+    .mobileFilter .tabs ul li {
+      display: block; }
+      .mobileFilter .tabs ul li a {
+        background-color: transparent;
+        color: #000;
+        border-radius: 0;
+        margin: 0 2px 0 0;
+        transition: all 0.35s ease 0s; }
+        .mobileFilter .tabs ul li a:hover {
+          background-color: #193370;
+          transition: all 0.35s ease 0s;
+          color: #fff; }
+        .mobileFilter .tabs ul li a.active {
+          background-color: #193370;
+          transition: all 0.35s ease 0s;
+          color: #fff; }
 
 @media (max-width: 991px) {
   .deskFilter {
@@ -3098,7 +3118,8 @@
     border-radius: 4px;
     margin: 0 2px 2px 0;
     color: #fff;
-    background-color: #193370; }
+    background-color: #193370;
+    display: inline-block; }
 
 /*  404 Page  */
 .notFoundArea {

@@ -110,17 +110,27 @@
 						  </form>
                   </div>
                </div>
-				<div class="col-sm-4 pad-0">
+               <div class="col-sm-4 pad-0">
 				  <div class="contactInfo">
-                   <h2>Contact Information</h2>
-				    <ul>
-						 <li><span><i class="feather icon-map-pin"></i></span> SCO - 356 , First Floor, 44-D, Chandigarh, 160047</li> 
-						 <li><a href="mailto:info@ditstek.com"><span><i class="feather icon-mail"></i></span> info@ditstek.com</a></li>
-						 <li><a href="tel:+91-623-942-1395"><span><i class="feather icon-phone"></i></span> +91-623-942-1395 </a></li> 
-						 <li><a href="tel:+91172-4080477"><span><i class="feather icon-phone"></i></span> +91172-4080477 </a></li>
-					
-						<li><a href="skype:-princy.dhupar-?chat"><span><i class="fa fa-skype"></i></span> princy.dhupar</a></li> 
-					</ul>
+                  <h2>India Office</h2>
+                  <ul>
+                     <li><span><i class="feather icon-map-pin"></i></span> SCO - 356 , First Floor, 44-D, Chandigarh, 160047</li>
+                     <li><a href="mailto:info@ditstek.com"><span><i class="feather icon-mail"></i></span> info@ditstek.com</a></li>
+                     <li><a href="tel:+91-623-942-1395"><span><i class="feather icon-phone"></i></span> +91-623-942-1395 </a></li>
+                     <li><a href="tel:+91172-4080477"><span><i class="feather icon-phone"></i></span> +91172-4080477 </a></li>
+
+                     <li><a href="skype:-princy.dhupar-?chat"><span><i class="fa fa-skype"></i></span> princy.dhupar</a></li>
+                  </ul>
+                  <h2>USA Office</h2>
+                  <ul>
+                     <li><span><i class="feather icon-map-pin"></i></span> 1500 Poly Dr, Suite 107 Billings, MT, USA</li>
+                     <li>
+                        <div class="mainClass"><a href="mailto:tom@whitewater.dev"><span><i class="feather icon-mail"></i></span><img src="<?php echo $url; ?>assets/images/img-bottom1.png" alt="image"></a></div>
+                     </li>
+                     <li>
+                        <div class="mainClass"><a href="tel:+1-406-672-8292"><span><i class="feather icon-phone"></i></span> +1-406-672-8292</a></div>
+                     </li>
+                  </ul>
 				  </div>
 				</div>
             </div>

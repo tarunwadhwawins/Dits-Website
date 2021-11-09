@@ -7,7 +7,6 @@
       <meta charset="utf-8">
       <meta http-equiv="pragma" content="no-cache" />
       <?php include_once('common/commonmeta.php'); ?>
-      <meta name="author" content="Dits"/>
       <meta name="twitter:card" content="summary_large_image"/>
       <meta name="twitter:site" content="@ditstek"/>
       <meta name="twitter:title" content="DITSTEK - Custom Software Development Solutions"/>

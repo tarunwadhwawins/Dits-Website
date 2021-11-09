@@ -18,9 +18,9 @@
 <?php
   } else {
 ?>
-    <title>Remote Custom Software and Web Application Development Company - Ditstek Innovations</title>
-    <meta name="description" content="DITSTEK is a Top Rated IT Outsourcing company delivering custom software solutions  We are providers of outsourcing, offshore software development offering custom web app and software services along with full-stack remote development to global clients with flexible engagement models."/>
-    <meta name="keywords" content="remote custom software development, custom web application development company, custom software development, web application development services, outsource web development company"/>
+    <title></title>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
 <?php
   }
 ?>
