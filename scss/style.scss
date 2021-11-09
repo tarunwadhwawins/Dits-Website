@@ -3891,7 +3891,7 @@ padding:50px 0;
 			}
 			.card-body{
 			  padding: 1.25rem 0;
-				@media(max-width:767px){
+				@media(max-width:991px){
 				 padding:15px;
 				}
 				.thumbImage{
@@ -3942,7 +3942,8 @@ padding:50px 0;
 				  border:1px solid #193370;
 					h5{
 						a{
-						  color:#fff;	
+						  color:#fff;
+						  
 						}
 					}
 				}
@@ -3965,6 +3966,7 @@ padding:50px 0;
 					   font-size:18px;
 						a{
 						  color:#fff;	
+						  display: block;
 						}
 					}
 				}	

@@ -66,27 +66,27 @@
           background: transparent;
           border-radius: 4px; }
           .topHeader .socialMedias ul li.linkedin a:hover {
-            color: #00C3F8; }
+            color: #00c3f8; }
         .topHeader .socialMedias ul li.facebook {
           background: transparent;
           border-radius: 4px; }
           .topHeader .socialMedias ul li.facebook a:hover {
-            color: #3E5993; }
+            color: #3e5993; }
         .topHeader .socialMedias ul li.twitter {
           background: transparent;
           border-radius: 4px; }
           .topHeader .socialMedias ul li.twitter a:hover {
-            color: #00C3F8; }
+            color: #00c3f8; }
         .topHeader .socialMedias ul li.behance {
           background: transparent;
           border-radius: 4px; }
           .topHeader .socialMedias ul li.behance a:hover {
-            color: #00C3F8; }
+            color: #00c3f8; }
         .topHeader .socialMedias ul li.instagram {
           background: transparent;
           border-radius: 4px; }
           .topHeader .socialMedias ul li.instagram a:hover {
-            color: #00C3F8; }
+            color: #00c3f8; }
         .topHeader .socialMedias ul li.youtube {
           background: transparent;
           border-radius: 4px; }
@@ -110,7 +110,7 @@
         display: none !important; } }
     .navigationMenus .navbar .collapse .navbar-nav li {
       display: inline-block;
-      font-family: 'dosissemibold';
+      font-family: "dosissemibold";
       font-size: 16px;
       text-transform: uppercase; }
       @media (max-width: 991px) {
@@ -126,7 +126,7 @@
         letter-spacing: 1px; }
         @media (max-width: 1199px) {
           .navigationMenus .navbar .collapse .navbar-nav li a {
-            padding: 10px 12px; } }
+            padding: 10px 5px; } }
         .navigationMenus .navbar .collapse .navbar-nav li a:hover {
           color: #155a9f; }
       .navigationMenus .navbar .collapse .navbar-nav li.active a {
@@ -217,7 +217,7 @@
           .navigationMenus .navbar .collapse .navbar-nav li ul.fullWidth li.columnFull .headerPortfolio {
             padding: 15px 0; }
             .navigationMenus .navbar .collapse .navbar-nav li ul.fullWidth li.columnFull .headerPortfolio h4 {
-              font-family: 'open_sansbold';
+              font-family: "open_sansbold";
               font-size: 18px;
               margin: 0 0 15px 0; }
             .navigationMenus .navbar .collapse .navbar-nav li ul.fullWidth li.columnFull .headerPortfolio .portCarousel {
@@ -267,11 +267,11 @@
               display: block;
               text-transform: uppercase;
               color: #155a9f;
-              font-family: 'open_sansbold';
+              font-family: "open_sansbold";
               font-size: 18px; }
             .navigationMenus .navbar .collapse .navbar-nav li ul.fullWidth li.columnFull .serviceTitle span {
               display: block;
-              font-family: 'open_sansregular';
+              font-family: "open_sansregular";
               color: #000;
               font-size: 13px; }
               .navigationMenus .navbar .collapse .navbar-nav li ul.fullWidth li.columnFull .serviceTitle span.counter {
@@ -286,7 +286,7 @@
                 padding: 0px; }
                 .navigationMenus .navbar .collapse .navbar-nav li ul.fullWidth li.columnFull .serviceMenus .serviceSubMenu ul li {
                   font-size: 14px;
-                  font-family: 'open_sansbold';
+                  font-family: "open_sansbold";
                   line-height: 28px;
                   margin: 0 0 10px 0;
                   text-transform: capitalize; }
@@ -305,7 +305,7 @@
                     list-style: disc; }
                     .navigationMenus .navbar .collapse .navbar-nav li ul.fullWidth li.columnFull .serviceMenus .serviceSubMenu ul li ul li {
                       font-size: 13px;
-                      font-family: 'open_sanssemibold';
+                      font-family: "open_sanssemibold";
                       line-height: 16px;
                       margin: 0 0 5px 0; }
                       .navigationMenus .navbar .collapse .navbar-nav li ul.fullWidth li.columnFull .serviceMenus .serviceSubMenu ul li ul li.active a {

@@ -3015,7 +3015,7 @@
 
 .tabs .tab-content .card .card-body {
   padding: 1.25rem 0; }
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     .tabs .tab-content .card .card-body {
       padding: 15px; } }
   .tabs .tab-content .card .card-body .thumbImage img {
@@ -3062,7 +3062,8 @@
   .tabs .tab-content .card .card-header h5 {
     font-size: 18px; }
     .tabs .tab-content .card .card-header h5 a {
-      color: #fff; }
+      color: #fff;
+      display: block; }
 
 .tags {
   display: block;
