@@ -3171,16 +3171,12 @@
     color: #fff; }
 
 .load-more {
-  text-align: center; }
-  .load-more .load-more-button {
-    background: #042a63;
-    border-radius: 3px;
-    color: white;
-    display: inline-block;
-    padding: 10px 30px;
-    transition: all 0.25s ease-out;
-    -webkit-font-smoothing: antialiased;
-    cursor: pointer; }
+  text-align: center;
+  padding: 0 0 30px 0;
+  width: 50px;
+  margin: 0 auto; }
+  .load-more img {
+    max-width: 100%; }
 
 /*  inner banner   */
 @media (min-width: 768px) {

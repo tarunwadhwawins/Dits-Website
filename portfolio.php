@@ -78,25 +78,6 @@ $get_portfolio = get_portfolio($conn);
                                  </div>
                            </div>
                            </div>
-                           <!-- <button class="btn btn-primary btn-block collapsed" id="cat-tabs" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                              <span class="category-name">Category - All</span><i class="fa fa-chevron-right" aria-hidden="true"></i>
-                           </button>
-                           <div class="collapse" id="collapseExample">
-                              <div class="card card-body">
-                                 <div class="tabs-domain">
-                                    <input type="radio" id="radio0" name="tabs" />
-                                    <label class="tab category All" for="radio0" onclick="loadCategory('All', 'All', 'All')">All</label>
-                                    <?php $get_category = get_category($conn);
-                                    $i = 1;
-                                    foreach ($get_category as $list) { ?>
-                                       <input type="radio" id="radio<?php echo $i ?>" name="tabs" />
-                                       <label class="tab category <?php echo $list['slug'] ?>" for="radio-1" onclick="loadCategory('<?php echo $list['slug'] ?>', '<?php echo $list['id'] ?>', '<?php echo $list['name'] ?>')" id="<?php echo $list['id'] ?>"><?php echo $list['name'] ?></label>
-                                    <?php $i++;
-                                    } ?>
-                                    <span class="glider"></span>
-                                 </div>
-                              </div>
-                           </div> -->
                         </div>
                      </div>
                      <div class="col-sm-12 col-sm-12 d-sm-none d-md-none d-lg-block">
@@ -167,22 +148,14 @@ $get_portfolio = get_portfolio($conn);
 
                            <div id="content" class="tab-content" role="tablist">
                               <div id="pane-ALL" class="card tab-pane fade show active" role="tabpanel" aria-labelledby="tab-ALL">
-                                 <!-- <div class="card-header" role="tab" id="heading-ALL">
-                                 <h5 class="mb-0">
-                                    <a data-toggle="collapse" href="#collapse-ALL" aria-expanded="true" aria-controls="collapse-ALL">
-                                       <span id="cat-name">All</span>
-                                       <span id="tag-name"></span>
-                                    </a>
-                                 </h5>
-                              </div> -->
                                  <div id="collapse-ALL" class="collapse show" data-parent="#content" role="tabpanel" aria-labelledby="heading-ALL">
                                     <div class="card-body">
                                        <div id='PortfolioContent'> </div>
                                     </div>
                                  </div>
-                                 <div class="col-sm-12" id="loading-element" style="height:50px;">
+                                 <div class="col-sm-12" id="loading-element">
                               <div class="load-more" style="display: none;">
-                                 <img src="<?php echo $url; ?>assets\images\Loading.gif" style="height: 100px;"/>
+                                 <img src="<?php echo $url; ?>assets\images\Loading.gif" alt="image"/>
                               </div>
                            </div>
                               </div>
