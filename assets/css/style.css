@@ -2955,21 +2955,36 @@
         padding: 25px 15px; } }
 
 .mobileFilter {
-  margin: 0 0 15px 0; }
+  margin: 0 0 15px 0;
+  position: relative; }
   @media (min-width: 991px) {
     .mobileFilter {
       display: none; } }
+  .mobileFilter .card {
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    left: 0; }
   .mobileFilter .btn {
     display: flex;
     align-items: center;
-    justify-content: space-between; }
+    justify-content: space-between;
+    background-color: transparent; }
+    .mobileFilter .btn:hover {
+      background-color: #193370; }
     .mobileFilter .btn.collapsed i {
       transform: rotate(90deg); }
   .mobileFilter .tabs-domain {
     display: block;
     border: 0px solid; }
+    .mobileFilter .tabs-domain .tab {
+      justify-content: flex-start; }
   .mobileFilter .btn-primary:focus {
-    box-shadow: none; }
+    box-shadow: none !important; }
+  .mobileFilter .dropdown-menu.tagsList {
+    width: 100%;
+    height: 200px;
+    overflow: auto; }
   .mobileFilter .tabs ul {
     display: block; }
     .mobileFilter .tabs ul li {

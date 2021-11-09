@@ -3635,13 +3635,24 @@
 }
 .mobileFilter {
 	margin:0 0 15px 0;
+	position: relative;
 	@media (min-width:991px) {
 		display: none;
+	}
+	.card {
+		position: absolute;
+		z-index: 99;
+		width: 100%;
+		left: 0;
 	}
 	.btn {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		background-color: transparent;
+		&:hover{
+		    background-color: #193370;
+		}
 		&.collapsed {
 			i {
 				transform: rotate(90deg);
@@ -3651,11 +3662,21 @@
 	.tabs-domain{
        display:block;
 	   border:0px solid;
+	   .tab{
+		justify-content: flex-start;
+	   }
 	}
 	.btn-primary{
 	 &:focus{
-	  box-shadow:none;
+	  box-shadow:none!important;
 	 }
+	}
+	.dropdown-menu {
+	  &.tagsList{
+		width: 100%;
+		height: 200px;
+		overflow: auto;
+	  }
 	}
 	.tabs{
 	 ul{
