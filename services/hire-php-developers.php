@@ -4,12 +4,9 @@
 <!doctype html>
 <html lang="en">
    <head>
-        <title>Hire Remote PHP Web Developers | Dedicated Full Stack PHP Programmers - Ditstek Innovations</title>
       <meta charset="utf-8">
       <meta http-equiv="pragma" content="no-cache" />
-      <meta name="description" content="Hiring dedicated PHP developers for your web development project? Hire best PHP programmers/developers from us & build scalable & secure web apps. Hire Remote php developers Today | Strict NDAs -Contact us!"/>
-      <meta name="keywords" content="Hire PHP developers, Hire PHP programmers, Hire PHP developers India, Hire PHP programmers India, Offshore PHP developers, Remote PHP programmers, Remote PHP developers India, Offshore PHP programmers India, Dedicated PHP developers, dedicated PHP Programmers,Dedicated remote web developers,hire remote php developers"/>
-      <meta name="author" content="Dits"/>
+      <?php include_once('../common/commonmeta.php'); ?>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <!--common css-->
        <link href="https://www.ditstek.com/services/hire-php-developers" rel="canonical"/>

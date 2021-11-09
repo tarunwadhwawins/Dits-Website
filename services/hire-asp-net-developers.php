@@ -4,12 +4,9 @@
 <!doctype html>
 <html lang="en">
    <head>
-        <title>Top .NET  Development Company | Remote .net Development Services | Full Stack ASP.NET Development Company - Ditstek Innovations</title>
       <meta charset="utf-8">
       <meta http-equiv="pragma" content="no-cache" />
-      <meta name="description" content="Outsource .NET development to DITSTEK. We offer dedicated teams of professional .NET developers , application customization and enhancement , custom development and integration. We have extensive expertise in .NET based application development , web applications, web portals , custom solutions. Hire remote ASP.NET Developers. "/>
-      <meta name="keywords" content="Top .NET  Development Company, Best .NET Development Services, Remote .net Development , Full Stack ASP.NET Development Company, Web Application Development Services"/>
-      <meta name="author" content="Dits"/>
+      <?php include_once('../common/commonmeta.php'); ?>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <!--common css-->
        <link href="https://www.ditstek.com/services/hire-asp-net-developers" rel="canonical"/>

@@ -4,12 +4,9 @@
 <!doctype html>
 <html lang="en">
    <head>
-        <title>Custom Software Development Services | Skilled developers! Hire us! - Ditstek Innovations</title>
       <meta charset="utf-8">
       <meta http-equiv="pragma" content="no-cache" />
-      <meta name="description" content="DITSTEK is a leader in custom software development services including mission critical architecture, design and development. We offer a complete bouquet of software development services to help businesses address their key technology challenges, enhance productivity and control costs. Learn more."/>
-      <meta name="keywords" content="Software Development, Custom Software Development, Offshore Software Development, Remote software development, SAAS software Development, Custom sofware Development Company, Remote Software Development Compnay, Best Offshore Software Development"/>
-      <meta name="author" content="Dits"/>
+      <?php include_once('../common/commonmeta.php'); ?>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <!--common css-->
       <link href="https://www.ditstek.com/services/software-development-services" rel="canonical"/>

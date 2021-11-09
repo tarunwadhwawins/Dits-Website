@@ -4,12 +4,9 @@
 <!doctype html>
 <html lang="en">
    <head>
-       <title>Hire UI and UX Developers - Ditstek Innovations</title>
       <meta charset="utf-8">
       <meta http-equiv="pragma" content="no-cache" />
-      <meta name="description" content="DITSTEK UI and UX services rely on current market trends and the past experience in software design. From end-to-end CX design to UI; UX services for digital products, our customer experience services can help you engage clients better at every touchpoint."/>
-      <meta name="keywords" content="Hire UI and UX Developers, top graphic design companies, best graphic design companies, top UI UX developers, UI UX Development agency"/>
-      <meta name="author" content="Dits"/>
+      <?php include_once('../common/commonmeta.php'); ?>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <!--common css-->
        <link href="https://www.ditstek.com/services/hiring-ui-ux-developers" rel="canonical"/>

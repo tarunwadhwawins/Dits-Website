@@ -4,15 +4,11 @@
 <!doctype html>
 <html lang="en">
    <head>
-     <title>Top Custom Web Development Company | Custom Software Development Services - Ditstek Innovations</title>
       <meta charset="utf-8">
       <meta http-equiv="pragma" content="no-cache" />
-      <meta name="description" content="We are a custom software development company delivering top notch services to businesses. DITSTEK has a proficient team to offer a full range of design and development services including custom software and applications to software testing as per your needs.We offer CLOUD SERVICES, MANAGED SERVICES, DEVELOPMENT SERVICES, Offshore Software Development, Remote Software Development, Devops"/>
-      <meta name="keywords" content="Remote Custom Software Development, Custom Web Application Development Company, custome software development, web application development services, outsource web development company"/>
-      <meta name="author" content="Dits"/>
+      <?php include_once('../common/commonmeta.php'); ?>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <!--common css-->
-       <link href="https://www.ditstek.com/services/custom-application-development" rel="canonical"/>
        <?php include_once('../common/commoncss.php'); ?>
 	  <!---->
    </head>
