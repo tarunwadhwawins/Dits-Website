@@ -34,7 +34,7 @@
     transform: translateY(-50%);
     width: 100%; }
     .homeSlider .sliderContent span {
-      font-family: 'dosislight';
+      font-family: "dosislight";
       font-size: 32px;
       text-transform: uppercase;
       letter-spacing: 3px;
@@ -118,7 +118,7 @@
     position: relative;
     text-align: right;
     padding: 0 40px 0 0;
-    font-family: 'open_sansextrabold';
+    font-family: "open_sansextrabold";
     text-transform: uppercase; }
     .aboutUs .aboutUsTitle h2 span {
       color: #3095fb; }
@@ -155,7 +155,7 @@
       .aboutUs .aboutUsDesc ul li {
         display: inline-block;
         margin: 0 30px 0 0;
-        font-family: 'dosisextrabold'; }
+        font-family: "dosisextrabold"; }
         .aboutUs .aboutUsDesc ul li a {
           color: #193370;
           border-bottom: 1px solid #f9f9f9;
@@ -189,7 +189,7 @@
       .softwareSolutions .softwareSolutionsDesc {
         margin: 0 0 45px 0; } }
     .softwareSolutions .softwareSolutionsDesc span {
-      font-family: 'dosislight';
+      font-family: "dosislight";
       font-size: 32px;
       text-transform: uppercase;
       letter-spacing: 3px;
@@ -467,7 +467,7 @@
       border-bottom: 1px solid #f9f9f9;
       padding: 0;
       transition: 0.5s;
-      font-family: 'dosisextrabold'; }
+      font-family: "dosisextrabold"; }
       .method .methodDesc .viewMore:hover {
         border-bottom: 1px solid #193370; }
   .method .animation-principles-home {
@@ -631,7 +631,7 @@
     color: #fff; }
     .counterSection .counters span {
       font-size: 30px;
-      font-family: 'dosisextrabold';
+      font-family: "dosisextrabold";
       position: relative;
       margin: 0 0 10px 0;
       display: inline-block; }
@@ -644,7 +644,7 @@
     .counterSection .counters p {
       color: #fff;
       font-size: 14px;
-      font-family: 'open_sansregular';
+      font-family: "open_sansregular";
       text-transform: uppercase;
       letter-spacing: 1px; }
     @media (max-width: 767px) {
@@ -671,7 +671,7 @@
       .testimonials .testimonialDesc {
         margin: 0 0 30px 0; } }
     .testimonials .testimonialDesc span {
-      font-family: 'dosislight';
+      font-family: "dosislight";
       font-size: 32px;
       text-transform: uppercase;
       letter-spacing: 3px;
@@ -892,7 +892,7 @@
         line-height: 24px;
         margin: 0 0 10px 0; }
   .story h2 {
-    font-family: 'open_sanssemibold';
+    font-family: "open_sanssemibold";
     font-size: 35px;
     line-height: 30px;
     margin: 0 0 20px 0; }
@@ -1311,20 +1311,20 @@
     text-align: center;
     margin: 0 0 30px 0;
     min-height: 240px;
-    transition: all .7s ease; }
+    transition: all 0.7s ease; }
     @media (max-width: 576px) {
       .softwareDev .softwareApp {
         min-height: inherit; } }
     .softwareDev .softwareApp:hover {
       box-shadow: 1px 0 8px rgba(0, 0, 0, 0.12);
-      transition: all .7s ease;
+      transition: all 0.7s ease;
       background: rgba(220, 220, 220, 0.2); }
     .softwareDev .softwareApp h5 {
       font-size: 18px;
       line-height: 21px;
       margin: 0 0 15px 0;
       text-align: left;
-      font-family: 'open_sanssemibold'; }
+      font-family: "open_sanssemibold"; }
       @media (max-width: 576px) {
         .softwareDev .softwareApp h5 br {
           display: none; } }
@@ -1519,7 +1519,7 @@
     text-align: center;
     margin: 0 0 30px 0;
     min-height: 290px;
-    transition: all .7s ease;
+    transition: all 0.7s ease;
     background-color: #fff; }
     @media (max-width: 576px) {
       .softwareTech .softwareTechApp {
@@ -1547,7 +1547,7 @@
   .portfoliopage .methodTop {
     text-align: center; }
     .portfoliopage .methodTop span {
-      font-family: 'dosissemibold';
+      font-family: "dosissemibold";
       font-size: 32px;
       text-transform: uppercase;
       letter-spacing: 3px;
@@ -1776,7 +1776,7 @@
         font-size: 20px;
         margin: 0 0 10px 0;
         text-transform: capitalize;
-        font-family: 'dosissemibold'; }
+        font-family: "dosissemibold"; }
       .portfolio .potfolioDiv .thumbDesc p {
         font-size: 14px;
         margin: 0 0 10px 0;
@@ -1816,11 +1816,11 @@
       font-size: 14px;
       line-height: 30px;
       color: #000;
-      font-family: 'open_sansregular'; }
+      font-family: "open_sansregular"; }
   .portfolioInner .portfolioInnerDesc h4 {
     font-size: 18px;
     color: #000;
-    font-family: 'open_sansregular';
+    font-family: "open_sansregular";
     margin: 0 0 15px 0; }
   .portfolioInner .portfolioInnerImage {
     position: relative; }
@@ -1849,7 +1849,7 @@
       text-align: left;
       margin: 0 0 40px 0; }
       .contact .contactInner .heading h1 {
-        font-family: 'dosissemibold';
+        font-family: "dosissemibold";
         font-size: 32px;
         text-transform: capitalize;
         letter-spacing: 3px;
@@ -1878,7 +1878,7 @@
     flex-direction: column;
     justify-content: center; }
     .contact .contactInfo h2 {
-      font-family: 'dosisregular';
+      font-family: "dosisregular";
       font-size: 32px;
       text-transform: capitalize;
       letter-spacing: 3px;
@@ -1892,7 +1892,7 @@
         position: relative;
         padding: 0 0 30px 25px;
         color: #fff;
-        font-family: 'dosisregular';
+        font-family: "dosisregular";
         letter-spacing: 1.5px; }
         .contact .contactInfo ul li a {
           color: #fff; }
@@ -1937,11 +1937,11 @@
 
 /*---  UX UI   -- */
 .uxUiImageDesc h2 {
-  font-family: 'open_sanssemibold';
+  font-family: "open_sanssemibold";
   text-transform: none; }
 
 .puxUiDesc h2 {
-  font-family: 'open_sanssemibold';
+  font-family: "open_sanssemibold";
   text-transform: none; }
 
 .topSpace150 {
@@ -1960,7 +1960,7 @@
       background-color: #fff; }
     .topSpace150 .uxUiDvplCol h4 {
       margin-bottom: 10px;
-      font-family: 'open_sanssemibold';
+      font-family: "open_sanssemibold";
       text-transform: none;
       min-height: 56px; }
 
@@ -1972,7 +1972,7 @@
   .ctaSection.blueBg h2 {
     color: #fff;
     text-transform: capitalize;
-    font-family: 'open_sanssemibold'; }
+    font-family: "open_sanssemibold"; }
   .ctaSection.blueBg .uxUiCtaBtn .siteBtn:last-child {
     margin-right: 0; }
   .ctaSection.blueBg .uxUiCtaBtn .siteBtn:hover {
@@ -1985,7 +1985,7 @@
   .ctaSection.lightBlueBg h2 {
     color: #fff;
     text-transform: capitalize;
-    font-family: 'open_sanssemibold'; }
+    font-family: "open_sanssemibold"; }
   .ctaSection.lightBlueBg p {
     color: #fff; }
   .ctaSection.lightBlueBg .uxUiCtaBtn .siteBtn:last-child {
@@ -2058,7 +2058,7 @@
         width: 60px;
         height: 60px; }
     .hrdSection .hrdCaptionIcon h4 {
-      font-family: 'open_sanssemibold';
+      font-family: "open_sanssemibold";
       text-transform: capitalize; }
   .hrdSection .hrdColSection {
     min-height: 224px; }
@@ -2082,15 +2082,15 @@
 
 .fhmSection h2 {
   text-transform: capitalize;
-  font-family: 'open_sanssemibold'; }
+  font-family: "open_sanssemibold"; }
 
 .fhmSection .fhmDescSection h5 {
   text-transform: capitalize;
-  font-family: 'open_sanssemibold'; }
+  font-family: "open_sanssemibold"; }
 
 /*   hire php developrts  */
 .hdDecription h2 {
-  font-family: 'open_sanssemibold';
+  font-family: "open_sanssemibold";
   text-transform: none; }
 
 .whdSection {
@@ -2104,7 +2104,7 @@
       .whdSection .fhm-imageSection {
         margin-top: 20px; } }
   .whdSection h5 {
-    font-family: 'open_sanssemibold';
+    font-family: "open_sanssemibold";
     text-transform: none; }
 
 /*   ASP.net developrts  */
@@ -2113,7 +2113,7 @@
   align-self: center;
   padding: 20px 0; }
   .rightAlignSection h5 {
-    font-family: 'open_sanssemibold';
+    font-family: "open_sanssemibold";
     text-transform: none;
     color: #fff; }
   .rightAlignSection p {
@@ -2128,7 +2128,7 @@
     .leftAlignSection {
       margin-top: 0 !important; } }
   .leftAlignSection h5 {
-    font-family: 'open_sanssemibold';
+    font-family: "open_sanssemibold";
     text-transform: none;
     color: #fff; }
   .leftAlignSection p {
@@ -2208,12 +2208,12 @@
     text-align: center;
     margin: 0 0 30px 0;
     border: 1px solid #eee;
-    transition: all .7s ease;
+    transition: all 0.7s ease;
     padding: 15px 30px;
     min-height: 250px; }
     .technologyStack .thumbSection:hover {
       box-shadow: 1px 0 8px rgba(0, 0, 0, 0.12);
-      transition: all .7s ease;
+      transition: all 0.7s ease;
       background: rgba(220, 220, 220, 0.2); }
     .technologyStack .thumbSection .thumbLogo {
       margin: 0 0 15px 0; }
@@ -2274,7 +2274,7 @@
       .technoDev .technoFrontDesc {
         margin: 0px; } }
     .technoDev .technoFrontDesc span {
-      font-family: 'devinne_txt_btregular';
+      font-family: "devinne_txt_btregular";
       color: #d7d7d7;
       font-size: 116px;
       line-height: normal; }
@@ -2313,7 +2313,7 @@
       .technoDotNet .thumbDesc {
         margin: 0 0 30px 0; } }
     .technoDotNet .thumbDesc span {
-      font-family: 'devinne_txt_btregular';
+      font-family: "devinne_txt_btregular";
       color: #d7d7d7;
       font-size: 116px;
       line-height: normal; }
@@ -2330,7 +2330,7 @@
     float: none;
     position: relative;
     margin: 0 auto;
-    transition: all .7s ease; }
+    transition: all 0.7s ease; }
     @media (max-width: 991px) {
       .technoDotNet .technoDbDesc {
         width: 100%; } }
@@ -2390,7 +2390,7 @@
     display: block;
     text-align: center;
     margin: 50px 0 0 0;
-    transition: all .7s ease; }
+    transition: all 0.7s ease; }
     @media (max-width: 576px) {
       .technoDotNet .quality {
         margin: 30px 0 0 0; } }
@@ -2444,7 +2444,7 @@
     text-align: center;
     padding: 0px 0 30px 0; }
     .technoDesign .technoDesignDesc span {
-      font-family: 'devinne_txt_btregular';
+      font-family: "devinne_txt_btregular";
       color: #d7d7d7;
       font-size: 116px;
       line-height: normal; }
@@ -2467,7 +2467,7 @@
         bottom: 0;
         left: 50%;
         width: 88px;
-        content: '';
+        content: "";
         background-image: url(../technoicons/bglayer-techno.png);
         background-repeat: no-repeat;
         background-size: cover;
@@ -2589,7 +2589,7 @@
       .technoBack .technoBackDesc {
         text-align: center; } }
     .technoBack .technoBackDesc span {
-      font-family: 'devinne_txt_btregular';
+      font-family: "devinne_txt_btregular";
       color: #d7d7d7;
       font-size: 116px;
       line-height: normal; }
@@ -2659,7 +2659,7 @@
     .technoComm {
       padding: 0 0 30px 0; } }
   .technoComm .technoCommDesc span {
-    font-family: 'devinne_txt_btregular';
+    font-family: "devinne_txt_btregular";
     color: #d7d7d7;
     font-size: 116px;
     line-height: normal; }
@@ -2676,7 +2676,7 @@
   padding: 50px 0 0 0;
   text-align: center; }
   .opensource .thumbDesc span {
-    font-family: 'devinne_txt_btregular';
+    font-family: "devinne_txt_btregular";
     color: #d7d7d7;
     font-size: 116px;
     line-height: normal; }
@@ -2744,7 +2744,7 @@
         top: -15px; }
         .blogs .blogDiv .thumbImage .dayMonth .day {
           font-size: 22px;
-          font-family: 'dosissemibold';
+          font-family: "dosissemibold";
           width: 100%;
           height: 50px;
           line-height: 50px;
@@ -2753,7 +2753,7 @@
           letter-spacing: 2px; }
         .blogs .blogDiv .thumbImage .dayMonth .month {
           font-size: 18px;
-          font-family: 'dosissemibold';
+          font-family: "dosissemibold";
           width: 100%;
           height: 50px;
           line-height: 50px;
@@ -2783,7 +2783,7 @@
         font-size: 20px;
         line-height: 25px;
         text-transform: capitalize;
-        font-family: 'dosissemibold'; }
+        font-family: "dosissemibold"; }
       .blogs .blogDiv .thumbDesc p {
         font-size: 13px;
         line-height: 23px;
@@ -2793,7 +2793,7 @@
         padding: 0 0 0 40px;
         color: #000;
         font-size: 14px;
-        font-family: 'dosissemibold'; }
+        font-family: "dosissemibold"; }
         .blogs .blogDiv .thumbDesc .readMore:before {
           content: "";
           background-color: #c9c9c9;
@@ -2899,7 +2899,7 @@
             color: #000;
             line-height: 21px;
             display: block;
-            font-family: 'dosissemibold'; }
+            font-family: "dosissemibold"; }
             .blogInnerPage .recentPosts ul li .blogContent .blogInnerContent a.active {
               color: #155a9f; }
             .blogInnerPage .recentPosts ul li .blogContent .blogInnerContent a:hover {
@@ -2907,7 +2907,7 @@
         .blogInnerPage .recentPosts ul li .blogContent .srpw-meta {
           color: #155a9f;
           font-size: 13px;
-          font-family: 'dosissemibold'; }
+          font-family: "dosissemibold"; }
 
 /*--domain--*/
 .reverseCol {
@@ -2951,12 +2951,23 @@
       .domain .whiteBg {
         padding: 25px 15px; } }
 
+@media (min-width: 991px) {
+  .mobileFilter {
+    display: none; } }
+
+.mobileFilter .btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .mobileFilter .btn.collapsed i {
+    transform: rotate(90deg); }
+
 .tabs-domain {
   display: inline-flex;
   position: relative;
   margin: 0 0 15px 0;
-  border: .5px solid #eee; }
-  .tabs-domain input[type=radio] {
+  border: 0.5px solid #eee; }
+  .tabs-domain input[type="radio"] {
     display: none; }
   .tabs-domain .tab {
     display: flex;
@@ -2970,16 +2981,16 @@
     padding: 6px 18px;
     margin: 0;
     border-right: 1px solid #ddd; }
-  .tabs-domain input[type=radio] + label.active {
+  .tabs-domain input[type="radio"] + label.active {
     color: #fff;
     background-color: #193370; }
-  .tabs-domain input[type=radio] + label > {
+  .tabs-domain input[type="radio"] + label > {
     background-color: #185ee0; }
-  .tabs-domain input[id=radio-1]:checked ~ .glider {
+  .tabs-domain input[id="radio-1"]:checked ~ .glider {
     transform: translateX(0); }
-  .tabs-domain input[id=radio-2]:checked ~ .glider {
+  .tabs-domain input[id="radio-2"]:checked ~ .glider {
     transform: translateX(100%); }
-  .tabs-domain input[id=radio-3]:checked ~ .glider {
+  .tabs-domain input[id="radio-3"]:checked ~ .glider {
     transform: translateX(200%); }
   .tabs-domain .glider {
     position: absolute;
