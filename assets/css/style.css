@@ -2947,6 +2947,9 @@
     padding: 40px 60px 0;
     width: 100%;
     border-radius: 5px; }
+    @media (max-width: 1199px) {
+      .domain .whiteBg {
+        padding: 40px 20px 0; } }
     @media (max-width: 767px) {
       .domain .whiteBg {
         padding: 25px 15px; } }

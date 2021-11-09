@@ -3625,6 +3625,9 @@
 		padding: 40px 60px 0;
 		width: 100%;
 		border-radius: 5px;
+		@media (max-width: 1199px) {
+			padding: 40px 20px 0;
+		}
 		@media (max-width: 767px) {
 			padding: 25px 15px;
 		}
