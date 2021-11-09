@@ -47,6 +47,11 @@ footer {
           footer .widget ul li a:hover {
             text-decoration: none;
             color: #155a9f; }
+    footer .widget .widget-contact h5 {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 18px; }
     footer .widget .widget-contact ul li {
       border-bottom: 0px solid #3c3c3c;
       position: relative;
