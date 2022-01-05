@@ -71,9 +71,9 @@ $get_portfolio_details = get_portfolio_details($conn, $slug);
                   <?php
                   $fa = $get_portfolio_details[0]['fs_image'];
                   $section1Image  = (explode(',', $fa));
-                  foreach ($section1Image as $list) {
+                  foreach ($section1Image as $key => $list) {
                   ?>
-                     <img src="<?php echo $url; ?>/assets/portfolioimage/<?php echo $list ?>" usemap="#image-map" alt="Addiction Substance Abuse Management" title="<?php echo str_replace(['.jpg', '.jpeg', '.png', '.gif'], '', $list) ?>">
+                     <img src="<?php echo $url; ?>/assets/portfolioimage/<?php echo $list ?>" usemap="#image-map_<?php echo $key+1; ?>" alt="Addiction Substance Abuse Management" title="<?php echo str_replace(['.jpg', '.jpeg', '.png', '.gif'], '', $list) ?>">
                   <?php } ?>
                    <?php echo $get_portfolio_details[0]['image_text'] ?>
                </div>

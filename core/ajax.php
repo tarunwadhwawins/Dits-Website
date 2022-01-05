@@ -26,7 +26,7 @@
         }
 
          
-        $sql = "SELECT portfolio.*,category.name FROM portfolio,category WHERE portfolio.category_id=category.id $CategoryQuery  AND portfolio.status=1 ";
+        $sql = "SELECT portfolio.*,category.name FROM portfolio,category WHERE portfolio.category_id=category.id $CategoryQuery  AND portfolio.status=1 order by id DESC ";
         $res=mysqli_query($conn,$sql);
         $total_record = $res->num_rows;
 
