@@ -104,7 +104,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span id=bannerExtOne>Custom Software</span>
 <h1 id=bannerExtTwo>Development Solution</h1>
 <p id=bannerExtThree>A remote software development company providing offshore development services enabling <br> business rapidity and competence with web and mobile solutions</p>
-<div class=bannerButton id=bannerExtFour> <a href="/portfolio" class="btn btn-custom siteBtn">Our Portfolio </a> <a href="javascript:void(0);"  data-toggle="modal" data-target="#exampleModal" class="btn btn-custom siteBtn addCountry">Get in touch</a> </div>
+<div class=bannerButton id=bannerExtFour> <a href="<?php echo $url; ?>portfolio" class="btn btn-custom siteBtn">Our Portfolio </a> <a href="javascript:void(0);"  data-toggle="modal" data-target="#exampleModal" class="btn btn-custom siteBtn addCountry">Get in touch</a> </div>
 </div>
 <div class="scroll wow"><a href="#services"><span></span></a></div>
 </section>
@@ -125,8 +125,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>We offer highly cost-effective and optimized solutions that facilitate our clients to achieve their business outcomes with speed and convenience.We build on our legacy knowledge and apply it our expertise areas such as Full-stack Development, .Net Consulting and Development, Custom Application Development, Technology Consulting, CRM, Business Process Automation Software, Web Enterprise Applications, Mobile Application Development, Outsourced Product Development, and Open Source Technologies etc. DITS also provides remote developers and dedicated developers to nurture and apply their competencies, helping brands build impactful engineering solutions with trailblazing technologies.</p>
 <p>The team comprises of passionate, purpose-led individuals with disruptive thinking to deliver technology while addressing the clients' toughest challenges, all while seeking to revolutionize the IT industry and create positive social change.</p>
 <ul>
-<li><a href="/about">Know More About Us <i class="fa fa-angle-double-right"></i></a></li>
-<li><a href="/portfolio">View Our Work <i class="fa fa-angle-double-right"></i></a></li>
+<li><a href="<?php echo $url; ?>about">Know More About Us <i class="fa fa-angle-double-right"></i></a></li>
+<li><a href="<?php echo $url; ?>portfolio">View Our Work <i class="fa fa-angle-double-right"></i></a></li>
 </ul>
 </div>
 </div>
@@ -146,7 +146,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class=serviceSection>
 <div class="row mg-0">
 <div class="col-md-4 col-sm-6 pad-0">
-<div class=services><a href="/services/software-development-services" title="Software Development Services">
+<div class=services><a href="<?php echo $url; ?>services/software-development-services" title="Software Development Services">
 <div class="spriteImage softDev"></div>
 <div class=servicesDesc>
 <h3>Software Development Services</h3>
@@ -156,7 +156,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 </div>
 <div class="col-md-4 col-sm-6 pad-0">
-<div class=services><a href="/services/full-stack-development-services" title="Full Stack Development">
+<div class=services><a href="<?php echo $url; ?>services/full-stack-development-services" title="Full Stack Development">
 <div class="spriteImage fullDev"></div>
 <div class=servicesDesc>
 <h3>Full Stack Development</h3>
@@ -166,7 +166,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 </div>
 <div class="col-md-4 col-sm-6 pad-0">
-<div class="services last borRgt"><a href="/services/front-end-development" title="Front End Development">
+<div class="services last borRgt"><a href="<?php echo $url; ?>services/front-end-development" title="Front End Development">
 <div class="spriteImage frontEnd"></div>
 <div class=servicesDesc>
 <h3>Front End Development</h3>
@@ -176,7 +176,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 </div>
 <div class="col-md-4 col-sm-6 pad-0">
-<div class="services borBtm"><a href="/services/dedicated-development-team" title="Dedicated Development Team">
+<div class="services borBtm"><a href="<?php echo $url; ?>services/dedicated-development-team" title="Dedicated Development Team">
 <div class="spriteImage devTeam"></div>
 <div class=servicesDesc>
 <h3>Dedicated Development Team</h3>
@@ -186,7 +186,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 </div>
 <div class="col-md-4 col-sm-6 pad-0">
-<div class="services borBtm"><a href="/services/hire-remote-developers" title="Hire Remote Developers">
+<div class="services borBtm"><a href="<?php echo $url; ?>services/hire-remote-developers" title="Hire Remote Developers">
 <div class="spriteImage hireDev"></div>
 <div class=servicesDesc>
 <h3>Hire Remote Developers</h3>
@@ -196,7 +196,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 </div>
 <div class="col-md-4 col-sm-6 pad-0">
-<div class="services last borRgt borBtm"><a href="/services/hire-asp-net-developers" title="Hiring Asp.Net Developers">
+<div class="services last borRgt borBtm"><a href="<?php echo $url; ?>services/hire-asp-net-developers" title="Hiring Asp.Net Developers">
 <div class="spriteImage netDev"></div>
 <div class=servicesDesc>
 <h3>Hiring Asp.Net Developers</h3>
@@ -385,7 +385,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <h2>Methodology</h2>
 <p>Agile methodologies are front and center of DITS, and working <br> in close collaboration – between the development team and business stakeholders – is Fundamental. <b>DITS, an Agile Enterprise Software Development Company</b> endeavors to implement the Agile Model Driven approach to every customer and their project.</p>
 <p>As per the requirement and the nature of customized software in development, we, as an offshore development team have been using various methodologies like Waterfall, Kanban, Agile, Scrum, code versioning tools like GIT, Github, Bitbucket, TFS, SVN, Project management tools like JIRA, Trello, Basecamp, Plan.io, Pivotal Tracker ensuring that we build and deliver a promising robust and scalable software.</p>
-<a href="/methodology" class=viewMore>View More <i class="fa fa-angle-double-right"></i></a>
+<a href="<?php echo $url; ?>methodology" class=viewMore>View More <i class="fa fa-angle-double-right"></i></a>
 </div>
 </div>
 <div class=col-md-6>
