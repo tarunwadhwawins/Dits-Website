@@ -158,7 +158,6 @@ if (isset($_POST['submit'])) {
             $msg = "Title already exist";
         }
     }
-
     if ($msg == '') {
         if (isset($_GET['id']) && $_GET['id'] != '') {
             if ($MainImageQuery != '' || $Section1ImageQuery != '' || $Section2ImageQuery != '' || $sliderImageUpdate != '') {
@@ -178,13 +177,13 @@ if (isset($_POST['submit'])) {
             session_start();
             $_SESSION['success_message'] = "Data updated successfully.";
         } else {
-            mysqli_query($conn, "insert into portfolio (seo_title, seo_keyword, seo_desc,category_id, title, slug , tags, banner_heading , sub_heading , short_desc, fs_heading , fs_sub_heading ,  fs_description ,  fs_image , image_text , ss_description ,  ss_image , date, status, image,slider_image) 
-            values('$seo_title', '$seo_keyword', '$seo_desc', '$category_id', '$title', '$slug' , '$tags', '$banner_heading', '$sub_heading', '$short_desc', '$fs_heading', '$fs_sub_heading' , '$fs_description'  , '$fsImage', '$image_text' , '$ss_description' , '$ssImage' , '$date', '1', '$image',  '$fileName')");
+            $sql = mysqli_query($conn, 'insert into portfolio (seo_title, seo_keyword, seo_desc,category_id, title, slug , tags, banner_heading , sub_heading , short_desc, fs_heading , fs_sub_heading ,  fs_description ,  fs_image , image_text , ss_description ,  ss_image , date, status, image,slider_image) 
+            values("'.$seo_title.'", "'.$seo_keyword.'", "'.$seo_desc.'", "'.$category_id.'", "'.$title.'", "'.$slug.'" , "'.$tags.'", "'.$banner_heading.'", "'.$sub_heading.'", "'.$short_desc.'", "'.$fs_heading.'", "'.$fs_sub_heading.'" , "'.$fs_description.'"  , "'.$fsImage.'", "'.$image_text.'" , "'.$ss_description.'" , "'.$ssImage.'" , "'.$date.'", "1", "'.$image.'",  "'.$fileName.'")');
 
             session_start();
             $_SESSION['success_message'] = "Data inserted successfully.";
         }
-
+       
         header('location:add-portfolio.php?id=' . $_GET['id']);
         die();
     }

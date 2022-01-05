@@ -1,4 +1,3 @@
-
 <?php
 function get_safe_value($conn,$str){
    require_once('../core/dbconnection.php');

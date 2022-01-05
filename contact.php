@@ -1,13 +1,16 @@
-<?php
-    require_once('core/dbconnection.php');
-?>
+
 <!doctype html>
 <html lang="en">
    <head>
       <meta charset="utf-8">
       <meta http-equiv="pragma" content="no-cache" />
+      <meta name="description" content=" Get in touch with DITSTEK, a custom application development company operating across the globe."/>
+      <meta name="keywords" content="Contact Us"/>
+      <meta name="author" content="Dits"/>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <?php include_once('common/commonmeta.php'); ?>
+      <title>Remote Dedicated Development Company | Ditstek Innovations</title>
+      <!--common css-->
+      <link href="https://www.ditstek.com/contact" rel="canonical"/>
       <?php include_once('common/commoncss.php'); ?>
       <!---->
    </head>
@@ -110,7 +113,7 @@
 						  </form>
                   </div>
                </div>
-               <div class="col-sm-4 pad-0">
+				<div class="col-sm-4 pad-0">
 				  <div class="contactInfo">
                   <h2>India Office</h2>
                   <ul>
@@ -125,7 +128,7 @@
                   <ul>
                      <li><span><i class="feather icon-map-pin"></i></span> 1500 Poly Dr, Suite 107 Billings, MT, USA</li>
                      <li>
-                        <div class="mainClass"><a href="mailto:tom@whitewater.dev"><span><i class="feather icon-mail"></i></span><img src="<?php echo $url; ?>assets/images/img-bottom1.png" alt="image"></a></div>
+                        <div class="mainClass"><a href="mailto:tom@whitewater.dev"><span><i class="feather icon-mail"></i></span><img src="/assets/images/img-bottom1.png" alt="image" /></a></div>
                      </li>
                      <li>
                         <div class="mainClass"><a href="tel:+1-406-672-8292"><span><i class="feather icon-phone"></i></span> +1-406-672-8292</a></div>

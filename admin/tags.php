@@ -85,7 +85,7 @@ $res = mysqli_query($conn,$sql);
                             <thead>
                                 <tr>
                                     <th>Sr. No</th>
-                                    <th>Tag</th>
+                                    <th>tag</th>
                                     <th>Status</th>
                                     <th>Actions</th>
                                     
@@ -113,7 +113,7 @@ $res = mysqli_query($conn,$sql);
                                 <td>
                                       <?php
                                 
-                                      echo "<a class='btn btn-primary mr-2' href='add-tag.php?id=".$row['id']."'><i class='fa fa-edit'></i></a>";
+                                      echo "<a class='btn btn-primary' href='add-tag.php?id=".$row['id']."'><i class='fa fa-edit'></i></a>";
                                       echo "<a class='btn btn-danger' href='?type=delete&id=".$row['id']."'><i class='fa fa-close'></i></a>";
                                       ?>
                                 </td>
@@ -135,7 +135,18 @@ $res = mysqli_query($conn,$sql);
                             <li class="page-item"><a class="page-link" href="#">Next</a></li>
                         </ul> -->
                         <ul class="pagination">
-                            <?php pagination($total_pages,$pageno); ?>
+                            <li><a class="page-item page-link" href="?pageno=1">First</a></li>
+                            <li class="<?php if($pageno <= 1){ echo 'disabled'; } ?>">
+                            <a class="page-link" href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>">Previous</a></li>
+                            
+                            <?php for($i = 1; $i <= $total_pages; $i++ ): ?>
+                            <li class="page-item <?php if($pageno == $i) {echo 'active'; } ?>">
+                             <a class="page-link" href="tags.php?pageno=<?= $i; ?>"> <?= $i; ?> </a>
+                            </li>
+                            <?php endfor; ?>
+                            <li class="<?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
+                            <a class="page-link" href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1); } ?>">Next</a></li>
+                            <li><a class="page-item page-link" href="?pageno=<?php echo $total_pages; ?>">Last</a></li>
                         </ul>
                         </div>
                     </div>      

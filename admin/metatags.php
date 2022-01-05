@@ -96,7 +96,7 @@
                                 </thead>
                                 <tbody>
                                 <?php
-                                    $index = $offset+1;
+                                    $index = 1;
                                     while($row = mysqli_fetch_assoc($res)){
                                 ?>
                                     <tr>

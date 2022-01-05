@@ -1,14 +1,10 @@
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/popper.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/form-validator/jquery.form-validator.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
 
   <!-- <script src="assets/js/ckeditor.js"></script> -->
   <script>
     $(document).ready(function() {
-      $.validate({
-         modules: 'security'
-      });
       $("#menu").click(function() {
         $("body").toggleClass('show')
       });

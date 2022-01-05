@@ -1,12 +1,12 @@
-<?php
-    require_once('../core/dbconnection.php');
-?>
 <!doctype html>
 <html lang="en">
    <head>
+        <title>Remote Software Development Company | Web Application Services - Ditstek Innovations</title>
       <meta charset="utf-8">
       <meta http-equiv="pragma" content="no-cache" />
-      <?php include_once('../common/commonmeta.php'); ?>
+      <meta name="description" content="DITSTEK - A Remote Software development company. We develop custom software solutions for a vast range of industries. Services : Custom Development, Full Stack Development , Dedicated teams. Contact us now to get a free consultation and free quote."/>
+      <meta name="keywords" content="remote software development, remote software developer, remote web application development, web application development, hire remote developers"/>
+      <meta name="author" content="Dits"/>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <!--common css-->
        <link href="https://www.ditstek.com/services/hire-remote-developers" rel="canonical"/>

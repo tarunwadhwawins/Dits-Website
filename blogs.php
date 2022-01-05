@@ -51,9 +51,9 @@ require_once('core/ajax.php');
 
       </div>
         <div class="row">
-            <div class="col-sm-12" id="loading-element" style="height:50px;">
+            <div class="col-sm-12" id="loading-element">
                 <div class="load-more" style="display: none;">
-                    <img src="<?php echo $url; ?>assets\images\loader.gif" style="height: 100px;"/>
+                    <img src="<?php echo $url; ?>assets\images\Loading.gif" alt="image"/>
                 </div>
             </div>
         </div>

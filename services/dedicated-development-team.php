@@ -1,12 +1,12 @@
-<?php
-    require_once('../core/dbconnection.php');
-?>
 <!doctype html>
 <html lang="en">
    <head>
+        <title>Dedicated Software Development Team | Offshore Developers | Remote Development Team - Ditstek Innovations</title>
       <meta charset="utf-8">
       <meta http-equiv="pragma" content="no-cache" />
-      <?php include_once('../common/commonmeta.php'); ?>
+      <meta name="description" content="Cost-effective and scalable dedicated software development team. Hire a team of developers with DITSTEK to get best dedicated offshore developers to work for you within weeks. Contact us today and hire our remote dedicated team of developers. Zero hiring cost, no extra fees, no social payments"/>
+      <meta name="keywords" content="Dedicated Software Development Team, Dedicated Offshore Developers, Dedicated Remote Development Team, Dedicated remote developers, web development company"/>
+      <meta name="author" content="Dits">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <!--common css-->
        <link href="https://www.ditstek.com/services/dedicated-development-team" rel="canonical"/>

@@ -7,44 +7,45 @@
   }
 ?>
 
+
 <div class="sidebar-offcanvas">
   <a class="navbar-brand mb-2 px-2" href="#">
-    <img src="<?php echo $url; ?>admin/assets/images/logo.png" alt="image">
+    <img src="assets/images/logo.png" alt="image">
   </a>
   <div class="sidebar-menu">
     <ul class="nav flex-column">
-      <li class="nav-item <?php echo $current_page == 'dashboard' ? 'active':'' ?>">
-        <a class="nav-link" href="<?php echo $url; ?>admin/dashboard">
+      <li class="nav-item <?php echo $current_page == '/admin/dashboard' ? 'active':'' ?>">
+        <a class="nav-link" href="dashboard">
           <i class="fa fa-tachometer"></i>
           <div class="text">Dashboard</div>
         </a>
       </li>
-      <li class="nav-item <?php echo $current_page == 'metatags' ? 'active':'' ?>">
-        <a class="nav-link" href="<?php echo $url; ?>admin/metatags">
+      <li class="nav-item <?php echo $current_page == '/admin/metatags' ? 'active':'' ?>">
+        <a class="nav-link" href="metatags">
           <i class="fa fa-file"></i>
           <div class="text">Meta Tags</div>
         </a>
       </li>
-       <li class="nav-item sub-menu <?php echo $current_page == 'portfolio' ? 'active':'' ?>">
+      <li class="nav-item sub-menu <?php echo $current_page == '/admin/portfolio' ? 'active':'' ?>">
           <a class="nav-link" href=javascript:void(0)">
           <i class="fa fa-tty"></i>
             <div class="text">Portfolio</div>
             <span class="right"><i class="fa fa-angle-down"></i></span>
           </a>
           <ul class="innerMenus">
-              <li><a href="<?php echo $url; ?>admin/portfolio">Portfolio Listing</a></li>
-              <li><a href="<?php echo $url; ?>admin/category">Category</a></li>
-              <li><a href="<?php echo $url; ?>admin/tags">Tags</a></li>
+              <li><a href="portfolio">Portfolio Listing</a></li>
+              <li><a href="category">Category</a></li>
+              <li><a href="tags">Tags</a></li>
           </ul>
       </li>
-      <li class="nav-item <?php echo $current_page == 'blogs' ? 'active':'' ?>">
-        <a class="nav-link" href="<?php echo $url; ?>admin/blogs">
+      <li class="nav-item <?php echo $current_page == '/admin/blogs' ? 'active':'' ?>">
+        <a class="nav-link" href="blogs">
           <i class="fa fa-file"></i>
           <div class="text">Blogs</div>
         </a>
       </li>
-      <li class="nav-item <?php echo $current_page == 'contact' ? 'active':'' ?>">
-        <a class="nav-link" href="<?php echo $url; ?>admin/contact">
+            <li class="nav-item <?php echo $current_page == '/admin/contact' ? 'active':'' ?>">
+        <a class="nav-link" href="contact">
           <i class="fa fa-file"></i>
           <div class="text">Contact</div>
         </a>
