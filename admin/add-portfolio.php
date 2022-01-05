@@ -63,7 +63,6 @@ if (isset($_POST['submit'])) {
     $short_desc = get_safe_value($conn, $_POST['short_desc']);
     $slug1 = str_replace(' ', '-', $title);
     $slug = trim(strtolower($slug1), "?");
-
     $MainImageQuery = "";
     if (isset($_FILES['image']) && $_FILES['image']['name'] != '') {
         //$image = rand(111111111, 999999999) . '_' . $_FILES['image']['name'];
@@ -82,7 +81,6 @@ if (isset($_POST['submit'])) {
     } else {
         $image = '';
     }
-
     $Section1ImageQuery = "";
     if (isset($_FILES['fs_image']) && $_FILES['fs_image']['name'] != '') {
         foreach ($_FILES["fs_image"]["error"] as $key => $error) {
@@ -93,17 +91,13 @@ if (isset($_POST['submit'])) {
                 $tmp_name = $_FILES["fs_image"]["tmp_name"][$key];
                 move_uploaded_file($tmp_name, "../assets/portfolioimage/" . $name);
 
-                $res = mysqli_query($conn, "select fs_image from portfolio ");
-                $checkImage = mysqli_num_rows($res);
-                $row = mysqli_fetch_array($res);
+                
                 $oldImage = $row['fs_image'];
                 $newSection1Image = $fsImage . "," . $oldImage;
-
                 $Section1ImageQuery = ", fs_image = '$newSection1Image'";
             }
         }
     }
-
     $Section2ImageQuery = "";
     if (isset($_FILES['ss_image']) && $_FILES['ss_image']['name'] != '') {
         foreach ($_FILES["ss_image"]["error"] as $key => $error) {
@@ -114,9 +108,6 @@ if (isset($_POST['submit'])) {
                 $tmp_name = $_FILES["ss_image"]["tmp_name"][$key];
                 move_uploaded_file($tmp_name, "../assets/portfolioimage/" . $name);
 
-                $res = mysqli_query($conn, "select ss_image from portfolio ");
-                $checkImage = mysqli_num_rows($res);
-                $row = mysqli_fetch_array($res);
                 $oldImage = $row['ss_image'];
                 $newSection2Image = $ssImage . "," . $oldImage;
                 $Section2ImageQuery = ", ss_image = '$newSection2Image'";
@@ -135,9 +126,6 @@ if (isset($_POST['submit'])) {
                 $tmp_name = $_FILES["sliderImage"]["tmp_name"][$key];
                 move_uploaded_file($tmp_name, "../assets/portfolioimage/" . $name);
 
-                $res = mysqli_query($conn, "select slider_image from portfolio ");
-                $checkImage = mysqli_num_rows($res);
-                $row = mysqli_fetch_array($res);
                 $oldImage = $row['slider_image'];
                 $newSliderImage = $fileName . "," . $oldImage;
                 $sliderImageUpdate = ", slider_image = '$newSliderImage'";
@@ -546,7 +534,7 @@ if (isset($_POST['submit'])) {
 
             if (result) {
                 $.ajax({
-                    url: '/core/ajax',
+                    url: '<?php echo $url; ?>core/ajax',
                     method: "POST",
                     headers: {
                         "content-type": "application/x-www-form-urlencoded"
@@ -571,7 +559,7 @@ if (isset($_POST['submit'])) {
 
             if (result) {
                 $.ajax({
-                    url: '/core/ajax',
+                    url: '<?php echo $url; ?>core/ajax',
                     method: "POST",
                     headers: {
                         "content-type": "application/x-www-form-urlencoded"
@@ -597,7 +585,7 @@ if (isset($_POST['submit'])) {
             console.log(imageName);
             if (result) {
                 $.ajax({
-                    url: '/core/ajax',
+                    url: '<?php echo $url; ?>core/ajax',
                     method: "POST",
                     headers: {
                         "content-type": "application/x-www-form-urlencoded"
