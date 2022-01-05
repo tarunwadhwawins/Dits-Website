@@ -1,12 +1,12 @@
+<?php
+    require_once('../core/dbconnection.php');
+?>
 <!doctype html>
 <html lang="en">
    <head>
-        <title>Front End Development Company | Hire Angular Developers | Hire React JS Developers - Ditstek Innovations</title>
       <meta charset="utf-8">
       <meta http-equiv="pragma" content="no-cache" />
-      <meta name="description" content="A web development company leveraging the latest technologies like .NET, CORE, Laravel, Node.js , Angular, React and Vue to create robust and scalable web applications. Hire our remote front end developers today!"/>
-      <meta name="keywords" content="Front End Development Company , Hire Angular Developers , Hire React JS Developers, Front End Development Services, Front End Development"/>
-      <meta name="author" content="Dits">
+      <?php include_once('../common/commonmeta.php'); ?>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <!--common css-->
       <link href="https://www.ditstek.com/services/front-end-development" rel="canonical"/>

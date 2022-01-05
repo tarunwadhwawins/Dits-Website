@@ -1,12 +1,12 @@
+<?php
+    require_once('../core/dbconnection.php');
+?>
 <!doctype html>
 <html lang="en">
    <head>
-        <title>Hire Full Stack Development Team | Remote Developers Company - Ditstek Innovations</title>
       <meta charset="utf-8">
       <meta http-equiv="pragma" content="no-cache" />
-      <meta name="description" content="Looking to hire full stack developers ? DITSTEK is a full stack web development company, creating custom-built web applications. We specializie in frontend and backend frameworks for startups and big enterprises. As a top rated provider we develop custom software applications and focus on SPA web development."/>
-      <meta name="keywords" content="full stack remote development, remote full stack developer, full stack developer remote, Hire full  stack developer, Remmote full stack developer"/>
-      <meta name="author" content="Dits"/>
+      <?php include_once('../common/commonmeta.php'); ?>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <!--common css-->
       <link href="https://www.ditstek.com/services/full-stack-development-services" rel="canonical"/>

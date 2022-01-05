@@ -1,16 +1,24 @@
-       <script src="/assets/js/jquery.min.js"></script>
-       <script src="/assets/js/popper.min.js"></script>
-	   <script src="/assets/js/bootstrap.min.js"></script>
-	   <script src="/assets/js/jquery.counterup.min.js"></script>
-	   <script src="/assets/js/wow.min.js"></script>
-       <script src="/assets/js/owl.carousel.js"></script>
-       <script src="/assets/js/jquery.nicescroll.min.js"></script>
-       <script src="/assets/js/custom.js"></script>
-	   <script src="/assets/js/jquery.validate.js"></script>
-	   <script src="/assets/js/contact.js"></script>
-	   <script src="/assets/js/quotes.js"></script>
-    <script src="/assets/js/modelCountry.js"></script>
-    <script src="/assets/js/imageMapResizer.min.js"></script>
+       <script>
+       		var base_url = "<?php echo $url; ?>";
+       </script>
+       <script src="<?php echo $url; ?>assets/js/jquery.min.js"></script>
+	   <script src="<?php echo $url; ?>assets/js/popper.min.js"></script>
+	   <script src="<?php echo $url; ?>assets/js/bootstrap.min.js"></script>
+	   <script src="<?php echo $url; ?>assets/js/jquery.counterup.min.js"></script>
+	   <script src="<?php echo $url; ?>assets/js/wow.min.js"></script>
+       <script src="<?php echo $url; ?>assets/js/owl.carousel.js"></script>
+       <script src="<?php echo $url; ?>assets/js/jquery.nicescroll.min.js"></script>
+       <script src="<?php echo $url; ?>assets/js/custom.js"></script>
+	   <script src="<?php echo $url; ?>assets/js/jquery.validate.js"></script>
+	   <script src="<?php echo $url; ?>assets/js/contact.js"></script>
+	   <script src="<?php echo $url; ?>assets/js/quotes.js"></script>
+    <script src="<?php echo $url; ?>assets/js/modelCountry.js"></script>
+    <script src="<?php echo $url; ?>assets/js/imageMapResizer.min.js"></script>
+	  <script type="text/javascript">
+
+		//$('map').imageMapResize();
+
+	</script>
 	   <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
