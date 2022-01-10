@@ -35,6 +35,7 @@
               <li><a href="<?php echo $url; ?>admin/portfolio">Portfolio Listing</a></li>
               <li><a href="<?php echo $url; ?>admin/category">Category</a></li>
               <li><a href="<?php echo $url; ?>admin/tags">Tags</a></li>
+              <li><a href="<?php echo $url; ?>admin/portfolio-order">Ordering</a></li>
           </ul>
       </li>
       <li class="nav-item <?php echo $current_page == 'blogs' ? 'active':'' ?>">
