@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 10, 2022 at 11:37 AM
+-- Generation Time: Jan 11, 2022 at 10:26 AM
 -- Server version: 8.0.27-0ubuntu0.20.04.1
 -- PHP Version: 8.0.14
 
@@ -31,9 +31,9 @@ CREATE TABLE `portfolio_order` (
   `id` int NOT NULL,
   `portfolio_id` int NOT NULL,
   `category_id` int NOT NULL,
-  `tag_id` varchar(255) NOT NULL,
+  `tag_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `position` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Indexes for dumped tables
