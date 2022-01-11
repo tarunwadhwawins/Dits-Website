@@ -16,7 +16,9 @@ if(isset($_GET['tag']) && $_GET['tag']!='ALL'){
 }
 
 if($category_id == 0 && $tag_id == "ALL"){
+
     $sql = "select portfolio.* from (SELECT portfolio.*,category.name FROM portfolio inner join category on portfolio.category_id=category.id group by portfolio.id) as portfolio LEFT JOIN portfolio_order on portfolio_order.portfolio_id = portfolio.id  order by portfolio_order.position ASC; ";
+
 }elseif($tag_id != "ALL" && $category_id == 0){
     $sql = "select portfolio.* from (SELECT portfolio.*,category.name FROM portfolio inner join category on portfolio.category_id=category.id WHERE FIND_IN_SET('".$tag_id."',portfolio.tags)) as portfolio LEFT JOIN portfolio_order on portfolio_order.portfolio_id = portfolio.id  AND FIND_IN_SET(portfolio_order.tag_id,portfolio.tags) order by portfolio_order.position ASC; ";
 }elseif($category_id != 0 && $tag_id == "ALL"){
@@ -70,6 +72,7 @@ $tag = mysqli_query($conn,$sql);
                         <option value="0" selected>ALL</option>
                         <?php while($row=mysqli_fetch_assoc($category)) { ?>
                         <option <?php if(@$_GET['category']==$row['id']){ echo "selected"; } ?> value="<?php echo $row['id'] ?>"><?php echo $row['name'] ?></option>
+
                         <?php } ?>
                     </select>
                 </div>
@@ -78,7 +81,9 @@ $tag = mysqli_query($conn,$sql);
                     <select class="form-control" id="tag" onchange="load_portfolio();">
                         <option value="ALL" selected>ALL</option>
                         <?php while($row=mysqli_fetch_assoc($tag)) { ?>
+
                         <option <?php if(@$_GET['tag']==$row['tag']){ echo "selected"; } ?> value="<?php echo $row['tag'] ?>"><?php echo $row['tag'] ?></option>
+
                         <?php } ?>
                     </select>
                 </div>
