@@ -3,9 +3,36 @@
 
     if(isset($_GET['Action']) && $_GET['Action']=='getPortfolio')
     {
-        
-        $CategoryID = $_GET['CategoryID'];
-        $TagName = $_GET['Tag'];
+        ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+        $category = "";
+        $tag = "";
+        $category_id = "All";
+        $tag_id = "All";
+        if(isset($_GET['CategoryID']) && $_GET['CategoryID']!='All'){
+            $category = " AND portfolio.category_id='".$_GET['CategoryID']."'";
+            $category_id = $_GET['CategoryID'];
+        }
+        if(isset($_GET['Tag']) && $_GET['Tag']!='All'){
+            $tag = " AND FIND_IN_SET('".$_GET['Tag']."',portfolio.tags)";
+            $tag_id = $_GET['Tag'];
+        }
+
+        if($category_id == "All" && $tag_id == "All"){
+            $sql = "select portfolio.* from (SELECT portfolio.*,category.name FROM portfolio inner join category on portfolio.category_id=category.id) as portfolio LEFT JOIN portfolio_order on portfolio_order.portfolio_id = portfolio.id  order by portfolio_order.position ASC ";
+        }elseif($tag_id != "ALL" && $category_id == "All"){
+            $sql = "select portfolio.* from (SELECT portfolio.*,category.name FROM portfolio inner join category on portfolio.category_id=category.id WHERE FIND_IN_SET('".$tag_id."',portfolio.tags)) as portfolio LEFT JOIN portfolio_order on portfolio_order.portfolio_id = portfolio.id  AND FIND_IN_SET(portfolio_order.tag_id,portfolio.tags) order by portfolio_order.position ASC ";
+        }elseif($category_id != "All" && $tag_id == "All"){
+            $sql = "select portfolio.* from (SELECT portfolio.*,category.name FROM portfolio inner join category on portfolio.category_id=category.id WHERE portfolio.category_id='".$category_id."') as portfolio LEFT JOIN portfolio_order on portfolio_order.portfolio_id = portfolio.id AND portfolio_order.category_id = portfolio.category_id order by portfolio_order.position ASC ";
+        }else{
+            $sql = "select portfolio.* from (SELECT portfolio.*,category.name FROM portfolio inner join category on portfolio.category_id=category.id WHERE FIND_IN_SET('".$tag_id."',portfolio.tags) AND portfolio.category_id='".$category_id."') as portfolio LEFT JOIN portfolio_order on portfolio_order.portfolio_id = portfolio.id AND portfolio_order.category_id = portfolio.category_id and FIND_IN_SET(portfolio_order.tag_id,portfolio.tags) order by portfolio_order.position ASC ";
+        }
+
+
+
+       
         $page = @$_GET['page'];
         if(empty($page)){
             $page = 1;
@@ -13,27 +40,14 @@
         $limit = 6;
         $offset = ($page-1)*$limit;
         
-        $CategoryQuery = "";
-        if($CategoryID != 'All')
-        {   
         
-            $CategoryQuery .= " AND category_id='$CategoryID'";
-        }
-
-        if($TagName != 'All')
-        {
-            $CategoryQuery .= " AND FIND_IN_SET('$TagName',tags)";
-        }
-
-         
-        $sql = "SELECT portfolio.*,category.name FROM portfolio,category WHERE portfolio.category_id=category.id $CategoryQuery  AND portfolio.status=1 order by id DESC ";
         $res=mysqli_query($conn,$sql);
         $total_record = $res->num_rows;
-
         $sql.=" limit ".$offset.",".$limit;
         $res=mysqli_query($conn,$sql);
         $Response = array();
         $Output = "";
+
         if(mysqli_num_rows($res) > 0)
         {
 
@@ -184,7 +198,18 @@
         $update_slider_image= "UPDATE portfolio SET `fs_image` = TRIM(BOTH ',' FROM REPLACE( REPLACE(CONCAT(',',REPLACE(`fs_image`, ',', ',,'), ','),',$name,', ''), ',,', ',') ) WHERE FIND_IN_SET('$name', `fs_image`) AND id='$id'";
         mysqli_query($conn,$update_slider_image);
        }
+    if (isset($_POST['Action']) && $_POST['Action'] == 'portfolioOrder') {
+        $sql = "DELETE FROM `portfolio_order` WHERE `category_id`='".$_POST['category']."' AND `tag_id`='".$_POST['tag']."'";
+        mysqli_query($conn,$sql);
+        foreach ($_POST['task_order'] as $order => $portfolio_id) {
+            $sql = "DELETE FROM `portfolio_order` WHERE `category_id`='".$_POST['category']."' AND `tag_id`='".$_POST['tag']."' AND `portfolio_id`='".$portfolio_id."'";
+        mysqli_query($conn,$sql);
+            $sql = "INSERT INTO `portfolio_order`(`portfolio_id`, `category_id`, `tag_id`, `position`) VALUES ('".$portfolio_id."','".$_POST['category']."','".$_POST['tag']."','".$order."')";
 
+            mysqli_query($conn,$sql);
+        }
+    }
+    
     function get_tags($conn)
     {
 		$sql= "SELECT * FROM tags WHERE status=1 ORDER BY tag";
