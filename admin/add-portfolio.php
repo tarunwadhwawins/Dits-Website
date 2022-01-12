@@ -28,15 +28,28 @@ if (isset($_GET['id']) && $_GET['id'] != '') {
         $slug = $row['slug'];
         $tags = (explode(',', $row['tags']));
         $image = $row['image'];
-        $slider_image = (explode(',', $row['slider_image']));
+        if(!empty($row['slider_image'])){
+            $slider_image = (explode(',', $row['slider_image']));
+        }else{
+            $slider_image = array();            
+        }
         $banner_heading = $row['banner_heading'];
         $fs_heading = $row['fs_heading'];
         $fs_sub_heading = $row['fs_sub_heading'];
         $fs_description = $row['fs_description'];
-        $fs_image = (explode(',', $row['fs_image']));
+        if(!empty($row['fs_image'])){
+            $fs_image = (explode(',', $row['fs_image']));
+        }else{
+            $fs_image = array();            
+        }
         $image_text = $row['image_text'];
         $ss_description = $row['ss_description'];
-        $ss_image = (explode(',', $row['ss_image']));
+        if(!empty($row['ss_image'])){
+            $ss_image = (explode(',', $row['ss_image']));
+
+        }else{
+            $ss_image = array();            
+        }
         $date = $row['date'];
         $short_desc = $row['short_desc'];
     } else {
@@ -67,19 +80,19 @@ if (isset($_POST['submit'])) {
     $slug1 = str_replace(' ', '-', $title);
     $slug = trim(strtolower($slug1), "?");
     
-    $MainImageQuery = ", image = '".$_POST['image']."' ";
-    $image = $_POST['image'];
+    $MainImageQuery = ", image = '".trim($_POST['image'],',')."' ";
+    $image = trim($_POST['image'],',');
 
 
-    $Section1ImageQuery = ", fs_image = '".$_POST['fs_image']."' ";
-    $fsImage = $_POST['fs_image'];
+    $Section1ImageQuery = ", fs_image = '".trim($_POST['fs_image'],',')."' ";
+    $fsImage = trim($_POST['fs_image'],',');
 
 
-    $Section2ImageQuery = ", ss_image = '".$_POST['ss_image']."' ";
-    $ssImage = $_POST['ss_image'];
+    $Section2ImageQuery = ", ss_image = '".trim($_POST['ss_image'],',')."' ";
+    $ssImage = trim($_POST['ss_image'],',');
 
-    $sliderImageUpdate = ", slider_image = '".$_POST['sliderImage']."' ";
-    $fileName = $_POST['sliderImage'];
+    $sliderImageUpdate = ", slider_image = '".trim($_POST['sliderImage'],',')."' ";
+    $fileName = trim($_POST['sliderImage'],',');
 
 
     $res = mysqli_query($conn, "select * from portfolio where title='$title'");
@@ -797,11 +810,18 @@ if (isset($_POST['submit'])) {
                     $.ajax({
                         url: "<?php echo $url; ?>remove_file",
                         type:'post',
-                        data:{file,file}, 
+                        data:{file:file,id:'<?php echo @$_GET['id']; ?>'}, 
                         success: function(result){
                             $("#mainImage").val("");
                         }
                     });
+                });
+
+                this.on("error", function (file) {
+                    
+                    alert("please enter image file have size max 1MB");
+                    dzClosure.removeFile(file);
+                    
                 });
             },
             success: function(file, response){
@@ -855,11 +875,17 @@ if (isset($_POST['submit'])) {
                     $.ajax({
                         url: "<?php echo $url; ?>remove_file",
                         type:'post',
-                        data:{file:file.serverId}, 
+                        data:{file:file.serverId,id:'<?php echo @$_GET['id']; ?>'}, 
                         success: function(result){
                             $("#fs_image").val($("#fs_image").val().replace(file.serverId, ""));
                         }
                     });
+                });
+                this.on("error", function (file) {
+                    
+                    alert("please enter image file have size max 1MB");
+                    dzClosure.removeFile(file);
+                    
                 });
             },
             success: function(file, response){
@@ -920,11 +946,17 @@ if (isset($_POST['submit'])) {
                     $.ajax({
                         url: "<?php echo $url; ?>remove_file",
                         type:'post',
-                        data:{file:file.serverId}, 
+                        data:{file:file.serverId,id:'<?php echo @$_GET['id']; ?>'}, 
                         success: function(result){
                             $("#ss_image").val($("#ss_image").val().replace(file.serverId, ""));
                         }
                     });
+                });
+                this.on("error", function (file) {
+                    
+                    alert("please enter image file have size max 1MB");
+                    dzClosure.removeFile(file);
+                    
                 });
             },
             success: function(file, response){
@@ -986,11 +1018,17 @@ if (isset($_POST['submit'])) {
                     $.ajax({
                         url: "<?php echo $url; ?>remove_file",
                         type:'post',
-                        data:{file:file.serverId}, 
+                        data:{file:file.serverId,id:'<?php echo @$_GET['id']; ?>'}, 
                         success: function(result){
                             $("#sliderImage").val($("#sliderImage").val().replace(file.serverId, ""));
                         }
                     });
+                });
+                this.on("error", function (file) {
+                    
+                    alert("please enter image file have size max 1MB");
+                    dzClosure.removeFile(file);
+                    
                 });
             },
             success: function(file, response){
