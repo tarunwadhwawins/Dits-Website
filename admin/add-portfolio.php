@@ -124,18 +124,18 @@ if (isset($_POST['submit'])) {
             }
 
             mysqli_query($conn, $update_sql);
-
+            $id = $_GET['id'];
             session_start();
             $_SESSION['success_message'] = "Data updated successfully.";
         } else {
             mysqli_query($conn, "insert into portfolio (seo_title, seo_keyword, seo_desc,category_id, title, slug , tags, banner_heading , sub_heading , short_desc, fs_heading , fs_sub_heading ,  fs_description ,  fs_image , image_text , ss_description ,  ss_image , date, status, image,slider_image) 
             values('$seo_title', '$seo_keyword', '$seo_desc', '$category_id', '$title', '$slug' , '$tags', '$banner_heading', '', '$short_desc', '$fs_heading', '$fs_sub_heading' , '$fs_description'  , '$fsImage', '$image_text' , '$ss_description' , '$ssImage' , '$date', '1', '$image',  '$fileName')");
-
+            $id = $conn->insert_id;
             session_start();
             $_SESSION['success_message'] = "Data inserted successfully.";
         }
 
-        header('location:add-portfolio.php?id=' . $_GET['id']);
+        header('location:add-portfolio.php?id=' . $id);
         die();
     }
 }
@@ -457,85 +457,6 @@ if (isset($_POST['submit'])) {
             CKEDITOR.replace('editor1');
         });
 
-        //update  multiple image delete one by one on x click
-
-        $(document).on('click', '.delete-image1', function() {
-            var imageId = $(this).attr('data-id');
-            var imageName = $(this).attr('data-name');
-            var result = confirm("Are You sure want to delete!");
-
-            if (result) {
-                $.ajax({
-                    url: '<?php echo $url; ?>core/ajax',
-                    method: "POST",
-                    headers: {
-                        "content-type": "application/x-www-form-urlencoded"
-                    },
-                    data: {
-                        "Action": 'RemoveImageSection1',
-                        "id": imageId,
-                        "name": imageName
-                    },
-                    success: function(html) {
-                        $('#ImageBlock1Section-' + imageId).remove();
-                    }
-                });
-            }
-        });
-
-
-        $(document).on('click', '.delete-image2', function() {
-            var imageId = $(this).attr('data-id');
-            var imageName = $(this).attr('data-name');
-            var result = confirm("Are You sure want to delete!");
-
-            if (result) {
-                $.ajax({
-                    url: '<?php echo $url; ?>core/ajax',
-                    method: "POST",
-                    headers: {
-                        "content-type": "application/x-www-form-urlencoded"
-                    },
-                    data: {
-                        "Action": 'RemoveImageSection2',
-                        "id": imageId,
-                        "name": imageName
-                    },
-                    success: function(html) {
-                        $('#ImageBlock2Section-' + imageId).remove();
-                    }
-                });
-            }
-        });
-
-
-        $(document).on('click', '.delete-image', function() {
-
-            var imageId = $(this).attr('data-id');
-            var imageName = $(this).attr('data-name');
-            var result = confirm("Are You sure want to delete!");
-            console.log(imageName);
-            if (result) {
-                $.ajax({
-                    url: '<?php echo $url; ?>core/ajax',
-                    method: "POST",
-                    headers: {
-                        "content-type": "application/x-www-form-urlencoded"
-                    },
-                    data: {
-                        "Action": 'RemoveImage',
-                        "id": imageId,
-                        "name": imageName
-                    },
-                    success: function(html) {
-                        $('#ImageBlockSlider-' + imageId).remove();
-                    }
-                });
-            }
-        });
-
-
-
         $(document).ready(function() {
             $('#example-getting-started').multiselect();
         });
@@ -626,139 +547,8 @@ if (isset($_POST['submit'])) {
             });
         });
 
-        function preview_image(event) {
-            var reader = new FileReader();
-            reader.onload = function() {
-                var output = document.getElementById('output_image');
-                output.src = reader.result;
-                $('#ImageBlock').show();
-            }
-            reader.readAsDataURL(event.target.files[0]);
-            $('.fileName').html(event.target.files[0].name);
-            $('#imageUpload').hide();
-            $('#ImageBlock').show();
-        }
-
-        function HideImageButton() {
-            var result = confirm("Are You sure want to delete!");
-            if (result) {
-                $('#ImageBlock').hide();
-            }
-            $('#imageUpload').show();
-            $('#image').val('');
-        }
-
-        //window.setTimeout("document.getElementById('successMessage').style.display='none';", 3000);
     </script>
-    <!---->
-    <script>
-        $(document).ready(function() {
-            $('.delete-image').click(function() {
-                $('#ImageBlock1Section').hide();
-            });
-        });
-
-        $(document).ready(function() {
-            $('.delete-image').click(function() {
-                $('#ImageBlock2Section').hide();
-            });
-        });
-
-        $(document).ready(function() {
-            $('.delete-image').click(function() {
-                $('#ImageBlockSlider').hide();
-            });
-        });
-
-        // Multiple images preview 
-        $(function() {
-            var multiImgPreview = function(input, imgPreviewPlaceholder) {
-
-                if (input.files) {
-                    var filesAmount = input.files.length;
-                    var items = input.files;
-                    for (i = 0; i < filesAmount; i++) {
-                        var Imagehtml = '';
-                        var wrapperid = "btnWrapperid_" + i;
-                        var src = URL.createObjectURL(event.target.files[i]);
-                        html = '<div class="btnWrapper" id="' + wrapperid + '">';
-                        html += '<div class="crossIcon" id="crossIcon" onclick="deleteSliderimage(' + i + ');"><i class="fa fa-times"></i></div>';
-                        html += '<div class="image-inner"><img src="' + src + '"/>' + event.target.files[i].name + '</div>';
-                        $(imgPreviewPlaceholder).append(html)
-                        html += '</div>';
-
-                    }
-                }
-
-
-            };
-
-            $('#sliderFile').on('change', function() {
-                multiImgPreview(this, 'div.imgGallery');
-            });
-        });
-
-        $(function() {
-            var multiImgPreview = function(input, imgPreviewPlaceholder) {
-                if (input.files) {
-                    var filesAmount = input.files.length;
-                    var items = input.files;
-                    for (i = 0; i < filesAmount; i++) {
-                        var Imagehtml = '';
-                        var wrapperid2 = "btnWrapperid2_" + i;
-                        var src = URL.createObjectURL(event.target.files[i]);
-                        html = '<div class="btnWrapper" id="' + wrapperid2 + '">';
-                        html += '<div class="crossIcon" id="crossIcon" onclick="deleteSliderimageSection2(' + i + ');"><i class="fa fa-times"></i></div>';
-                        html += '<div class="image-inner"><img src="' + src + '"/>' + event.target.files[i].name + '</div>';
-                        $(imgPreviewPlaceholder).append(html)
-                        html += '</div>';
-                    }
-                }
-
-            };
-
-            $('#ss_image').on('change', function() {
-                multiImgPreview(this, 'div.ssGallery');
-            });
-        });
-
-
-        $(function() {
-            var multiImgPreview = function(input, imgPreviewPlaceholder) {
-                if (input.files) {
-                    var filesAmount = input.files.length;
-                    var items = input.files;
-                    for (i = 0; i < filesAmount; i++) {
-                        var wrapperid1 = "btnWrapperid1_" + i;
-                        var Imagehtml = '';
-                        var src = URL.createObjectURL(event.target.files[i]);
-                        html = '<div class="btnWrapper" id="' + wrapperid1 + '">';
-                        html += '<div class="crossIcon" id="crossIcon" onclick="deleteSliderimageSection1(' + i + ');"><i class="fa fa-times"></i></div>';
-                        html += '<div class="image-inner"><img src="' + src + '"/>' + event.target.files[i].name + '</div>';
-                        $(imgPreviewPlaceholder).append(html)
-                        html += '</div>';
-                    }
-                }
-
-            };
-
-            $('#fs_image').on('change', function() {
-                multiImgPreview(this, 'div.fsGallery');
-            });
-        });
-
-        function deleteSliderimage(index) {
-            $("#btnWrapperid_" + index).remove();
-        }
-
-        function deleteSliderimageSection2(index2) {
-            $("#btnWrapperid2_" + index2).remove();
-        }
-
-        function deleteSliderimageSection1(index1) {
-            $("#btnWrapperid1_" + index1).remove();
-        }
-    </script>
+  
     <script src="https://unpkg.com/@jcubic/tagger@0.x.x/tagger.js"></script>
     <script>
         var input = document.querySelector('[name="seo_keyword"]');
@@ -767,7 +557,7 @@ if (isset($_POST['submit'])) {
             allow_spaces: true,
             wrap: true,
             completion: {
-                list: ['foo', 'bar', 'tomato', 'tomato sause']
+                list: []
             }
         });
         <?php
