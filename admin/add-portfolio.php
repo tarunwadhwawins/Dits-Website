@@ -823,7 +823,7 @@ if (isset($_POST['submit'])) {
             },
             success: function(file, response){
                 response = JSON.parse(response);
-                var current_file = $("#ss_image").val();
+                var current_file = $("#sliderImage").val();
                 if(current_file!=""){
                     $("#sliderImage").val(current_file+','+response.file);
                 }else{

@@ -2,7 +2,7 @@
 
 if (isset($_FILES['file']) && $_FILES['file']['name'] != '') {
     //$image = rand(111111111, 999999999) . '_' . $_FILES['image']['name'];
-    $image = time()."_".str_replace(" ", "_", $_FILES['file']['name']);
+    $image = time().rand(10,100)."_".str_replace(" ", "_", $_FILES['file']['name']);
     $extension = pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
     $allowed_extensions = array("jpg", "jpeg", "png", "gif");
     if (!in_array($extension, $allowed_extensions)) {
