@@ -9,7 +9,6 @@ $get_portfolio = get_portfolio($conn);
 <html lang="en">
 
 <head>
-   <title>Custom Software Development Company | Dedicated Software Development Teams - Ditstek Innovations</title>
    <meta charset="utf-8">
    <meta http-equiv="pragma" content="no-cache" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0">

@@ -127,15 +127,17 @@ if (isset($_POST['submit'])) {
             $id = $_GET['id'];
             session_start();
             $_SESSION['success_message'] = "Data updated successfully.";
+            header('location:add-portfolio.php?id=' . $id);
         } else {
             mysqli_query($conn, "insert into portfolio (seo_title, seo_keyword, seo_desc,category_id, title, slug , tags, banner_heading , sub_heading , short_desc, fs_heading , fs_sub_heading ,  fs_description ,  fs_image , image_text , ss_description ,  ss_image , date, status, image,slider_image) 
             values('$seo_title', '$seo_keyword', '$seo_desc', '$category_id', '$title', '$slug' , '$tags', '$banner_heading', '', '$short_desc', '$fs_heading', '$fs_sub_heading' , '$fs_description'  , '$fsImage', '$image_text' , '$ss_description' , '$ssImage' , '$date', '1', '$image',  '$fileName')");
             $id = $conn->insert_id;
             session_start();
             $_SESSION['success_message'] = "Data inserted successfully.";
+            header('location:add-portfolio.php');
         }
 
-        header('location:add-portfolio.php?id=' . $id);
+        
         die();
     }
 }

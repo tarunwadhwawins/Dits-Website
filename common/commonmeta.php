@@ -24,7 +24,5 @@
 <?php
   }
 ?>
-
-
-<link href="<?php echo $current_url; ?>" rel="canonical"/>
- <meta name="author" content="Dits"/>
+    <link href="<?php echo $current_url; ?>" rel="canonical"/>
+    <meta name="author" content="Dits"/>

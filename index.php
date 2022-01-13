@@ -18,14 +18,11 @@
       <meta property="og:image" content="https://ditstek.com/assets/images/logo.png"/> 
       <meta property="og:type" content="website"/> 
       <meta property="og:description" content="Ditstek Innovations, 'DITS' is a Web and Mobile Development Custom Software outsourcing company offering customized and robust solutions to various clients across USA, Germany, Canada, UK, UAE, Australia, Sweden, South Africa etc. with strong multi years continuing partnerships which include dedicated teams, product development, Maintenance of existing solutions, R&D and technology consulting"/></code>
-      
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="msvalidate.01" content="3F416B44A7EE2BB4BCE8BF552AAEE8E4" />
-      
-      <!-- Clarity tracking code for https://ditstek.com/ --><script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "6o3xa9tkvm");</script>
-
+      <!-- Clarity tracking code for https://ditstek.com/ -->
+      <script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "6o3xa9tkvm");</script>
       <!--common css-->
-      <link href="https://www.ditstek.com/" rel="canonical"/>
       <?php include_once('common/commoncss.php'); ?>
       <!---->
 <!-- Global site tag (gtag.js) - Google Analytics -->
