@@ -40,7 +40,7 @@ $get_portfolio_details = get_portfolio_details($conn, $slug);
          <?php
          $imgTitle = str_replace(['.jpg', '.jpeg', '.png', '.gif'], '', $get_portfolio_details[0]['image']);
          ?>
-         <img src="<?php echo $url; ?>/assets/portfolioimage/<?php echo $get_portfolio_details[0]['image'] ?>" alt="Addiction Substance Abuse Management" title="<?php echo $imgTitle ?>" />
+         <img src="<?php echo $url; ?>assets/portfolioimage/<?php echo $get_portfolio_details[0]['image'] ?>" alt="Addiction Substance Abuse Management" title="<?php echo $imgTitle ?>" />
          <div class="bannerDesc inner">
             <div class="container">
                <div class="row">
@@ -73,7 +73,7 @@ $get_portfolio_details = get_portfolio_details($conn, $slug);
                   $section1Image  = (explode(',', $fa));
                   foreach ($section1Image as $key => $list) {
                   ?>
-                     <img src="<?php echo $url; ?>/assets/portfolioimage/<?php echo $list ?>" usemap="#image-map_<?php echo $key+1; ?>" alt="Addiction Substance Abuse Management" title="<?php echo str_replace(['.jpg', '.jpeg', '.png', '.gif'], '', $list) ?>">
+                     <img src="<?php echo $url; ?>assets/portfolioimage/<?php echo $list ?>" usemap="#image-map_<?php echo $key+1; ?>" alt="Addiction Substance Abuse Management" title="<?php echo str_replace(['.jpg', '.jpeg', '.png', '.gif'], '', $list) ?>">
                   <?php } ?>
                    <?php echo $get_portfolio_details[0]['image_text'] ?>
                </div>
@@ -91,7 +91,7 @@ $get_portfolio_details = get_portfolio_details($conn, $slug);
                   $section2Image  = (explode(',', $ssImage));
                   foreach ($section2Image as $list) {
                   ?>
-                     <img src="<?php echo $url; ?>/assets/portfolioimage/<?php echo $list ?>" alt="Technical Implementations" title="<?php echo str_replace(['.jpg', '.jpeg', '.png', '.gif'], '', $list) ?>">
+                     <img src="<?php echo $url; ?>assets/portfolioimage/<?php echo $list ?>" alt="Technical Implementations" title="<?php echo str_replace(['.jpg', '.jpeg', '.png', '.gif'], '', $list) ?>">
                   <?php } ?>
 
                </div>
@@ -121,7 +121,7 @@ $get_portfolio_details = get_portfolio_details($conn, $slug);
                   ?>
                      <div class="slide">
                         <div class="cl">
-                           <img src="<?php echo $url; ?>/assets/portfolioimage/<?php echo $list ?>" alt="Peer to Peer Car Sharing Application" title="<?php echo str_replace(['.jpg', '.jpeg', '.png', '.gif'], '', $list) ?>">
+                           <img src="<?php echo $url; ?>assets/portfolioimage/<?php echo $list ?>" alt="Peer to Peer Car Sharing Application" title="<?php echo str_replace(['.jpg', '.jpeg', '.png', '.gif'], '', $list) ?>">
 
                         </div>
                      </div>
