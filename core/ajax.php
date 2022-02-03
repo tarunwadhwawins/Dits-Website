@@ -3,9 +3,7 @@
 
     if(isset($_GET['Action']) && $_GET['Action']=='getPortfolio')
     {
-        ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+
 
         $category = "";
         $tag = "";
@@ -279,7 +277,7 @@ error_reporting(E_ALL);
     {
 		if($slug!='')
         {
-			$sql="SELECT * from portfolio WHERE  status=1 AND slug='$slug'";
+			$sql="SELECT portfolio.*,category.name FROM portfolio inner join category on portfolio.category_id=category.id  WHERE  portfolio.status=1 AND portfolio.slug='$slug'";
 		}
 		$res=mysqli_query($conn,$sql);
 		 $data= array();

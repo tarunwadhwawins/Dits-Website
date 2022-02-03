@@ -6,6 +6,14 @@ $slug = str_replace('.php', '', $_GET['title']);
 $slug = trim($slug);
 $get_portfolio_details = get_portfolio_details($conn, $slug);
 
+$TagsHTML = "";
+$Tags = explode(',', $get_portfolio_details[0]['tags']);
+
+foreach($Tags AS $Tag)
+{
+  $TagsHTML .= "<span>$Tag</span>";
+}
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -59,6 +67,13 @@ $get_portfolio_details = get_portfolio_details($conn, $slug);
    <section class="portfolioInner">
       <div class="container">
          <div class="row">
+
+            <div class="col-sm-12">
+              <?php echo $get_portfolio_details[0]['name']; ?>
+            </div>
+            <div class="col-sm-12">
+              <?php echo $TagsHTML; ?>
+            </div>
             <div class="col-sm-6">
                <div class="portfolioInnerDesc">
                   <h2><?php echo $get_portfolio_details[0]['fs_heading'] ?></h2>
