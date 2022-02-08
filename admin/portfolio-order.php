@@ -17,12 +17,12 @@ if(isset($_GET['tag']) && $_GET['tag']!='ALL'){
 
 if($category_id == 0 && $tag_id == "ALL"){
 
-    $sql = "select portfolio.* from (SELECT portfolio.*,category.name FROM portfolio inner join category on portfolio.category_id=category.id group by portfolio.id) as portfolio LEFT JOIN portfolio_order on portfolio_order.portfolio_id = portfolio.id  order by portfolio_order.position ASC; ";
+    $sql = "select portfolio.* from (SELECT portfolio.*,category.name FROM portfolio inner join category on portfolio.category_id=category.id group by portfolio.id) as portfolio LEFT JOIN portfolio_order on portfolio_order.portfolio_id = portfolio.id where portfolio_order.tag_id ='ALL' AND portfolio_order.category_id ='0'   order by portfolio_order.position ASC; ";
 
 }elseif($tag_id != "ALL" && $category_id == 0){
-    $sql = "select portfolio.* from (SELECT portfolio.*,category.name FROM portfolio inner join category on portfolio.category_id=category.id WHERE FIND_IN_SET('".$tag_id."',portfolio.tags)) as portfolio LEFT JOIN portfolio_order on portfolio_order.portfolio_id = portfolio.id  AND FIND_IN_SET(portfolio_order.tag_id,portfolio.tags) order by portfolio_order.position ASC; ";
+    $sql = "select portfolio.* from (SELECT portfolio.*,category.name FROM portfolio inner join category on portfolio.category_id=category.id WHERE FIND_IN_SET('".$tag_id."',portfolio.tags)) as portfolio LEFT JOIN portfolio_order on portfolio_order.portfolio_id = portfolio.id  AND FIND_IN_SET(portfolio_order.tag_id,portfolio.tags) where  portfolio_order.category_id ='0'  order by portfolio_order.position ASC; ";
 }elseif($category_id != 0 && $tag_id == "ALL"){
-    $sql = "select portfolio.* from (SELECT portfolio.*,category.name FROM portfolio inner join category on portfolio.category_id=category.id WHERE portfolio.category_id='".$category_id."') as portfolio LEFT JOIN portfolio_order on portfolio_order.portfolio_id = portfolio.id AND portfolio_order.category_id = portfolio.category_id order by portfolio_order.position ASC; ";
+    $sql = "select portfolio.* from (SELECT portfolio.*,category.name FROM portfolio inner join category on portfolio.category_id=category.id WHERE portfolio.category_id='".$category_id."') as portfolio LEFT JOIN portfolio_order on portfolio_order.portfolio_id = portfolio.id AND portfolio_order.category_id = portfolio.category_id  where portfolio_order.tag_id ='ALL' order by portfolio_order.position ASC; ";
 }else{
     $sql = "select portfolio.* from (SELECT portfolio.*,category.name FROM portfolio inner join category on portfolio.category_id=category.id WHERE FIND_IN_SET('".$tag_id."',portfolio.tags) AND portfolio.category_id='".$category_id."') as portfolio LEFT JOIN portfolio_order on portfolio_order.portfolio_id = portfolio.id AND portfolio_order.category_id = portfolio.category_id and FIND_IN_SET(portfolio_order.tag_id,portfolio.tags) order by portfolio_order.position ASC; ";
 }
