@@ -2,7 +2,7 @@
     require_once('core/dbconnection.php');
 ?>
 <!doctype html>
-<html>
+<html lang="en">
    <head>
       <meta charset="utf-8">
       <meta http-equiv="pragma" content="no-cache" />
@@ -406,7 +406,7 @@
                </div>
                <div class="col-md-7">
                   <div class="technoBackDesc">
-                     <span>10</span>
+                     <span>11</span>
                      <h4>QA - Manual and Automation</h4>
                      <p>Quality is one of the keystones of <b><a href="https://www.ditstek.com/services/software-development-services" target="_blank">software development services</a></b> . Efficient testing can be done in different forms – manually, with or without specific tools, or totally in automated mode. Keeping clients' customized specifications at the core, DITS offer a comprehensive set of Manual and Automated Testing Services adhering to standard quality assurance practices and processes.</p>
 					 <h6>Manual Testing </h6>
@@ -432,7 +432,7 @@
             <div class="row">
 				 <div class="col-md-12">
                   <div class="thumbDesc">
-                     <span>11</span>
+                     <span>12</span>
                      <h4>Our QA - Manual And Automation Stack involves</h4>
                   </div>
 				  <div class="thumbIcons">
@@ -449,7 +449,7 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<div class="technoCommDesc">
-					<span>12</span>
+					<span>13</span>
 					<h4>PM and Communication </h4>
 					<p>Hassle-free communication via your own preferred channels with our <b><a href="https://www.ditstek.com/services/dedicated-development-team" target="_blank">dedicated developers</a></b> for daily real-time updates and status. For effortless communication we utilize tools like <b>Trello</b>, <b>Slack</b>, <b>Zoom</b>, <b>Skype</b>, <b>Jira</b>, <b>Planio</b>, <b>Basecamp and Pivotal Tracker</b> with agile  <b><a href="https://www.ditstek.com/methodology" target="_blank">Methodology</a></b>.</p>
 					<img src="assets/images/commbanner.jpg" alt="image" title="Communication Tools">

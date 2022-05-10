@@ -35,7 +35,7 @@
                      <div class="widget-contact">
                         <h5>India Office</h5>
                         <ul>
-                           <li><span><i class="feather icon-map-pin"></i></span> SCO - 356 , First Floor, 44-D, Chandigarh, 160047</li>
+                           <li><span><i class="feather icon-map-pin"></i></span> SCO - 356 , Sector 44-D, Chandigarh, 160047</li>
                            <li>
                               <div class="mainClass"><a href="mailto:info@ditstek.com"><span><i class="feather icon-mail"></i></span><img src="<?php echo $url; ?>assets/images/Img-Bottom.png" alt="image" /></a></div>
                            </li>
@@ -69,7 +69,7 @@
       <div class="row borderTop">
                <div class="col-sm-6">
                   <div class="copy-right">
-                     <p>Copyright © 2021. All rights reserved.</p>
+                     <p>Copyright © 2022. All rights reserved.</p>
                   </div>
                </div>
 				 <div class="col-sm-6 ">
@@ -81,6 +81,7 @@
                   </div>
                </div>
             </div>
+            <span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=Pgx0DU5WdLmJfIwIGfo5MXcAY98v5ppYJCbCSG7g4m4AYdL8mCSLVbLJ8xzE"></script></span>
 </footer>
 <!--bottom to top scroll-->
 <a href="#" id="scroll" title="Bottom to Top Scroll">

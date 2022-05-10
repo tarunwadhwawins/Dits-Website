@@ -3,7 +3,7 @@
   $current_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
   $current_page = str_replace($url."admin/", "", $current_url); 
   if($_SESSION['ADMIN_LOGIN'] != "yes") {
-    header("Location: http://localhost/Dits-Website/admin/");
+    header("Location: ".$url."/admin/");
   }
 ?>
 

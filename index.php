@@ -98,8 +98,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <section class=homeSlider>
 <img src="assets/images/homebanner.jpg" title="Custom Software Development" alt="Custom Software Development" />
 <div class=sliderContent>
-<span id=bannerExtOne>Custom Software</span>
-<h1 id=bannerExtTwo>Development Solution</h1>
+
+<h1 id=bannerExtTwo><span id=bannerExtOne>Custom Software</span> <br>Development Solution</h1>
 <p id=bannerExtThree>A remote software development company providing offshore development services enabling <br> business rapidity and competence with web and mobile solutions</p>
 <div class=bannerButton id=bannerExtFour> <a href="<?php echo $url; ?>portfolio" class="btn btn-custom siteBtn">Our Portfolio </a> <a href="javascript:void(0);"  data-toggle="modal" data-target="#exampleModal" class="btn btn-custom siteBtn addCountry">Get in touch</a> </div>
 </div>

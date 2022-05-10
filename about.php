@@ -22,7 +22,7 @@
          <?php include_once('common/header.php'); ?>
          <!---->
 		  <div class="bannerMain">
-            <img src="assets/images/aboutbg1.jpg" alt="image"/>
+            <img src="assets/images/aboutbanner.jpg" alt="image"/>
             <div class="bannerDesc">
                <div class="container">
                   <div class="row">

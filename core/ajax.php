@@ -68,7 +68,7 @@
                 }
                 $Output .= "<div class='col-lg-4 col-md-6 col-sm-12 commonPortfolio moreBox'>
                                 <div class='potfolioDiv'>
-                                    <a href='portfolios/$row[slug]' target='_blank'>
+                                    <a href='portfolio/$row[slug]' target='_blank'>
                                     <div class='thumbImage' style='background-image: url(assets/portfolioimage/$row[image]);'>
                                             <div class='domainName'>$row[name]</div>
                                         </div>

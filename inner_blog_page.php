@@ -5,7 +5,7 @@ require_once('core/ajax.php');
 $slug=str_replace('.php', '', $_GET['title']);
 $slug=trim($slug);
 $get_blog=get_blog($conn,$slug);
-
+ $current_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 ?>
 
 <!doctype html>
@@ -25,6 +25,8 @@ $get_blog=get_blog($conn,$slug);
     <meta property="og:description" content="The conceptions of offshore and onshore development are rooted within offshore and onshore firms' ideas, so we'll conjointly glance at that to compare the two of them." />
     <meta property="og:type" content="article" />
     <meta property="og:image" content="https://ditstek.com/assets/images/4-reasons-why-offshore-development.jpg" />
+        <meta name="robots" content="follow, index"/>
+    <link rel="canonical" href="<?php echo $current_url; ?>"/>
     <!--common css-->
     <?php include_once('common/commoncss.php'); ?>
 </head>

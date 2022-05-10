@@ -114,7 +114,7 @@
 				  <div class="contactInfo">
                   <h2>India Office</h2>
                   <ul>
-                     <li><span><i class="feather icon-map-pin"></i></span> SCO - 356 , First Floor, 44-D, Chandigarh, 160047</li>
+                     <li><span><i class="feather icon-map-pin"></i></span> SCO - 356 , Sector 44-D, Chandigarh, 160047</li>
                      <li><a href="mailto:info@ditstek.com"><span><i class="feather icon-mail"></i></span> info@ditstek.com</a></li>
                      <li><a href="tel:+91-623-942-1395"><span><i class="feather icon-phone"></i></span> +91-623-942-1395 </a></li>
                      <li><a href="tel:+91172-4080477"><span><i class="feather icon-phone"></i></span> +91172-4080477 </a></li>

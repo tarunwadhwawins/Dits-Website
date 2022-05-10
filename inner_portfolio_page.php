@@ -8,10 +8,9 @@ $get_portfolio_details = get_portfolio_details($conn, $slug);
 
 $TagsHTML = "";
 $Tags = explode(',', $get_portfolio_details[0]['tags']);
-
-foreach($Tags AS $Tag)
-{
-  $TagsHTML .= "<span>$Tag</span>";
+$current_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+foreach ($Tags as $Tag) {
+   $TagsHTML .= "<span><a href='javascript:void(0)'>$Tag</a></span>";
 }
 
 ?>
@@ -27,6 +26,8 @@ foreach($Tags AS $Tag)
    <meta name="author" content="Dits">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title><?php echo $get_portfolio_details[0]['title'] ?></title>
+   <meta name="robots" content="follow, index"/>
+   <link rel="canonical" href="<?php echo $current_url; ?>"/>
    <!--common css-->
    <?php include_once('common/commoncss.php'); ?>
    <!--slicl slider css-->
@@ -55,6 +56,7 @@ foreach($Tags AS $Tag)
                   <div class="col-sm-12">
                      <h1><?php echo $get_portfolio_details[0]['banner_heading'] ?></h1>
                      <div class="bannerButton mt-3" id="bannerExtFour" data-toggle="modal" data-target="#exampleModal"> <a href="javascript:void(0);" class="btn btn-custom blueBtn  siteBtn addCountry">Contact Form</a> </div>
+
                   </div>
                </div>
             </div>
@@ -67,12 +69,11 @@ foreach($Tags AS $Tag)
    <section class="portfolioInner">
       <div class="container">
          <div class="row">
-
             <div class="col-sm-12">
-              <?php echo $get_portfolio_details[0]['name']; ?>
-            </div>
-            <div class="col-sm-12">
-              <?php echo $TagsHTML; ?>
+               <div class="domainCategory">
+                  <div class="domainName"><?php echo $get_portfolio_details[0]['name']; ?></div>
+                  <div class="tagsListing"><?php echo $TagsHTML; ?></div>
+               </div>
             </div>
             <div class="col-sm-6">
                <div class="portfolioInnerDesc">
@@ -88,9 +89,9 @@ foreach($Tags AS $Tag)
                   $section1Image  = (explode(',', $fa));
                   foreach ($section1Image as $key => $list) {
                   ?>
-                     <img src="<?php echo $url; ?>assets/portfolioimage/<?php echo $list ?>" usemap="#image-map_<?php echo $key+1; ?>" alt="Addiction Substance Abuse Management" title="<?php echo str_replace(['.jpg', '.jpeg', '.png', '.gif'], '', $list) ?>">
+                     <img src="<?php echo $url; ?>assets/portfolioimage/<?php echo $list ?>" usemap="#image-map_<?php echo $key + 1; ?>" alt="Addiction Substance Abuse Management" title="<?php echo str_replace(['.jpg', '.jpeg', '.png', '.gif'], '', $list) ?>">
                   <?php } ?>
-                   <?php echo $get_portfolio_details[0]['image_text'] ?>
+                  <?php echo $get_portfolio_details[0]['image_text'] ?>
                </div>
             </div>
          </div>

@@ -9,7 +9,7 @@
                         <div class="row">
                            <div class="col-sm-12">
                               <div class="heading">
-                                 <h1>Send Us a Message</h1>
+                                 <h3>Send Us a Message</h3>
                               </div>
                            </div>
                            <div class="col-sm-12"> <div id='message'></div></div>
