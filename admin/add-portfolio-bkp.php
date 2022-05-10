@@ -562,16 +562,13 @@ if (isset($_POST['submit'])) {
                 list: []
             }
         });
-        file_list = null;
         <?php
             if(!empty($image)){
-                if(file_exists("../assets/portfolioimage/".$image)){
-                    $size = filesize("../assets/portfolioimage/".$image);
+                $size = filesize("../assets/portfolioimage/".$image);
         ?>
 
-                    file_list = {'name':'<?php echo $image; ?>','size':'<?php echo $size; ?>','path':'<?php echo $url."/assets/portfolioimage/".$image ;?>'};
+                file_list = {'name':'<?php echo $image; ?>','size':'<?php echo $size; ?>','path':'<?php echo $url."/assets/portfolioimage/".$image ;?>'};
         <?php
-                }
             }
         ?>
         Dropzone.options.myDropzone= {
@@ -588,14 +585,11 @@ if (isset($_POST['submit'])) {
                 <?php
                     if(!empty($image)){
                 ?>
-                        if(file_list){
+                        var mockFile = { name: file_list.name, size: file_list.size };
 
-                            var mockFile = { name: file_list.name, size: file_list.size };
-
-                            this.emit("addedfile", mockFile);
-                            this.emit("thumbnail", mockFile, file_list.path);
-                            this.emit("complete", mockFile);
-                        }
+                        this.emit("addedfile", mockFile);
+                        this.emit("thumbnail", mockFile, file_list.path);
+                        this.emit("complete", mockFile);
                 <?php
                     }
                 ?>
@@ -631,14 +625,12 @@ if (isset($_POST['submit'])) {
         <?php
             if(!empty($fs_image)){
                 foreach ($fs_image as $key=>$value) {
-                    if(file_exists("../assets/portfolioimage/".$value)){
 
-                        $size = filesize("../assets/portfolioimage/".$value);
+                    $size = filesize("../assets/portfolioimage/".$value);
         ?>
 
-                        file_list_first_section[<?php echo $key ?>] = {'name':'<?php echo $value; ?>','size':'<?php echo $size; ?>','path':'<?php echo $url."/assets/portfolioimage/".$value ;?>'};
+                file_list_first_section[<?php echo $key ?>] = {'name':'<?php echo $value; ?>','size':'<?php echo $size; ?>','path':'<?php echo $url."/assets/portfolioimage/".$value ;?>'};
         <?php
-                    }
                 }
             }
         ?>
@@ -704,14 +696,12 @@ if (isset($_POST['submit'])) {
         <?php
             if(!empty($ss_image)){
                 foreach ($ss_image as $key=>$value) {
-                    if(file_exists("../assets/portfolioimage/".$value)){
 
-                        $size = filesize("../assets/portfolioimage/".$value);
+                    $size = filesize("../assets/portfolioimage/".$value);
         ?>
 
-                    file_list_second_section[<?php echo $key ?>] = {'name':'<?php echo $value; ?>','size':'<?php echo $size; ?>','path':'<?php echo $url."/assets/portfolioimage/".$value ;?>'};
+                file_list_second_section[<?php echo $key ?>] = {'name':'<?php echo $value; ?>','size':'<?php echo $size; ?>','path':'<?php echo $url."/assets/portfolioimage/".$value ;?>'};
         <?php
-                    }
                 }
             }
         ?>
@@ -777,14 +767,12 @@ if (isset($_POST['submit'])) {
         <?php
             if(!empty($slider_image)){
                 foreach ($slider_image as $key=>$value) {
-                    if(file_exists("../assets/portfolioimage/".$value)){
 
-                        $size = filesize("../assets/portfolioimage/".$value);
+                    $size = filesize("../assets/portfolioimage/".$value);
         ?>
 
-                        file_list_slider_section[<?php echo $key ?>] = {'name':'<?php echo $value; ?>','size':'<?php echo $size; ?>','path':'<?php echo $url."/assets/portfolioimage/".$value ;?>'};
+                file_list_slider_section[<?php echo $key ?>] = {'name':'<?php echo $value; ?>','size':'<?php echo $size; ?>','path':'<?php echo $url."/assets/portfolioimage/".$value ;?>'};
         <?php
-                    }
                 }
             }
         ?>
