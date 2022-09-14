@@ -19,13 +19,7 @@ $get_blog=get_blog($conn,$slug);
     <meta name="author" content="Ditstek" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $get_blog[0]['title'] ?></title>
-    <meta property="og:title" content="4 Reasons Why Offshore Development Is A Better Option Than The Onshore - Ditstek Innovations" />
-    <meta property="og:site_name" content="Dits Innovations" />
-    <meta property="og:url" content="https://ditstek.com/blogs/4-reasons-why-offshore-development-is-a-better-option-than-the-onshore" />
-    <meta property="og:description" content="The conceptions of offshore and onshore development are rooted within offshore and onshore firms' ideas, so we'll conjointly glance at that to compare the two of them." />
-    <meta property="og:type" content="article" />
-    <meta property="og:image" content="https://ditstek.com/assets/images/4-reasons-why-offshore-development.jpg" />
-        <meta name="robots" content="follow, index"/>
+    <meta name="robots" content="follow, index"/>
     <link rel="canonical" href="<?php echo $current_url; ?>"/>
     <!--common css-->
     <?php include_once('common/commoncss.php'); ?>
@@ -39,7 +33,7 @@ $get_blog=get_blog($conn,$slug);
         <?php include_once('common/header.php'); ?>
         <!---->
         <div class="bannerMain barkWrapper">
-            <img src="<?php echo $url; ?>/assets/blogimages/<?php echo $get_blog[0]['image'] ?>" title="4 Reasons Why Offshore Development Is A Better Option Than The Onshore" alt="4 Reasons Why Offshore Development Is A Better Option Than The Onshore" />
+            <img src="<?php echo $url; ?>assets/blogimages/<?php echo $get_blog[0]['image'] ?>" title="4 Reasons Why Offshore Development Is A Better Option Than The Onshore" alt="4 Reasons Why Offshore Development Is A Better Option Than The Onshore" />
             <div class="bannerDesc">
                 <div class="container">
                     <div class="row">
@@ -84,7 +78,7 @@ $get_blog=get_blog($conn,$slug);
                                 <?php
                                 $img = str_replace(".jpg","",$row['image']);
                                 ?>
-                                <img src="<?php echo $url; ?>/assets/blogimages/<?php echo $row['image'] ?>" title="<?php echo $img ?> " alt="image" /></a>
+                                <img src="<?php echo $url; ?>assets/blogimages/<?php echo $row['image'] ?>" title="<?php echo $img ?> " alt="image" /></a>
                                 <div class="blogContent">
                                 <div class="blogInnerContent"><a class="active" href="<?php echo $row['slug'] ?>" target="_self">
                                 <?php echo $row['title'] ?></a></div>

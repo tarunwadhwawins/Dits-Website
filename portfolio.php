@@ -9,9 +9,6 @@ $get_portfolio = get_portfolio($conn);
 <html lang="en">
 
 <head>
-   <meta charset="utf-8">
-   <meta http-equiv="pragma" content="no-cache" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <?php include_once('common/commonmeta.php'); ?>
    <?php include_once('common/commoncss.php'); ?>
    <!---->

@@ -4,9 +4,6 @@
 <!doctype html>
 <html lang="en">
    <head>
-      <meta charset="utf-8">
-      <meta http-equiv="pragma" content="no-cache" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <?php include_once('common/commonmeta.php'); ?>
       <?php include_once('common/commoncss.php'); ?>
       <!---->
@@ -40,7 +37,7 @@
                      <div class="row">
                         <div class="col-sm-12">
                            <div class="heading">
-                              <h1>Send Us a Message</h1>
+                              <h2>Send Us a Message</h2>
                            </div>
                         </div>
                         <div class="col-sm-12"> <div id='message'></div></div>
@@ -57,21 +54,21 @@
                               <input type="text" class="form-control" name="contact_email" id="contactEmail" placeholder="Email Id"/>  
                            </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-4 d-none">
                            <div class="contactForm">
                               <select name="country" class="countries form-control" id="countryId">
                                  <option value="">Select Country</option>
                               </select>        
                            </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-4 d-none">
                            <div class="contactForm">
                               <select name="state" class="states form-control" id="stateId">
                                  <option value="">Select State</option>
                               </select>     
                            </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-4 d-none">
                            <div class="contactForm">
                               <select name="city" class="cities form-control" id="cityId">
                                  <option value="">Select City</option>

@@ -1854,7 +1854,9 @@
     font-family: "open_sansregular";
     margin: 0 0 15px 0; }
   .portfolioInner .portfolioInnerImage {
-    position: relative; }
+    position: relative;
+    gap: 40px;
+    display: grid;}
     .portfolioInner .portfolioInnerImage img {
       max-width: 100%; }
 

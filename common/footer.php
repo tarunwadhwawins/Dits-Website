@@ -15,7 +15,7 @@
                      <a href="<?php echo $url; ?>about" title="About Us"><i class="feather icon-arrow-right"></i>About Us </a>
                   </li>
                   <li class="border-widget">
-                     <a href="<?php echo $url; ?>blogs" title="Blogs" target="_blank"><i class="feather icon-arrow-right"></i>Blogs </a>
+                     <a href="<?php echo $url; ?>blog" title="Blogs" target="_blank"><i class="feather icon-arrow-right"></i>Blogs </a>
                   </li>
                   <li class="border-widget">
                      <a href="<?php echo $url; ?>portfolio" title="Portfolio "><i class="feather icon-arrow-right"></i>Portfolio </a>

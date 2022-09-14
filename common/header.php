@@ -1,5 +1,4 @@
-<!--floating Icon-->
-       <!--<div id="floater" class="removeTopSpace"><a href="/contact"><i class="fa fa-file-text-o" aria-hidden="true"></i> Get A Quote</a></div>-->
+
 <div class="get-a-quote">
     <a href="javascript:void(0)" class="show-popup addQuote"><i class="fa fa-file-text-o" aria-hidden="true"></i> Get A Quote</a>
     <div class="contact-us">
@@ -23,21 +22,21 @@
                           <input type="text" class="form-control" placeholder="Last Name" name="contact_last_name" id="contactLastName">
                        </div> -->
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 d-none">
                         <div class="form-group">
                             <select class="quotecountries form-control" id="quotecountryId" name="country">
                                 <option value="">Select Country</option>
                             </select>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 d-none">
                         <div class="form-group">
                             <select class="quotestates form-control" id="quotestateId" name="state">
                                 <option value="">Select State</option>
                             </select>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 d-none">
                         <div class="form-group">
                             <select class="quotecities form-control" id="quotecityId" name="city">
                                 <option value="">Select City</option>
@@ -215,32 +214,32 @@ $current_page = $_SERVER['REQUEST_URI'];
                                                                 <div class="item">
                                                                     <div class="blogBox">
                                                                         <img class="img-fluid" src="<?php echo $url; ?>assets/portfolioimage/sellout-banner.jpg" alt="image">
-                                                                        <h6><a href="<?php echo $url; ?>portfolios/saas-based-event-ticketing-platform">SAAS Based Event Ticketing Platform</a></h6>
+                                                                        <h6><a href="<?php echo $url; ?>portfolio/saas-based-event-ticketing-platform">SAAS Based Event Ticketing Platform</a></h6>
                                                                     </div>
                                                                 </div>	
                                                                 <div class="item">
                                                                     <div class="blogBox">
                                                                         <img class="img-fluid" src="<?php echo $url; ?>assets/portfolioimage/rhentit-banner.jpg" alt="image">
-                                                                        <h6><a href="<?php echo $url; ?>portfolios/b2b2c-rental-platform-pos-rental-software-and-marketplace">B2B2C rental platform POS Rental Software and Marketplace</a></h6>
+                                                                        <h6><a href="<?php echo $url; ?>portfolio/saas-based-b2b2c-workflow-automation-for-rental-businesses-pos-and-market-place">B2B2C rental platform POS Rental Software and Marketplace</a></h6>
                                                                     </div>
                                                                 </div>
                                                                  <div class="item">
                                                                     <div class="blogBox">
                                                                         <img class="img-fluid" src="<?php echo $url; ?>assets/portfolioimage/164915352451_Drive-Shop-Portfolio-Banner.jpg" alt="image">
-                                                                        <h6><a href="<?php echo $url; ?>portfolios/saas-based-business-workflow-automation-suit-of-apps-for-automotive-industry">SAAS Based Business Workflow Automation Suit of Apps for Automotive Industry</a></h6>
+                                                                        <h6><a href="<?php echo $url; ?>portfolio/saas-based-business-workflow-automation-suite-of-apps-for-automotive-industry">SAAS Based Business Workflow Automation Suit of Apps for Automotive Industry</a></h6>
                                                                     </div>
                                                                 </div>
                                                                 <div class="item">
                                                                     <div class="blogBox">
                                                                         <img class="img-fluid" src="<?php echo $url; ?>assets/portfolioimage/affiliate-marketing.jpg" alt="image">
-                                                                        <h6> <a href="<?php echo $url; ?>portfolios/affiliate-marketing-green-tech-platform">Affiliate Marketing Green Tech Platform</a></h6>
+                                                                        <h6> <a href="<?php echo $url; ?>portfolio/affiliate-marketing-green-tech-platform">Affiliate Marketing Green Tech Platform</a></h6>
                                                                     </div>
                                                                 </div>	
                                                                
                                                                 <div class="item">
                                                                     <div class="blogBox">
                                                                         <img class="img-fluid" src="<?php echo $url; ?>assets/portfolioimage/blommruner-banner.jpg" alt="image">
-                                                                        <h6><a href="<?php echo $url; ?>portfolios/saas-based-e-commerce-marketplace-and-workflow-automation-solution">SAAS Based E-Commerce Marketplace and Workflow Automation Solution</a></h6>
+                                                                        <h6><a href="<?php echo $url; ?>portfolio/saas-based-e-commerce-marketplace-and-workflow-automation-solution">SAAS Based E-Commerce Marketplace and Workflow Automation Solution</a></h6>
                                                                     </div>
                                                                 </div>
                                                             </div>

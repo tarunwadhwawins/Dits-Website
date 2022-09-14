@@ -59,6 +59,7 @@ if (isset($_GET['id']) && $_GET['id'] != '') {
 }
 
 if (isset($_POST['submit'])) {
+    
     // echo "<pre>";
     // print_r($_POST);
     // print_r($_FILES);
@@ -214,7 +215,7 @@ if (isset($_POST['submit'])) {
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Seo Keyword</label>
-                                <input type="text" name="seo_keyword" value="<?php echo $seo_keyword ?>" class="form-control" placeholder="Enter  Title" />
+                                <input type="text" name="seo_keyword" value="<?php echo $seo_keyword ?>" class="form-control" placeholder="Enter Keyword" />
                             </div>
                         </div>
                         <div class="col-sm-12">
@@ -551,17 +552,9 @@ if (isset($_POST['submit'])) {
 
     </script>
   
-    <script src="https://unpkg.com/@jcubic/tagger@0.x.x/tagger.js"></script>
+   
     <script>
-        var input = document.querySelector('[name="seo_keyword"]');
-        var seo_keyword = tagger(input, {
-            allow_duplicates: false,
-            allow_spaces: true,
-            wrap: true,
-            completion: {
-                list: []
-            }
-        });
+       
         file_list = null;
         <?php
             if(!empty($image)){

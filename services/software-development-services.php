@@ -4,12 +4,8 @@
 <!doctype html>
 <html lang="en">
    <head>
-      <meta charset="utf-8">
-      <meta http-equiv="pragma" content="no-cache" />
       <?php include_once('../common/commonmeta.php'); ?>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <!--common css-->
-      <link href="https://www.ditstek.com/services/software-development-services" rel="canonical"/>
       <?php include_once('../common/commoncss.php'); ?>
       <!---->
    </head>
@@ -43,7 +39,7 @@
             <div class="row">
                <div class="col-sm-12">
                   <div class="softwareDesc">
-                     <p><b>Ditstek is an offshore software development company that offers software development services globally.</b> Our turnkey and custom-made software supports your business infrastructure with scalable programs that skyrockets key areas of your organization using automation. Our persistent team of developers has created custom made cloud-based mobile applications that have an industry-wide implementation. DITS’s enterprise-grade solution is robust, integrated and scalable. Our team instantly homogenize with yours’ to create a seamless solution. </p>
+                     <p><b>Ditstek is an <a href="https://www.ditstek.com/blog/4-reasons-why-offshore-development-is-a-better-option-than-the-onshore" target="_blank">offshore software development company</a>  that offers software development services globally.</b> Our turnkey and custom-made software supports your business infrastructure with scalable programs that skyrockets key areas of your organization using automation. Our persistent team of developers has created custom made cloud-based mobile applications that have an industry-wide implementation. DITS’s enterprise-grade solution is robust, integrated and scalable. Our team instantly homogenize with yours’ to create a seamless solution. </p>
                      <p>We have a proven track record in developing B2B and B2C apps for businesses. Our powerful, robust and impactful apps work in all platforms. Our turnkey and custom-made software support your business infrastructure with scalable programs that skyrockets key areas of your organization using automation. We are committed to solving major pain areas of every department through end-to-end solutions.</p>
                      <h2>Custom Software Development Services</h2>
                      <p><img class="hostSoft" src="../assets/images/hos-soft.png" alt="Custom Software Development Services" title="Custom Software Development Services"> We are a leading provider of highly adaptable, agile, scalable and custom software development services and solutions to empower your business. It is backed by a strong workforce of expert software developers that have been delivering result-oriented software development solutions from startups to well-established product and service based companies across the globe.</p>

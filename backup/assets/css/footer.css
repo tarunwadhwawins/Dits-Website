@@ -1,0 +1,110 @@
+footer {
+  background-color: #181f28;
+  color: #ddd;
+  position: relative; }
+  footer .widget {
+    margin-bottom: 30px; }
+    @media (max-width: 991px) {
+      footer .widget {
+        margin-bottom: 15px; } }
+    footer .widget h4 {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 32px; }
+      @media (max-width: 991px) {
+        footer .widget h4 {
+          margin-bottom: 15px; } }
+    footer .widget p {
+      margin: 0 0 10px 0;
+      line-height: 24px;
+      color: #fff;
+      font-size: 14px; }
+      @media (max-width: 991px) {
+        footer .widget p {
+          font-size: 13px;
+          line-height: 22px; } }
+    footer .widget ul {
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+      footer .widget ul li {
+        border-bottom: 1px solid #3c3c3c;
+        padding: 12px 0 12px;
+        font-size: 14px; }
+        @media (max-width: 991px) {
+          footer .widget ul li {
+            font-size: 12px;
+            padding: 6px 0; } }
+        @media (max-width: 576px) {
+          footer .widget ul li {
+            font-size: 14px; } }
+        footer .widget ul li:last-child {
+          border-bottom: 0px solid #3c3c3c; }
+        footer .widget ul li a {
+          color: #ddd; }
+          footer .widget ul li a i {
+            padding-right: 14px; }
+          footer .widget ul li a:hover {
+            text-decoration: none;
+            color: #155a9f; }
+    footer .widget .widget-contact h5 {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 18px; }
+    footer .widget .widget-contact ul li {
+      border-bottom: 0px solid #3c3c3c;
+      position: relative;
+      padding: 0 0 15px 25px; }
+      footer .widget .widget-contact ul li span {
+        position: absolute;
+        left: 0;
+        top: 0px; }
+  footer .copy-right {
+    padding: 15px 0px; }
+    @media (max-width: 640px) {
+      footer .copy-right {
+        padding: 5px 0px; } }
+    footer .copy-right p {
+      font-size: 12px;
+      line-height: 24px;
+      color: #fff;
+      letter-spacing: 1px; }
+      @media (max-width: 640px) {
+        footer .copy-right p {
+          text-align: center; } }
+    footer .copy-right ul {
+      margin: 0px;
+      padding: 0px;
+      list-style: none;
+      text-align: right; }
+      @media (max-width: 640px) {
+        footer .copy-right ul {
+          text-align: center; } }
+      footer .copy-right ul li {
+        display: inline-block;
+        font-size: 12px;
+        margin: 0 10px 0 0;
+        position: relative;
+        letter-spacing: 1px; }
+        footer .copy-right ul li:last-child {
+          margin: 0; }
+        footer .copy-right ul li a {
+          color: #fff; }
+          footer .copy-right ul li a:hover {
+            text-decoration: none;
+            color: #155a9f; }
+        footer .copy-right ul li:before {
+          content: "";
+          height: 100%;
+          width: 1px;
+          background: rgba(255, 255, 255, 0.1);
+          position: absolute;
+          right: -8px; }
+        footer .copy-right ul li:last-child:before {
+          width: 0px; }
+  footer span#siteseal {
+    position: absolute;
+    right: 268px;
+    bottom: 10px; }

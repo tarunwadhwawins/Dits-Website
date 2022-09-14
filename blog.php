@@ -7,9 +7,6 @@ require_once('core/ajax.php');
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="pragma" content="no-cache" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <?php include_once('common/commonmeta.php'); ?>
 <!--common css-->
 <?php include_once('common/commoncss.php'); ?>
@@ -48,13 +45,78 @@ require_once('core/ajax.php');
             </div>
         </div>
         <div id='BlogContent' class="quotes">
+            <?php
+            $page = 1;
+       
+                $limit = 40;
+                $offset = ($page-1)*$limit;
+                
+                $sql = "SELECT * FROM blogs WHERE status=1 ORDER BY date desc";
+                
+                $res=mysqli_query($conn,$sql);
+                $total_record = $res->num_rows;
 
-      </div>
+                $sql.=" limit ".$offset.",".$limit; 
+                $res=mysqli_query($conn,$sql);
+                $Response = array();
+                $Output = "";
+                if(mysqli_num_rows($res) > 0)
+                {
+
+                    $Output .= "<div class='row'>";
+                    while($row = mysqli_fetch_assoc($res))
+                    {
+                        $time  = strtotime($row['date']);
+                        $day   = date('d',$time);
+                        $month = date('M',$time);
+                        $year  = date('Y',$time);
+                        $str = $row['short_desc'];
+                        if( strlen( $row['short_desc']) > 200) 
+                        {
+                            $str = explode( "\n", wordwrap( $row['short_desc'], 200));
+                            $str = $str[0] . '<div class="readMore">Read More ...</div>';
+                        }
+                        $Output .='
+                        <div class="col-lg-6 col-md-6 col-sm-6 blogBox moreBox">
+                            <div class="blogDiv">
+                                <a href="blog/'.$row['slug'].'"  target="_blank">
+                                    <div class="thumbImage">
+                                        <img src="assets/blogimages/'.$row['image'].'" alt="image"/> 
+                                        <span class="dayMonth"> <span class="day">'.$day.'</span>
+                                        <span class="month">'.strtoupper($month).'</span>
+                                        <span class="day">'.$year.'</span> </span> 
+                                    </div>
+                                    <div class="thumbDesc">
+                                        <h2>'.$row['title'].'</h2>
+                                        <span class="adminBlogs"> 
+                                            <span class="admin"><i class="fa fa-user"></i>Ditstek</span> 
+                                            <span class="blogsIcon"><i class="fa fa-folder-o"></i>Blogs</span> 
+                                        </span><p>'.$str.'</p>
+                                    </div>
+                                </a> 
+                            </div>
+                        </div>';
+                    }
+                    $Output .= "</div>";
+                }
+                else
+                {
+                    $Output = "<center>No Result Found.</center>";
+                }
+                echo $Output;
+                $total_page = ceil($total_record/$limit);
+                
+                if($total_page > $page){
+                    $Response['next'] = true;
+                }else{
+                    $Response['next'] = false;
+                }
+            ?>
+        </div>
         <div class="row">
             <div class="col-sm-12" id="loading-element" style="height:50px;">
                 <div class="load-more" style="display: none;">
-                    <!--<img src="<?php echo $url; ?>assets\images\loader.gif" alt="image" style="height: 100px;"/>-->
-                     <img src="<?php echo $url; ?>assets\images\Loading.gif" alt="image"/>
+                    <img src="<?php echo $url; ?>assets\images\Loading.gif" style="height: 100px;"/>
                 </div>
             </div>
         </div>
@@ -122,8 +184,8 @@ require_once('core/ajax.php');
 <!-- <script src="assets/js/app.js"></script> -->
 
 <script>
-    var page = 1;
-    var has_more = true;
+    var page = 2;
+    var has_more = <?php echo $Response['next']; ?>;
     var ajax_load ;
     $(document).ready(function () {
   
@@ -133,7 +195,7 @@ require_once('core/ajax.php');
         
         var element_position = $('#BlogContent');
 
-        $(window).on('scroll', function() {
+       /* $(window).on('scroll', function() {
             var y_scroll_pos = $(this).scrollTop();
             var scroll_pos_test = (element_position[0].offsetTop+element_position[0].offsetHeight)-300;
             
@@ -141,7 +203,7 @@ require_once('core/ajax.php');
                
                 loadBlog();
             }
-        });
+        });*/
   
     });
     
@@ -172,7 +234,7 @@ require_once('core/ajax.php');
                         });
         }
     }
-    loadBlog();
+    //loadBlog();
 </script> 
 
 <!---->
