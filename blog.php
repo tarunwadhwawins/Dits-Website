@@ -116,7 +116,7 @@ require_once('core/ajax.php');
         <div class="row">
             <div class="col-sm-12" id="loading-element" style="height:50px;">
                 <div class="load-more" style="display: none;">
-                    <img src="<?php echo $url; ?>assets\images\Loading.gif" style="height: 100px;"/>
+                    <img src="<?php echo $url; ?>assets/images/Loading.gif" style="height: 100px;"/>
                 </div>
             </div>
         </div>

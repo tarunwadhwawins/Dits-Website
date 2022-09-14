@@ -21,6 +21,21 @@ $get_blog=get_blog($conn,$slug);
     <title><?php echo $get_blog[0]['title'] ?></title>
     <meta name="robots" content="follow, index"/>
     <link rel="canonical" href="<?php echo $current_url; ?>"/>
+
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@ditstek"/>
+    <meta name="twitter:title" content="<?php echo $get_blog[0]['title'] ?>"/>
+    <meta name="twitter:description" content="<?php echo $get_blog[0]['seo_desc'] ?>"/>
+    <meta name="twitter:image" content="<?php echo $url; ?>assets/images/logo.png"/>
+
+    <meta property="og:title" content="<?php echo $get_blog[0]['title'] ?>"/> 
+    <meta property="og:url" content="<?php echo $current_url; ?>"/> 
+    <meta property="og:site_name" content="DITSTEK"/> 
+    <meta property="og:image" content="<?php echo $url; ?>assets/images/logo.png"/> 
+    <meta property="og:type" content="website"/> 
+    <meta property="og:description" content="<?php echo $get_blog[0]['seo_desc'] ?>"/></code>
+
+    <?php include_once('common/seo-scripts.php'); ?>
     <!--common css-->
     <?php include_once('common/commoncss.php'); ?>
 </head>

@@ -151,7 +151,7 @@ $get_portfolio = get_portfolio($conn);
                                  </div>
                                  <div class="col-sm-12" id="loading-element">
                               <div class="load-more" style="display: none;">
-                                 <img src="<?php echo $url; ?>assets\images\Loading.gif" alt="image"/>
+                                 <img src="<?php echo $url; ?>assets/images/Loading.gif" alt="image"/>
                               </div>
                            </div>
                               </div>
