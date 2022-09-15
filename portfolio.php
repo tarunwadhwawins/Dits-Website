@@ -2,6 +2,7 @@
 require_once('core/dbconnection.php');
 require_once('core/ajax.php');
 $get_portfolio = get_portfolio($conn);
+
 ?>
 
 <!doctype html>
@@ -148,7 +149,9 @@ $get_portfolio = get_portfolio($conn);
                                        <div id='PortfolioContent'>
                                           <div class='row'>
                                           <?php
+                                             $Output='';
                                              foreach ($get_portfolio as $key => $row) {
+
                                                 # code...
                                                  $str = $row['short_desc'];
                                                  if( strlen( $row['short_desc']) >200) {

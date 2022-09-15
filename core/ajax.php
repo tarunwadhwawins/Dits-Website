@@ -235,7 +235,7 @@
 
 	function get_portfolio($conn,$cat_id='',$portfolio_id='')
     {
-		$sql="SELECT * from portfolio where  status=1";
+		$sql="SELECT portfolio.*,category.name FROM portfolio inner join category on portfolio.category_id=category.id where  portfolio.status=1";
 		if($cat_id!='')
         {
          $sql.=" and category_id=$cat_id";
