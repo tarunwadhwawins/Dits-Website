@@ -2,7 +2,6 @@
 require_once('core/dbconnection.php');
 require_once('core/ajax.php');
 $get_portfolio = get_portfolio($conn);
-
 ?>
 
 <!doctype html>
@@ -146,10 +145,48 @@ $get_portfolio = get_portfolio($conn);
                               <div id="pane-ALL" class="card tab-pane fade show active" role="tabpanel" aria-labelledby="tab-ALL">
                                  <div id="collapse-ALL" class="collapse show" data-parent="#content" role="tabpanel" aria-labelledby="heading-ALL">
                                     <div class="card-body">
-                                       <div id='PortfolioContent'> </div>
+                                       <div id='PortfolioContent'>
+                                          <div class='row'>
+                                          <?php
+                                             foreach ($get_portfolio as $key => $row) {
+                                                # code...
+                                                 $str = $row['short_desc'];
+                                                 if( strlen( $row['short_desc']) >200) {
+                                                     $str = explode( "\n", wordwrap( $row['short_desc'], 200));
+                                                     $str = $str[0] . '<div class="readMore">Read More ...</div>';
+                                                 }
+                                           
+                                                 $TagsHTML = "";
+                                                 $Tags = explode(',', $row['tags']);
+                                                 foreach($Tags AS $Tag)
+                                                 {
+                                                     $TagsHTML .= "<span>$Tag</span>";
+                                                 }
+                                                 $Output .= "<div class='col-lg-4 col-md-6 col-sm-12 commonPortfolio moreBox'>
+                                                                 <div class='potfolioDiv'>
+                                                                     <a href='portfolio/$row[slug]' target='_blank'>
+                                                                     <div class='thumbImage' style='background-image: url(assets/portfolioimage/$row[image]);'>
+                                                                             <div class='domainName'>$row[name]</div>
+                                                                         </div>
+                                                                         <div class='thumbDesc'>
+                                                                             <div class='tags'>
+                                                                                 $TagsHTML
+                                                                             </div>
+                                                                             <h2>$row[title]</h2>
+                                                                             <p>$str</p>
+                                                                         </div>
+                                                                     </a>
+                                                                 </div>
+                                                             </div>";
+                                             }
+                                             echo $Output;
+                                          ?>
+                                          </div>
+                                        </div>
                                     </div>
                                  </div>
                                  <div class="col-sm-12" id="loading-element">
+
                               <div class="load-more" style="display: none;">
                                  <img src="<?php echo $url; ?>assets/images/Loading.gif" alt="image"/>
                               </div>
@@ -171,14 +208,14 @@ $get_portfolio = get_portfolio($conn);
       var selected_category = "All";
       var selected_tag = "All";
       var page = 1;
-      var has_more = true;
+      var has_more = false;
       var ajax_load;
       var element_position = $('#PortfolioContent');
       $(document).ready(function() {
          $(".load-more").hide();
          $('.tabs-domain label:first').addClass('active');
-         $("#PortfolioContent").html("");
-         loadPortfolio(selected_category, selected_tag);
+         //$("#PortfolioContent").html("");
+         //loadPortfolio(selected_category, selected_tag);
 
          $(window).on('scroll', function() {
             var y_scroll_pos = $(this).scrollTop();
