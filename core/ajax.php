@@ -209,7 +209,47 @@
             mysqli_query($conn,$sql);
         }
     }
-    
+    if(isset($_GET['action']) && $_GET['action']=='getCountry'){
+        $sql = "SELECT * FROM countries";
+        
+        $res=mysqli_query($conn,$sql);
+        $Output ='';
+        while($row = mysqli_fetch_assoc($res)){
+               
+                $Output .='<option data-countryid="'.$row['id'].'" value="'.$row['name'].'">'.$row['name'].'</option>';
+        }
+        $Response['Output'] = $Output;
+        $Response=json_encode($Response);
+        echo $Response; exit;
+    }
+    if(isset($_GET['action']) && $_GET['action']=='getState'){
+        $countryId = $_GET['countryId'];
+        $sql = "SELECT * FROM states where country_id = '".$countryId."'";
+        
+        $res=mysqli_query($conn,$sql);
+        $Output ='';
+        while($row = mysqli_fetch_assoc($res)){
+               
+                $Output .='<option data-stateid="'.$row['id'].'" value="'.$row['name'].'">'.$row['name'].'</option>';
+        }
+        $Response['Output'] = $Output;
+        $Response=json_encode($Response);
+        echo $Response; exit;
+    }
+    if(isset($_GET['action']) && $_GET['action']=='getCity'){
+        $stateId = $_GET['stateId'];
+        $sql = "SELECT * FROM cities where state_id = '".$stateId."'";
+        
+        $res=mysqli_query($conn,$sql);
+        $Output ='';
+        while($row = mysqli_fetch_assoc($res)){
+               
+                $Output .='<option data-stateid="'.$row['id'].'" value="'.$row['name'].'">'.$row['name'].'</option>';
+        }
+        $Response['Output'] = $Output;
+        $Response=json_encode($Response);
+        echo $Response; exit;
+    }
     function get_tags($conn)
     {
 		$sql= "SELECT * FROM tags WHERE status=1 ORDER BY tag";

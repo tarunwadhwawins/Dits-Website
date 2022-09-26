@@ -39,6 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action']) && !empty($_
     }
 }
 
+
 function userInformationHtml($request) {
     $html = '<p><strong>First Name</strong> : '. $request['contact_first_name'].'</p>';
     $html .= '<p><strong>Email</strong> : '. $request['contact_email'].'</p>';
@@ -81,12 +82,7 @@ function customerEmailData($Name) {
                               <td><table align="center" valign="middle" cellpadding="0" cellspacing="0" border="0" style="max-width:610px;width:100%;overflow:hidden;margin:0;padding:0;background-color:#49535c;text-align:center">
                                   <tbody>
                                     <tr>
-                                      <td><img style="width:100%" src="https://www.ditstek.com/emailimages/headerbg.jpg" alt="image" class="CToWUd a6T" tabindex="0">
-                                        <div class="a6S" dir="ltr" style="opacity: 0.01; left: 846px; top: 119px;">
-                                          <div id=":18l" class="T-I J-J5-Ji aQv T-I-ax7 L3 a5q" role="button" tabindex="0" aria-label="Download attachment " data-tooltip-class="a1V" data-tooltip="Download">
-                                            <div class="aSK J-J5-Ji aYr"></div>
-                                          </div>
-                                        </div></td>
+                                      
                                     </tr>
                                   </tbody>
                                 </table></td>
@@ -111,10 +107,7 @@ function customerEmailData($Name) {
                               <td><table align="center" valign="center" cellpadding="0" cellspacing="0" border="0" style="max-width:610px;width:100%;overflow:hidden;background-color:#193370;padding:30px 20px 5px;box-sizing:border-box">
                                   <tbody>
                                     <tr>
-                                      <td><p style="text-align:center;height:30px;overflow:hidden;margin:0"> <a href="https://www.instagram.com/ditstek_innovations/" style="text-decoration:none;display:inline-block;margin:0 5px" target="_blank"><img alt="image" border="0" src="https://www.ditstek.com/emailimages/Instagram.png" height="auto" width="28" style="outline:none;color:#ffffff;display:block;text-decoration:none;border-color:#ececec" class="CToWUd"></a> <a href="https://www.facebook.com/Ditstek" style="text-decoration:none;padding:0;display:inline-block;margin:0 5px" target="_blank"><img alt="image" border="0" src="https://www.ditstek.com/emailimages/fb.png" height="auto" width="28" style="outline:none;color:#ffffff;display:block;text-decoration:none;border-color:#ececec" class="CToWUd"></a> <a href="https://twitter.com/DitsTek" style="text-decoration:none;padding:0;display:inline-block;margin:0 5px" target="_blank"><img alt="image" border="0" src="https://www.ditstek.com/emailimages/Twitter.png" height="auto" width="28" style="outline:none;color:#ffffff;display:block;text-decoration:none;border-color:#ececec" class="CToWUd"></a> <a href="https://www.youtube.com/c/ditstek" style="text-decoration:none;padding:0;display:inline-block;margin:0 5px" target="_blank"><img alt="image" border="0" src="https://www.ditstek.com/emailimages/Youtube.png" height="auto" width="28" style="outline:none;color:#ffffff;display:block;text-decoration:none;border-color:#ececec" class="CToWUd"></a> <a href="https://www.behance.net/DitstekInnovations" style="text-decoration:none;padding:0;display:inline-block;margin:0 5px" target="_blank"><img alt="image" border="0" src="https://www.ditstek.com/emailimages/behance.png" height="auto" width="28" style="outline:none;color:#ffffff;display:block;text-decoration:none;border-color:#ececec" class="CToWUd"></a> <a href="https://www.linkedin.com/company/ditstek-innovations" style="text-decoration:none;padding:0;display:inline-block;margin:0 5px" target="_blank"><img alt="image" border="0" src="https://www.ditstek.com/emailimages/linkedin.png" height="auto" width="28" style="outline:none;color:#ffffff;display:block;text-decoration:none;border-color:#ececec" class="CToWUd"></a> </p>
-                                        <p style="color:#fff;font-family:Lato,sans-serif;font-size:15px;line-height:15px;margin-top:15px;margin-bottom:0px;padding:0;font-weight:normal;text-align:center"> <a href="tel:+91-623-942-1395" style="color:#fff;text-decoration:none;font-family:Lato,sans-serif" target="_blank">+91-623-942-1395</a>, <a href="mailto:info@ditstek.com" style="color:#fff;text-decoration:none;font-family:Lato,sans-serif" target="_blank">info@ditstek.com</a> </p>
-                                        <p style="color:#fff;font-family:Lato,sans-serif;font-size:15px;line-height:15px;margin-top:5px;margin-bottom:0px;padding:0;font-weight:normal;text-align:center"> <a href="https://www.ditstek.com/" style="color:#fff;text-decoration:none;font-family:Lato,sans-serif" target="_blank">www.ditstek.com </a> </p>
-                                      </td>
+                                      
                                     </tr>
                                   </tbody>
                                 </table></td>

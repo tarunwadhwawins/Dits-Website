@@ -54,25 +54,24 @@
                               <input type="text" class="form-control" name="contact_email" id="contactEmail" placeholder="Email Id"/>  
                            </div>
                         </div>
-                        <div class="col-sm-4 d-none">
+                        <div class="col-sm-4">
                            <div class="contactForm">
                               <select name="country" class="countries form-control" id="countryId">
                                  <option value="">Select Country</option>
                               </select>        
                            </div>
                         </div>
-                        <div class="col-sm-4 d-none">
+                        <div class="col-sm-4">
                            <div class="contactForm">
                               <select name="state" class="states form-control" id="stateId">
                                  <option value="">Select State</option>
                               </select>     
                            </div>
                         </div>
-                        <div class="col-sm-4 d-none">
+                        <div class="col-sm-4">
                            <div class="contactForm">
-                              <select name="city" class="cities form-control" id="cityId">
-                                 <option value="">Select City</option>
-                              </select>
+                              <input type="text" class="form-control" name="city" id="cityId" placeholder="City"/>  
+                             
                            </div>
                         </div>
                         <div class="col-sm-6">

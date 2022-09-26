@@ -59,7 +59,7 @@ $(function () {
     })
     
     jQuery(".quotecountries").on("change", function(ev) {
-        var countryId = jQuery("option:selected", this).attr('countryid');
+        var countryId = jQuery("option:selected", this).data('countryid');
         if(countryId != ''){
             getQuoteStates(countryId);
         }
@@ -67,22 +67,22 @@ $(function () {
             jQuery(".quotestates option:gt(0)").remove();
         }
     });
-    jQuery(".quotestates").on("change", function(ev) {
-        var stateId = jQuery("option:selected", this).attr('stateid');
-        if(stateId != ''){
-            getQuoteCities(stateId);
-        }
-        else{
-            jQuery(".quotecities option:gt(0)").remove();
-        }
-    });
+    // jQuery(".quotestates").on("change", function(ev) {
+    //     var stateId = jQuery("option:selected", this).attr('stateid');
+    //     if(stateId != ''){
+    //         getQuoteCities(stateId);
+    //     }
+    //     else{
+    //         jQuery(".quotecities option:gt(0)").remove();
+    //     }
+    // });
 
-    jQuery(".quotecities").on("change", function(ev) {
-        var cityId = jQuery("option:selected", this).val();
-        if(cityId != ''){
-            confCity(cityId);
-        }
-    });
+    // jQuery(".quotecities").on("change", function(ev) {
+    //     var cityId = jQuery("option:selected", this).val();
+    //     if(cityId != ''){
+    //         confCity(cityId);
+    //     }
+    // });
 })
 
 function ajaxCall() {
@@ -108,151 +108,38 @@ function ajaxCall() {
 }
 
 function getQuoteCountries() {
-    var rootUrl = "https://geodata.solutions/api/api.php";
-    //now check for set values
-    var addParams = '';
-    if (jQuery("#gds_appid").length > 0) {
-        addParams += '&appid=' + jQuery("#gds_appid").val();
-    }
-    if (jQuery("#gds_hash").length > 0) {
-        addParams += '&hash=' + jQuery("#gds_hash").val();
-    }
-
+    var rootUrl = "core/ajax?action=getCountry";
+    
     var call = new ajaxCall();
 
-    var countryClasses = jQuery('#quotecountryId').attr('class');
-
-    var cC = countryClasses.split(" ");
-    cC.shift();
-    var addClasses = '';
-    if (cC.length > 0)
-    {
-        acC = cC.join();
-        addClasses = '&addClasses=' + encodeURIComponent(acC);
-    }
-
-    var presel = false;
-    var iip = 'N';
-    jQuery.each(cC, function (index, value) {
-        if (value.match("^presel-")) {
-            presel = value.substring(7);
-
-        }
-        if (value.match("^presel-byi"))
-        {
-            var iip = 'Y';
-        }
-    });
-
-
-    var url = rootUrl + '?type=getCountries' + addParams + addClasses;
-    var method = "post";
+    var url = rootUrl;
+    var method = "get";
     var data = {};
     jQuery('.quotecountries').find("option:eq(0)").html("Please wait..");
     call.send(data, url, method, function (data) {
         jQuery('.quotecountries').find("option:eq(0)").html("Select Country");
-
-        if (data.tp == 1) {
-            if (presel == 'byip')
-            {
-                presel = data['presel'];
-                console.log('2 presel is set as ' + presel);
-            }
-
-
-            if (jQuery.inArray("group-continents", cC) > -1)
-            {
-                var $select = jQuery('.quotecountries');
-                console.log(data['result']);
-                jQuery.each(data['result'], function (i, optgroups) {
-                    var $optgroup = jQuery("<optgroup>", {label: i});
-                    if (optgroups.length > 0)
-                    {
-                        $optgroup.appendTo($select);
-                    }
-
-                    jQuery.each(optgroups, function (groupName, options) {
-                        var coption = jQuery('<option />');
-                        coption.attr('value', options.name).text(options.name);
-                        coption.attr('countryid', options.id);
-                        if (presel) {
-                            if (presel.toUpperCase() == options.id) {
-                                coption.attr('selected', 'selected');
-                            }
-                        }
-                        coption.appendTo($optgroup);
-                    });
-                });
-            } else
-            {
-                jQuery.each(data['result'], function (key, val) {
-                    var option = jQuery('<option />');
-                    option.attr('value', val).text(val);
-                    option.attr('countryid', key);
-                    if (presel)
-                    {
-                        if (presel.toUpperCase() == key)
-                        {
-                            option.attr('selected', 'selected');
-                        }
-                    }
-                    jQuery('.quotecountries').append(option);
-                });
-            }
-            if (presel)
-            {
-                jQuery('.quotecountries').trigger('change');
-            }
-            jQuery(".quotecountries").prop("disabled", false);
-        } else {
-            alert(data.msg);
-        }
+        countryOption = data.Output;
+        jQuery('.quotecountries').append(countryOption);
+       
     });
 }
 
 function getQuoteStates(id) {
-    jQuery(".quotestates option:gt(0)").remove();
-    jQuery(".quotecities option:gt(0)").remove();
+    jQuery(".states option:gt(0)").remove();
+    jQuery(".cities option:gt(0)").remove();
     //get additional fields
-    var stateClasses = jQuery('#quotestateId').attr('class');
 
-    var rootUrl = "https://geodata.solutions/api/api.php";
-    //now check for set values
-    var addParams = '';
-    if (jQuery("#gds_appid").length > 0) {
-        addParams += '&appid=' + jQuery("#gds_appid").val();
-    }
-    if (jQuery("#gds_hash").length > 0) {
-        addParams += '&hash=' + jQuery("#gds_hash").val();
-    }
-
+    var rootUrl = "core/ajax?action=getState";
     var call = new ajaxCall();
-
-    var cC = stateClasses.split(" ");
-    cC.shift();
-    var addClasses = '';
-    if (cC.length > 0)
-    {
-        acC = cC.join();
-        addClasses = '&addClasses=' + encodeURIComponent(acC);
-    }
-    var url = rootUrl + '?type=getStates&countryId=' + id + addParams + addClasses;
-    var method = "post";
+    var url = rootUrl + '&countryId=' + id;
+    var method = "get";
     var data = {};
     jQuery('.quotestates').find("option:eq(0)").html("Please wait..");
     call.send(data, url, method, function (data) {
         jQuery('.quotestates').find("option:eq(0)").html("Select State");
-        if (data.tp == 1) {
-            jQuery.each(data['result'], function (key, val) {
-                var option = jQuery('<option />');
-                option.attr('value', val).text(val);
-                option.attr('stateid', key);
-                jQuery('.quotestates').append(option);
-            });
-            jQuery(".quotestates").prop("disabled", false);
-        } else {
-            alert(data.msg);
-        }
+        stateOption = data.Output;
+        jQuery('.quotestates').append(stateOption);
+        
     });
 }
 

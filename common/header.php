@@ -22,25 +22,24 @@
                           <input type="text" class="form-control" placeholder="Last Name" name="contact_last_name" id="contactLastName">
                        </div> -->
                     </div>
-                    <div class="col-sm-4 d-none">
+                    <div class="col-sm-4">
                         <div class="form-group">
                             <select class="quotecountries form-control" id="quotecountryId" name="country">
                                 <option value="">Select Country</option>
                             </select>
                         </div>
                     </div>
-                    <div class="col-sm-4 d-none">
+                    <div class="col-sm-4">
                         <div class="form-group">
                             <select class="quotestates form-control" id="quotestateId" name="state">
                                 <option value="">Select State</option>
                             </select>
                         </div>
                     </div>
-                    <div class="col-sm-4 d-none">
+                    <div class="col-sm-4">
                         <div class="form-group">
-                            <select class="quotecities form-control" id="quotecityId" name="city">
-                                <option value="">Select City</option>
-                            </select>
+                            <input type="text" class="quotecities form-control" name="city" id="quotecityId" placeholder="City"/>  
+                           
                         </div>
                     </div>
                     <div class="col-sm-6">
