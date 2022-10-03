@@ -37,9 +37,7 @@ $(function () {
                     var $messageDiv = $('#quotesmessage')
                     $messageDiv.hide().html(response.Message);          
                     if(response.Success == true) {
-                        $messageDiv.text('Thank You! Our Team Will Get Back To You Soon!!');
-                        document.getElementById("quoteForm").reset();
-                        $messageDiv.addClass('alert alert-success').fadeIn(1500);
+                        window.location="thankyou";
                     } else {
                         $messageDiv.text('Error');
                         $messageDiv.addClass('alert alert-danger').fadeIn(1500);

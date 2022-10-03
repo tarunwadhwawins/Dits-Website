@@ -136,7 +136,7 @@ function sendEmail($to_email, $subject, $message) {
         $mailheader .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
 
 
-        mail($to_email, $subject, $message, $mailheader) or die('error'); 
+      //  mail($to_email, $subject, $message, $mailheader) or die('error'); 
     } catch(Exception $ex) {
         echo '<pre>';print_r($ex);die;
     }
