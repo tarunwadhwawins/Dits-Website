@@ -67,7 +67,7 @@ $get_portfolio = get_portfolio($conn);
                                     $i = 1;
                                     foreach ($get_category as $list) { ?>
                                        <input type="radio" id="radio<?php echo $i ?>" name="tabs" />
-                                       <label class="tab category <?php echo $list['slug'] ?>" for="radio-1" onclick="loadCategory('<?php echo $list['slug'] ?>', '<?php echo $list['id'] ?>', '<?php echo $list['name'] ?>')" id="<?php echo $list['id'] ?>"><?php echo $list['name'] ?></label>
+                                       <label class="tab category <?php echo $list['slug'] ?>" data-slug="<?php echo $list['slug']; ?>" data-id="<?php echo $list['id']; ?>" for="radio-1" onclick="loadCategory('<?php echo $list['slug'] ?>', '<?php echo $list['id'] ?>', '<?php echo $list['name'] ?>')" id="<?php echo $list['id'] ?>"><?php echo $list['name'] ?></label>
                                     <?php $i++;
                                     } ?>
                                     <span class="glider"></span>
@@ -88,7 +88,7 @@ $get_portfolio = get_portfolio($conn);
                               foreach ($get_category as $list) {
                               ?>
                                  <input type="radio" id="radio<?php echo $i ?>" name="tabs" />
-                                 <label class="tab category <?php echo $list['slug'] ?>" for="radio-1" onclick="loadCategory('<?php echo $list['slug'] ?>', '<?php echo $list['id'] ?>', '<?php echo $list['name'] ?>')" id="<?php echo $list['id'] ?>"><?php echo $list['name'] ?></label>
+                                 <label class="tab category <?php echo $list['slug'] ?>" data-slug="<?php echo $list['slug']; ?>" data-id="<?php echo $list['id']; ?>" for="radio-1" onclick="loadCategory('<?php echo $list['slug'] ?>', '<?php echo $list['id'] ?>', '<?php echo $list['name'] ?>')" id="<?php echo $list['id'] ?>"><?php echo $list['name'] ?></label>
                                  <?php
                                  $i++;
                                  ?>
@@ -116,7 +116,7 @@ $get_portfolio = get_portfolio($conn);
                                        foreach ($get_tags as $tag) {
                                        ?>
                                           <li class="nav-item">
-                                             <a id="tab-ALL" href="#pane-ALL" class="nav-link" data-toggle="tab" role="tab" onclick="loadCategoryWithTag('<?php echo $tag['tag'] ?>')"><?php echo $tag['tag'] ?></a>
+                                             <a id="tab-ALL" href="#pane-ALL" class="nav-link" data-toggle="tab" data-tag="<?php echo $tag['tag']; ?>" role="tab" onclick="loadCategoryWithTag('<?php echo $tag['tag'] ?>')"><?php echo $tag['tag'] ?></a>
                                           </li>
                                        <?php } ?>
                                     </ul>
@@ -137,7 +137,7 @@ $get_portfolio = get_portfolio($conn);
                               foreach ($get_tags as $tag) {
                               ?>
                                  <li class="nav-item">
-                                    <a id="tab-ALL" href="#pane-ALL" class="nav-link" data-toggle="tab" role="tab" onclick="loadCategoryWithTag('<?php echo $tag['tag'] ?>')"><?php echo $tag['tag'] ?></a>
+                                    <a id="tab-ALL" href="#pane-ALL" class="nav-link" data-toggle="tab" role="tab" data-tag="<?php echo $tag['tag']; ?>" onclick="loadCategoryWithTag('<?php echo $tag['tag'] ?>')"><?php echo $tag['tag'] ?></a>
                                  </li>
                               <?php } ?>
                            </ul>
@@ -214,9 +214,12 @@ $get_portfolio = get_portfolio($conn);
       var has_more = false;
       var ajax_load;
       var element_position = $('#PortfolioContent');
+      getURLparameter();
       $(document).ready(function() {
          $(".load-more").hide();
-         $('.tabs-domain label:first').addClass('active');
+         if(selected_category=="All"){
+            $('.tabs-domain label:first').addClass('active');
+         }
          //$("#PortfolioContent").html("");
          //loadPortfolio(selected_category, selected_tag);
 
@@ -244,6 +247,8 @@ $get_portfolio = get_portfolio($conn);
          selected_category = CategoryID;
          selected_tag = "All";
          has_more = true;
+
+         window.history.replaceState('', '', updateURLParameter(window.location.href, "category", Slug));
          loadPortfolio(CategoryID, 'All');
       }
 
@@ -253,6 +258,7 @@ $get_portfolio = get_portfolio($conn);
          $("#collapseExample1").removeClass('show');
          $(".tag-name").text('Tags - ' + Tag);
          var Category = $(".tabs-domain label.active").attr('id');
+         
          if (!Category) {
             Category = "All";
          }
@@ -260,7 +266,7 @@ $get_portfolio = get_portfolio($conn);
          selected_tag = Tag;
          $("#PortfolioContent").html("");
          has_more = true;
-         console.log(Category);
+         window.history.replaceState('', '', updateURLParameter(window.location.href, "tag", Tag));
          loadPortfolio(Category, Tag)
       }
 
@@ -291,6 +297,41 @@ $get_portfolio = get_portfolio($conn);
                }
             });
          }
+      }
+      function getURLparameter(){
+         const queryString = window.location.search;
+         const urlParams = new URLSearchParams(queryString);
+         const category = urlParams.get('category');
+         if($("."+category).length>0){
+            var slug = $("."+category).data('slug');
+            var id = $("."+category).data('id');
+            var text = $("."+category).text();
+            loadCategory(slug,id,text);
+         }
+
+         const tag = urlParams.get('tag');
+         if($('[data-tag='+tag+']').length>0){
+            $('[data-tag='+tag+']').click();
+         }
+      }
+      function updateURLParameter(url, param, paramVal){
+          var newAdditionalURL = "";
+          var tempArray = url.split("?");
+          var baseURL = tempArray[0];
+          var additionalURL = tempArray[1];
+          var temp = "";
+          if (additionalURL) {
+              tempArray = additionalURL.split("&");
+              for (var i=0; i<tempArray.length; i++){
+                  if(tempArray[i].split('=')[0] != param){
+                      newAdditionalURL += temp + tempArray[i];
+                      temp = "&";
+                  }
+              }
+          }
+
+          var rows_txt = temp + "" + param + "=" + paramVal;
+          return baseURL + "?" + newAdditionalURL + rows_txt;
       }
    </script>
 
