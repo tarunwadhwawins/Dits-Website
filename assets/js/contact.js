@@ -39,7 +39,7 @@ $(document).ready(function () {
                     var $messageDiv = $('#message')
                     $messageDiv.hide().html(response.Message);			
                     if(response.Success == true) {
-						window.location="thankyou";
+						window.location=base_url+"thankyou";
                     } else {
 						$messageDiv.text('Error');
                         $messageDiv.addClass('alert alert-danger').fadeIn(1500);

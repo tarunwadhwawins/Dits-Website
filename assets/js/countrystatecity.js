@@ -52,7 +52,7 @@ function ajaxCall() {
 }
 
 function getCountries() {
-    var rootUrl = "core/ajax?action=getCountry";
+    var rootUrl =  base_url+"/core/ajax?action=getCountry";
     
     var call = new ajaxCall();
 
@@ -74,7 +74,7 @@ function getStates(id) {
     //get additional fields
     var stateClasses = jQuery('#stateId').attr('class');
 
-    var rootUrl = "core/ajax?action=getState";
+    var rootUrl =  base_url+"/core/ajax?action=getState";
     var call = new ajaxCall();
     var url = rootUrl + '&countryId=' + id;
     var method = "get";

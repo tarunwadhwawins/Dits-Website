@@ -14,6 +14,8 @@
 	   <script src="<?php echo $url; ?>assets/js/quotes.js"></script>
     <script src="<?php echo $url; ?>assets/js/modelCountry.js"></script>
     <script src="<?php echo $url; ?>assets/js/imageMapResizer.min.js"></script>
+    
+        <script src="<?php echo $url; ?>assets/js/countrystatecity.js"></script>
 	  <script type="text/javascript">
 
 		//$('map').imageMapResize();

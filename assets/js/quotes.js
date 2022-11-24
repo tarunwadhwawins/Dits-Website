@@ -37,7 +37,7 @@ $(function () {
                     var $messageDiv = $('#quotesmessage')
                     $messageDiv.hide().html(response.Message);          
                     if(response.Success == true) {
-                        window.location="thankyou";
+                        window.location=base_url+"thankyou";
                     } else {
                         $messageDiv.text('Error');
                         $messageDiv.addClass('alert alert-danger').fadeIn(1500);
@@ -106,7 +106,7 @@ function ajaxCall() {
 }
 
 function getQuoteCountries() {
-    var rootUrl = "core/ajax?action=getCountry";
+    var rootUrl =  base_url+"/core/ajax?action=getCountry";
     
     var call = new ajaxCall();
 
@@ -127,7 +127,7 @@ function getQuoteStates(id) {
     jQuery(".cities option:gt(0)").remove();
     //get additional fields
 
-    var rootUrl = "core/ajax?action=getState";
+    var rootUrl =  base_url+"/core/ajax?action=getState";
     var call = new ajaxCall();
     var url = rootUrl + '&countryId=' + id;
     var method = "get";

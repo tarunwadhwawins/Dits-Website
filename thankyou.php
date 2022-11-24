@@ -47,7 +47,6 @@
       <?php include_once('common/commonscripts.php'); ?>
       <!---->
       <!--scripts-->
-        <script src="./assets/js/countrystatecity.js"></script>
       <!---->
    </body>
 </html>
