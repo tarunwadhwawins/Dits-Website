@@ -5,7 +5,7 @@ require_once('core/ajax.php');
 $slug=str_replace('.php', '', $_GET['title']);
 $slug=trim($slug);
 $get_blog=get_blog($conn,$slug);
-
+ $current_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 ?>
 
 <!doctype html>
@@ -19,12 +19,24 @@ $get_blog=get_blog($conn,$slug);
     <meta name="author" content="Ditstek" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $get_blog[0]['title'] ?></title>
-    <meta property="og:title" content="4 Reasons Why Offshore Development Is A Better Option Than The Onshore - Ditstek Innovations" />
-    <meta property="og:site_name" content="Dits Innovations" />
-    <meta property="og:url" content="https://ditstek.com/blogs/4-reasons-why-offshore-development-is-a-better-option-than-the-onshore" />
-    <meta property="og:description" content="The conceptions of offshore and onshore development are rooted within offshore and onshore firms' ideas, so we'll conjointly glance at that to compare the two of them." />
-    <meta property="og:type" content="article" />
-    <meta property="og:image" content="https://ditstek.com/assets/images/4-reasons-why-offshore-development.jpg" />
+    <meta name="robots" content="follow, index"/>
+    <link rel="canonical" href="<?php echo $current_url; ?>"/>
+    
+      <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@ditstek"/>
+    <meta name="twitter:title" content="<?php echo $get_blog[0]['title'] ?>"/>
+    <meta name="twitter:description" content="<?php echo $get_blog[0]['seo_desc'] ?>"/>
+    <meta name="twitter:image" content="<?php echo $url; ?>assets/images/logo.png"/>
+
+    <meta property="og:title" content="<?php echo $get_blog[0]['title'] ?>"/> 
+    <meta property="og:url" content="<?php echo $current_url; ?>"/> 
+    <meta property="og:site_name" content="DITSTEK"/> 
+    <meta property="og:image" content="<?php echo $url; ?>assets/images/logo.png"/> 
+    <meta property="og:type" content="website"/> 
+    <meta property="og:description" content="<?php echo $get_blog[0]['seo_desc'] ?>"/></code>
+
+    <?php include_once('common/seo-scripts.php'); ?>
+    
     <!--common css-->
     <?php include_once('common/commoncss.php'); ?>
 </head>
@@ -37,7 +49,7 @@ $get_blog=get_blog($conn,$slug);
         <?php include_once('common/header.php'); ?>
         <!---->
         <div class="bannerMain barkWrapper">
-            <img src="<?php echo $url; ?>/assets/blogimages/<?php echo $get_blog[0]['image'] ?>" title="4 Reasons Why Offshore Development Is A Better Option Than The Onshore" alt="4 Reasons Why Offshore Development Is A Better Option Than The Onshore" />
+            <img src="<?php echo $url; ?>assets/blogimages/<?php echo $get_blog[0]['image'] ?>" title="4 Reasons Why Offshore Development Is A Better Option Than The Onshore" alt="4 Reasons Why Offshore Development Is A Better Option Than The Onshore" />
             <div class="bannerDesc">
                 <div class="container">
                     <div class="row">
@@ -82,7 +94,7 @@ $get_blog=get_blog($conn,$slug);
                                 <?php
                                 $img = str_replace(".jpg","",$row['image']);
                                 ?>
-                                <img src="<?php echo $url; ?>/assets/blogimages/<?php echo $row['image'] ?>" title="<?php echo $img ?> " alt="image" /></a>
+                                <img src="<?php echo $url; ?>assets/blogimages/<?php echo $row['image'] ?>" title="<?php echo $img ?> " alt="image" /></a>
                                 <div class="blogContent">
                                 <div class="blogInnerContent"><a class="active" href="<?php echo $row['slug'] ?>" target="_self">
                                 <?php echo $row['title'] ?></a></div>

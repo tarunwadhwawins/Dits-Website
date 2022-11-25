@@ -152,3 +152,40 @@
 [19-Jul-2021 08:11:29 UTC] PHP Notice:  Undefined index: contact_phone in /home/j8by0ghyo34y/public_html/core/general.php on line 51
 [19-Jul-2021 08:11:29 UTC] PHP Notice:  Undefined index: contact_findUs in /home/j8by0ghyo34y/public_html/core/general.php on line 52
 [19-Jul-2021 08:11:29 UTC] PHP Notice:  Undefined index: contact_message in /home/j8by0ghyo34y/public_html/core/general.php on line 53
+[13-Jan-2022 09:17:47 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/j8by0ghyo34y/public_html/core/ajax.php on line 47
+[13-Jan-2022 09:17:47 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/j8by0ghyo34y/public_html/core/ajax.php on line 53
+[13-Jan-2022 09:17:53 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/j8by0ghyo34y/public_html/core/ajax.php on line 47
+[13-Jan-2022 09:17:53 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/j8by0ghyo34y/public_html/core/ajax.php on line 53
+[10-Feb-2022 00:01:44 UTC] PHP Notice:  Undefined index: contact_first_name in /home/j8by0ghyo34y/public_html/core/general.php on line 43
+[10-Feb-2022 00:01:44 UTC] PHP Notice:  Undefined index: contact_email in /home/j8by0ghyo34y/public_html/core/general.php on line 44
+[10-Feb-2022 00:01:44 UTC] PHP Notice:  Undefined index: contact_phone in /home/j8by0ghyo34y/public_html/core/general.php on line 48
+[10-Feb-2022 00:01:44 UTC] PHP Notice:  Undefined index: contact_findUs in /home/j8by0ghyo34y/public_html/core/general.php on line 49
+[10-Feb-2022 00:01:44 UTC] PHP Notice:  Undefined index: contact_message in /home/j8by0ghyo34y/public_html/core/general.php on line 50
+[19-Sep-2022 15:37:20 UTC] PHP Notice:  Undefined index: contact_first_name in /home/j8by0ghyo34y/public_html/core/general.php on line 43
+[19-Sep-2022 15:37:20 UTC] PHP Notice:  Undefined index: contact_email in /home/j8by0ghyo34y/public_html/core/general.php on line 44
+[19-Sep-2022 15:37:20 UTC] PHP Notice:  Undefined index: contact_phone in /home/j8by0ghyo34y/public_html/core/general.php on line 48
+[19-Sep-2022 15:37:20 UTC] PHP Notice:  Undefined index: contact_findUs in /home/j8by0ghyo34y/public_html/core/general.php on line 49
+[19-Sep-2022 15:37:20 UTC] PHP Notice:  Undefined index: contact_message in /home/j8by0ghyo34y/public_html/core/general.php on line 50
+[20-Sep-2022 03:59:43 UTC] PHP Notice:  Undefined index: contact_first_name in /home/j8by0ghyo34y/public_html/core/general.php on line 43
+[20-Sep-2022 03:59:43 UTC] PHP Notice:  Undefined index: contact_email in /home/j8by0ghyo34y/public_html/core/general.php on line 44
+[20-Sep-2022 03:59:43 UTC] PHP Notice:  Undefined index: contact_phone in /home/j8by0ghyo34y/public_html/core/general.php on line 48
+[20-Sep-2022 03:59:43 UTC] PHP Notice:  Undefined index: contact_findUs in /home/j8by0ghyo34y/public_html/core/general.php on line 49
+[20-Sep-2022 03:59:43 UTC] PHP Notice:  Undefined index: contact_message in /home/j8by0ghyo34y/public_html/core/general.php on line 50
+[20-Sep-2022 04:44:48 UTC] PHP Notice:  Undefined index: quotes_first_name in /home/j8by0ghyo34y/public_html/core/general.php on line 57
+[20-Sep-2022 04:44:48 UTC] PHP Notice:  Undefined index: quotes_email in /home/j8by0ghyo34y/public_html/core/general.php on line 58
+[20-Sep-2022 04:44:48 UTC] PHP Notice:  Undefined index: quotes_phone in /home/j8by0ghyo34y/public_html/core/general.php on line 62
+[20-Sep-2022 04:44:48 UTC] PHP Notice:  Undefined index: quotes_findUs in /home/j8by0ghyo34y/public_html/core/general.php on line 63
+[20-Sep-2022 04:44:48 UTC] PHP Notice:  Undefined index: quotes_message in /home/j8by0ghyo34y/public_html/core/general.php on line 64
+[20-Sep-2022 04:58:14 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/j8by0ghyo34y/public_html/core/general.php:145) in /home/j8by0ghyo34y/public_html/core/general.php on line 154
+[20-Sep-2022 04:59:06 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/j8by0ghyo34y/public_html/core/general.php:145) in /home/j8by0ghyo34y/public_html/core/general.php on line 154
+[20-Sep-2022 05:09:30 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/j8by0ghyo34y/public_html/core/general.php:145) in /home/j8by0ghyo34y/public_html/core/general.php on line 153
+[20-Sep-2022 05:11:41 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/j8by0ghyo34y/public_html/core/general.php:145) in /home/j8by0ghyo34y/public_html/core/general.php on line 153
+[20-Sep-2022 05:26:52 UTC] PHP Notice:  Undefined index: contact_first_name in /home/j8by0ghyo34y/public_html/core/general.php on line 43
+[20-Sep-2022 05:26:52 UTC] PHP Notice:  Undefined index: contact_email in /home/j8by0ghyo34y/public_html/core/general.php on line 44
+[20-Sep-2022 05:26:52 UTC] PHP Notice:  Undefined index: contact_phone in /home/j8by0ghyo34y/public_html/core/general.php on line 48
+[20-Sep-2022 05:26:52 UTC] PHP Notice:  Undefined index: contact_findUs in /home/j8by0ghyo34y/public_html/core/general.php on line 49
+[20-Sep-2022 05:26:52 UTC] PHP Notice:  Undefined index: contact_message in /home/j8by0ghyo34y/public_html/core/general.php on line 50
+[25-Oct-2022 15:45:24 UTC] PHP Notice:  Undefined index: state in /home/j8by0ghyo34y/public_html/core/general.php on line 18
+[25-Oct-2022 15:45:24 UTC] PHP Notice:  Undefined index: state in /home/j8by0ghyo34y/public_html/core/general.php on line 55
+[24-Nov-2022 06:38:29 UTC] PHP Notice:  Undefined index: state in /home/j8by0ghyo34y/public_html/core/general.php on line 18
+[24-Nov-2022 06:38:29 UTC] PHP Notice:  Undefined index: state in /home/j8by0ghyo34y/public_html/core/general.php on line 55

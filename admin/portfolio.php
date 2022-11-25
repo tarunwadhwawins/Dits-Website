@@ -40,12 +40,23 @@ if (isset($_GET['pageno']))
 }
 $PerPAge = 10;
 $offset = ($pageno-1) * $PerPAge;
-$total_pages_sql = "SELECT COUNT(*) FROM portfolio, category WHERE portfolio.category_id=category.id";
+
+$category_condition = "";
+
+if(isset($_GET['category']) && $_GET['category']!=0){
+    $category_condition = " AND portfolio.category_id='".$_GET['category']."'";
+}
+
+$total_pages_sql = "SELECT COUNT(*) FROM portfolio, category WHERE portfolio.category_id=category.id ".$category_condition;
 $result = mysqli_query($conn,$total_pages_sql);
 $total_rows = mysqli_fetch_array($result)[0];
 $total_pages = ceil($total_rows / $PerPAge);
-$sql = "SELECT portfolio.*,category.name FROM portfolio,category WHERE portfolio.category_id=category.id ORDER BY portfolio.id DESC LIMIT $offset, $PerPAge";
+$sql = "SELECT portfolio.*,category.name FROM portfolio,category WHERE portfolio.category_id=category.id ".$category_condition." ORDER BY portfolio.id DESC LIMIT $offset, $PerPAge";
 $res = mysqli_query($conn,$sql);
+
+$sql = "SELECT * FROM category";
+$category = mysqli_query($conn,$sql);
+
 ?>
 
 <!DOCTYPE html>
@@ -78,11 +89,12 @@ $res = mysqli_query($conn,$sql);
             <div class="whiteBg">
                 <h2>Portfolio Listing</h2>
                 <div class="form-group mb-2">
-                    <select class="form-control">
-                        <option value="0" selected>Choose Category</option>
-                        <option value="1">All</option>
-                        <option value="2">Health Care</option>
-                        <option value="3">Retail</option>
+                    <select class="form-control" id="category" onchange="load_portfolio();">
+                       <option value="0" selected>ALL</option>
+                        <?php while($row=mysqli_fetch_assoc($category)) { ?>
+                        <option <?php if(@$_GET['category']==$row['id']){ echo "selected"; } ?> value="<?php echo $row['id'] ?>"><?php echo $row['name'] ?></option>
+
+                        <?php } ?>
                     </select>
                 </div>
              <div class="row">
@@ -165,7 +177,11 @@ $res = mysqli_query($conn,$sql);
         {
          return confirm("Are you sure want to edit ?");
         }
-    
+        function load_portfolio() {
+            var category = $("#category").val();
+            var url = '<?php echo $url ?>admin/portfolio?category='+category;
+            window.location = url;
+        }
 </script>
 </body>
 </html>

@@ -4,10 +4,7 @@
 <!doctype html>
 <html lang="en">
    <head>
-      <meta charset="utf-8">
-      <meta http-equiv="pragma" content="no-cache" />
       <?php include_once('../common/commonmeta.php'); ?>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <!--common css-->
        <?php include_once('../common/commoncss.php'); ?>
 	  <!---->
@@ -194,7 +191,7 @@
 						<div class="col-sm-12 text-center">
 							<div class="col-sm-12">
 							<h2 class="mb-4">Why choose DITS for custom application development services? </h2>
-							<p>DITS’s team of dedicated developers are experienced in creating custom software development in all verticals, including retail, healthcare, manufacturing, logistics and finance etc. A steadfast Project Manager is employed who is responsible for bringing transparent communication with your in-house IT team continuously evaluates and manages project risks. <a href="https://ditstek.com/" target="bkank">DITS</a> follow agile development methodology and staunchly supports providing quality services at every stage of the software development lifecycle. </p>
+							<p>DITS’s team of dedicated developers are experienced in creating custom software development in all verticals, including retail, healthcare, manufacturing, logistics and finance etc. A steadfast Project Manager is employed who is responsible for bringing transparent communication with your in-house IT team continuously evaluates and manages project risks. <a href="https://www.ditstek.com/" target="bkank">DITS</a> follow agile development methodology and staunchly supports providing quality services at every stage of the software development lifecycle. </p>
 						</div>
 						</div>
 					</div>

@@ -1,5 +1,5 @@
       <!--favicon-->
-	  <link rel="icon" type="image/x-icon" href="<?php echo $url; ?>assets/images/favicon.png">
+	  <link rel="icon" type="image/x-icon" href="<?php echo $url; ?>assets/images/favicon.png"/>
       <!--css-->
       <link rel="stylesheet" href="<?php echo $url; ?>assets/css/common.css" type="text/css"/>
 	  <link rel="stylesheet" href="<?php echo $url; ?>assets/css/header.css" type="text/css"/>
@@ -14,4 +14,5 @@
      <!--owl carousel -->
       <link rel="stylesheet" href="<?php echo $url; ?>assets/css/owl.carousel.min.css" type="text/css"/>
      <link rel="stylesheet" href="<?php echo $url; ?>assets/css/owl.theme.default.min.css" type="text/css"/>
+     
       

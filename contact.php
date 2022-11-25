@@ -4,9 +4,6 @@
 <!doctype html>
 <html lang="en">
    <head>
-      <meta charset="utf-8">
-      <meta http-equiv="pragma" content="no-cache" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <?php include_once('common/commonmeta.php'); ?>
       <?php include_once('common/commoncss.php'); ?>
       <!---->
@@ -40,7 +37,7 @@
                      <div class="row">
                         <div class="col-sm-12">
                            <div class="heading">
-                              <h1>Send Us a Message</h1>
+                              <h2>Send Us a Message</h2>
                            </div>
                         </div>
                         <div class="col-sm-12"> <div id='message'></div></div>
@@ -73,9 +70,8 @@
                         </div>
                         <div class="col-sm-4">
                            <div class="contactForm">
-                              <select name="city" class="cities form-control" id="cityId">
-                                 <option value="">Select City</option>
-                              </select>
+                              <input type="text" class="form-control" name="city" id="cityId" placeholder="City"/>  
+                             
                            </div>
                         </div>
                         <div class="col-sm-6">
@@ -114,7 +110,7 @@
 				  <div class="contactInfo">
                   <h2>India Office</h2>
                   <ul>
-                     <li><span><i class="feather icon-map-pin"></i></span> SCO - 356 , First Floor, 44-D, Chandigarh, 160047</li>
+                     <li><span><i class="feather icon-map-pin"></i></span> SCO - 356 , Sector 44-D, Chandigarh, 160047</li>
                      <li><a href="mailto:info@ditstek.com"><span><i class="feather icon-mail"></i></span> info@ditstek.com</a></li>
                      <li><a href="tel:+91-623-942-1395"><span><i class="feather icon-phone"></i></span> +91-623-942-1395 </a></li>
                      <li><a href="tel:+91172-4080477"><span><i class="feather icon-phone"></i></span> +91172-4080477 </a></li>
@@ -147,7 +143,7 @@
       <?php include_once('common/commonscripts.php'); ?>
       <!---->
       <!--scripts-->
-        <script src="./assets/js/countrystatecity.js"></script>
+        
       <!---->
    </body>
 </html>

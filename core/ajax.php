@@ -3,9 +3,36 @@
 
     if(isset($_GET['Action']) && $_GET['Action']=='getPortfolio')
     {
-        
-        $CategoryID = $_GET['CategoryID'];
-        $TagName = $_GET['Tag'];
+
+
+        $category = "";
+        $tag = "";
+        $category_id = "All";
+        $tag_id = "All";
+        if(isset($_GET['CategoryID']) && $_GET['CategoryID']!='All'){
+            $category = " AND portfolio.category_id='".$_GET['CategoryID']."'";
+            $category_id = $_GET['CategoryID'];
+        }
+        if(isset($_GET['Tag']) && $_GET['Tag']!='All'){
+            $tag = " AND FIND_IN_SET('".$_GET['Tag']."',portfolio.tags)";
+            $tag_id = $_GET['Tag'];
+        }
+
+        if($category_id == "All" && $tag_id == "All"){
+
+            $sql = "select portfolio.* from (SELECT portfolio.*,category.name FROM portfolio inner join category on portfolio.category_id=category.id) as portfolio LEFT JOIN portfolio_order on portfolio_order.portfolio_id = portfolio.id where status ='1' AND portfolio_order.tag_id ='ALL' AND portfolio_order.category_id ='0'   order by portfolio_order.position ASC ";
+
+        }elseif($tag_id != "ALL" && $category_id == "All"){
+            $sql = "select portfolio.* from (SELECT portfolio.*,category.name FROM portfolio inner join category on portfolio.category_id=category.id WHERE FIND_IN_SET('".$tag_id."',portfolio.tags)) as portfolio LEFT JOIN portfolio_order on portfolio_order.portfolio_id = portfolio.id  AND FIND_IN_SET(portfolio_order.tag_id,portfolio.tags) where status ='1'  order by portfolio_order.position ASC ";
+        }elseif($category_id != "All" && $tag_id == "All"){
+            $sql = "select portfolio.* from (SELECT portfolio.*,category.name FROM portfolio inner join category on portfolio.category_id=category.id WHERE portfolio.category_id='".$category_id."') as portfolio LEFT JOIN portfolio_order on portfolio_order.portfolio_id = portfolio.id AND portfolio_order.category_id = portfolio.category_id where status ='1'  order by portfolio_order.position ASC ";
+        }else{
+            $sql = "select portfolio.* from (SELECT portfolio.*,category.name FROM portfolio inner join category on portfolio.category_id=category.id WHERE FIND_IN_SET('".$tag_id."',portfolio.tags) AND portfolio.category_id='".$category_id."') as portfolio LEFT JOIN portfolio_order on portfolio_order.portfolio_id = portfolio.id AND portfolio_order.category_id = portfolio.category_id and FIND_IN_SET(portfolio_order.tag_id,portfolio.tags) where status ='1' order by portfolio_order.position ASC ";
+        }
+
+
+
+       
         $page = @$_GET['page'];
         if(empty($page)){
             $page = 1;
@@ -13,27 +40,14 @@
         $limit = 6;
         $offset = ($page-1)*$limit;
         
-        $CategoryQuery = "";
-        if($CategoryID != 'All')
-        {   
         
-            $CategoryQuery .= " AND category_id='$CategoryID'";
-        }
-
-        if($TagName != 'All')
-        {
-            $CategoryQuery .= " AND FIND_IN_SET('$TagName',tags)";
-        }
-
-         
-        $sql = "SELECT portfolio.*,category.name FROM portfolio,category WHERE portfolio.category_id=category.id $CategoryQuery  AND portfolio.status=1 ";
         $res=mysqli_query($conn,$sql);
         $total_record = $res->num_rows;
-
         $sql.=" limit ".$offset.",".$limit;
         $res=mysqli_query($conn,$sql);
         $Response = array();
         $Output = "";
+
         if(mysqli_num_rows($res) > 0)
         {
 
@@ -54,7 +68,7 @@
                 }
                 $Output .= "<div class='col-lg-4 col-md-6 col-sm-12 commonPortfolio moreBox'>
                                 <div class='potfolioDiv'>
-                                    <a href='portfolios/$row[slug]' target='_blank'>
+                                    <a href='portfolio/$row[slug]' target='_blank'>
                                     <div class='thumbImage' style='background-image: url(assets/portfolioimage/$row[image]);'>
                                             <div class='domainName'>$row[name]</div>
                                         </div>
@@ -184,7 +198,58 @@
         $update_slider_image= "UPDATE portfolio SET `fs_image` = TRIM(BOTH ',' FROM REPLACE( REPLACE(CONCAT(',',REPLACE(`fs_image`, ',', ',,'), ','),',$name,', ''), ',,', ',') ) WHERE FIND_IN_SET('$name', `fs_image`) AND id='$id'";
         mysqli_query($conn,$update_slider_image);
        }
+    if (isset($_POST['Action']) && $_POST['Action'] == 'portfolioOrder') {
+        $sql = "DELETE FROM `portfolio_order` WHERE `category_id`='".$_POST['category']."' AND `tag_id`='".$_POST['tag']."'";
+        mysqli_query($conn,$sql);
+        foreach ($_POST['task_order'] as $order => $portfolio_id) {
+            $sql = "DELETE FROM `portfolio_order` WHERE `category_id`='".$_POST['category']."' AND `tag_id`='".$_POST['tag']."' AND `portfolio_id`='".$portfolio_id."'";
+        mysqli_query($conn,$sql);
+            $sql = "INSERT INTO `portfolio_order`(`portfolio_id`, `category_id`, `tag_id`, `position`) VALUES ('".$portfolio_id."','".$_POST['category']."','".$_POST['tag']."','".$order."')";
 
+            mysqli_query($conn,$sql);
+        }
+    }
+    if(isset($_GET['action']) && $_GET['action']=='getCountry'){
+        $sql = "SELECT * FROM countries";
+        
+        $res=mysqli_query($conn,$sql);
+        $Output ='';
+        while($row = mysqli_fetch_assoc($res)){
+               
+                $Output .='<option data-countryid="'.$row['id'].'" value="'.$row['name'].'">'.$row['name'].'</option>';
+        }
+        $Response['Output'] = $Output;
+        $Response=json_encode($Response);
+        echo $Response; exit;
+    }
+    if(isset($_GET['action']) && $_GET['action']=='getState'){
+        $countryId = $_GET['countryId'];
+        $sql = "SELECT * FROM states where country_id = '".$countryId."'";
+        
+        $res=mysqli_query($conn,$sql);
+        $Output ='';
+        while($row = mysqli_fetch_assoc($res)){
+               
+                $Output .='<option data-stateid="'.$row['id'].'" value="'.$row['name'].'">'.$row['name'].'</option>';
+        }
+        $Response['Output'] = $Output;
+        $Response=json_encode($Response);
+        echo $Response; exit;
+    }
+    if(isset($_GET['action']) && $_GET['action']=='getCity'){
+        $stateId = $_GET['stateId'];
+        $sql = "SELECT * FROM cities where state_id = '".$stateId."'";
+        
+        $res=mysqli_query($conn,$sql);
+        $Output ='';
+        while($row = mysqli_fetch_assoc($res)){
+               
+                $Output .='<option data-stateid="'.$row['id'].'" value="'.$row['name'].'">'.$row['name'].'</option>';
+        }
+        $Response['Output'] = $Output;
+        $Response=json_encode($Response);
+        echo $Response; exit;
+    }
     function get_tags($conn)
     {
 		$sql= "SELECT * FROM tags WHERE status=1 ORDER BY tag";
@@ -210,7 +275,7 @@
 
 	function get_portfolio($conn,$cat_id='',$portfolio_id='')
     {
-		$sql="SELECT * from portfolio where  status=1";
+		$sql="SELECT portfolio.*,category.name FROM portfolio inner join category on portfolio.category_id=category.id where  portfolio.status=1";
 		if($cat_id!='')
         {
          $sql.=" and category_id=$cat_id";
@@ -252,7 +317,7 @@
     {
 		if($slug!='')
         {
-			$sql="SELECT * from portfolio WHERE  status=1 AND slug='$slug'";
+			$sql="SELECT portfolio.*,category.name FROM portfolio inner join category on portfolio.category_id=category.id  WHERE  portfolio.status=1 AND portfolio.slug='$slug'";
 		}
 		$res=mysqli_query($conn,$sql);
 		 $data= array();
@@ -275,10 +340,17 @@
     }
    
     function pagination($total_pages,$pageno){
+        $url = "";
+        foreach ($_GET as $key => $value) {
+            if($key!="pageno"){
+                $url.=$key."=".$value."&";
+
+            }
+        }
 ?>
-        <li><a class="page-item page-link" href="?pageno=1">First</a></li>
+        <li><a class="page-item page-link" href="?<?php echo $url; ?>pageno=1">First</a></li>
         <li class="<?php if($pageno <= 1){ echo 'disabled'; } ?>">
-        <a class="page-link" href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>">Previous</a></li>
+        <a class="page-link" href="<?php if($pageno <= 1){ echo '#'; } else { echo "?".$url."pageno=".($pageno - 1); } ?>">Previous</a></li>
         
         <?php 
             if($total_pages < 6){
@@ -286,14 +358,14 @@
                 for($i = 1; $i <= $total_pages; $i++ ){
         ?>
                     <li class="page-item <?php if($pageno == $i) {echo 'active'; } ?>">
-                        <a class="page-link" href="?pageno=<?= $i; ?>"> <?= $i; ?> </a>
+                        <a class="page-link" href="?<?php echo $url; ?>pageno=<?= $i; ?>"> <?= $i; ?> </a>
                     </li>
         <?php   } 
             }else{
                 for($i = 1; $i <= 3; $i++ ){
         ?>
                     <li class="page-item <?php if($pageno == $i) {echo 'active'; } ?>">
-                        <a class="page-link" href="?pageno=<?= $i; ?>"> <?= $i; ?> </a>
+                        <a class="page-link" href="?<?php echo $url; ?>pageno=<?= $i; ?>"> <?= $i; ?> </a>
                     </li>
         <?php   
                 } 
@@ -307,7 +379,7 @@
                         for($i = $pageno-1; $i <= $pageno+1; $i++ ){
         ?>
                             <li class="page-item <?php if($pageno == $i) {echo 'active'; } ?>">
-                                <a class="page-link" href="?pageno=<?= $i; ?>"> <?= $i; ?> </a>
+                                <a class="page-link" href="?<?php echo $url; ?>pageno=<?= $i; ?>"> <?= $i; ?> </a>
                             </li>
         <?php   
                         }
@@ -316,14 +388,14 @@
                             <a class="page-link" href="#"> .... </a>
                         </li>
                         <li class="page-item <?php if($pageno == $total_pages) {echo 'active'; } ?>">
-                            <a class="page-link" href="?pageno=<?= $total_pages; ?>"> <?= $total_pages; ?> </a>
+                            <a class="page-link" href="?<?php echo $url; ?>pageno=<?= $total_pages; ?>"> <?= $total_pages; ?> </a>
                         </li>
         <?php
                     }elseif($pageno == $total_pages){
                         for($i = $total_pages-2; $i <= $total_pages; $i++ ){
         ?>
                             <li class="page-item <?php if($pageno == $i) {echo 'active'; } ?>">
-                                <a class="page-link" href="?pageno=<?= $i; ?>"> <?= $i; ?> </a>
+                                <a class="page-link" href="?<?php echo $url; ?>pageno=<?= $i; ?>"> <?= $i; ?> </a>
                             </li>
         <?php   
                         }
@@ -331,7 +403,7 @@
                         for($i = $pageno-2; $i <= $total_pages; $i++ ){
         ?>
                             <li class="page-item <?php if($pageno == $i) {echo 'active'; } ?>">
-                                <a class="page-link" href="?pageno=<?= $i; ?>"> <?= $i; ?> </a>
+                                <a class="page-link" href="?<?php echo $url; ?>pageno=<?= $i; ?>"> <?= $i; ?> </a>
                             </li>
         <?php   
                         }
@@ -340,7 +412,7 @@
                 }else{
         ?>
                     <li class="page-item <?php if($pageno == $total_pages) {echo 'active'; } ?>">
-                            <a class="page-link" href="?pageno=<?= $total_pages; ?>"> <?= $total_pages; ?> </a>
+                            <a class="page-link" href="?<?php echo $url; ?>pageno=<?= $total_pages; ?>"> <?= $total_pages; ?> </a>
                         </li>
         <?php
                 }
@@ -351,8 +423,8 @@
 
         ?>
         <li class="<?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
-        <a class="page-link" href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1); } ?>">Next</a></li>
-        <li><a class="page-item page-link" href="?pageno=<?php echo $total_pages; ?>">Last</a></li>
+        <a class="page-link" href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?".$url."pageno=".($pageno + 1); } ?>">Next</a></li>
+        <li><a class="page-item page-link" href="?<?php echo $url; ?>pageno=<?php echo $total_pages; ?>">Last</a></li>
 <?php
     }
     

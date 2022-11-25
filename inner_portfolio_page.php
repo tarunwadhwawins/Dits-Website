@@ -6,6 +6,13 @@ $slug = str_replace('.php', '', $_GET['title']);
 $slug = trim($slug);
 $get_portfolio_details = get_portfolio_details($conn, $slug);
 
+$TagsHTML = "";
+$Tags = explode(',', $get_portfolio_details[0]['tags']);
+$current_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+foreach ($Tags as $Tag) {
+   $TagsHTML .= "<span><a href='javascript:void(0)'>$Tag</a></span>";
+}
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -19,6 +26,23 @@ $get_portfolio_details = get_portfolio_details($conn, $slug);
    <meta name="author" content="Dits">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title><?php echo $get_portfolio_details[0]['title'] ?></title>
+   <meta name="robots" content="follow, index"/>
+   <link rel="canonical" href="<?php echo $current_url; ?>"/>
+   
+   <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@ditstek"/>
+    <meta name="twitter:title" content="<?php echo $get_portfolio_details[0]['title'] ?>"/>
+    <meta name="twitter:description" content="<?php echo $get_portfolio_details[0]['seo_desc'] ?>"/>
+    <meta name="twitter:image" content="<?php echo $url; ?>assets/images/logo.png"/>
+
+    <meta property="og:title" content="<?php echo $get_portfolio_details[0]['title'] ?>"/> 
+    <meta property="og:url" content="<?php echo $current_url; ?>"/> 
+    <meta property="og:site_name" content="DITSTEK"/> 
+    <meta property="og:image" content="<?php echo $url; ?>assets/images/logo.png"/> 
+    <meta property="og:type" content="website"/> 
+    <meta property="og:description" content="<?php echo $get_portfolio_details[0]['seo_desc'] ?>"/></code>
+
+   <?php include_once('common/seo-scripts.php'); ?>
    <!--common css-->
    <?php include_once('common/commoncss.php'); ?>
    <!--slicl slider css-->
@@ -40,13 +64,14 @@ $get_portfolio_details = get_portfolio_details($conn, $slug);
          <?php
          $imgTitle = str_replace(['.jpg', '.jpeg', '.png', '.gif'], '', $get_portfolio_details[0]['image']);
          ?>
-         <img src="<?php echo $url; ?>/assets/portfolioimage/<?php echo $get_portfolio_details[0]['image'] ?>" alt="Addiction Substance Abuse Management" title="<?php echo $imgTitle ?>" />
+         <img src="<?php echo $url; ?>assets/portfolioimage/<?php echo $get_portfolio_details[0]['image'] ?>" alt="Addiction Substance Abuse Management" title="<?php echo $imgTitle ?>" />
          <div class="bannerDesc inner">
             <div class="container">
                <div class="row">
                   <div class="col-sm-12">
                      <h1><?php echo $get_portfolio_details[0]['banner_heading'] ?></h1>
                      <div class="bannerButton mt-3" id="bannerExtFour" data-toggle="modal" data-target="#exampleModal"> <a href="javascript:void(0);" class="btn btn-custom blueBtn  siteBtn addCountry">Contact Form</a> </div>
+
                   </div>
                </div>
             </div>
@@ -59,6 +84,12 @@ $get_portfolio_details = get_portfolio_details($conn, $slug);
    <section class="portfolioInner">
       <div class="container">
          <div class="row">
+            <div class="col-sm-12">
+               <div class="domainCategory">
+                  <div class="domainName"><?php echo $get_portfolio_details[0]['name']; ?></div>
+                  <div class="tagsListing"><?php echo $TagsHTML; ?></div>
+               </div>
+            </div>
             <div class="col-sm-6">
                <div class="portfolioInnerDesc">
                   <h2><?php echo $get_portfolio_details[0]['fs_heading'] ?></h2>
@@ -71,11 +102,11 @@ $get_portfolio_details = get_portfolio_details($conn, $slug);
                   <?php
                   $fa = $get_portfolio_details[0]['fs_image'];
                   $section1Image  = (explode(',', $fa));
-                  foreach ($section1Image as $list) {
+                  foreach ($section1Image as $key => $list) {
                   ?>
-                     <img src="<?php echo $url; ?>/assets/portfolioimage/<?php echo $list ?>" usemap="#image-map" alt="Addiction Substance Abuse Management" title="<?php echo str_replace(['.jpg', '.jpeg', '.png', '.gif'], '', $list) ?>">
+                     <img src="<?php echo $url; ?>assets/portfolioimage/<?php echo $list ?>" usemap="#image-map_<?php echo $key + 1; ?>" alt="Addiction Substance Abuse Management" title="<?php echo str_replace(['.jpg', '.jpeg', '.png', '.gif'], '', $list) ?>">
                   <?php } ?>
-                   <?php echo $get_portfolio_details[0]['image_text'] ?>
+                  <?php echo $get_portfolio_details[0]['image_text'] ?>
                </div>
             </div>
          </div>
@@ -91,7 +122,7 @@ $get_portfolio_details = get_portfolio_details($conn, $slug);
                   $section2Image  = (explode(',', $ssImage));
                   foreach ($section2Image as $list) {
                   ?>
-                     <img src="<?php echo $url; ?>/assets/portfolioimage/<?php echo $list ?>" alt="Technical Implementations" title="<?php echo str_replace(['.jpg', '.jpeg', '.png', '.gif'], '', $list) ?>">
+                     <img src="<?php echo $url; ?>assets/portfolioimage/<?php echo $list ?>" alt="Technical Implementations" title="<?php echo str_replace(['.jpg', '.jpeg', '.png', '.gif'], '', $list) ?>">
                   <?php } ?>
 
                </div>
@@ -121,7 +152,7 @@ $get_portfolio_details = get_portfolio_details($conn, $slug);
                   ?>
                      <div class="slide">
                         <div class="cl">
-                           <img src="<?php echo $url; ?>/assets/portfolioimage/<?php echo $list ?>" alt="Peer to Peer Car Sharing Application" title="<?php echo str_replace(['.jpg', '.jpeg', '.png', '.gif'], '', $list) ?>">
+                           <img src="<?php echo $url; ?>assets/portfolioimage/<?php echo $list ?>" alt="Peer to Peer Car Sharing Application" title="<?php echo str_replace(['.jpg', '.jpeg', '.png', '.gif'], '', $list) ?>">
 
                         </div>
                      </div>
@@ -132,7 +163,7 @@ $get_portfolio_details = get_portfolio_details($conn, $slug);
       </div>
    </section>
    <div class="backPortfolio">
-      <a href="<?php echo $url; ?>/portfolio">Back To Portfolio </a>
+      <a href="<?php echo $url; ?>portfolio">Back To Portfolio </a>
    </div>
    <!--footer-->
    <?php include_once('common/footer.php'); ?>

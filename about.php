@@ -4,11 +4,7 @@
 <!doctype html>
 <html lang="en">
    <head>
-      <meta charset="utf-8">
-      <meta http-equiv="pragma" content="no-cache" />
       <?php include_once('common/commonmeta.php'); ?>
-     
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <!--common css-->
        <?php include_once('common/commoncss.php'); ?>
 	  <!---->
@@ -23,7 +19,7 @@
          <?php include_once('common/header.php'); ?>
          <!---->
 		  <div class="bannerMain">
-            <img src="assets/images/aboutbg1.jpg" alt="image"/>
+            <img src="assets/images/aboutbanner.jpg" alt="image"/>
             <div class="bannerDesc">
                <div class="container">
                   <div class="row">

@@ -31,6 +31,9 @@ $(document).ready(function () {
     
         },
         submitHandler: function(form) {
+            var button = $(this).find('button');
+            button.attr('disabled','disabled');
+            $(".formLoader").css('display','inline-block');
             $.ajax({
                 url: base_url+"/core/general?action=ConactFormSave",
                 type: "POST",
@@ -39,12 +42,12 @@ $(document).ready(function () {
                     var $messageDiv = $('#message')
                     $messageDiv.hide().html(response.Message);			
                     if(response.Success == true) {
-						$messageDiv.text('Thank You! Our Team Will Get Back To You Soon!!');
-						document.getElementById("contactForm").reset();
-                        $messageDiv.addClass('alert alert-success').fadeIn(1500);
+						window.location=base_url+"thankyou";
                     } else {
 						$messageDiv.text('Error');
                         $messageDiv.addClass('alert alert-danger').fadeIn(1500);
+                        button.removeAttr('disabled');
+                        $(".formLoader").css('display','none');
                     }
 
                     setTimeout(function(){

@@ -4,9 +4,6 @@
 <!doctype html>
 <html lang="en">
    <head>
-      <meta charset="utf-8">
-      <meta http-equiv="pragma" content="no-cache" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <?php include_once('common/commonmeta.php'); ?>
       <!--common css-->
       <?php include_once('common/commoncss.php'); ?>

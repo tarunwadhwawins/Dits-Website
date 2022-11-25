@@ -9,7 +9,7 @@
                         <div class="row">
                            <div class="col-sm-12">
                               <div class="heading">
-                                 <h1>Send Us a Message</h1>
+                                 <h3>Send Us a Message</h3>
                               </div>
                            </div>
                            <div class="col-sm-12"> <div id='message'></div></div>
@@ -18,7 +18,7 @@
                      <div class="row">                     
                            <div class="col-sm-6">
                               <div class="contactForm">
-                                 <input type="text" class="form-control" name="contact_first_name" id="contactFirstName" placeholder="First Name" />  
+                                 <input type="text" class="form-control" name="contact_first_name" id="contactFirstName" placeholder="Name" />  
                               </div>
                            </div>
                            <div class="col-sm-6">
@@ -28,23 +28,21 @@
                            </div>
                            <div class="col-sm-4">
                               <div class="contactForm">
-                                 <select class="modelcountries form-control" id="modelcountryId" name="country">
+                                 <select class="countries form-control" id="modelcountryId" name="country">
                                     <option value="">Select Country</option>
                                  </select>        
                               </div>
                            </div>
                            <div class="col-sm-4">
                               <div class="contactForm">
-                                 <select class="modelstates form-control" id="modelstateId" name="state">
+                                 <select class="states form-control" id="modelstateId" name="state">
                                     <option value="">Select State</option>
                                  </select>     
                               </div>
                            </div>
                            <div class="col-sm-4">
                               <div class="contactForm">
-                                 <select class="modelcities form-control" id="modelcityId" name="city">
-                                    <option value="">Select City</option>
-                                 </select>
+                                 <input type="text" class="form-control" name="city" id="cityId" placeholder="City"/>
                               </div>
                            </div>
                            <div class="col-sm-6">
@@ -71,7 +69,7 @@
                            </div>
                            <div class="col-sm-12">
                               <div class="contactForm">
-                                 <input type="submit" value="Submit" class="btn btn-custom siteBtn">
+                                 <button type="submit" class="btn btn-custom siteBtn"><div class="formLoader"></div>Submit</button>
                               </div>
                            </div>
                   

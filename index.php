@@ -4,95 +4,12 @@
 <!doctype html>
 <html lang="en">
    <head>
-      <meta charset="utf-8">
-      <meta http-equiv="pragma" content="no-cache" />
       <?php include_once('common/commonmeta.php'); ?>
-      <meta name="twitter:card" content="summary_large_image"/>
-      <meta name="twitter:site" content="@ditstek"/>
-      <meta name="twitter:title" content="DITSTEK - Custom Software Development Solutions"/>
-     <meta name="twitter:description" content="A remote software development company providing offshore development services enabling business rapidity and competence with web and mobile solutions."/>
-      <meta name="twitter:image" content="https://ditstek.com/assets/images/logo.png"/>
-      <meta property="og:title" content="DITSTEK — Custom Software Outsourcing Company"/> 
-      <meta property="og:url" content="https://ditstek.com"/> 
-      <meta property="og:site_name" content="DITSTEK"/> 
-      <meta property="og:image" content="https://ditstek.com/assets/images/logo.png"/> 
-      <meta property="og:type" content="website"/> 
-      <meta property="og:description" content="Ditstek Innovations, 'DITS' is a Web and Mobile Development Custom Software outsourcing company offering customized and robust solutions to various clients across USA, Germany, Canada, UK, UAE, Australia, Sweden, South Africa etc. with strong multi years continuing partnerships which include dedicated teams, product development, Maintenance of existing solutions, R&D and technology consulting"/></code>
-      
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="msvalidate.01" content="3F416B44A7EE2BB4BCE8BF552AAEE8E4" />
-      
-      <!-- Clarity tracking code for https://ditstek.com/ --><script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "6o3xa9tkvm");</script>
-
+      <script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "6o3xa9tkvm");</script>
       <!--common css-->
-      <link href="https://www.ditstek.com/" rel="canonical"/>
       <?php include_once('common/commoncss.php'); ?>
       <!---->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129154793-3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-129154793-3');
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org/",
-  "@type": "WebSite",
-  "name": "DITSTEK Innovations",
-  "url": "https://ditstek.com/",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://ditstek.com/about.php{search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "DITSTEK Innovations",
-  "url": "https://ditstek.com/",
-  "logo": "https://ditstek.com/assets/images/logo.png",
-"description": "DITSTEK is a Top Rated IT Outsourcing company delivering custom software solutions  We are providers of outsourcing, offshore software development offering custom web app and software services along with full stack remote development to global clients with flexible engagement models",
-  "sameAs": [
-    "https://www.facebook.com/Ditstek",
-    "https://twitter.com/DitsTek",
-    "https://www.instagram.com/ditstek_innovations/",
-    "https://www.youtube.com/c/ditstek",
-    "https://www.linkedin.com/company/ditstek-innovations"],
-"address": {"@type": "PostalAddress","streetAddress": "SCO - 365, Second Floor, Sector 44 D","addressRegion": "Chandigarh","postalCode": "160047","addressCountry": "India","telephone": "+91-6239421395"}
-}
-</script>
-<!-- Facebook Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '177861686526833');
-  fbq('track', 'PageView');
-</script>
-<noscript><img alt="image" height="1" width="1" class="fbPixel"
-  src="https://www.facebook.com/tr?id=177861686526833&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Facebook Pixel Code -->
-
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WNB5R2R');</script>
-<!-- End Google Tag Manager -->
-      <!---->
+     
    </head>
    <body class="home">
       <!--navigation-->
@@ -101,10 +18,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <section class=homeSlider>
 <img src="assets/images/homebanner.jpg" title="Custom Software Development" alt="Custom Software Development" />
 <div class=sliderContent>
-<span id=bannerExtOne>Custom Software</span>
-<h1 id=bannerExtTwo>Development Solution</h1>
+
+<h1 id=bannerExtTwo><span id=bannerExtOne>Custom Software</span> <br>Development Solution</h1>
 <p id=bannerExtThree>A remote software development company providing offshore development services enabling <br> business rapidity and competence with web and mobile solutions</p>
-<div class=bannerButton id=bannerExtFour> <a href="/portfolio" class="btn btn-custom siteBtn">Our Portfolio </a> <a href="javascript:void(0);"  data-toggle="modal" data-target="#exampleModal" class="btn btn-custom siteBtn addCountry">Get in touch</a> </div>
+<div class=bannerButton id=bannerExtFour> <a href="<?php echo $url; ?>portfolio" class="btn btn-custom siteBtn">Our Portfolio </a> <a href="javascript:void(0);"  data-toggle="modal" data-target="#exampleModal" class="btn btn-custom siteBtn addCountry">Get in touch</a> </div>
 </div>
 <div class="scroll wow"><a href="#services"><span></span></a></div>
 </section>
@@ -125,8 +42,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>We offer highly cost-effective and optimized solutions that facilitate our clients to achieve their business outcomes with speed and convenience.We build on our legacy knowledge and apply it our expertise areas such as Full-stack Development, .Net Consulting and Development, Custom Application Development, Technology Consulting, CRM, Business Process Automation Software, Web Enterprise Applications, Mobile Application Development, Outsourced Product Development, and Open Source Technologies etc. DITS also provides remote developers and dedicated developers to nurture and apply their competencies, helping brands build impactful engineering solutions with trailblazing technologies.</p>
 <p>The team comprises of passionate, purpose-led individuals with disruptive thinking to deliver technology while addressing the clients' toughest challenges, all while seeking to revolutionize the IT industry and create positive social change.</p>
 <ul>
-<li><a href="/about">Know More About Us <i class="fa fa-angle-double-right"></i></a></li>
-<li><a href="/portfolio">View Our Work <i class="fa fa-angle-double-right"></i></a></li>
+<li><a href="<?php echo $url; ?>about">Know More About Us <i class="fa fa-angle-double-right"></i></a></li>
+<li><a href="<?php echo $url; ?>portfolio">View Our Work <i class="fa fa-angle-double-right"></i></a></li>
 </ul>
 </div>
 </div>
@@ -146,7 +63,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class=serviceSection>
 <div class="row mg-0">
 <div class="col-md-4 col-sm-6 pad-0">
-<div class=services><a href="/services/software-development-services" title="Software Development Services">
+<div class=services><a href="<?php echo $url; ?>services/software-development-services" title="Software Development Services">
 <div class="spriteImage softDev"></div>
 <div class=servicesDesc>
 <h3>Software Development Services</h3>
@@ -156,7 +73,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 </div>
 <div class="col-md-4 col-sm-6 pad-0">
-<div class=services><a href="/services/full-stack-development-services" title="Full Stack Development">
+<div class=services><a href="<?php echo $url; ?>services/full-stack-development-services" title="Full Stack Development">
 <div class="spriteImage fullDev"></div>
 <div class=servicesDesc>
 <h3>Full Stack Development</h3>
@@ -166,7 +83,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 </div>
 <div class="col-md-4 col-sm-6 pad-0">
-<div class="services last borRgt"><a href="/services/front-end-development" title="Front End Development">
+<div class="services last borRgt"><a href="<?php echo $url; ?>services/front-end-development" title="Front End Development">
 <div class="spriteImage frontEnd"></div>
 <div class=servicesDesc>
 <h3>Front End Development</h3>
@@ -176,7 +93,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 </div>
 <div class="col-md-4 col-sm-6 pad-0">
-<div class="services borBtm"><a href="/services/dedicated-development-team" title="Dedicated Development Team">
+<div class="services borBtm"><a href="<?php echo $url; ?>services/dedicated-development-team" title="Dedicated Development Team">
 <div class="spriteImage devTeam"></div>
 <div class=servicesDesc>
 <h3>Dedicated Development Team</h3>
@@ -186,7 +103,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 </div>
 <div class="col-md-4 col-sm-6 pad-0">
-<div class="services borBtm"><a href="/services/hire-remote-developers" title="Hire Remote Developers">
+<div class="services borBtm"><a href="<?php echo $url; ?>services/hire-remote-developers" title="Hire Remote Developers">
 <div class="spriteImage hireDev"></div>
 <div class=servicesDesc>
 <h3>Hire Remote Developers</h3>
@@ -196,7 +113,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 </div>
 <div class="col-md-4 col-sm-6 pad-0">
-<div class="services last borRgt borBtm"><a href="/services/hire-asp-net-developers" title="Hiring Asp.Net Developers">
+<div class="services last borRgt borBtm"><a href="<?php echo $url; ?>services/hire-asp-net-developers" title="Hiring Asp.Net Developers">
 <div class="spriteImage netDev"></div>
 <div class=servicesDesc>
 <h3>Hiring Asp.Net Developers</h3>
@@ -385,7 +302,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <h2>Methodology</h2>
 <p>Agile methodologies are front and center of DITS, and working <br> in close collaboration – between the development team and business stakeholders – is Fundamental. <b>DITS, an Agile Enterprise Software Development Company</b> endeavors to implement the Agile Model Driven approach to every customer and their project.</p>
 <p>As per the requirement and the nature of customized software in development, we, as an offshore development team have been using various methodologies like Waterfall, Kanban, Agile, Scrum, code versioning tools like GIT, Github, Bitbucket, TFS, SVN, Project management tools like JIRA, Trello, Basecamp, Plan.io, Pivotal Tracker ensuring that we build and deliver a promising robust and scalable software.</p>
-<a href="/methodology" class=viewMore>View More <i class="fa fa-angle-double-right"></i></a>
+<a href="<?php echo $url; ?>methodology" class=viewMore>View More <i class="fa fa-angle-double-right"></i></a>
 </div>
 </div>
 <div class=col-md-6>
