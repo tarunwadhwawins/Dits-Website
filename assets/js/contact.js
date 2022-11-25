@@ -31,6 +31,9 @@ $(document).ready(function () {
     
         },
         submitHandler: function(form) {
+            var button = $(this).find('button');
+            button.attr('disabled','disabled');
+            $(".formLoader").css('display','inline-block');
             $.ajax({
                 url: base_url+"/core/general?action=ConactFormSave",
                 type: "POST",
@@ -43,6 +46,8 @@ $(document).ready(function () {
                     } else {
 						$messageDiv.text('Error');
                         $messageDiv.addClass('alert alert-danger').fadeIn(1500);
+                        button.removeAttr('disabled');
+                        $(".formLoader")..css('display','none');
                     }
 
                     setTimeout(function(){
