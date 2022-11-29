@@ -4248,12 +4248,12 @@
   font-family: "open_sanssemibold";
 }
 .industries ul {
-  padding: 20px 0 0 30px;
+  padding: 20px 0 0 14px;
 }
 .industries ul li {
   font-size: 15px;
   line-height: 30px;
-  font-weight: 600;
+  font-weight: 400;
 }
 .industries ul li a {
   color: #000;
