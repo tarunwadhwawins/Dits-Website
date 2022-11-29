@@ -1,42 +1,53 @@
 .topHeader {
 	background-color: #193370;
 	padding: 0;
+
 	.contactDetails {
 		display: block;
 		position: relative;
+
 		@media (max-width: 640px) {
 			text-align: center;
 		}
+
 		.phone {
 			width: auto;
 			display: inline-block;
 			margin: 0 20px 0 0;
 			font-size: 15px;
 			line-height: 35px;
+
 			a {
 				color: #fff;
+
 				&:hover {
 					text-decoration: none;
 				}
+
 				i {
 					padding: 0 10px 0 0;
 				}
 			}
 		}
+
 		.email {
 			width: auto;
 			display: inline-block;
 			margin: 0;
 			font-size: 15px;
 			line-height: 35px;
+
 			a {
 				color: #fff;
+
 				&:hover {
 					text-decoration: none;
 				}
+
 				i {
 					padding: 0 10px 0 0;
 				}
+
 				img {
 					position: relative;
 					top: -2px;
@@ -44,21 +55,26 @@
 			}
 		}
 	}
+
 	.socialMedias {
 		display: block;
 		position: relative;
 		text-align: right;
+
 		@media (max-width: 640px) {
 			text-align: center;
 		}
+
 		ul {
 			margin: 0px;
 			padding: 0px;
 			list-style: none;
+
 			li {
 				width: auto;
 				display: inline-block;
 				line-height: 37px;
+
 				a {
 					color: #fff;
 					width: 32px;
@@ -70,58 +86,71 @@
 					transition: background 0.5s;
 					-webkit-transition: background 0.5s;
 					font-size: 15px;
+
 					&:hover {
 						text-decoration: none;
 					}
 				}
+
 				&.linkedin {
 					background: transparent;
 					border-radius: 4px;
+
 					a {
 						&:hover {
 							color: #00c3f8;
 						}
 					}
 				}
+
 				&.facebook {
 					background: transparent;
 					border-radius: 4px;
+
 					a {
 						&:hover {
 							color: #3e5993;
 						}
 					}
 				}
+
 				&.twitter {
 					background: transparent;
 					border-radius: 4px;
+
 					a {
 						&:hover {
 							color: #00c3f8;
 						}
 					}
 				}
+
 				&.behance {
 					background: transparent;
 					border-radius: 4px;
+
 					a {
 						&:hover {
 							color: #00c3f8;
 						}
 					}
 				}
+
 				&.instagram {
 					background: transparent;
 					border-radius: 4px;
+
 					a {
 						&:hover {
 							color: #00c3f8;
 						}
 					}
 				}
+
 				&.youtube {
 					background: transparent;
 					border-radius: 4px;
+
 					a {
 						&:hover {
 							color: #ea4335;
@@ -132,33 +161,41 @@
 		}
 	}
 }
+
 .navigationMenus {
 	display: block;
 	padding: 0;
 	background-color: #fff;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
 	.navbar {
 		padding: 0px;
+
 		.navbar-brand {
 			margin: 0px;
 			width: 100px;
+
 			img {
 				max-width: 100%;
 			}
 		}
+
 		.collapse {
 			@media (max-width: 768px) {
 				display: none !important;
 			}
+
 			.navbar-nav {
 				li {
 					display: inline-block;
 					font-family: "dosissemibold";
 					font-size: 16px;
 					text-transform: uppercase;
+
 					@media (max-width: 991px) {
 						font-size: 14px;
 					}
+
 					a {
 						text-decoration: none;
 						transition: all 0.5s ease 0s;
@@ -167,18 +204,22 @@
 						padding: 10px 15px;
 						line-height: 40px;
 						letter-spacing: 1px;
+
 						@media (max-width: 1199px) {
 							padding: 10px 5px;
 						}
+
 						&:hover {
 							color: #155a9f;
 						}
 					}
+
 					&.active {
 						a {
 							color: #155a9f;
 						}
 					}
+
 					ul.fullWidth {
 						width: 100%;
 						position: absolute;
@@ -192,10 +233,18 @@
 						z-index: 99;
 						display: none;
 						box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.1);
+
+						&.industriesMenu {
+							width: 300px;
+							position: absolute;
+							left: initial;
+						}
+
 						li.columnFull {
 							width: 100%;
 							position: relative;
 							padding: 0 15px;
+
 							.hireUs {
 								background-color: #165a9f;
 								text-align: center;
@@ -203,8 +252,10 @@
 								align-items: center;
 								flex-direction: column;
 								padding: 20px 0;
+
 								.thumbImage {
 									position: relative;
+
 									.hireusImage {
 										display: inline-block;
 										background-image: url("../images/spriteimage.png");
@@ -221,20 +272,24 @@
 										max-width: 100%;
 									}
 								}
+
 								.desc {
 									position: relative;
+
 									h4 {
 										color: #fff;
 										font-size: 26px;
 										margin: 10px 0 5px 0;
 										text-transform: uppercase;
 									}
+
 									p {
 										color: #fff;
 										font-size: 14px;
 									}
 								}
 							}
+
 							.CallUs {
 								background-color: #004b98;
 								text-align: center;
@@ -242,8 +297,10 @@
 								align-items: center;
 								flex-direction: column;
 								padding: 20px 0;
+
 								.thumbImage {
 									position: relative;
+
 									.CallUsImage {
 										display: inline-block;
 										background-image: url("../images/spriteimage.png");
@@ -255,21 +312,26 @@
 										width: 50px;
 										height: 50px;
 									}
+
 									img {
 										max-width: 100%;
 									}
 								}
+
 								.desc {
 									position: relative;
+
 									h4 {
 										color: #fff;
 										font-size: 26px;
 										margin: 10px 0;
 										text-transform: uppercase;
 									}
+
 									p {
 										color: #fff;
 										font-size: 14px;
+
 										a {
 											color: #fff;
 											padding: 0;
@@ -278,43 +340,52 @@
 									}
 								}
 							}
+
 							.headerPortfolio {
 								padding: 15px 0;
+
 								h4 {
 									font-family: "open_sansbold";
 									font-size: 18px;
 									margin: 0 0 15px 0;
 								}
+
 								.portCarousel {
 									box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.1);
 									background: #fff;
+
 									.blogBox {
 										img {
 											max-width: 100%;
 										}
+
 										h6 {
 											padding: 10px;
 											background: #fff;
-											font-size:13px;
+											font-size: 13px;
 											line-height: 19px;
 											text-decoration: underline;
-											text-transform:capitalize;
+											text-transform: capitalize;
+
 											a {
 												padding: 0px;
 												line-height: 0px;
 											}
 										}
 									}
+
 									.owl-dots {
 										display: block;
 										position: absolute;
 										width: 100%;
 										text-align: center;
 										bottom: -40px;
+
 										.owl-dot {
 											span {
 												background: #3095fb;
 											}
+
 											&.active {
 												span {
 													background: #193370;
@@ -322,26 +393,32 @@
 											}
 										}
 									}
+
 									.owl-nav {
 										position: absolute;
 										width: 100%;
 										text-align: center;
 										display: none;
+
 										.owl-prev {
 											margin: 0 15px 0 0;
+
 											&:focus {
 												box-shadow: none;
 												outline: none;
 											}
+
 											span {
 												font-size: 30px;
 											}
 										}
+
 										.owl-next {
 											&:focus {
 												box-shadow: none;
 												outline: none;
 											}
+
 											span {
 												font-size: 30px;
 											}
@@ -349,6 +426,7 @@
 									}
 								}
 							}
+
 							//						.counters{
 							//						       background-color: #165a9f;
 							//							   text-align: center;
@@ -383,6 +461,7 @@
 							//						   }
 							.serviceTitle {
 								padding: 15px 0;
+
 								label {
 									display: block;
 									text-transform: uppercase;
@@ -390,58 +469,72 @@
 									font-family: "open_sansbold";
 									font-size: 18px;
 								}
+
 								span {
 									display: block;
 									font-family: "open_sansregular";
 									color: #000;
 									font-size: 13px;
+
 									&.counter {
 										animation-duration: 1s;
 										animation-delay: 0s;
 									}
 								}
 							}
+
 							.serviceMenus {
 								display: block;
+
 								.serviceSubMenu {
 									display: block;
+
 									ul {
 										margin: 0px;
 										padding: 0px;
+
 										li {
 											font-size: 14px;
 											font-family: "open_sansbold";
 											line-height: 28px;
 											margin: 0 0 10px 0;
 											text-transform: capitalize;
+											width: 100%;
+
 											&.active {
 												a {
 													color: #000;
 												}
 											}
+
 											a {
 												color: #155a9f;
 												padding: 0px;
 												line-height: normal;
+
 												i {
 													font-weight: bold;
 													padding: 0 4px 0 0;
 												}
 											}
+
 											ul {
 												margin: 0px;
 												padding: 0 0 0 22px;
 												list-style: disc;
+
 												li {
 													font-size: 13px;
 													font-family: "open_sanssemibold";
 													line-height: 16px;
 													margin: 0 0 5px 0;
+
 													&.active {
 														a {
 															color: #000 !important;
 														}
 													}
+
 													a {
 														color: #155a9f !important;
 														padding: 0px;
@@ -454,6 +547,7 @@
 							}
 						}
 					}
+
 					&:hover {
 						.fullWidth {
 							display: block;
@@ -462,10 +556,12 @@
 				}
 			}
 		}
+
 		.navbar-toggle {
 			box-shadow: none;
 			border: none;
 			background: none;
+
 			&:focus {
 				outline: none;
 			}

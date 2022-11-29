@@ -1,7 +1,6 @@
 {
   "name": "ditsphp",
   "version": "1.0.0",
-  "description": "",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,9 +9,22 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^4.5.0",
+    "bootstrap": "^4.6.2",
+    "gulp-install": "^1.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tarunwadhwawins/Dits-Website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tarunwadhwawins/Dits-Website/issues"
+  },
+  "homepage": "https://github.com/tarunwadhwawins/Dits-Website#readme",
+  "description": "",
+  "devDependencies": {
+    "browser-sync": "^2.27.10",
     "gulp": "^4.0.2",
-    "gulp-install": "^1.1.0",
-    "gulp-sass": "^4.1.0"
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.56.1"
   }
 }

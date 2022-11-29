@@ -9,7 +9,7 @@ session_start();
 // For Local
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "password";
 $dbname = "ditstekdb";
 $url = "http://localhost/Dits-Website/";
 // Create connection
