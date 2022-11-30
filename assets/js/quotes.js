@@ -31,7 +31,7 @@ $(function () {
             var button =  $($(this)[0].currentForm).find('button');
             var captcha = $($(this)[0].currentForm).find('.g-recaptcha-response');
             if(captcha.val() == ''){
-                $(".recaptchaerror").show();
+                $($(this)[0].currentForm).find(".recaptchaerror").show();
                 return false;
             }
             button.attr('disabled','disabled');
