@@ -9,43 +9,59 @@ require 'vendor/autoload.php';
 
 
 $response = array('Success' => false, 'Message' => 'Invalid Request');
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action']) && !empty($_GET['action'])) {
-    require_once('dbconnection.php');
-    $request = $_POST;
-    switch($_GET['action']) {
-        case 'ConactFormSave':
-        $sql = "INSERT INTO contacts (FirstName, Email, Country, State, City, Phone, FindUs, Message,URL,IP) VALUES ('" .mysqli_real_escape_string($conn,$request['contact_first_name']) . "', '" .mysqli_real_escape_string($conn,$request['contact_email']) . "', '". mysqli_real_escape_string($conn,$request['country']) . "', '". mysqli_real_escape_string($conn,$request['state']) . "', '".mysqli_real_escape_string($conn,$request['city'])  . "', '". mysqli_real_escape_string($conn,$request['contact_phone']) ."', '". mysqli_real_escape_string($conn,$request['contact_findUs'])."', '". mysqli_real_escape_string($conn,$request['contact_message'])."', '". mysqli_real_escape_string($conn,$_SERVER['HTTP_REFERER']) ."', '". mysqli_real_escape_string($conn,$_SERVER['REMOTE_ADDR']) ."')";
-        
-        if ($conn->query($sql) === TRUE) {
+require_once('dbconnection.php');
+$response = array('Success' => false, 'Message' => 'Invalid Request');
+if(!isset($_POST['g-recaptcha-response']) || $_POST['g-recaptcha-response']==""){
+  $response = array('Success' => false, 'Message' => 'Captcha is not valid.');
+}else{
+  $captcha = $_POST['g-recaptcha-response'];
+  $secretKey = "6LcKMkYjAAAAAMPE97sa6GV_Va36xLp6cvevkEy-";
+  $ip = $_SERVER['REMOTE_ADDR'];
+  // post request to server
+  $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
+  $response = file_get_contents($url);
+  $responseKeys = json_decode($response,true);
+  // should return JSON with success as true
+  if($responseKeys["success"]) {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action']) && !empty($_GET['action'])) {
+        require_once('dbconnection.php');
+        $request = $_POST;
+        switch($_GET['action']) {
+            case 'ConactFormSave':
+            $sql = "INSERT INTO contacts (FirstName, Email, Country, State, City, Phone, FindUs, Message,URL,IP) VALUES ('" .mysqli_real_escape_string($conn,$request['contact_first_name']) . "', '" .mysqli_real_escape_string($conn,$request['contact_email']) . "', '". mysqli_real_escape_string($conn,$request['country']) . "', '". mysqli_real_escape_string($conn,$request['state']) . "', '".mysqli_real_escape_string($conn,$request['city'])  . "', '". mysqli_real_escape_string($conn,$request['contact_phone']) ."', '". mysqli_real_escape_string($conn,$request['contact_findUs'])."', '". mysqli_real_escape_string($conn,$request['contact_message'])."', '". mysqli_real_escape_string($conn,$_SERVER['HTTP_REFERER']) ."', '". mysqli_real_escape_string($conn,$_SERVER['REMOTE_ADDR']) ."')";
             
-            // Contact Information to Client
-              sendEmail('info@ditstek.com', "Contact Information", userInformationHtml($request));
-            //   sendEmail('ajaykwins@gmail.com', "Contact Information", userInformationHtml($request));
-            // Thank you email to User
-            $message = customerEmailData($request['contact_first_name']);
-            sendEmail($request['contact_email'], 'Thank you for Contact', $message);
-            $response = array('Success' => true, 'Message' => 'Thank you for contacting Ditstek Innovations. Our team will get back to you shortly with the next steps. ');
-        } else {
-            $response = array('Success' => false, 'Message' => 'Error while submitting information.');
+            if ($conn->query($sql) === TRUE) {
+                
+                // Contact Information to Client
+                //   sendEmail('info@ditstek.com', "Contact Information", userInformationHtml($request));
+                  sendEmail('ajaykwins@gmail.com', "Contact Information", userInformationHtml($request));
+                // Thank you email to User
+                $message = customerEmailData($request['contact_first_name']);
+                sendEmail($request['contact_email'], 'Thank you for Contact', $message);
+                $response = array('Success' => true, 'Message' => 'Thank you for contacting Ditstek Innovations. Our team will get back to you shortly with the next steps. ');
+            } else {
+                $response = array('Success' => false, 'Message' => 'Error while submitting information.');
+            }
+            break;
+            case 'QuotesFormSave':
+            $sql = "INSERT INTO contacts (FirstName, Email, Country, State, City, Phone, FindUs, Message,URL,IP) VALUES ('" .mysqli_real_escape_string($conn,$request['quotes_first_name']) . "', '" .mysqli_real_escape_string($conn,$request['quotes_email']) . "', '". mysqli_real_escape_string($conn,$request['country'])  . "', '". mysqli_real_escape_string($conn,$request['state'])  . "', '". mysqli_real_escape_string($conn,$request['city'])  . "', '". mysqli_real_escape_string($conn,$request['quotes_phone'])  ."', '". mysqli_real_escape_string($conn,$request['quotes_findUs']) ."', '". mysqli_real_escape_string($conn,$request['quotes_message']) ."', '". mysqli_real_escape_string($conn,$_SERVER['HTTP_REFERER']) ."', '". mysqli_real_escape_string($conn,$_SERVER['REMOTE_ADDR']) ."')";
+            if ($conn->query($sql) === TRUE) {
+                
+                // Contact Information to Client
+                // sendEmail('info@ditstek.com', "Contact Information", userInformationHtmlQuotes($request));
+                sendEmail('ajaykwins@ditstek.com', "Contact Information", userInformationHtmlQuotes($request));
+                
+                // Thank you email to User
+                $message = customerEmailData($request['quotes_first_name']);
+                sendEmail($request['quotes_email'], 'Thank you for Contact', $message);
+                $response = array('Success' => true, 'Message' => 'Thank you for contacting Ditstek Innovations. Our team will get back to you shortly with the next steps. ');
+            } else {
+                $response = array('Success' => false, 'Message' => 'Error while submitting information.');
+            }
+            break;
         }
-        break;
-        case 'QuotesFormSave':
-        $sql = "INSERT INTO contacts (FirstName, Email, Country, State, City, Phone, FindUs, Message,URL,IP) VALUES ('" .mysqli_real_escape_string($conn,$request['quotes_first_name']) . "', '" .mysqli_real_escape_string($conn,$request['quotes_email']) . "', '". mysqli_real_escape_string($conn,$request['country'])  . "', '". mysqli_real_escape_string($conn,$request['state'])  . "', '". mysqli_real_escape_string($conn,$request['city'])  . "', '". mysqli_real_escape_string($conn,$request['quotes_phone'])  ."', '". mysqli_real_escape_string($conn,$request['quotes_findUs']) ."', '". mysqli_real_escape_string($conn,$request['quotes_message']) ."', '". mysqli_real_escape_string($conn,$_SERVER['HTTP_REFERER']) ."', '". mysqli_real_escape_string($conn,$_SERVER['REMOTE_ADDR']) ."')";
-        if ($conn->query($sql) === TRUE) {
-            
-            // Contact Information to Client
-            sendEmail('info@ditstek.com', "Contact Information", userInformationHtmlQuotes($request));
-            
-            // Thank you email to User
-            $message = customerEmailData($request['quotes_first_name']);
-            sendEmail($request['quotes_email'], 'Thank you for Contact', $message);
-            $response = array('Success' => true, 'Message' => 'Thank you for contacting Ditstek Innovations. Our team will get back to you shortly with the next steps. ');
-        } else {
-            $response = array('Success' => false, 'Message' => 'Error while submitting information.');
-        }
-        break;
     }
+  }
 }
 
 function userInformationHtml($request) {
@@ -87,7 +103,7 @@ function customerEmailData($Name) {
                         <table cellpadding="0" cellspacing="0" align="center" border="0" style="max-width:610px;width:100%;margin:auto;padding:0;background-color:#ffffff;color:#222222;overflow:hidden;border-left:1px solid #eee;border-right:1px solid #eee">
                           <tbody>
                             <tr>
-    							<th style="padding:15px 0;background-color:#f2f2f2;"><img src="https://ditstekdemo.com/ClientApps/ditstek-email-template-images/logo.png" alt="DITSTEK" style="max-width:150px"/></th>
+                  <th style="padding:15px 0;background-color:#f2f2f2;"><img src="https://ditstekdemo.com/ClientApps/ditstek-email-template-images/logo.png" alt="DITSTEK" style="max-width:150px"/></th>
                             </tr>
                             <tr style="max-width:610px;width:100%;box-sizing:border-box">
                               <td><table align="center" valign="middle" cellpadding="0" cellspacing="0" border="0" style="overflow:hidden;max-width:610px;width:100%;box-sizing:border-box;margin:0;padding:30px 15px 10px">
