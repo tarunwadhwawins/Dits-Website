@@ -68,6 +68,10 @@
                               </div>
                            </div>
                            <div class="col-sm-12">
+                              <div class="g-recaptcha" data-sitekey="6LcKMkYjAAAAAOEUgrEnosQrqfnsYOyjvlByc61o" data-callback="captchSubmit"></div>
+                              <div class="recaptchaerror">Please validate captcha</div>
+                          </div>
+                           <div class="col-sm-12">
                               <div class="contactForm">
                                  <button type="submit" class="btn btn-custom siteBtn"><div class="formLoader"></div>Submit</button>
                               </div>

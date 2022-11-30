@@ -28,7 +28,14 @@ $(function () {
     
         },
         submitHandler: function(form) {
-            
+            var button =  $($(this)[0].currentForm).find('button');
+            var captcha = $($(this)[0].currentForm).find('.g-recaptcha-response');
+            if(captcha.val() == ''){
+                $(".recaptchaerror").show();
+                return false;
+            }
+            button.attr('disabled','disabled');
+             $(".formLoader").css('display','inline-block');
             $.ajax({
                 url: base_url+"/core/general?action=QuotesFormSave",
                 type: "POST",
