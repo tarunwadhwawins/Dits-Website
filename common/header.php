@@ -69,6 +69,10 @@
                             <textarea class="form-control" rows="3" placeholder="Message" name="quotes_message" id="quotesMessage"></textarea>
                         </div>
                     </div>
+                    <div class="col-sm-12">
+                         <div class="g-recaptcha" data-sitekey="6LcKMkYjAAAAAOEUgrEnosQrqfnsYOyjvlByc61o" data-callback="captchSubmit"></div>
+                           <div class="recaptchaerror">Please validate captcha</div>
+                    </div>
                     <div class="col-6">
                         <div class="text-left">
                             <a href="javascript:void(0)" class="close-btn btn">Close</a>
@@ -76,7 +80,7 @@
                     </div>
                     <div class="col-6">
                         <div class="contactUsForm">
-                            <input type="submit" value="Send" class="btn siteBtn">
+                            <button type="submit" class="btn siteBtn"><div class="formLoader"></div>Send</button>
                         </div>
                     </div>
                 </div>

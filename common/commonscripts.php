@@ -19,6 +19,9 @@
 	  <script type="text/javascript">
 
 		//$('map').imageMapResize();
+		function captchSubmit(token){
+			$(".recaptchaerror").hide();
+		}
 
 	</script>
 <script type="text/javascript">
@@ -33,3 +36,6 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 
 </script>
+
+
+<script src="https://www.google.com/recaptcha/api.js" async defer> </script>
