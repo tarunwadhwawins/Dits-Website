@@ -1,4 +1,3 @@
-
 <div class="get-a-quote">
     <a href="javascript:void(0)" class="show-popup addQuote"><i class="fa fa-file-text-o" aria-hidden="true"></i> Get A Quote</a>
     <div class="contact-us">
@@ -6,7 +5,7 @@
             <h4>Contact us now and get consult for your project absolutely free</h4>
         </div>
         <div class="contact-form-main">
-                <div id='quotesmessage'></div>
+            <div id='quotesmessage'></div>
             <form name="quoteForm" method="POST" id="quoteForm">
                 <div class="row">
                     <div class="col-sm-6">
@@ -38,8 +37,8 @@
                     </div>
                     <div class="col-sm-4">
                         <div class="form-group">
-                            <input type="text" class="quotecities form-control" name="city" id="quotecityId" placeholder="City"/>  
-                           
+                            <input type="text" class="quotecities form-control" name="city" id="quotecityId" placeholder="City" />
+
                         </div>
                     </div>
                     <div class="col-sm-6">
@@ -54,7 +53,7 @@
                    </div> -->
                     <div class="col-sm-6">
                         <div class="form-group">
-                           <!-- <select class="form-control" id="sel1"> -->
+                            <!-- <select class="form-control" id="sel1"> -->
                             <select class="form-control" name="quotes_findUs" id="quotesFindUs">
                                 <option value="" selected>How did you find us?</option>
                                 <option value="Website">Website</option>
@@ -100,7 +99,7 @@ $current_page = $_SERVER['REQUEST_URI'];
                 <div class="col-sm-6">
                     <div class="contactDetails">
                         <div class="phone"><a href="tel:+91-623-942-1395"><i class="feather icon-phone"></i>+91-623-942-1395</a></div>
-                        <div class="email"><a href="mailto:info@ditstek.com"><i class="feather icon-mail"></i><img src="<?php echo $url; ?>assets/images/Img-Top.png" alt="image"/></a></div>
+                        <div class="email"><a href="mailto:info@ditstek.com"><i class="feather icon-mail"></i><img src="<?php echo $url; ?>assets/images/Img-Top.png" alt="image" /></a></div>
                     </div>
                 </div>
                 <div class="col-sm-6">
@@ -123,10 +122,10 @@ $current_page = $_SERVER['REQUEST_URI'];
             <div class="row">
                 <div class="col-sm-12">
                     <nav class="navbar navbar-expand-md">
-                        <a class="navbar-brand" href="<?php echo $url; ?>"><img src="<?php echo $url; ?>assets/images/logo.png" title="Ditstek Innovations" alt="image"/></a>
+                        <a class="navbar-brand" href="<?php echo $url; ?>"><img src="<?php echo $url; ?>assets/images/logo.png" title="Ditstek Innovations" alt="image" /></a>
                         <button type="button" class="navbar-toggle hidden-lg" data-toggle="collapse" id="offcanvas-toggler">
                             <div class="menu-bar"></div>
-          <!--                   <img src="/assets/images/menu-bar.png" alt="image"/>-->
+                            <!--                   <img src="/assets/images/menu-bar.png" alt="image"/>-->
                         </button>
                         <div class="collapse navbar-collapse" id="collapsibleNavbar">
                             <ul class="navbar-nav ml-auto">
@@ -145,7 +144,7 @@ $current_page = $_SERVER['REQUEST_URI'];
                                                     <div class="hireUs">
                                                         <div class="thumbImage">
                                                             <div class="hireusImage"></div>
-                                                     <!-- <img src="../assets/images/hireus.png" alt="image"/>-->
+                                                            <!-- <img src="../assets/images/hireus.png" alt="image"/>-->
                                                         </div>
                                                         <div class="desc">
                                                             <h4>Hire Us</h4>
@@ -155,7 +154,7 @@ $current_page = $_SERVER['REQUEST_URI'];
                                                     <div class="CallUs">
                                                         <div class="thumbImage">
                                                             <div class="CallUsImage"></div>
-                                                        <!-- <img src="../assets/images/callus.png" alt="image"/>-->
+                                                            <!-- <img src="../assets/images/callus.png" alt="image"/>-->
                                                         </div>
                                                         <div class="desc">
                                                             <h4>Call Us</h4>
@@ -216,14 +215,14 @@ $current_page = $_SERVER['REQUEST_URI'];
                                                                         <img class="img-fluid" src="<?php echo $url; ?>assets/portfolioimage/sellout-banner.jpg" alt="image">
                                                                         <h6><a href="<?php echo $url; ?>portfolio/saas-based-event-ticketing-platform">SAAS Based Event Ticketing Platform</a></h6>
                                                                     </div>
-                                                                </div>	
+                                                                </div>
                                                                 <div class="item">
                                                                     <div class="blogBox">
                                                                         <img class="img-fluid" src="<?php echo $url; ?>assets/portfolioimage/rhentit-banner.jpg" alt="image">
                                                                         <h6><a href="<?php echo $url; ?>portfolio/saas-based-b2b2c-workflow-automation-for-rental-businesses-pos-and-market-place">B2B2C rental platform POS Rental Software and Marketplace</a></h6>
                                                                     </div>
                                                                 </div>
-                                                                 <div class="item">
+                                                                <div class="item">
                                                                     <div class="blogBox">
                                                                         <img class="img-fluid" src="<?php echo $url; ?>assets/portfolioimage/164915352451_Drive-Shop-Portfolio-Banner.jpg" alt="image">
                                                                         <h6><a href="<?php echo $url; ?>portfolio/saas-based-business-workflow-automation-suite-of-apps-for-automotive-industry">SAAS Based Business Workflow Automation Suit of Apps for Automotive Industry</a></h6>
@@ -234,8 +233,8 @@ $current_page = $_SERVER['REQUEST_URI'];
                                                                         <img class="img-fluid" src="<?php echo $url; ?>assets/portfolioimage/affiliate-marketing.jpg" alt="image">
                                                                         <h6> <a href="<?php echo $url; ?>portfolio/affiliate-marketing-green-tech-platform">Affiliate Marketing Green Tech Platform</a></h6>
                                                                     </div>
-                                                                </div>	
-                                                               
+                                                                </div>
+
                                                                 <div class="item">
                                                                     <div class="blogBox">
                                                                         <img class="img-fluid" src="<?php echo $url; ?>assets/portfolioimage/blommruner-banner.jpg" alt="image">
@@ -268,40 +267,21 @@ $current_page = $_SERVER['REQUEST_URI'];
                                 <li class="nav-item <?php echo $current_page == '/technology' ? 'active' : '' ?>">
                                     <a class="nav-link" href="<?php echo $url; ?>technology" title="Technology">Technology</a>
                                 </li>
-								 <!-- <li class="nav-item <?php echo $current_page == '/industries' ? 'active' : '' ?>">
+                                <!-- <li class="nav-item <?php echo $current_page == '/industries' ? 'active' : '' ?>">
                                 <a class="nav-link" href="<?php echo $url; ?>industries" title="Industries">Industries</a> </li> -->
 
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Industries <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                     <ul class="fullWidth industriesMenu">
-                                        <li class="columnFull">
-                                            <div class="row">
-                                                <div class="col-sm-12">                    
-                                                    <div class="serviceMenus">
-                                                        <div class="serviceSubMenu">
-                                                            <ul>
-                                                                <li class="nav-item <?php echo $current_page == '/industries/helthcare' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>industries/helthcare"><i class="feather icon-arrow-right"></i>Healthcare</a></li>
-                                                                <li class="nav-item <?php echo $current_page == '/industries/business-and-workflow-automation' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>industries/business-and-workflow-automation"><i class="feather icon-arrow-right"></i>Business And Workflow Automation</a></li>
-                                                                <li class="nav-item <?php echo $current_page == '/industries/ed-tech' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>industries/ed-tech"><i class="feather icon-arrow-right"></i>Ed-Tech</a></li>
-                                                                <li class="nav-item  <?php echo $current_page == '/industries/retail' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>industries/retail"><i class="feather icon-arrow-right"></i>Retail</a></li>
-                                                                <li class="nav-item  <?php echo $current_page == '/industries/iot' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>industries/iot"><i class="feather icon-arrow-right"></i>IOT</a></li>
-                                                                <li class="nav-item  <?php echo $current_page == '/industries/real-estate' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>industries/real-estate"><i class="feather icon-arrow-right"></i>Real Estate</a></li>
-                                                                <li class="nav-item  <?php echo $current_page == '/industries/fintech' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>industries/fintech"><i class="feather icon-arrow-right"></i>Fintech</a></li>
-                                                                        <!---->
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
+                                        <li class="nav-item <?php echo $current_page == '/industries/healthcare' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>industries/healthcare"><i class="feather icon-arrow-right"></i>Healthcare</a></li>
+                                        <li class="nav-item <?php echo $current_page == '/industries/business-and-workflow-automation' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>industries/business-and-workflow-automation"><i class="feather icon-arrow-right"></i>Business And Workflow Automation</a></li>
+                                        <li class="nav-item <?php echo $current_page == '/industries/ed-tech' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>industries/ed-tech"><i class="feather icon-arrow-right"></i>Ed-Tech</a></li>
+                                        <li class="nav-item  <?php echo $current_page == '/industries/retail' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>industries/retail"><i class="feather icon-arrow-right"></i>Retail</a></li>
+                                        <li class="nav-item  <?php echo $current_page == '/industries/iot' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>industries/iot"><i class="feather icon-arrow-right"></i>IOT</a></li>
+                                        <li class="nav-item  <?php echo $current_page == '/industries/real-estate' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>industries/real-estate"><i class="feather icon-arrow-right"></i>Real Estate</a></li>
+                                        <li class="nav-item  <?php echo $current_page == '/industries/fintech' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>industries/fintech"><i class="feather icon-arrow-right"></i>Fintech</a></li>
                                     </ul>
                                 </li>
-
-
-
-
-
-
 
                                 <li class="nav-item <?php echo $current_page == '/blog' ? 'active' : '' ?>">
                                     <a class="nav-link" href="<?php echo $url; ?>blog" title="Blog">Blogs</a>
@@ -312,7 +292,7 @@ $current_page = $_SERVER['REQUEST_URI'];
                                 <li class="nav-item <?php echo $current_page == '/contact' ? 'active' : '' ?>">
                                     <a class="nav-link" href="<?php echo $url; ?>contact" title="Contact Us">Contact Us</a>
                                 </li>
-                                
+
                             </ul>
                             </ul>
                         </div>
@@ -353,7 +333,7 @@ $current_page = $_SERVER['REQUEST_URI'];
                         </ul>
                     </li>
                 </ul>
-            </li> 
+            </li>
             <li class="nav-item <?php echo $current_page == '/technology' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>technology" title="Technology">Technology</a> </li>
 
             <li><a href="#">Industries </a>
@@ -361,19 +341,20 @@ $current_page = $_SERVER['REQUEST_URI'];
                     <i class="fa fa-plus"></i><i class="fa fa-minus"></i>
                 </span>
                 <ul class="collapse" id="collapse-menu-022651" aria-expanded="false">
-                <li class="nav-item <?php echo $current_page == '/industries/helthcare' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>industries/helthcare">Healthcare</a></li>
-                <li class="nav-item <?php echo $current_page == '/industries/business-and-workflow-automation' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>industries/business-and-workflow-automation">Business And Workflow Automation</a></li>
-                <li class="nav-item <?php echo $current_page == '/industries/ed-tech' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>industries/ed-tech">Ed-Tech</a></li>
-                <li class="nav-item  <?php echo $current_page == '/industries/retail' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>industries/retail">Retail</a></li>
-                <li class="nav-item  <?php echo $current_page == '/industries/iot' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>industries/iot">IOT</a></li>
-                <li class="nav-item  <?php echo $current_page == '/industries/real-estate' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>industries/real-estate">Real Estate</a></li>
-                <li class="nav-item  <?php echo $current_page == '/industries/fintech' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>industries/fintech">Fintech</a></li>
+                    <li class="nav-item <?php echo $current_page == '/industries/healthcare' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>industries/healthcare">Healthcare</a></li>
+                    <li class="nav-item <?php echo $current_page == '/industries/business-and-workflow-automation' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>industries/business-and-workflow-automation">Business And Workflow Automation</a></li>
+                    <li class="nav-item <?php echo $current_page == '/industries/ed-tech' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>industries/ed-tech">Ed-Tech</a></li>
+                    <li class="nav-item  <?php echo $current_page == '/industries/retail' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>industries/retail">Retail</a></li>
+                    <li class="nav-item  <?php echo $current_page == '/industries/iot' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>industries/iot">IOT</a></li>
+                    <li class="nav-item  <?php echo $current_page == '/industries/real-estate' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>industries/real-estate">Real Estate</a></li>
+                    <li class="nav-item  <?php echo $current_page == '/industries/fintech' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>industries/fintech">Fintech</a></li>
                 </ul>
-            </li> 
-            <!-- <li class="nav-item <?php //echo $current_page == '/industries' ? 'active' : '' ?>"> <a class="nav-link" href="<?php echo $url; ?>industries" title="Industries">Industries</a> </li> -->
+            </li>
+            <!-- <li class="nav-item <?php //echo $current_page == '/industries' ? 'active' : '' 
+                                        ?>"> <a class="nav-link" href="<?php echo $url; ?>industries" title="Industries">Industries</a> </li> -->
             <li class="nav-item <?php echo $current_page == '/blogs' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>blog" target="_blank">Blogs</a></li>
             <li class="nav-item <?php echo $current_page == '/portfolio' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>portfolio">Portfolio</a></li>
 
             <li class="nav-item <?php echo $current_page == '/contact' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>contact">Contact Us</a></li>
-    </div> 
-</div> 
+    </div>
+</div>

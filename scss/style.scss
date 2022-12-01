@@ -1165,7 +1165,7 @@
 					line-height: 56px;
 					color: #fff;
 					letter-spacing: 1px;
-					max-width: 100%
+					max-width: 100%;
 				}
 			}
 		}
@@ -2626,7 +2626,7 @@
 			text-transform: capitalize;
 			margin: 0 0 15px 0;
 
-			@media (max-width:540px) {
+			@media (max-width: 540px) {
 				font-size: 18px;
 			}
 		}
@@ -2645,10 +2645,9 @@
 					transition: 0.5s;
 					display: inline-block;
 
-					@media (max-width:540px) {
+					@media (max-width: 540px) {
 						padding: 6px 15px;
 					}
-
 				}
 
 				&:hover {
@@ -2656,7 +2655,6 @@
 						border: 1px solid #155a9f;
 						background-color: #155a9f;
 						color: #fff;
-
 					}
 				}
 			}
@@ -3131,10 +3129,50 @@
 
 /*   hire php developrts  */
 
-.hdDecription {
-	h2 {
-		font-family: "open_sanssemibold";
-		text-transform: none;
+.industries {
+	.innerThumbDesc {
+		h2 {
+			font-size: 20px;
+			margin: 0 0 5px 0;
+		}
+
+		h3 {
+			font-size: 16px;
+			margin: 15px 0 5px 0;
+		}
+
+		p {
+			margin: 0 0 15px 0;
+		}
+
+		ul {
+			padding: 0 0 15px 24px;
+			li {
+				font-size: 15px;
+				line-height: 30px;
+				font-family: "open_sansregular";
+				a {
+					color: #000;
+					cursor: default;
+				}
+			}
+
+			&.flow {
+				li {
+					width: 50%;
+				}
+			}
+		}
+		.rightImage {
+			float: right;
+			max-width: 400px;
+			padding: 0 0px 20px 20px;
+			@media (max-width: 991px) {
+				max-width: 100%;
+				padding: 10px 0;
+				float: initial;
+			}
+		}
 	}
 }
 
@@ -4220,7 +4258,7 @@
 			li {
 				font-size: 14px;
 				line-height: 28px;
-				font-family: 'open_sansregular';
+				font-family: "open_sansregular";
 			}
 		}
 	}
@@ -4488,24 +4526,24 @@
 		border-right: 1px solid #ddd;
 	}
 
-	input[type="radio"]+label.active {
+	input[type="radio"] + label.active {
 		color: #fff;
 		background-color: #193370;
 	}
 
-	input[type="radio"]+label {
+	input[type="radio"] + label {
 		background-color: #185ee0;
 	}
 
-	input[id="radio-1"]:checked~.glider {
+	input[id="radio-1"]:checked ~ .glider {
 		transform: translateX(0);
 	}
 
-	input[id="radio-2"]:checked~.glider {
+	input[id="radio-2"]:checked ~ .glider {
 		transform: translateX(100%);
 	}
 
-	input[id="radio-3"]:checked~.glider {
+	input[id="radio-3"]:checked ~ .glider {
 		transform: translateX(200%);
 	}
 
@@ -4760,51 +4798,6 @@
 	}
 }
 
-// Health care Page 
-
-.industries {
-	h3 {
-		text-transform: none;
-		font-size: 24px;
-		font-weight: 400;
-		font-family: "open_sanssemibold";
-	}
-
-	ul {
-		padding: 20px 0 0 14px;
-
-		li {
-			font-size: 15px;
-			line-height: 30px;
-			font-weight: 400;
-
-			a {
-				color: #000;
-				cursor: default;
-			}
-		}
-	}
-
-	.thumbImage {
-		width: 100%;
-
-		img {
-			max-width: 100%;
-		}
-	}
-
-	.buisnessDomains {
-		display: flex;
-		flex-wrap: wrap;
-
-		li {
-			width: 50%;
-			padding: 0 20px 8px 0;
-			line-height: 22px;
-		}
-	}
-}
-
 
 /*  inner banner   */
 @media (min-width: 768px) {
@@ -4841,7 +4834,7 @@
 }
 
 @media (max-width: 991px) {
-	.whiteBg .tab-content>.tab-pane {
+	.whiteBg .tab-content > .tab-pane {
 		display: block !important;
 		opacity: 1;
 	}

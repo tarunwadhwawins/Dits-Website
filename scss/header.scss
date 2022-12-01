@@ -235,9 +235,46 @@
 						box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.1);
 
 						&.industriesMenu {
-							width: 300px;
+							width: 310px;
 							position: absolute;
 							left: initial;
+							box-shadow: none;
+							background-color: #fff;
+							border-top: 3px solid #193370;
+							top: 57px;
+							li {
+								width: 100%;
+								border-bottom: 1px solid #e3e3e3;
+								&:last-child {
+									border: none;
+								}
+								&:hover {
+									a {
+										padding-left: 15px;
+										transition: 0.5s;
+										color: #3095fb;
+										.feather {
+											visibility: visible;
+											transition: 0.5s;
+										}
+									}
+								}
+								a {
+									line-height: 30px;
+									display: flex;
+									align-items: baseline;
+									padding: 8px 15px 8px 5px;
+									color: #193370;
+									text-transform: capitalize;
+									transition: 0.5s;
+									font-family: 'dosismedium';
+									.feather {
+										visibility: hidden;
+										margin-right: 5px;
+										color: #3095fb;
+									}
+								}
+							}
 						}
 
 						li.columnFull {
@@ -511,7 +548,8 @@
 												color: #155a9f;
 												padding: 0px;
 												line-height: normal;
-
+												display: flex;
+												align-items: baseline;
 												i {
 													font-weight: bold;
 													padding: 0 4px 0 0;
