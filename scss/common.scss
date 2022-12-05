@@ -310,7 +310,7 @@ textarea {
 		max-width: 0;
 		transform: translateY(-50%);
 		transition: all 1s ease-out;
-		height:440px;
+		max-height: 550px;
 		overflow-y:auto;
 		&.show {
 			right: 0;
