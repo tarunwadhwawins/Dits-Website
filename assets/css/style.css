@@ -2373,8 +2373,8 @@
   text-decoration: none;
 }
 .portfolio .potfolioDiv a:hover .thumbImage {
-  transform: scale(1.05);
-  transition: 2s;
+  transform: scale(1.07);
+  transition: 1s;
 }
 
 .portfolioInner {
@@ -2822,12 +2822,51 @@
   margin: 0 0 15px 0;
 }
 .industries .innerThumbDesc ul {
-  padding: 0 0 15px 24px;
+  padding: 0 0 15px 10px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 .industries .innerThumbDesc ul li {
   font-size: 15px;
   line-height: 30px;
+  position: relative;
   font-family: "open_sansregular";
+  background: #fbfbfb;
+  padding-left: 28px;
+  margin: 10px 20px 10px 0;
+  width: 47%;
+  padding: 7px 30px;
+  transition: 0.5s;
+}
+.industries .innerThumbDesc ul li::before {
+  content: "";
+  height: 5px;
+  width: 5px;
+  background-color: #656565;
+  position: absolute;
+  left: 16px;
+  top: 20px;
+  transition: 0.5s;
+  border-radius: 25px;
+}
+.industries .innerThumbDesc ul li:hover {
+  color: #155a9f;
+  padding-left: 37px;
+  transition: 0.5s;
+  background-color: #3095fb;
+}
+.industries .innerThumbDesc ul li:hover::before {
+  height: 7px;
+  width: 7px;
+  background-color: #ffffff;
+  left: 24px;
+  transition: 0.5s;
+  top: 19px;
+}
+.industries .innerThumbDesc ul li:hover a {
+  color: #fff;
+  font-weight: 600;
 }
 .industries .innerThumbDesc ul li a {
   color: #000;
@@ -2846,6 +2885,7 @@
     max-width: 100%;
     padding: 10px 0;
     float: initial;
+    width: 100%;
   }
 }
 
@@ -3053,6 +3093,18 @@
   }
 }
 
+.technologies ul {
+  list-style: none;
+}
+.technologies ul li {
+  line-height: 28px;
+}
+.technologies ul li i {
+  font-size: 12px;
+  color: #155a9f;
+  padding-right: 2px;
+}
+
 .technoDev {
   padding: 0 0 100px 0;
   text-align: center;
@@ -3130,15 +3182,66 @@
   justify-content: center;
   align-items: center;
 }
-.technoDev .thumbImage img {
+.technoDev .thumbImage .thumbImageInner {
+  transform: scale(1.02);
+  transition: all 0.5s;
+}
+.technoDev .thumbImage .thumbImageInner img {
   max-width: 100%;
+}
+.technoDev .thumbImage .thumbImageInner:hover {
+  transform: scale(1.07);
+}
+
+.rpgle .thumbImage {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.rpgle .thumbImage .thumbImageInner {
+  transform: scale(1.02);
+  transition: all 0.5s;
+}
+.rpgle .thumbImage .thumbImageInner img {
+  max-width: 100%;
+}
+.rpgle .thumbImage .thumbImageInner:hover {
+  transform: scale(1.07);
+}
+.rpgle .thumbDesc {
+  text-align: left;
+}
+.rpgle .thumbDesc span {
+  font-family: "devinne_txt_btregular";
+  color: #d7d7d7;
+  font-size: 116px;
+  line-height: normal;
+}
+.rpgle .thumbDesc h4 {
+  margin: 0 0 20px 0;
+  font-size: 25px;
 }
 
 .technoDotNet {
   padding: 50px 0;
 }
+.technoDotNet .thumbImage {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.technoDotNet .thumbImage .thumbImageInner {
+  transform: scale(1.02);
+  transition: all 0.5s;
+}
+.technoDotNet .thumbImage .thumbImageInner img {
+  max-width: 100%;
+}
+.technoDotNet .thumbImage .thumbImageInner:hover {
+  transform: scale(1.07);
+}
 .technoDotNet .thumbDesc {
-  text-align: center;
+  text-align: right;
   margin: 0 0 60px 0;
 }
 @media (max-width: 576px) {
@@ -3155,6 +3258,9 @@
 .technoDotNet .thumbDesc h4 {
   margin: 0 0 20px 0;
   font-size: 25px;
+}
+.technoDotNet p {
+  margin-bottom: 10px;
 }
 .technoDotNet .technoDbDesc {
   background-color: transparent;
@@ -3492,8 +3598,15 @@
   justify-content: center;
   align-items: center;
 }
-.technoBack .thumbImage img {
+.technoBack .thumbImage .thumbImageInner {
+  transform: scale(1.02);
+  transition: all 0.5s;
+}
+.technoBack .thumbImage .thumbImageInner img {
   max-width: 100%;
+}
+.technoBack .thumbImage .thumbImageInner:hover {
+  transform: scale(1.07);
 }
 .technoBack .technoBackDesc {
   text-align: right;

@@ -50,9 +50,9 @@ require_once('../core/dbconnection.php');
                             <p>Whether you are looking for <strong>eLearning software</strong> for businesses or any educational establishments, our team comes to help. We rigorously evaluate your requirements and industry specifics to develop a fully-featured EdTech development solution corresponding to your needs. In addition, our engineers build the functionality that delivers value to your users from simple eLearning portals to complex administration software.</p>
                             <p>As an expert in <strong>EdTech software development</strong>, <strong>DITS </strong> helps businesses and educational institutions enhance employee and student engagement in the learning process. Embrace the advantages of our sophisticated eLearning solutions.</p>
                             <ul>
-                                <li><a href="#">Learning Management Solutions</a></li>
-                                <li><a href="#">Virtual / Remote Learning Platform</a></li>
-                                <li><a href="#">e-learning Application Development</a></li>
+                                <li><a href="javascript:void(0);">Learning Management Solutions</a></li>
+                                <li><a href="javascript:void(0);">Virtual / Remote Learning Platform</a></li>
+                                <li><a href="javascript:void(0);">e-learning Application Development</a></li>
 
                             </ul>
                         </div>

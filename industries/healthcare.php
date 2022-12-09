@@ -50,20 +50,20 @@ require_once('../core/dbconnection.php');
                             <h3 class="py-2">Our Healthcare Software Solutions</h3>
                             <p>We strive to build robust, <strong>custom-built healthcare software solutions </strong> and <strong>healthcare mobile applications </strong> while operating as a digital consultant for health institutions to accomplish digital transformation initiatives to deliver secure, business-centric, user-friendly services seamlessly.</p>
                             <ul class="buisnessDomains">
-                                <li><a href="#">Electronic Medical Record(EMR)</a></li>
-                                <li><a href="#">Electronic Health Record(EHR)</a></li>
-                                <li><a href="#">Personal Health Record(PHR)</a></li>
-                                <li><a href="#">Healthcare Compliance Solutions</a></li>
-                                <li><a href="#">TeleHealth and TeleMedicine</a></li>
-                                <li><a href="#">Home Health and Care Management Solutions</a></li>
-                                <li><a href="#">Laboratory & Pharmacy Systems Integration</a></li>
-                                <li><a href="#">Practice Management Solutions</a></li>
-                                <li><a href="#">Population Health Management Applications</a></li>
-                                <li><a href="#">SAAS Based Healthcare applications</a></li>
-                                <li><a href="#">Patient Engagement and Monitoring Solutions</a></li>
-                                <li><a href="#">Behavioral Healthcare Solutions</a></li>
-                                <li><a href="#">Custom Healthcare Software Development</a></li>
-                                <li><a href="#">Population Health Management Solutions</a></li>
+                                <li><a href="javascript:void(0);">Electronic Medical Record(EMR)</a></li>
+                                <li><a href="javascript:void(0);">Electronic Health Record(EHR)</a></li>
+                                <li><a href="javascript:void(0);">Personal Health Record(PHR)</a></li>
+                                <li><a href="javascript:void(0);">Healthcare Compliance Solutions</a></li>
+                                <li><a href="javascript:void(0);">TeleHealth and TeleMedicine</a></li>
+                                <li><a href="javascript:void(0);">Home Health and Care Management Solutions</a></li>
+                                <li><a href="javascript:void(0);">Laboratory & Pharmacy Systems Integration</a></li>
+                                <li><a href="javascript:void(0);">Practice Management Solutions</a></li>
+                                <li><a href="javascript:void(0);">Population Health Management Applications</a></li>
+                                <li><a href="javascript:void(0);">SAAS Based Healthcare applications</a></li>
+                                <li><a href="javascript:void(0);">Patient Engagement and Monitoring Solutions</a></li>
+                                <li><a href="javascript:void(0);">Behavioral Healthcare Solutions</a></li>
+                                <li><a href="javascript:void(0);">Custom Healthcare Software Development</a></li>
+                                <li><a href="javascript:void(0);">Population Health Management Solutions</a></li>
                             </ul>
                         </div>
                     </div>

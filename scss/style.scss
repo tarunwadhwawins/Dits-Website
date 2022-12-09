@@ -2599,8 +2599,8 @@
 		a {
 			&:hover {
 				.thumbImage {
-					transform: scale(1.05);
-					transition: 2s;
+					transform: scale(1.07);
+					transition: 1s;
 				}
 			}
 		}
@@ -3146,11 +3146,56 @@
 		}
 
 		ul {
-			padding: 0 0 15px 24px;
+			padding: 0 0 15px 10px;
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+
 			li {
 				font-size: 15px;
 				line-height: 30px;
+				position: relative;
 				font-family: "open_sansregular";
+				background: #fbfbfb;
+				padding-left: 28px;
+				margin: 10px 20px 10px 0;
+				width: 47%;
+				padding: 7px 30px;
+				transition: 0.5s;
+
+				&::before {
+					content: '';
+					height: 5px;
+					width: 5px;
+					background-color: #656565;
+					position: absolute;
+					left: 16px;
+					top: 20px;
+					transition: 0.5s;
+					border-radius: 25px;
+				}
+
+				&:hover {
+					color: #155a9f;
+					padding-left: 37px;
+					transition: 0.5s;
+					background-color: #3095fb;
+
+					&::before {
+						height: 7px;
+						width: 7px;
+						background-color: #ffffff;
+						left: 24px;
+						transition: 0.5s;
+						top: 19px;
+					}
+
+					a {
+						color: #fff;
+						font-weight: 600;
+					}
+				}
+
 				a {
 					color: #000;
 					cursor: default;
@@ -3163,14 +3208,17 @@
 				}
 			}
 		}
+
 		.rightImage {
 			float: right;
 			max-width: 400px;
 			padding: 0 0px 20px 20px;
+
 			@media (max-width: 991px) {
 				max-width: 100%;
 				padding: 10px 0;
 				float: initial;
+				width: 100%;
 			}
 		}
 	}
@@ -3400,6 +3448,22 @@
 	}
 }
 
+.technologies {
+	ul {
+		list-style: none;
+
+		li {
+			line-height: 28px;
+
+			i {
+				font-size: 12px;
+				color: #155a9f;
+				padding-right: 2px;
+			}
+		}
+	}
+}
+
 .technoDev {
 	padding: 0 0 100px 0;
 	text-align: center;
@@ -3463,7 +3527,7 @@
 
 		ul {
 			margin: 10px 0;
-			padding: 0 0 0 40px;
+			padding: 0 0 0 20px;
 
 			li {
 				margin: 0 0 5px 0;
@@ -3478,8 +3542,54 @@
 		justify-content: center;
 		align-items: center;
 
-		img {
-			max-width: 100%;
+		.thumbImageInner {
+			transform: scale(1.02);
+			transition: all .5s;
+
+			img {
+				max-width: 100%;
+			}
+
+			&:hover {
+				transform: scale(1.07);
+			}
+		}
+	}
+}
+
+.rpgle {
+	.thumbImage {
+		height: 100%;
+		display: flex;
+		align-items: center;
+
+		.thumbImageInner {
+			transform: scale(1.02);
+			transition: all .5s;
+
+			img {
+				max-width: 100%;
+			}
+
+			&:hover {
+				transform: scale(1.07);
+			}
+		}
+	}
+
+	.thumbDesc {
+		text-align: left;
+
+		span {
+			font-family: "devinne_txt_btregular";
+			color: #d7d7d7;
+			font-size: 116px;
+			line-height: normal;
+		}
+
+		h4 {
+			margin: 0 0 20px 0;
+			font-size: 25px;
 		}
 	}
 }
@@ -3487,8 +3597,27 @@
 .technoDotNet {
 	padding: 50px 0;
 
+	.thumbImage {
+		height: 100%;
+		display: flex;
+		align-items: center;
+
+		.thumbImageInner {
+			transform: scale(1.02);
+			transition: all .5s;
+
+			img {
+				max-width: 100%;
+			}
+
+			&:hover {
+				transform: scale(1.07);
+			}
+		}
+	}
+
 	.thumbDesc {
-		text-align: center;
+		text-align: right;
 		margin: 0 0 60px 0;
 
 		@media (max-width: 576px) {
@@ -3506,6 +3635,10 @@
 			margin: 0 0 20px 0;
 			font-size: 25px;
 		}
+	}
+
+	p {
+		margin-bottom: 10px;
 	}
 
 	.technoDbDesc {
@@ -3857,8 +3990,17 @@
 		justify-content: center;
 		align-items: center;
 
-		img {
-			max-width: 100%;
+		.thumbImageInner {
+			transform: scale(1.02);
+			transition: all .5s;
+
+			img {
+				max-width: 100%;
+			}
+
+			&:hover {
+				transform: scale(1.07);
+			}
 		}
 	}
 
@@ -4526,24 +4668,24 @@
 		border-right: 1px solid #ddd;
 	}
 
-	input[type="radio"] + label.active {
+	input[type="radio"]+label.active {
 		color: #fff;
 		background-color: #193370;
 	}
 
-	input[type="radio"] + label {
+	input[type="radio"]+label {
 		background-color: #185ee0;
 	}
 
-	input[id="radio-1"]:checked ~ .glider {
+	input[id="radio-1"]:checked~.glider {
 		transform: translateX(0);
 	}
 
-	input[id="radio-2"]:checked ~ .glider {
+	input[id="radio-2"]:checked~.glider {
 		transform: translateX(100%);
 	}
 
-	input[id="radio-3"]:checked ~ .glider {
+	input[id="radio-3"]:checked~.glider {
 		transform: translateX(200%);
 	}
 
@@ -4833,7 +4975,7 @@
 }
 
 @media (max-width: 991px) {
-	.whiteBg .tab-content > .tab-pane {
+	.whiteBg .tab-content>.tab-pane {
 		display: block !important;
 		opacity: 1;
 	}
@@ -4847,11 +4989,12 @@
 .g-recaptcha {
 	margin: 0 0 35px;
 }
+
 .recaptchaerror {
 	font-size: 12px;
 	color: #ff0000;
 	position: absolute;
-    left: 16px;
-    bottom: 20px;
+	left: 16px;
+	bottom: 20px;
 	display: none;
 }

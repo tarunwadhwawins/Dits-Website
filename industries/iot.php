@@ -55,12 +55,12 @@ require_once('../core/dbconnection.php');
                             <p>Smart/wearable devices promise to revolutionize how we receive, use, and share data in a personalized way. Right from the earliest wrist-sized calculators to the first Bluetooth headsets, these intelligent devices are taking innovation to the next level.</p>
                             <p>We are competent in rendering the following IoT development services:</p>
                             <ul>
-                                <li><a href="#">MVP Development </a></li>
-                                <li><a href="#">Startups and Enterprise</a></li>
-                                <li><a href="#">Business and Workflow Automation</a></li>
-                                <li><a href="#">Lightning Control Systems </a></li>
-                                <li><a href="#">Real-Time Monitoring</a></li>
-                                <li><a href="#">Dashboards and Analytics </a></li>
+                                <li><a href="javascript:void(0);">MVP Development </a></li>
+                                <li><a href="javascript:void(0);">Startups and Enterprise</a></li>
+                                <li><a href="javascript:void(0);">Business and Workflow Automation</a></li>
+                                <li><a href="javascript:void(0);">Lightning Control Systems </a></li>
+                                <li><a href="javascript:void(0);">Real-Time Monitoring</a></li>
+                                <li><a href="javascript:void(0);">Dashboards and Analytics </a></li>
                             </ul>
                             <p>Our versatile experience of comprehensive IoT aspects will help your business surmount all the challenges and emerge as a digitally forward firm.</p>
                         </div>

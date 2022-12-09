@@ -51,16 +51,16 @@ require_once('../core/dbconnection.php');
                             <p><strong>DITS</strong> has gained the trust of <strong>fintech MVPs</strong> and <strong>startups </strong> by providing robust and secure fintech products like <strong>e-wallet apps</strong> that enable users to top-up and pay bills with their phones and are powered by state-of-the-art technologies. Our inclusive expertise and extensive experience ensure the on-time delivery of next-generation fintech products. In addition, we also provide <strong>custom fintech software development services</strong> on both <strong>web and mobile platforms</strong> for better user engagement, custom reporting, and real-time data interaction.</p>
                             <p>Here is a list of the <strong>fintech software development</strong> services we provide:</p>
                             <ul>
-                                <li><a href="#">Startups / MVP Development</a></li>
-                                <li><a href="#">FinTech Web App Development</a></li>
-                                <li><a href="#">FinTech App Development</a></li>
-                                <li><a href="#">Payment Solution</a></li>
-                                <li><a href="#">Gateway Integration</a></li>
-                                <li><a href="#">Custom Fintech Development</a></li>
-                                <li><a href="#">Fintech Mobile App Development</a></li>
-                                <li><a href="#">Fintech UX/UX and Web Design</a></li>
-                                <li><a href="#">Fintech Payment Solutions</a></li>
-                                <li><a href="#">Data Analytics in Fintech</a></li>
+                                <li><a href="javascript:void(0);">Startups / MVP Development</a></li>
+                                <li><a href="javascript:void(0);">FinTech Web App Development</a></li>
+                                <li><a href="javascript:void(0);">FinTech App Development</a></li>
+                                <li><a href="javascript:void(0);">Payment Solution</a></li>
+                                <li><a href="javascript:void(0);">Gateway Integration</a></li>
+                                <li><a href="javascript:void(0);">Custom Fintech Development</a></li>
+                                <li><a href="javascript:void(0);">Fintech Mobile App Development</a></li>
+                                <li><a href="javascript:void(0);">Fintech UX/UX and Web Design</a></li>
+                                <li><a href="javascript:void(0);">Fintech Payment Solutions</a></li>
+                                <li><a href="javascript:void(0);">Data Analytics in Fintech</a></li>
                             </ul>
                             <p>From simple <strong>mobile payment apps</strong> to complex <strong>enterprise-level financial platforms,</strong> we provide our in-depth
                                 fintech expertise and efficient customer-oriented approach to assist our clients on their way to digital transformation. Having great experience in banking and <strong> financial software development,</strong> we develop either from scratch or enhance existing financial solutions for our clients. We are enthusiastic about analyzing

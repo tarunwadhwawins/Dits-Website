@@ -52,13 +52,13 @@ require_once('../core/dbconnection.php');
 							<p>We provide actionable insights with our apps by using tools that can gauge user sentiments. This sets a digital footprint for your real-estate business with our highly customized app development solutions</p>
 							<p>Our comprehensive solutions for your real estate business comprises: </p>
 							<ul>
-								<li><a href="#">Real Estate Marketplace</a></li>
-								<li><a href="#">Real Estate Web App Development</a></li>
-								<li><a href="#">Property Management Application</a></li>
-								<li><a href="#">Online Property Booking Solutions</a></li>
-								<li><a href="#">Real Estate Website Development</a></li>
-								<li><a href="#">Lead Management Solutions - CRM</a></li>
-								<li><a href="#">Maintenance And Support</a></li>
+								<li><a href="javascript:void(0);">Real Estate Marketplace</a></li>
+								<li><a href="javascript:void(0);">Real Estate Web App Development</a></li>
+								<li><a href="javascript:void(0);">Property Management Application</a></li>
+								<li><a href="javascript:void(0);">Online Property Booking Solutions</a></li>
+								<li><a href="javascript:void(0);">Real Estate Website Development</a></li>
+								<li><a href="javascript:void(0);">Lead Management Solutions - CRM</a></li>
+								<li><a href="javascript:void(0);">Maintenance And Support</a></li>
 
 							</ul>
 							<p>

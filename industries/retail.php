@@ -47,11 +47,11 @@ require_once('../core/dbconnection.php');
                             <img class="rightImage" src="../assets/domains/retail.jpg" alt="image" />
                             <h2 class="py-2">Retail</h2>
                             <p><strong>DITS</strong> offers custom retail software development services for brick and mortar, e-commerce, c-store & grocery, web, and mobile systems. We also provide brick-and-mortar <strong>POS</strong> integrations built with automated invoicing, payment processing, and security features that work flawlessly with all payment forms, such as bank cards, checks, and mobile payments.</p>
-                            <ul style="padding: 5px 0 15px 24px;">
-                                <li><a href="#">Virtual Storefronts</a></li>
-                                <li><a href="#">B2C & B2B </a></li>
-                                <li><a href="#">C2C, B2B2C Marketplaces</a></li>
-                                <li><a href="#">E-Commerce Web Designs</a></li>
+                            <ul>
+                                <li><a href="javascript:void(0);">Virtual Storefronts</a></li>
+                                <li><a href="javascript:void(0);">B2C & B2B </a></li>
+                                <li><a href="javascript:void(0);">C2C, B2B2C Marketplaces</a></li>
+                                <li><a href="javascript:void(0);">E-Commerce Web Designs</a></li>
                             </ul>
                             <p>We blend payment and order processing systems into your virtual storefronts for more secure transaction processing and conventional billing automation and have developed feature-rich, sophisticated <strong>B2B, B2C, C2C, B2B2C marketplaces</strong> that bring vendors, distributors, and customers together in a centralized platform.</p>
                             <p>Our <strong>highly dedicated developers</strong> also design unique e-commerce websites and applications that are mobile-friendly and provide the ultimate shopping experiences for customers. We also engineer mobile-responsive e-commerce software solutions and <strong>retail management systems</strong> that allow Ecommerce portal development with automated synchronization of your physical catalog with your e-commerce store.</p>

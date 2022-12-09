@@ -23,7 +23,7 @@
                   <div class="row">
                      <div class="col-sm-12">
                         <h1>Technologies We Use</h1>
-                        <!--<div class="bannerButton mt-3" id="bannerExtFour" data-toggle="modal" data-target="#exampleModal"> <a href="javascript:void(0);" class="btn btn-custom siteBtn addCountry">Contact Form</a> </div>-->
+                        <!--<div class="bannerButton mt-3" id="bannerExtFour" data-toggle="modal" data-target="#exampleModal"> <a href="" class="btn btn-custom siteBtn addCountry">Contact Form</a> </div>-->
                      </div>
                   </div>
                </div>
@@ -45,24 +45,58 @@
             </div>
          </div>
       </section>
-      <section class="technoDev">
+      <section class="rpgle technologies">
          <div class="container">
-            <div class="row reverseCol">
-               <!--<div class="col-sm-12"><h3>Our Mobile and Web Development Technology Stack</h3></div>-->
+            <div class="row">
                <div class="col-md-7">
                   <div class="technoFrontDesc">
-                      <h4>.NET Development</h4>
-					  <p>A .NET development company like <b>DITS</b> can become your partner in creating .Net applications of any complexity. We primarily focus on custom .Net development and .Net growth for startups, SMBs and large enterprises utilizing <b>ASP .NET, Web API development, and ASP.NET Core.</b></p>
-                     <p>We are competent to provide the desired <b><a href="https://www.ditstek.com/services/custom-application-development" target="_blank">custom application development</a></b>  solutions as per the specific needs of the clients - be it <b>asp.net webforms / legacy conversions /</b> developing a custom web application using the latest  technologies for web development <b>ASP.NET, ASP.NET MVC (Model-View-Controller), Azure.</b> Patterns like <b>MVC</b> and built-in support for <b>Dependency Injection.</b></p>
-					  <p><b><a href="https://www.ditstek.com/services/hire-asp-net-developers" target="_blank">Hire ASP.NET developers</a></b>  having expertise in latest versions of <b>Entity Framework, Entity Framework Core </b> and have been developing solutions architectures in <b>Monilithic, N-Layered, clean architecture, ASP.NET Core Architecture, The Repository Pattern</b> and <b>Microservices.</b> We also use <b>.NET Core</b> for our server applications for the following application’s success.</p>
-					  <ul>
-					    <li>Cross-platform support</li>
-						<li>Use of microservices </li>
-						<li>Use of Docker containers </li>
-						<li>High performance and scalability requirements</li>
-						<li>Hand-in-hand versioning of .NET versions by application on the same server </li>
+                  <div class="thumbDesc">
+                     <span>01</span>
+                     <h4>IBM AS400 RPG Development</h4>
+                  </div> 
+					  <p>Need to update, maintain, or modernize your legacy applications running in the IBM i environment? DITS offers cutting-edge RPG development services. Our seasoned RPG programmers empower businesses with a range of development, integration, maintenance, modernization, and support solutions. We build high-performing, user-centric applications by leveraging IBM stack and deploy best-fit solutions while keeping a close eye on efficiency, security, and user experience. </p>
+                 <h6 class="pt-3"> <b>Our services include: </b></h6>
+                 <ul class="pl-2 py-2">
+                     <li> <i class="fa fa-arrow-right"></i> IBM i Application Development</li>
+                     <li> <i class="fa fa-arrow-right"></i> IBM i Application Management</li>
+                     <li> <i class="fa fa-arrow-right"></i> iSeries Software Development</li>
+                     <li> <i class="fa fa-arrow-right"></i> IBM iSeries AS400 Modernization</li>
+                     <li> <i class="fa fa-arrow-right"></i> IBM iSeries AS400 Migration</li>
+                     <li> <i class="fa fa-arrow-right"></i> IBM i Integration</li>
+                     <li> <i class="fa fa-arrow-right"></i> IBM i Interface Support</li>
+                     <li> <i class="fa fa-arrow-right"></i> Third-Party Apps Support</li>
 					  </ul>
-					  <p><b>ASP.NET Core,</b> and <b>.NET Core</b> are also optimized for modern web application development practices.</p> 
+
+					  <p>
+                 At DITS, we combine our domain expertise and proven agile development methodologies with tech frameworks to provide you with a gamut of RPG development services tailored to your business requirements.</p> 
+                  </div>
+               </div>
+               <div class="col-md-5">
+                  <div class="thumbImage"><div class="thumbImageInner"><img src="assets/images/rpgle.png" alt="image" title="RPGLE"/></div></div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="technoDotNet technologies">
+         <div class="container">
+            <div class="row reverseCol">
+               <div class="col-md-7">
+                  <div class="technoFrontDesc pl-4">
+                     <div class="thumbDesc">
+                        <span>02</span>
+                        <h4>.NET Development</h4>
+                     </div>
+                     <p>A .NET development company like <b>DITS</b> can become your partner in creating .Net applications of any complexity. We primarily focus on custom .Net development and .Net growth for startups, SMBs and large enterprises utilizing <b>ASP .NET, Web API development, and ASP.NET Core.</b></p>
+                           <p>We are competent to provide the desired <b><a href="https://www.ditstek.com/services/custom-application-development" target="_blank">custom application development</a></b>  solutions as per the specific needs of the clients - be it <b>asp.net webforms / legacy conversions /</b> developing a custom web application using the latest  technologies for web development <b>ASP.NET, ASP.NET MVC (Model-View-Controller), Azure.</b> Patterns like <b>MVC</b> and built-in support for <b>Dependency Injection.</b></p>
+                     <p><b><a href="https://www.ditstek.com/services/hire-asp-net-developers" target="_blank">Hire ASP.NET developers</a></b>  having expertise in latest versions of <b>Entity Framework, Entity Framework Core </b> and have been developing solutions architectures in <b>Monilithic, N-Layered, clean architecture, ASP.NET Core Architecture, The Repository Pattern</b> and <b>Microservices.</b> We also use <b>.NET Core</b> for our server applications for the following application’s success.</p>
+                     <ul class="pl-4 py-1">
+                        <li> <i class="fa fa-arrow-right"></i> Cross-platform support</li>
+                        <li> <i class="fa fa-arrow-right"></i> Use of microservices </li>
+                        <li> <i class="fa fa-arrow-right"></i> Use of Docker containers </li>
+                        <li> <i class="fa fa-arrow-right"></i> High performance and scalability requirements</li>
+                        <li> <i class="fa fa-arrow-right"></i> Hand-in-hand versioning of .NET versions by application on the same server </li>
+                     </ul>
+                     <p>At DITS, we combine our domain expertise and proven agile development methodologies with tech frameworks to provide you with a gamut of RPG development services tailored to your business requirements.</p>
                   </div>
                </div>
                <div class="col-md-5">
@@ -75,8 +109,8 @@
          <div class="container">
             <div class="row">
                <div class="col-md-12">
-                  <div class="thumbDesc">
-                     <span>02</span>
+                  <div class="thumbDesc text-center">
+                     <span>03</span>
                      <h4>Our Key .NET Technology Stack Involves –</h4>
                   </div>
                </div>
@@ -149,7 +183,7 @@
             <div class="row">
                <div class="col-sm-12">
                   <div class="technoDesignDesc">
-                     <span>03</span>
+                     <span>04</span>
                      <h4>Designing Tools</h4>
                      <p>We ideate, frame, and design the digital designing concepts for web and mobile applications. Our unique expertise in design development can aid businesses to tap the revolutionary potential of designing with our skilled and experienced designers. DITS follow a process to dive deep into each project detail, take a comprehensive understanding and provide complete designing solutions.</p>
                   </div>
@@ -199,7 +233,7 @@
                </div>
                <div class="col-md-7">
                   <div class="technoBackDesc">
-                     <span>04</span>
+                     <span>05</span>
                        <h4>Front-end Development</h4>
                        
                       <p>We at DITS understand your business's objectives and aids in creating top-notch solutions that meet your requirements leveraging the best front-end development technologies and practices. Our <b><a href="https://www.ditstek.com/services/full-stack-development-services" target="_target">full stack  developers</a></b> have extensive experience in frontend technologies.  We build well-bred web, mobile applications, cross-browser and cross-platform websites utilizing <b>Polymer</b>, <b>HTML5</b>, <b>Javascript</b>, <b>Typescript</b>, <b>CSS3</b>, <b>Scss</b>, <b>Less</b>, <b>AngularJS</b>, <b>Node.js</b>, <b>React.js</b>, <b>Vuejs</b>, <b>Bootstrap</b>, <b>Wordpress</b>, <b><a href="https://www.ditstek.com/services/hiring-ui-ux-developers" target="_blank">UI/UX Design</a></b>, <b>Responsive Mobile Design.</b></p>
@@ -215,7 +249,7 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="thumbDesc">
-                     <span>05</span>
+                     <span>06</span>
                      <h4>Our Key Front-End Technology Stack Involves –</h4>
                   </div>
                </div>
@@ -224,16 +258,16 @@
                      <!---->  
                      <ul class="nav nav-tabs">
                         <li class="nav-item">
-                           <a class="nav-link active" data-toggle="tab" href="#home">Javascript Frameworks</a>
+                           <a class="nav-link active" data-toggle="tab" href="home">Javascript Frameworks</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" data-toggle="tab" href="#menu1">Front End Languages</a>
+                           <a class="nav-link" data-toggle="tab" href="menu1">Front End Languages</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" data-toggle="tab" href="#menu2">UI Frameworks</a>
+                           <a class="nav-link" data-toggle="tab" href="menu2">UI Frameworks</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" data-toggle="tab" href="#menu3">CMS</a>
+                           <a class="nav-link" data-toggle="tab" href="menu3">CMS</a>
                         </li>
                      </ul>
                      <!-- Tab panes -->
@@ -286,23 +320,23 @@
             </div>
          </div>
       </section>
-      <section class="technoDev">
+      <section class="technoDev technologies">
          <div class="container">
             <div class="row reverseCol">
                <!--<div class="col-sm-12"><h3>Our Mobile and Web Development Technology Stack</h3></div>-->
                <div class="col-md-7">
                   <div class="technoFrontDesc">
-                     <span>06</span>
+                     <span>07</span>
                      <h4>Open-Source Technologies</h4>
                      <p>Open source development has taken an evolution in the contemporary market. Unmatched features, affordable price, effectiveness, and rich performance are some of the traits that make open source development highly favored. You can also harness the benefits of <b>open source technologies</b> to develop your own customized, dynamic applications and manage your open source ecosystem with an intelligent technology partner like <b>DITS</b>. We ensure to deliver scalable solutions right from scratch, till providing reliable open source codes and apps for businesses. <b><a href="https://www.ditstek.com/services/hire-php-developers" target="_blank">Hire php developers</a></b>  from DITS having enormous experience in developing user-friendly, scalable, and secure solutions using open source technologies like:</p>
-					  <ul>
-					  <li>Python</li>
-					  <li>PHP </li>
-					  <li>Laravel </li>
-					  <li>Node JS</li>
-					  <li>Codeigniter</li>
-                 <li>Java</li>
-					  </ul>
+                     <ul>
+                        <li> <i class="fa fa-arrow-right"></i> Python</li>
+                        <li> <i class="fa fa-arrow-right"></i> PHP </li>
+                        <li> <i class="fa fa-arrow-right"></i> Laravel </li>
+                        <li> <i class="fa fa-arrow-right"></i> Node JS</li>
+                        <li> <i class="fa fa-arrow-right"></i> Codeigniter</li>
+                        <li> <i class="fa fa-arrow-right"></i> Java</li>
+                     </ul>
 					 <p>We, at <b>DITS</b>, endeavor to acknowledge the requirements of businesses and to address accurate solutions while keeping you ahead of the technology curve utilizing the most innovative and cutting-edge technologies.</p>
                   </div>
                </div>
@@ -317,7 +351,7 @@
             <div class="row">
 				 <div class="col-md-12">
                   <div class="thumbDesc">
-                     <span>07</span>
+                     <span>08</span>
                      <h4>Our Open-Source Technology Stack involves</h4>
                   </div>
 				  <div class="thumbIcons">
@@ -334,7 +368,7 @@
             </div>
          </div>
       </section>
-      	  <section class="technoBack">
+      	  <section class="technoBack technologies">
          <div class="container">
             <div class="row">
                <div class="col-md-5 ">
@@ -342,16 +376,16 @@
                </div>
                <div class="col-md-7">
                   <div class="technoBackDesc">
-                     <span>08</span>
+                     <span>09</span>
                      <h4>IoT</h4>
                      <p><b>IoT</b> is a concept of a system where all its objects are interconnected with each other via the Internet. <b>DITS</b> has been working for businesses - from <b>startups</b> and <b>medium firms</b> to well-established companies - to turn their ideas into <b>MVPs</b> and full-scale IoT systems. With a great tech team of <b>full-stack developers</b> and industry experts, we understand all the specifics of the IoT concept. We have attained rich expertise in the domain, and now there are no unconnectable things for us. Our experts <b>integrate gateways,</b> utilizes <b>edge devices integration</b>, and <b>cloud platforms</b> to provide you with a perfectly-architected IoT ecosystem. </p>
-					 <p>Our IoT team had worked on applications like <b>Occupancy Sensors</b>, <b>HVAC</b>, <b>Lighting Control and Power Meter Sensors</b> that can collect, relay, and act on the shared <b>Real-Time Data</b> while complying with all industry standards using <b>Stream Analytics</b>,<b>COSMOS</b> and <b>DYNAMO db</b>. Using the latest technologies like <b>Microsoft Azure</b>, <b>AWS</b>, <b>Azure IOT HUb and Edge device</b> we have also aid businesses to drive decisions in real-time while building:</p>
-					 <ul>
-					   <li> Cloud Based Remote Monitoring IOT Dashboard </li>
-					   <li>Energy Management System </li>
-					   <li>Building Management System</li>
-					   <li>Lightning Control System</li>
-					 </ul>
+					      <p>Our IoT team had worked on applications like <b>Occupancy Sensors</b>, <b>HVAC</b>, <b>Lighting Control and Power Meter Sensors</b> that can collect, relay, and act on the shared <b>Real-Time Data</b> while complying with all industry standards using <b>Stream Analytics</b>,<b>COSMOS</b> and <b>DYNAMO db</b>. Using the latest technologies like <b>Microsoft Azure</b>, <b>AWS</b>, <b>Azure IOT HUb and Edge device</b> we have also aid businesses to drive decisions in real-time while building:</p>
+                     <ul>
+                        <li> <i class="fa fa-arrow-right"></i>Cloud Based Remote Monitoring IOT Dashboard </li>
+                        <li> <i class="fa fa-arrow-right"></i>Energy Management System </li>
+                        <li> <i class="fa fa-arrow-right"></i>Building Management System</li>
+                        <li> <i class="fa fa-arrow-right"></i>Lightning Control System</li>
+                     </ul>
                   </div>
                </div>
             </div>
@@ -362,7 +396,7 @@
             <div class="row reverseCol">
                <div class="col-md-7">
                   <div class="technoFrontDesc">
-                     <span>09</span>
+                     <span>10</span>
                      <h4>Mobile Application Development</h4>
                      <p>The upsurge rise in mobile users across the globe has made data consumption pretty extensive. It has also unfolded a chance for businesses to think and implement innovative business ideas for application development. <b>DITS</b> comprises a dedicated mobile application development team having years of experience in creating cross-platform mobile applications.</p>
 					 <h6>Cross-Platform App Development</h6>
@@ -383,7 +417,7 @@
             <div class="row">
 				 <div class="col-md-12">
                   <div class="thumbDesc">
-                     <span>10</span>
+                     <span>11</span>
                      <h4>Our Mobile Application Development Stack involves</h4>
                   </div>
 				  <div class="thumbIcons">
@@ -397,7 +431,7 @@
             </div>
          </div>
       </section>
-      <section class="technoBack">
+      <section class="technoBack technologies">
          <div class="container">
             <div class="row">
                <div class="col-md-5 ">
@@ -405,19 +439,19 @@
                </div>
                <div class="col-md-7">
                   <div class="technoBackDesc">
-                     <span>11</span>
+                     <span>12</span>
                      <h4>QA - Manual and Automation</h4>
                      <p>Quality is one of the keystones of <b><a href="https://www.ditstek.com/services/software-development-services" target="_blank">software development services</a></b> . Efficient testing can be done in different forms – manually, with or without specific tools, or totally in automated mode. Keeping clients' customized specifications at the core, DITS offer a comprehensive set of Manual and Automated Testing Services adhering to standard quality assurance practices and processes.</p>
 					 <h6>Manual Testing </h6>
 					 <p>There are always cases when human reasoning cannot be replaced, which makes manual tests an essential part of quality assurance. During manual testing, our professional QA directly interacts with the software and makes sure that the features behave as expected utilizing Test case management tool Testrail. </p>
 					 <p>Here at <b>DITS</b>, we have streamlined the manual software testing process that encompasses a set of procedures:</p>
 					  <ul>
-						<li>Requirements Analysis</li>
-						<li>Test plan and strategy development</li>
-						<li>Test case design</li>
-						<li>Tests execution</li>
-						<li>Bugs reporting</li>
-						<li>Retests of fixed issues</li>
+						<li> <i class="fa fa-arrow-right"></i>Requirements Analysis</li>
+						<li> <i class="fa fa-arrow-right"></i>Test plan and strategy development</li>
+						<li> <i class="fa fa-arrow-right"></i>Test case design</li>
+						<li> <i class="fa fa-arrow-right"></i>Tests execution</li>
+						<li> <i class="fa fa-arrow-right"></i>Bugs reporting</li>
+						<li> <i class="fa fa-arrow-right"></i>Retests of fixed issues</li>
 					  </ul>
 					  <h6>Automation Testing</h6>
 					  <p>In case of small projects, manual testing is often enough. But when it grows in scale, <b>automation testing</b> brings better ROI. <b>DITS</b> has a pool of dedicated, agile & skilled automation testers, who use a scalable test automation suite that consists of various automation testing tools <b>Cypress, Selenium, Nunit and Nsubstitue</b> for effective & reliable test automation. We also offer <b>Test-Driven Development (TDD)</b>utilizing the integration of <b>Cypress</b> within <b>TestRail</b>.</p>
@@ -431,7 +465,7 @@
             <div class="row">
 				 <div class="col-md-12">
                   <div class="thumbDesc">
-                     <span>12</span>
+                     <span>13</span>
                      <h4>Our QA - Manual And Automation Stack involves</h4>
                   </div>
 				  <div class="thumbIcons">
@@ -448,7 +482,7 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<div class="technoCommDesc">
-					<span>13</span>
+					<span>14</span>
 					<h4>PM and Communication </h4>
 					<p>Hassle-free communication via your own preferred channels with our <b><a href="https://www.ditstek.com/services/dedicated-development-team" target="_blank">dedicated developers</a></b> for daily real-time updates and status. For effortless communication we utilize tools like <b>Trello</b>, <b>Slack</b>, <b>Zoom</b>, <b>Skype</b>, <b>Jira</b>, <b>Planio</b>, <b>Basecamp and Pivotal Tracker</b> with agile  <b><a href="https://www.ditstek.com/methodology" target="_blank">Methodology</a></b>.</p>
 					<img src="assets/images/commbanner.jpg" alt="image" title="Communication Tools">
