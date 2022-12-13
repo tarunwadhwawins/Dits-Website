@@ -9831,7 +9831,7 @@ body {
 }
 @media (max-width: 576px) {
   .bannerButton .siteBtn {
-    margin: 0 0 15px 0;
+    margin: 0 10px 15px 0;
   }
 }
 /*--mobile menu css --*/
@@ -10368,4 +10368,9 @@ ul.checkobxListing li:before {
   display: none;
   vertical-align: middle;
   margin: -4px 15px 0 0;
+}
+
+.btn-custom.bannerSecondaryBtn:hover {
+  background-color: #1f4592;
+  border-color: #1f4592;
 }
