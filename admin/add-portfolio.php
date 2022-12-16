@@ -28,27 +28,26 @@ if (isset($_GET['id']) && $_GET['id'] != '') {
         $slug = $row['slug'];
         $tags = (explode(',', $row['tags']));
         $image = $row['image'];
-        if(!empty($row['slider_image'])){
+        if (!empty($row['slider_image'])) {
             $slider_image = (explode(',', $row['slider_image']));
-        }else{
-            $slider_image = array();            
+        } else {
+            $slider_image = array();
         }
         $banner_heading = $row['banner_heading'];
         $fs_heading = $row['fs_heading'];
         $fs_sub_heading = $row['fs_sub_heading'];
         $fs_description = $row['fs_description'];
-        if(!empty($row['fs_image'])){
+        if (!empty($row['fs_image'])) {
             $fs_image = (explode(',', $row['fs_image']));
-        }else{
-            $fs_image = array();            
+        } else {
+            $fs_image = array();
         }
         $image_text = $row['image_text'];
         $ss_description = $row['ss_description'];
-        if(!empty($row['ss_image'])){
+        if (!empty($row['ss_image'])) {
             $ss_image = (explode(',', $row['ss_image']));
-
-        }else{
-            $ss_image = array();            
+        } else {
+            $ss_image = array();
         }
         $date = $row['date'];
         $short_desc = $row['short_desc'];
@@ -59,7 +58,7 @@ if (isset($_GET['id']) && $_GET['id'] != '') {
 }
 
 if (isset($_POST['submit'])) {
-    
+
     // echo "<pre>";
     // print_r($_POST);
     // print_r($_FILES);
@@ -80,20 +79,20 @@ if (isset($_POST['submit'])) {
     $short_desc = get_safe_value($conn, $_POST['short_desc']);
     $slug1 = str_replace(' ', '-', $title);
     $slug = trim(strtolower($slug1), "?");
-    
-    $MainImageQuery = ", image = '".trim($_POST['image'],',')."' ";
-    $image = trim($_POST['image'],',');
+
+    $MainImageQuery = ", image = '" . trim($_POST['image'], ',') . "' ";
+    $image = trim($_POST['image'], ',');
 
 
-    $Section1ImageQuery = ", fs_image = '".trim($_POST['fs_image'],',')."' ";
-    $fsImage = trim($_POST['fs_image'],',');
+    $Section1ImageQuery = ", fs_image = '" . trim($_POST['fs_image'], ',') . "' ";
+    $fsImage = trim($_POST['fs_image'], ',');
 
 
-    $Section2ImageQuery = ", ss_image = '".trim($_POST['ss_image'],',')."' ";
-    $ssImage = trim($_POST['ss_image'],',');
+    $Section2ImageQuery = ", ss_image = '" . trim($_POST['ss_image'], ',') . "' ";
+    $ssImage = trim($_POST['ss_image'], ',');
 
-    $sliderImageUpdate = ", slider_image = '".trim($_POST['sliderImage'],',')."' ";
-    $fileName = trim($_POST['sliderImage'],',');
+    $sliderImageUpdate = ", slider_image = '" . trim($_POST['sliderImage'], ',') . "' ";
+    $fileName = trim($_POST['sliderImage'], ',');
 
 
     $res = mysqli_query($conn, "select * from portfolio where title='$title'");
@@ -109,7 +108,7 @@ if (isset($_POST['submit'])) {
             $msg = "Title already exist";
         }
     }
-   
+
     if ($msg == '') {
         if (isset($_GET['id']) && $_GET['id'] != '') {
             if ($MainImageQuery != '' || $Section1ImageQuery != '' || $Section2ImageQuery != '' || $sliderImageUpdate != '') {
@@ -138,7 +137,7 @@ if (isset($_POST['submit'])) {
             header('location:add-portfolio.php');
         }
 
-        
+
         die();
     }
 }
@@ -157,11 +156,7 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="https://unpkg.com/@jcubic/tagger@0.x.x/tagger.css" />
     <!---->
     <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css"
-      type="text/css"
-    />
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
 
     <style>
         .imgGallery img {
@@ -301,7 +296,7 @@ if (isset($_POST['submit'])) {
                                 <label>Images Upload</label>
                                 <div class="dropzone" id="myDropzone"></div>
                                 <input type="hidden" name="image" value="<?php echo @$image; ?>" id="mainImage" />
-                               
+
                             </div>
                         </div>
                     </div>
@@ -333,16 +328,16 @@ if (isset($_POST['submit'])) {
                                             <div class="form-group">
                                                 <label>Image Upload</label>
                                                 <div class="fsGallery"></div>
-                                                
-                                                <div class="dropzone" id="fsimageDropzone"></div>
-                                                <?php if(!empty($fs_image)){ ?> 
-                                                        <input type="hidden" name="fs_image" value="<?php echo implode(',',@$fs_image); ?>" id="fs_image" />
 
-                                                <?php }else{ ?> 
-                                                        <input type="hidden" name="fs_image" value="" id="fs_image" />
+                                                <div class="dropzone" id="fsimageDropzone"></div>
+                                                <?php if (!empty($fs_image)) { ?>
+                                                    <input type="hidden" name="fs_image" value="<?php echo implode(',', @$fs_image); ?>" id="fs_image" />
+
+                                                <?php } else { ?>
+                                                    <input type="hidden" name="fs_image" value="" id="fs_image" />
 
                                                 <?php } ?>
-                                                
+
                                             </div>
                                         </div>
                                         <div class="col-sm-12">
@@ -367,19 +362,19 @@ if (isset($_POST['submit'])) {
                                                 <label>Description</label>
                                                 <textarea class="ckeditor" name="editor1" id="editor1" required><?php echo $ss_description ?></textarea>
                                             </div>
-                                            </div>
+                                        </div>
                                         <div class="col-sm-12">
                                             <div class="form-group">
                                                 <label>Image Upload</label>
                                                 <div class="ssGallery"></div>
-                                                
-                                                <div class="dropzone" id="ssimageDropzone"></div>
-                                                
-                                                <?php if(!empty($ss_image)){ ?> 
-                                                        <input type="hidden" name="ss_image" value="<?php echo implode(',',@$ss_image); ?>" id="ss_image" />
 
-                                                <?php }else{ ?> 
-                                                        <input type="hidden" name="ss_image" value="" id="ss_image" />
+                                                <div class="dropzone" id="ssimageDropzone"></div>
+
+                                                <?php if (!empty($ss_image)) { ?>
+                                                    <input type="hidden" name="ss_image" value="<?php echo implode(',', @$ss_image); ?>" id="ss_image" />
+
+                                                <?php } else { ?>
+                                                    <input type="hidden" name="ss_image" value="" id="ss_image" />
 
                                                 <?php } ?>
                                             </div>
@@ -400,21 +395,34 @@ if (isset($_POST['submit'])) {
                                                 <label>Image Upload</label>
                                                 <div class="imgGallery"> </div>
                                                 <div class="dropzone" id="sliderImageDropzone"></div>
-                                                
 
-                                                 <?php if(!empty($slider_image)){ ?> 
-                                                        <input type="hidden" name="sliderImage" value="<?php echo implode(',',@$slider_image); ?>" id="sliderImage" />
 
-                                                <?php }else{ ?> 
-                                                        <input type="hidden" name="sliderImage" value="" id="sliderImage" />
+                                                <?php if (!empty($slider_image)) { ?>
+                                                    <input type="hidden" name="sliderImage" value="<?php echo implode(',', @$slider_image); ?>" id="sliderImage" />
+
+                                                <?php } else { ?>
+                                                    <input type="hidden" name="sliderImage" value="" id="sliderImage" />
 
                                                 <?php } ?>
-                                               
+
                                             </div>
 
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 mb-5">
+                        <div class="form-group">
+                            <label>Slider For</label>
+                            <div class="form-check-inline">
+                                <label class="form-check-label mr-3">
+                                    <input type="radio" class="form-check-input" name="optradio" checked>Web App
+                                </label>
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="optradio">Mobile App
+                                </label>
                             </div>
                         </div>
                     </div>
@@ -549,25 +557,27 @@ if (isset($_POST['submit'])) {
                 }
             });
         });
-
     </script>
-  
-   
+
+
     <script>
-       
         file_list = null;
         <?php
-            if(!empty($image)){
-                if(file_exists("../assets/portfolioimage/".$image)){
-                    $size = filesize("../assets/portfolioimage/".$image);
+        if (!empty($image)) {
+            if (file_exists("../assets/portfolioimage/" . $image)) {
+                $size = filesize("../assets/portfolioimage/" . $image);
         ?>
 
-                    file_list = {'name':'<?php echo $image; ?>','size':'<?php echo $size; ?>','path':'<?php echo $url."/assets/portfolioimage/".$image ;?>'};
+                file_list = {
+                    'name': '<?php echo $image; ?>',
+                    'size': '<?php echo $size; ?>',
+                    'path': '<?php echo $url . "/assets/portfolioimage/" . $image; ?>'
+                };
         <?php
-                }
             }
+        }
         ?>
-        Dropzone.options.myDropzone= {
+        Dropzone.options.myDropzone = {
             url: '<?php echo $url; ?>upload',
             autoProcessQueue: true,
             uploadMultiple: false,
@@ -579,64 +589,74 @@ if (isset($_POST['submit'])) {
             init: function() {
                 dzClosure = this; // Makes sure that 'this' is understood inside the functions below.
                 <?php
-                    if(!empty($image)){
+                if (!empty($image)) {
                 ?>
-                        if(file_list){
+                    if (file_list) {
 
-                            var mockFile = { name: file_list.name, size: file_list.size };
+                        var mockFile = {
+                            name: file_list.name,
+                            size: file_list.size
+                        };
 
-                            this.emit("addedfile", mockFile);
-                            this.emit("thumbnail", mockFile, file_list.path);
-                            this.emit("complete", mockFile);
-                        }
-                <?php
+                        this.emit("addedfile", mockFile);
+                        this.emit("thumbnail", mockFile, file_list.path);
+                        this.emit("complete", mockFile);
                     }
+                <?php
+                }
                 ?>
 
                 this.on("removedfile", function(file) {
                     var file = $("#mainImage").val();
-                    if(file==""){
+                    if (file == "") {
                         return;
                     }
                     $.ajax({
                         url: "<?php echo $url; ?>remove_file",
-                        type:'post',
-                        data:{file:file,id:'<?php echo @$_GET['id']; ?>'}, 
-                        success: function(result){
+                        type: 'post',
+                        data: {
+                            file: file,
+                            id: '<?php echo @$_GET['id']; ?>'
+                        },
+                        success: function(result) {
                             $("#mainImage").val("");
                         }
                     });
                 });
 
-                this.on("error", function (file) {
-                    
+                this.on("error", function(file) {
+
                     alert("please enter image file have size max 1MB");
                     dzClosure.removeFile(file);
-                    
+
                 });
             },
-            success: function(file, response){
+            success: function(file, response) {
                 file = JSON.parse(response);
                 $("#mainImage").val(file.file);
             }
         }
         var file_list_first_section = [];
         <?php
-            if(!empty($fs_image)){
-                foreach ($fs_image as $key=>$value) {
-                    if(file_exists("../assets/portfolioimage/".$value)){
+        if (!empty($fs_image)) {
+            foreach ($fs_image as $key => $value) {
+                if (file_exists("../assets/portfolioimage/" . $value)) {
 
-                        $size = filesize("../assets/portfolioimage/".$value);
+                    $size = filesize("../assets/portfolioimage/" . $value);
         ?>
 
-                        file_list_first_section[<?php echo $key ?>] = {'name':'<?php echo $value; ?>','size':'<?php echo $size; ?>','path':'<?php echo $url."/assets/portfolioimage/".$value ;?>'};
+                    file_list_first_section[<?php echo $key ?>] = {
+                        'name': '<?php echo $value; ?>',
+                        'size': '<?php echo $size; ?>',
+                        'path': '<?php echo $url . "/assets/portfolioimage/" . $value; ?>'
+                    };
         <?php
-                    }
                 }
             }
+        }
         ?>
 
-        Dropzone.options.fsimageDropzone= {
+        Dropzone.options.fsimageDropzone = {
             url: '<?php echo $url; ?>upload',
             autoProcessQueue: true,
             uploadMultiple: false,
@@ -648,45 +668,52 @@ if (isset($_POST['submit'])) {
             init: function() {
                 dzClosure = this; // Makes sure that 'this' is understood inside the functions below.
                 <?php
-                    if(!empty($fs_image)){
+                if (!empty($fs_image)) {
                 ?>
-                        $.each(file_list_first_section, function(key,value) {
-                            var mockFile = { name: value.name, size: value.size,serverId: value.name};
+                    $.each(file_list_first_section, function(key, value) {
+                        var mockFile = {
+                            name: value.name,
+                            size: value.size,
+                            serverId: value.name
+                        };
 
-                            dzClosure.emit("addedfile", mockFile);
-                            dzClosure.emit("thumbnail", mockFile, value.path);
-                            dzClosure.emit("complete", mockFile);
-                        });
+                        dzClosure.emit("addedfile", mockFile);
+                        dzClosure.emit("thumbnail", mockFile, value.path);
+                        dzClosure.emit("complete", mockFile);
+                    });
                 <?php
-                    }
+                }
                 ?>
                 this.on("removedfile", function(file) {
                     if (!file.serverId) {
                         return;
                     }
-                    
+
                     $.ajax({
                         url: "<?php echo $url; ?>remove_file",
-                        type:'post',
-                        data:{file:file.serverId,id:'<?php echo @$_GET['id']; ?>'}, 
-                        success: function(result){
+                        type: 'post',
+                        data: {
+                            file: file.serverId,
+                            id: '<?php echo @$_GET['id']; ?>'
+                        },
+                        success: function(result) {
                             $("#fs_image").val($("#fs_image").val().replace(file.serverId, ""));
                         }
                     });
                 });
-                this.on("error", function (file) {
-                    
+                this.on("error", function(file) {
+
                     alert("please enter image file have size max 1MB");
                     dzClosure.removeFile(file);
-                    
+
                 });
             },
-            success: function(file, response){
+            success: function(file, response) {
                 response = JSON.parse(response);
                 var current_file = $("#fs_image").val();
-                if(current_file!=""){
-                    $("#fs_image").val(current_file+','+response.file);
-                }else{
+                if (current_file != "") {
+                    $("#fs_image").val(current_file + ',' + response.file);
+                } else {
                     $("#fs_image").val(response.file);
                 }
                 file.serverId = response.file;
@@ -695,21 +722,25 @@ if (isset($_POST['submit'])) {
 
         var file_list_second_section = [];
         <?php
-            if(!empty($ss_image)){
-                foreach ($ss_image as $key=>$value) {
-                    if(file_exists("../assets/portfolioimage/".$value)){
+        if (!empty($ss_image)) {
+            foreach ($ss_image as $key => $value) {
+                if (file_exists("../assets/portfolioimage/" . $value)) {
 
-                        $size = filesize("../assets/portfolioimage/".$value);
+                    $size = filesize("../assets/portfolioimage/" . $value);
         ?>
 
-                    file_list_second_section[<?php echo $key ?>] = {'name':'<?php echo $value; ?>','size':'<?php echo $size; ?>','path':'<?php echo $url."/assets/portfolioimage/".$value ;?>'};
+                    file_list_second_section[<?php echo $key ?>] = {
+                        'name': '<?php echo $value; ?>',
+                        'size': '<?php echo $size; ?>',
+                        'path': '<?php echo $url . "/assets/portfolioimage/" . $value; ?>'
+                    };
         <?php
-                    }
                 }
             }
+        }
         ?>
 
-        Dropzone.options.ssimageDropzone= {
+        Dropzone.options.ssimageDropzone = {
             url: '<?php echo $url; ?>upload',
             autoProcessQueue: true,
             uploadMultiple: false,
@@ -721,45 +752,52 @@ if (isset($_POST['submit'])) {
             init: function() {
                 dzClosure = this; // Makes sure that 'this' is understood inside the functions below.
                 <?php
-                    if(!empty($ss_image)){
+                if (!empty($ss_image)) {
                 ?>
-                        $.each(file_list_second_section, function(key,value) {
-                            var mockFile = { name: value.name, size: value.size,serverId: value.name};
+                    $.each(file_list_second_section, function(key, value) {
+                        var mockFile = {
+                            name: value.name,
+                            size: value.size,
+                            serverId: value.name
+                        };
 
-                            dzClosure.emit("addedfile", mockFile);
-                            dzClosure.emit("thumbnail", mockFile, value.path);
-                            dzClosure.emit("complete", mockFile);
-                        });
+                        dzClosure.emit("addedfile", mockFile);
+                        dzClosure.emit("thumbnail", mockFile, value.path);
+                        dzClosure.emit("complete", mockFile);
+                    });
                 <?php
-                    }
+                }
                 ?>
                 this.on("removedfile", function(file) {
                     if (!file.serverId) {
                         return;
                     }
-                    
+
                     $.ajax({
                         url: "<?php echo $url; ?>remove_file",
-                        type:'post',
-                        data:{file:file.serverId,id:'<?php echo @$_GET['id']; ?>'}, 
-                        success: function(result){
+                        type: 'post',
+                        data: {
+                            file: file.serverId,
+                            id: '<?php echo @$_GET['id']; ?>'
+                        },
+                        success: function(result) {
                             $("#ss_image").val($("#ss_image").val().replace(file.serverId, ""));
                         }
                     });
                 });
-                this.on("error", function (file) {
-                    
+                this.on("error", function(file) {
+
                     alert("please enter image file have size max 1MB");
                     dzClosure.removeFile(file);
-                    
+
                 });
             },
-            success: function(file, response){
+            success: function(file, response) {
                 response = JSON.parse(response);
                 var current_file = $("#ss_image").val();
-                if(current_file!=""){
-                    $("#ss_image").val(current_file+','+response.file);
-                }else{
+                if (current_file != "") {
+                    $("#ss_image").val(current_file + ',' + response.file);
+                } else {
                     $("#ss_image").val(response.file);
                 }
                 file.serverId = response.file;
@@ -768,22 +806,26 @@ if (isset($_POST['submit'])) {
 
         var file_list_slider_section = [];
         <?php
-            if(!empty($slider_image)){
-                foreach ($slider_image as $key=>$value) {
-                    if(file_exists("../assets/portfolioimage/".$value)){
+        if (!empty($slider_image)) {
+            foreach ($slider_image as $key => $value) {
+                if (file_exists("../assets/portfolioimage/" . $value)) {
 
-                        $size = filesize("../assets/portfolioimage/".$value);
+                    $size = filesize("../assets/portfolioimage/" . $value);
         ?>
 
-                        file_list_slider_section[<?php echo $key ?>] = {'name':'<?php echo $value; ?>','size':'<?php echo $size; ?>','path':'<?php echo $url."/assets/portfolioimage/".$value ;?>'};
+                    file_list_slider_section[<?php echo $key ?>] = {
+                        'name': '<?php echo $value; ?>',
+                        'size': '<?php echo $size; ?>',
+                        'path': '<?php echo $url . "/assets/portfolioimage/" . $value; ?>'
+                    };
         <?php
-                    }
                 }
             }
+        }
         ?>
 
 
-        Dropzone.options.sliderImageDropzone= {
+        Dropzone.options.sliderImageDropzone = {
             url: '<?php echo $url; ?>upload',
             autoProcessQueue: true,
             uploadMultiple: false,
@@ -795,45 +837,52 @@ if (isset($_POST['submit'])) {
             init: function() {
                 dzClosure = this; // Makes sure that 'this' is understood inside the functions below.
                 <?php
-                    if(!empty($slider_image)){
+                if (!empty($slider_image)) {
                 ?>
-                        $.each(file_list_slider_section, function(key,value) {
-                            var mockFile = { name: value.name, size: value.size,serverId: value.name};
+                    $.each(file_list_slider_section, function(key, value) {
+                        var mockFile = {
+                            name: value.name,
+                            size: value.size,
+                            serverId: value.name
+                        };
 
-                            dzClosure.emit("addedfile", mockFile);
-                            dzClosure.emit("thumbnail", mockFile, value.path);
-                            dzClosure.emit("complete", mockFile);
-                        });
+                        dzClosure.emit("addedfile", mockFile);
+                        dzClosure.emit("thumbnail", mockFile, value.path);
+                        dzClosure.emit("complete", mockFile);
+                    });
                 <?php
-                    }
+                }
                 ?>
                 this.on("removedfile", function(file) {
                     if (!file.serverId) {
                         return;
                     }
-                    
+
                     $.ajax({
                         url: "<?php echo $url; ?>remove_file",
-                        type:'post',
-                        data:{file:file.serverId,id:'<?php echo @$_GET['id']; ?>'}, 
-                        success: function(result){
+                        type: 'post',
+                        data: {
+                            file: file.serverId,
+                            id: '<?php echo @$_GET['id']; ?>'
+                        },
+                        success: function(result) {
                             $("#sliderImage").val($("#sliderImage").val().replace(file.serverId, ""));
                         }
                     });
                 });
-                this.on("error", function (file) {
-                    
+                this.on("error", function(file) {
+
                     alert("please enter image file have size max 1MB");
                     dzClosure.removeFile(file);
-                    
+
                 });
             },
-            success: function(file, response){
+            success: function(file, response) {
                 response = JSON.parse(response);
                 var current_file = $("#sliderImage").val();
-                if(current_file!=""){
-                    $("#sliderImage").val(current_file+','+response.file);
-                }else{
+                if (current_file != "") {
+                    $("#sliderImage").val(current_file + ',' + response.file);
+                } else {
                     $("#sliderImage").val(response.file);
                 }
                 file.serverId = response.file;
@@ -841,4 +890,5 @@ if (isset($_POST['submit'])) {
         }
     </script>
 </body>
+
 </html>

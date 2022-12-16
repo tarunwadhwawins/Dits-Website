@@ -3170,7 +3170,7 @@
 				transition: 0.5s;
 
 				&::before {
-					content: '';
+					content: "";
 					height: 5px;
 					width: 5px;
 					background-color: #656565;
@@ -3225,6 +3225,88 @@
 				padding: 10px 0;
 				float: initial;
 				width: 100%;
+			}
+		}
+		.healthCareList {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 2%;
+			margin-top: 50px;
+			.flip-box {
+				background-color: transparent;
+				height: 200px;
+				margin-bottom: 2%;
+				width: 32%;
+				display: inline-block;
+				overflow: hidden;
+				border-radius: 8px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+				@media (max-width: 991px) {
+					width: 49%;
+				}
+				@media (max-width: 767px) {
+					width: 100%;
+				}
+				@media (max-width: 575px) {
+					height: 260px;
+					margin-bottom: 5%;
+				}
+				&:hover {
+					.flip-box-inner {
+						.flip-box-back {
+							top: 0%;
+							transition: 0.8s;
+						}
+					}
+				}
+				.flip-box-inner {
+					position: relative;
+					width: 100%;
+					height: 100%;
+					text-align: center;
+					transition: transform 0.8s;
+					background-color: #e3e3e3;
+					.flip-box-front,
+					.flip-box-back {
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						padding: 10px;
+						p {
+							font-size: 15px;
+							line-height: 20px;
+							font-family: "open_sansregular";
+							transition: 0.5s;
+							margin: 0;
+						}
+					}
+					.flip-box-front {
+						padding: 10px 15px;
+						p {
+							color: #000;
+							font-size: 22px;
+							line-height: 32px;
+							@media (max-width: 575px) {
+								font-size: 18px;
+								line-height: 28px;
+							}
+						}
+					}
+
+					.flip-box-back {
+						top: 100%;
+						background-color: dodgerblue;
+						transition: 0.8s;
+						p {
+							color: #fff;
+						}
+					}
+				}
 			}
 		}
 	}
@@ -3550,7 +3632,7 @@
 
 		.thumbImageInner {
 			transform: scale(1.02);
-			transition: all .5s;
+			transition: all 0.5s;
 
 			img {
 				max-width: 100%;
@@ -3571,7 +3653,7 @@
 
 		.thumbImageInner {
 			transform: scale(1.02);
-			transition: all .5s;
+			transition: all 0.5s;
 
 			img {
 				max-width: 100%;
@@ -3610,7 +3692,7 @@
 
 		.thumbImageInner {
 			transform: scale(1.02);
-			transition: all .5s;
+			transition: all 0.5s;
 
 			img {
 				max-width: 100%;
@@ -3998,7 +4080,7 @@
 
 		.thumbImageInner {
 			transform: scale(1.02);
-			transition: all .5s;
+			transition: all 0.5s;
 
 			img {
 				max-width: 100%;
@@ -4674,24 +4756,24 @@
 		border-right: 1px solid #ddd;
 	}
 
-	input[type="radio"]+label.active {
+	input[type="radio"] + label.active {
 		color: #fff;
 		background-color: #193370;
 	}
 
-	input[type="radio"]+label {
+	input[type="radio"] + label {
 		background-color: #185ee0;
 	}
 
-	input[id="radio-1"]:checked~.glider {
+	input[id="radio-1"]:checked ~ .glider {
 		transform: translateX(0);
 	}
 
-	input[id="radio-2"]:checked~.glider {
+	input[id="radio-2"]:checked ~ .glider {
 		transform: translateX(100%);
 	}
 
-	input[id="radio-3"]:checked~.glider {
+	input[id="radio-3"]:checked ~ .glider {
 		transform: translateX(200%);
 	}
 
@@ -4981,7 +5063,7 @@
 }
 
 @media (max-width: 991px) {
-	.whiteBg .tab-content>.tab-pane {
+	.whiteBg .tab-content > .tab-pane {
 		display: block !important;
 		opacity: 1;
 	}
@@ -5003,4 +5085,160 @@
 	left: 16px;
 	bottom: 20px;
 	display: none;
+}
+
+.whyJoin {
+	padding: 50px 0;
+	background-color: #f9f9f9;
+	h2 {
+		margin: 0 0 30px;
+		text-transform: capitalize;
+	}
+	.innerBox {
+		text-align: center;
+		padding: 20px 20px 0;
+		svg {
+			path {
+				fill: #3095fb;
+			}
+		}
+		h5 {
+			margin: 10px 0;
+			text-transform: capitalize;
+			font-family: "dosissemibold";
+			color: #222;
+		}
+		p {
+			color: #999;
+			font-size: 13px;
+		}
+	}
+}
+.partUs {
+	padding: 50px 0;
+	h2 {
+		text-transform: capitalize;
+		margin: 0 0 5px;
+	}
+	p {
+		color: #999;
+	}
+	.departments {
+		border-right: 1px solid #e3e3e3;
+		.nav {
+			margin: 20px 0 0;
+			min-height: 500px;
+			.nav-link {
+				color: #222;
+				padding: 15px 0;
+				font-size: 18px;
+				&:first-child {
+					padding-top: 0;
+				}
+			}
+			.nav-link.active {
+				color: #3095fb;
+				background-color: transparent;
+			}
+		}
+	}
+	.featuredRole {
+		position: absolute;
+		height: auto;
+		top: 0;
+		bottom: 0;
+		overflow: auto;
+		width: 100%;
+		padding: 0 20px 0 0;
+		.tab-content {
+			margin: 20px 0 0;
+			.tab-pane {
+				ul {
+					list-style: none;
+					li {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						border-top: 1px solid #e3e3e3;
+						padding: 15px 0;
+						&:first-child {
+							border: none;
+							padding-top: 0;
+						}
+						p {
+							font-size: 20px;
+							color: #444;
+						}
+						span {
+							font-size: 15px;
+							color: #999;
+						}
+						.right {
+							min-width: 120px;
+							text-align: right;
+						}
+					}
+				}
+				.noJob {
+					font-size: 18px;
+					color: #222;
+				}
+			}
+		}
+	}
+}
+.jobInfo {
+	padding: 30px 0;
+	h5 {
+		margin: 30px 0 5px;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+	ul {
+		list-style: inside;
+		li {
+			font-size: 15px;
+			font-family: "open_sansregular";
+			margin: 0 0 3px;
+		}
+	}
+}
+.mobileSlider {
+	display: block;
+	.cl {
+		padding: 25px;
+		.mobileSlide {
+			position: relative;
+			padding: 12px;
+		}
+	}
+	.slick-active {
+		&::before {
+			display: none;
+		}
+	}
+	.slick-active.slick-center {
+		.cl {
+			.mobileSlide {
+				&::before {
+					content: "";
+					background-image: url(../mobile-portfolio/mobile.png);
+					background-size: 100% 100%;
+					position: absolute;
+					inset: 0;
+					background-repeat: no-repeat;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 1200px) {
+	.mobileSlider {
+		.cl {
+			.mobileSlide {
+				padding: 9px;
+			}
+		}
+	}
 }

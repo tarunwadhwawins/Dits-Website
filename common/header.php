@@ -70,8 +70,8 @@
                         </div>
                     </div>
                     <div class="col-sm-12">
-                         <div class="g-recaptcha" data-sitekey="6LcKMkYjAAAAAOEUgrEnosQrqfnsYOyjvlByc61o" data-callback="captchSubmit"></div>
-                           <div class="recaptchaerror">Please validate captcha</div>
+                        <div class="g-recaptcha" data-sitekey="6LcKMkYjAAAAAOEUgrEnosQrqfnsYOyjvlByc61o" data-callback="captchSubmit"></div>
+                        <div class="recaptchaerror">Please validate captcha</div>
                     </div>
                     <div class="col-6">
                         <div class="text-left">
@@ -80,7 +80,9 @@
                     </div>
                     <div class="col-6">
                         <div class="contactUsForm">
-                            <button type="submit" class="btn siteBtn"><div class="formLoader"></div>Send</button>
+                            <button type="submit" class="btn siteBtn">
+                                <div class="formLoader"></div>Send
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -293,6 +295,7 @@ $current_page = $_SERVER['REQUEST_URI'];
                                 <li class="nav-item <?php echo $current_page == '/portfolio' ? 'active' : '' ?>">
                                     <a class="nav-link" href="<?php echo $url; ?>portfolio" title="Portfolio">Portfolio</a>
                                 </li>
+                                <li class="nav-item <?php echo $current_page == '/careers' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>careers">Careers</a></li>
                                 <li class="nav-item <?php echo $current_page == '/contact' ? 'active' : '' ?>">
                                     <a class="nav-link" href="<?php echo $url; ?>contact" title="Contact Us">Contact Us</a>
                                 </li>
@@ -358,6 +361,7 @@ $current_page = $_SERVER['REQUEST_URI'];
                                         ?>"> <a class="nav-link" href="<?php echo $url; ?>industries" title="Industries">Industries</a> </li> -->
             <li class="nav-item <?php echo $current_page == '/blogs' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>blog" target="_blank">Blogs</a></li>
             <li class="nav-item <?php echo $current_page == '/portfolio' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>portfolio">Portfolio</a></li>
+            <li class="nav-item <?php echo $current_page == '/careers' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>careers">Careers</a></li>
 
             <li class="nav-item <?php echo $current_page == '/contact' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>contact">Contact Us</a></li>
     </div>
