@@ -419,10 +419,10 @@ if (isset($_POST['submit'])) {
                             <label>Slider For</label>
                             <div class="form-check-inline">
                                 <label class="form-check-label mr-3">
-                                    <input type="radio" class="form-check-input" name="slider" value="web" <?php if($slider=='web'){ echo "checked"; } ?> >Web App
+                                    <input type="radio" class="form-check-input" name="slider" value="web" <?php if(@$slider=='web'){ echo "checked"; } ?> >Web App
                                 </label>
                                 <label class="form-check-label">
-                                    <input type="radio" class="form-check-input" name="slider" value="mobile" <?php if($slider=='mobile'){ echo "checked"; } ?> >Mobile App
+                                    <input type="radio" class="form-check-input" name="slider" value="mobile" <?php if(@$slider=='mobile'){ echo "checked"; } ?> >Mobile App
                                 </label>
                             </div>
                         </div>
