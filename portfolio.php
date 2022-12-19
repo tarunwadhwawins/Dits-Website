@@ -337,9 +337,9 @@ $get_portfolio = get_portfolio($conn);
          if(index>-1){
             URL = URL.substring(0,index);
          }
-         URL=URL+"portfolio/"
+         URL=URL+"portfolio"
          if(selected_category_slug!='All' || selected_tag!='All'){
-            URL=URL+selected_category_slug+"/";
+            URL=URL+"/"+selected_category_slug+"/";
          }
          if(selected_category_slug!='All' || selected_tag!='All'){
             URL=URL+selected_tag.replace(" ","-");
