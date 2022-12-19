@@ -232,7 +232,7 @@ $get_portfolio = get_portfolio($conn);
       <?php 
          if(isset($_GET['tag']) && $_GET['tag']!=''){
       ?>
-            var selected_tag = "<?php echo $_GET['tag']; ?>";
+            var selected_tag = "<?php echo str_replace("-", " ", $_GET['tag']); ?>";
       <?php
          }else{
       ?>
@@ -342,7 +342,7 @@ $get_portfolio = get_portfolio($conn);
             URL=URL+selected_category_slug+"/";
          }
          if(selected_category_slug!='All' || selected_tag!='All'){
-            URL=URL+selected_tag;
+            URL=URL+selected_tag.replace(" ","-");
          }
          window.history.pushState("","", URL);
       }
