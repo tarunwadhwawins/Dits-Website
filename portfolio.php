@@ -24,7 +24,7 @@ $get_portfolio = get_portfolio($conn);
       <?php include_once('common/header.php'); ?>
       <!---->
       <div class="bannerMain">
-         <img src="assets/images/Portfoliobanner1.jpg" alt="image" />
+         <img src="<?php echo $url; ?>assets/images/Portfoliobanner1.jpg" alt="image" />
          <div class="bannerDesc">
             <div class="container">
                <div class="row">
@@ -168,8 +168,8 @@ $get_portfolio = get_portfolio($conn);
                                                  }
                                                  $Output .= "<div class='col-lg-4 col-md-6 col-sm-12 commonPortfolio moreBox'>
                                                                  <div class='potfolioDiv'>
-                                                                     <a href='portfolio/$row[slug]' target='_blank'>
-                                                                     <div class='thumbImage' style='background-image: url(assets/portfolioimage/$row[image]);'>
+                                                                     <a href='$url/portfolio/$row[slug]' target='_blank'>
+                                                                     <div class='thumbImage' style='background-image: url($url/assets/portfolioimage/$row[image]);'>
                                                                              <div class='domainName'>$row[name]</div>
                                                                          </div>
                                                                          <div class='thumbDesc'>
@@ -344,6 +344,7 @@ $get_portfolio = get_portfolio($conn);
          if(selected_category_slug!='All' || selected_tag!='All'){
             URL=URL+selected_tag.replace(" ","-");
          }
+         console.log(URL);
          window.history.pushState("","", URL);
       }
       
