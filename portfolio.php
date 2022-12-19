@@ -333,20 +333,16 @@ $get_portfolio = get_portfolio($conn);
       }
       function updateURL(){
          var URL = window.location.href;
-         var index = URL.indexOf("category");
+         var index = URL.indexOf("portfolio");
          if(index>-1){
             URL = URL.substring(0,index);
-         }else{
-            var index = URL.indexOf("tag");
-            if(index>-1){
-               URL = URL.substring(0,index);
-            }
          }
-         if(selected_category_slug!='All'){
-            URL=URL+"category/"+selected_category_slug+"/";
+         URL=URL+"portfolio/"
+         if(selected_category_slug!='All' || selected_tag!='All'){
+            URL=URL+selected_category_slug+"/";
          }
-         if(selected_tag!='All'){
-            URL=URL+"tag/"+selected_tag;
+         if(selected_category_slug!='All' || selected_tag!='All'){
+            URL=URL+selected_tag;
          }
          window.history.pushState("","", URL);
       }
