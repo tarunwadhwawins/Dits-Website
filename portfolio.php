@@ -1,6 +1,7 @@
 <?php
 require_once('core/dbconnection.php');
 require_once('core/ajax.php');
+
 $get_portfolio = get_portfolio($conn);
 
 ?>
@@ -62,7 +63,7 @@ $get_portfolio = get_portfolio($conn);
                            <div class="dropdown-menu tagsList" aria-labelledby="cat-tabs">
                            <div class="tabs-domain">
                                     <input type="radio" id="radio0" name="tabs" />
-                                    <label class="tab category All" for="radio0" onclick="loadCategory('All', 'All', 'All')">All</label>
+                                    <label class="tab category All active" for="radio0" onclick="loadCategory('All', 'All', 'All')">All</label>
                                     <?php $get_category = get_category($conn);
                                     $i = 1;
                                     foreach ($get_category as $list) { ?>
@@ -109,14 +110,14 @@ $get_portfolio = get_portfolio($conn);
                                  <div class="tabs">
                                     <ul id="tabs" class="nav justify-content-center" role="tablist">
                                        <li class="nav-item">
-                                          <a id="tab-A" href="#pane-A" class="nav-link active" data-toggle="tab" role="tab" onclick="loadCategoryWithTag('All')">All</a>
+                                          <a id="tag-All" href="#pane-A" class="nav-link tag-All active" data-toggle="tab" role="tab" onclick="loadCategoryWithTag('All')">All</a>
                                        </li>
                                        <?php
                                        $get_tags = get_tags($conn);
                                        foreach ($get_tags as $tag) {
                                        ?>
                                           <li class="nav-item">
-                                             <a id="tab-ALL" href="#pane-ALL" class="nav-link" data-toggle="tab" role="tab" onclick="loadCategoryWithTag('<?php echo $tag['tag'] ?>')"><?php echo $tag['tag'] ?></a>
+                                             <a id="tag-<?php echo str_replace(" ", "-", $tag['tag']); ?>" href="#pane-ALL" class="nav-link tag-<?php echo str_replace(" ", "-", $tag['tag']); ?>" data-toggle="tab" role="tab" onclick="loadCategoryWithTag('<?php echo $tag['tag'] ?>')"><?php echo $tag['tag'] ?></a>
                                           </li>
                                        <?php } ?>
                                     </ul>
@@ -129,7 +130,7 @@ $get_portfolio = get_portfolio($conn);
                         <div class="tabs">
                            <ul id="tabs" class="nav nav-tabs justify-content-center" role="tablist">
                               <li class="nav-item">
-                                 <a id="tab-A" href="#pane-A" class="nav-link active" data-toggle="tab" role="tab" onclick="loadCategoryWithTag('All')">All</a>
+                                 <a id="tag-All" href="#pane-A" class="nav-link tag-All active" data-toggle="tab" role="tab" onclick="loadCategoryWithTag('All')">All</a>
                               </li>
 
                               <?php
@@ -137,7 +138,7 @@ $get_portfolio = get_portfolio($conn);
                               foreach ($get_tags as $tag) {
                               ?>
                                  <li class="nav-item">
-                                    <a id="tab-ALL" href="#pane-ALL" class="nav-link" data-toggle="tab" role="tab" onclick="loadCategoryWithTag('<?php echo $tag['tag'] ?>')"><?php echo $tag['tag'] ?></a>
+                                    <a id="tag-<?php echo str_replace(" ", "-", $tag['tag']); ?>" href="#pane-ALL" class="nav-link tag-<?php echo str_replace(" ", "-", $tag['tag']); ?>" data-toggle="tab" role="tab" onclick="loadCategoryWithTag('<?php echo $tag['tag'] ?>')"><?php echo $tag['tag'] ?></a>
                                  </li>
                               <?php } ?>
                            </ul>
@@ -208,25 +209,57 @@ $get_portfolio = get_portfolio($conn);
    <?php include_once('common/commonscripts.php'); ?>
    <!---->
    <script>
-      var selected_category = "All";
-      var selected_tag = "All";
+      
+      <?php 
+         if(isset($_GET['category']) && $_GET['category']!=''){
+      ?>
+            var selected_category_slug = "<?php echo $_GET['category']; ?>";
+            var selected_category = $("."+selected_category_slug).attr('id');
+            var selected_category_name = $("."+selected_category_slug)[0].innerHTML;
+            
+            
+      <?php
+         }else{
+      ?>
+            var selected_category = "All";
+            var selected_category_slug = "All";
+            var selected_category_name = "All";
+
+      <?php
+         }
+      ?>
+
+      <?php 
+         if(isset($_GET['tag']) && $_GET['tag']!=''){
+      ?>
+            var selected_tag = "<?php echo $_GET['tag']; ?>";
+      <?php
+         }else{
+      ?>
+            var selected_tag = "All";
+
+      <?php
+         }
+      ?>
+      
+      loadCategory(selected_category_slug, selected_category, selected_category_name);
+
       var page = 1;
       var has_more = false;
       var ajax_load;
       var element_position = $('#PortfolioContent');
       $(document).ready(function() {
          $(".load-more").hide();
-         $('.tabs-domain label:first').addClass('active');
-         //$("#PortfolioContent").html("");
-         //loadPortfolio(selected_category, selected_tag);
-
+         if(selected_category_slug == "All"){
+            $('.tabs-domain label:first').addClass('active');
+         }
          $(window).on('scroll', function() {
             var y_scroll_pos = $(this).scrollTop();
             var scroll_pos_test = (element_position[0].offsetTop + element_position[0].offsetHeight) - 300;
 
             if (y_scroll_pos > scroll_pos_test) {
 
-               loadPortfolio(selected_category, selected_tag);
+              loadPortfolio(selected_category, selected_tag);
             }
          });
       });
@@ -239,12 +272,18 @@ $get_portfolio = get_portfolio($conn);
          $(".category").removeClass('active');
          $("." + Slug).addClass('active');
          $('.nav-link').removeClass('active');
-         $('.tabs li:first .nav-link').addClass('active');
+         
+         if(typeof selected_tag == 'undefined'){
+            selected_tag = "All";
+         }
+         $(".tag-" + selected_tag.replace(" ","-")).addClass('active');
+
          $("#PortfolioContent").html("");
          selected_category = CategoryID;
-         selected_tag = "All";
+         selected_category_slug = Slug;
+         
          has_more = true;
-         loadPortfolio(CategoryID, 'All');
+         loadPortfolio(CategoryID, selected_tag);
       }
 
       function loadCategoryWithTag(Tag, Category) {
@@ -260,7 +299,6 @@ $get_portfolio = get_portfolio($conn);
          selected_tag = Tag;
          $("#PortfolioContent").html("");
          has_more = true;
-         console.log(Category);
          loadPortfolio(Category, Tag)
       }
 
@@ -270,6 +308,7 @@ $get_portfolio = get_portfolio($conn);
             if (ajax_load) {
                ajax_load.abort();
             }
+            updateURL();
             ajax_load = jQuery.ajax({
                url: '<?php echo $url; ?>core/ajax',
                method: "GET",
@@ -292,6 +331,26 @@ $get_portfolio = get_portfolio($conn);
             });
          }
       }
+      function updateURL(){
+         var URL = window.location.href;
+         var index = URL.indexOf("category");
+         if(index>-1){
+            URL = URL.substring(0,index);
+         }else{
+            var index = URL.indexOf("tag");
+            if(index>-1){
+               URL = URL.substring(0,index);
+            }
+         }
+         if(selected_category_slug!='All'){
+            URL=URL+"category/"+selected_category_slug+"/";
+         }
+         if(selected_tag!='All'){
+            URL=URL+"tag/"+selected_tag;
+         }
+         window.history.pushState("","", URL);
+      }
+      
    </script>
 
    <style>

@@ -19,6 +19,9 @@ RewriteRule ^portfolios/(.*)$ /portfolio/$1 [R=301,NC,L]
 RewriteRule ^blogs /blog/$1 [R=301,NC,L]
 RewriteRule ^blog/(.*)$ inner_blog_page.php?title=$1 [NC]
 
+RewriteRule ^portfolio/category/([^/]+)/?$ portfolio.php?category=$1 [NC,L]
+RewriteRule ^portfolio/category/([^/]+)/tag/([^/]+)/?$ portfolio.php?category=$1&tag=$2 [NC,L]
+RewriteRule ^portfolio/tag/([^/]+)/?$ portfolio.php?tag=$1 [NC,L]
 RewriteRule ^portfolio/([^/]+)/?$ inner_portfolio_page.php?title=$1 [NC,L]
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^ %{REQUEST_URI}.php [NC,L]
