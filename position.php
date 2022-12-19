@@ -67,7 +67,7 @@ require_once('core/dbconnection.php');
       </div>
    </section>
    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog contact" role="document">
+      <div class="modal-dialog modal-dialog-centered contact" role="document">
          <div class="modal-content modal-md">
             <div class="row">
                <button type="button" class="close" data-dismiss="modal" aria-label="Close">

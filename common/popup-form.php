@@ -1,4 +1,4 @@
-<div class="modal-dialog contact" role="document">
+<div class="modal-dialog modal-dialog-centered contact" role="document">
    <div class="modal-content modal-md">
       <div class="row">
          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
