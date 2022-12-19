@@ -26,6 +26,7 @@ if (isset($_GET['id']) && $_GET['id'] != '') {
         $seo_desc = $row['seo_desc'];
         $title = $row['title'];
         $slug = $row['slug'];
+        $slider = $row['slider'];
         $tags = (explode(',', $row['tags']));
         $image = $row['image'];
         if (!empty($row['slider_image'])) {
@@ -64,6 +65,7 @@ if (isset($_POST['submit'])) {
     // print_r($_FILES);
     // die;
     $seo_title = get_safe_value($conn, $_POST['seo_title']);
+    $slider = get_safe_value($conn, $_POST['slider']);
     $seo_keyword = get_safe_value($conn, $_POST['seo_keyword']);
     $seo_desc = get_safe_value($conn, $_POST['seo_desc']);
     $category_id = get_safe_value($conn, $_POST['category_id']);
@@ -114,13 +116,12 @@ if (isset($_POST['submit'])) {
             if ($MainImageQuery != '' || $Section1ImageQuery != '' || $Section2ImageQuery != '' || $sliderImageUpdate != '') {
                 $update_sql = "update portfolio set  seo_title = '$seo_title' , seo_keyword = '$seo_keyword' , seo_desc = '$seo_desc' ,
                 category_id = '$category_id' , title='$title', slug='$slug' , tags = '$tags', banner_heading='$banner_heading', 
-                fs_heading = '$fs_heading' , fs_sub_heading = '$fs_sub_heading', fs_description = '$fs_description' $Section1ImageQuery , image_text = '$image_text' , ss_description = '$ss_description' $Section2ImageQuery  , date='$date' ,
+                fs_heading = '$fs_heading' , fs_sub_heading = '$fs_sub_heading', fs_description = '$fs_description' $Section1ImageQuery , image_text = '$image_text' , ss_description = '$ss_description' $Section2ImageQuery  , date='$date' , slider='$slider' ,
                 short_desc='$short_desc' $MainImageQuery $sliderImageUpdate  where id='$id'";
             } else {
                 $update_sql = "update portfolio set  seo_title = '$seo_title' , seo_keyword = '$seo_keyword' , seo_desc = '$seo_desc' ,
                 category_id = '$category_id' , title='$title', slug='$slug' , tags = '$tags', banner_heading='$banner_heading', fs_heading = '$fs_heading' ,
-                fs_sub_heading = '$fs_sub_heading', fs_description = '$fs_description', image_text = '$image_text'  , ss_description = '$ss_description'  , date='$date' ,
-                short_desc='$short_desc'  where id='$id'";
+                fs_sub_heading = '$fs_sub_heading', fs_description = '$fs_description', image_text = '$image_text'  , ss_description = '$ss_description'  , date='$date' , slider='$slider' ,  short_desc='$short_desc'  where id='$id'";
             }
 
             mysqli_query($conn, $update_sql);
@@ -129,8 +130,8 @@ if (isset($_POST['submit'])) {
             $_SESSION['success_message'] = "Data updated successfully.";
             header('location:add-portfolio.php?id=' . $id);
         } else {
-            mysqli_query($conn, "insert into portfolio (seo_title, seo_keyword, seo_desc,category_id, title, slug , tags, banner_heading , sub_heading , short_desc, fs_heading , fs_sub_heading ,  fs_description ,  fs_image , image_text , ss_description ,  ss_image , date, status, image,slider_image) 
-            values('$seo_title', '$seo_keyword', '$seo_desc', '$category_id', '$title', '$slug' , '$tags', '$banner_heading', '', '$short_desc', '$fs_heading', '$fs_sub_heading' , '$fs_description'  , '$fsImage', '$image_text' , '$ss_description' , '$ssImage' , '$date', '1', '$image',  '$fileName')");
+            mysqli_query($conn, "insert into portfolio (seo_title, seo_keyword, seo_desc,category_id, title, slug , tags, banner_heading , sub_heading , short_desc, fs_heading , fs_sub_heading ,  fs_description ,  fs_image , image_text , ss_description ,  ss_image , date, status, image,slider_image,slider) 
+            values('$seo_title', '$seo_keyword', '$seo_desc', '$category_id', '$title', '$slug' , '$tags', '$banner_heading', '', '$short_desc', '$fs_heading', '$fs_sub_heading' , '$fs_description'  , '$fsImage', '$image_text' , '$ss_description' , '$ssImage' , '$date', '1', '$image',  '$fileName',  '$slider')");
             $id = $conn->insert_id;
             session_start();
             $_SESSION['success_message'] = "Data inserted successfully.";
@@ -418,10 +419,10 @@ if (isset($_POST['submit'])) {
                             <label>Slider For</label>
                             <div class="form-check-inline">
                                 <label class="form-check-label mr-3">
-                                    <input type="radio" class="form-check-input" name="optradio" checked>Web App
+                                    <input type="radio" class="form-check-input" name="slider" value="web" <?php if($slider=='web'){ echo "checked"; } ?> >Web App
                                 </label>
                                 <label class="form-check-label">
-                                    <input type="radio" class="form-check-input" name="optradio">Mobile App
+                                    <input type="radio" class="form-check-input" name="slider" value="mobile" <?php if($slider=='mobile'){ echo "checked"; } ?> >Mobile App
                                 </label>
                             </div>
                         </div>
