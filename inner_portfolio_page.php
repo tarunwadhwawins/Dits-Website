@@ -70,7 +70,7 @@ foreach ($Tags as $Tag) {
                <div class="row">
                   <div class="col-sm-12">
                      <h1><?php echo $get_portfolio_details[0]['banner_heading'] ?></h1>
-                     <div class="bannerButton mt-3" id="bannerExtFour" data-toggle="modal" data-target="#exampleModal"> <a href="javascript:void(0);" class="btn btn-custom blueBtn  siteBtn addCountry">Contact Form</a> </div>
+                     <div class="bannerButton mt-3" id="bannerExtFour" data-toggle="modal" data-target="#exampleModal"> <a href="javascript:void(0);" class="btn btn-custom blueBtn  siteBtn addCountry">Contact Us</a> </div>
 
                   </div>
                </div>

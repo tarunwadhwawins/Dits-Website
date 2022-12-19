@@ -111,28 +111,37 @@
                   </div>
                </div>
                <div class="col-sm-4 pad-0">
-				  <div class="contactInfo">
-                  <h2>India Office</h2>
-                  <ul>
-                     <li><span><i class="feather icon-map-pin"></i></span> SCO - 356 , Sector 44-D, Chandigarh, 160047</li>
-                     <li><a href="mailto:info@ditstek.com"><span><i class="feather icon-mail"></i></span> info@ditstek.com</a></li>
-                     <li><a href="tel:+91-623-942-1395"><span><i class="feather icon-phone"></i></span> +91-623-942-1395 </a></li>
-                     <li><a href="tel:+91172-4080477"><span><i class="feather icon-phone"></i></span> +91172-4080477 </a></li>
-
-                     <li><a href="skype:-princy.dhupar-?chat"><span><i class="fa fa-skype"></i></span> princy.dhupar</a></li>
-                  </ul>
-                  <h2>USA Office</h2>
-                  <ul>
-                     <li><span><i class="feather icon-map-pin"></i></span> 1500 Poly Dr, Suite 107 Billings, MT, USA</li>
-                     <li>
-                        <div class="mainClass"><a href="mailto:tom@whitewater.dev"><span><i class="feather icon-mail"></i></span><img src="<?php echo $url; ?>assets/images/img-bottom1.png" alt="image"></a></div>
-                     </li>
-                     <li>
-                        <div class="mainClass"><a href="tel:+1-406-672-8292"><span><i class="feather icon-phone"></i></span> +1-406-672-8292</a></div>
-                     </li>
-                  </ul>
-				  </div>
-				</div>
+                  <div class="contactInfo">
+                        <h2>offshore</h2>
+                        <ul>
+                           <li><a href="https://www.ditstek.com/" target="_blank"><span><i class="feather icon-globe"></i></span> Chandigarh
+                                            (India)</a></li>
+                           <li><a href="mailto:info@ditstek.com"><span><i class="feather icon-mail"></i></span> mailto:info@ditstek.com</a></li>
+                           <li><a href="tel:+91172-4080477"><span><i class="feather icon-phone"></i></span> +91172-4080477 </a></li>
+                        </ul>
+                        <h2>onshore</h2>
+                        <ul class="borderBottom">
+                        <li><a href="https://whitewater.dev/" target="_blank"><span><i class="feather icon-globe"></i></span> Montana (USA)</span></a></li>
+                           <li><span><i class="feather icon-map-pin"></i></span> 1500 Poly Dr, Suite 107 Billings, MT, USA</li>
+                           <li>
+                              <div class="mainClass"><a href="mailto:tom@whitewater.dev"><span><i class="feather mailto:icon-mail"></i></span>tom@whitewater.dev</a></div>
+                           </li>
+                           <li>
+                              <div class="mainClass"><a href="tel:+1(406) 672-8292"><span><i class="feather icon-phone"></i></span> +1(406) 672-8292</a></div>
+                           </li>
+                        </ul>
+                        <ul>
+                           <li><a href="https://www.abellasys.com/" target="_blank"><span><i class="feather icon-globe"></i></span> Utah (USA)</a></li>
+                           <li><span><i class="feather icon-map-pin"></i></span>Heber City, UT 84032</li>
+                           <li>
+                              <div class="mainClass"><a href="mailto:info@abellasys.com"><span><i class="feather mailto:icon-mail"></i></span>info@abellasys.com</a></div>
+                           </li>
+                           <li>
+                              <div class="mainClass"><a href="tel:+1(877) 559-6361"><span><i class="feather icon-phone"></i></span>+1(877) 559-6361</a></div>
+                           </li>
+                        </ul>
+                  </div>
+				   </div>
             </div>
          </div>
       </section>

@@ -21,7 +21,7 @@
 
 <h1 id=bannerExtTwo><span id=bannerExtOne>Custom Software</span> <br>Development Solution</h1>
 <p id=bannerExtThree>A remote software development company providing offshore development services enabling <br> business rapidity and competence with web and mobile solutions</p>
-<div class=bannerButton id=bannerExtFour> <a href="<?php echo $url; ?>portfolio" class="btn btn-custom siteBtn">Our Portfolio </a> <a href="javascript:void(0);"  data-toggle="modal" data-target="#exampleModal" class="btn btn-custom siteBtn addCountry bannerSecondaryBtn">Get in touch</a> </div>
+<div class=bannerButton id=bannerExtFour> <a href="<?php echo $url; ?>portfolio" class="btn btn-custom siteBtn blueBtn">Our Portfolio </a> <a href="javascript:void(0);"  data-toggle="modal" data-target="#exampleModal" class="btn btn-custom siteBtn addCountry bannerSecondaryBtn">Get in touch</a> </div>
 </div>
 <div class="scroll wow"><a href="#services"><span></span></a></div>
 </section>
