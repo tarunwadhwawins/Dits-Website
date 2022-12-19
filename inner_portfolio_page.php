@@ -135,33 +135,77 @@ foreach ($Tags as $Tag) {
          </div>
       </div>
    </section>
-   <section class="commonSlider">
-      <div class="container">
-         <div class="row">
-            <div class="col-sm-12">
-               <div class="commonTitle">
-                  <h3>Project Screenshots</h3>
-               </div>
-            </div>
-            <div class="col-sm-12">
-               <div class="slider center">
-                  <?php
-                  $sImage = $get_portfolio_details[0]['slider_image'];
-                  $sliderImage  = (explode(',', $sImage));
-                  foreach ($sliderImage as $list) {
-                  ?>
-                     <div class="slide">
-                        <div class="cl">
-                           <img src="<?php echo $url; ?>assets/portfolioimage/<?php echo $list ?>" alt="Peer to Peer Car Sharing Application" title="<?php echo str_replace(['.jpg', '.jpeg', '.png', '.gif'], '', $list) ?>">
-
-                        </div>
+   <?php
+      if($get_portfolio_details[0]['slider']=='web'){
+   ?>
+         <section class="commonSlider">
+            <div class="container">
+               <div class="row">
+                  <div class="col-sm-12">
+                     <div class="commonTitle">
+                        <h3>Project Screenshots</h3>
                      </div>
-                  <?php } ?>
+                  </div>
+                  <div class="col-sm-12">
+                     <div class="slider center">
+                        <?php
+                        $sImage = $get_portfolio_details[0]['slider_image'];
+                        $sliderImage  = (explode(',', $sImage));
+                        foreach ($sliderImage as $list) {
+                        ?>
+                           <div class="slide">
+                              <div class="cl">
+                                 <img src="<?php echo $url; ?>assets/portfolioimage/<?php echo $list ?>" alt="Peer to Peer Car Sharing Application" title="<?php echo str_replace(['.jpg', '.jpeg', '.png', '.gif'], '', $list) ?>">
+
+                              </div>
+                           </div>
+                        <?php } ?>
+                     </div>
+                  </div>
                </div>
             </div>
-         </div>
-      </div>
-   </section>
+         </section>
+   <?php
+
+      }
+  
+      if($get_portfolio_details[0]['slider']=='mobile'){
+   ?>
+         <section class="commonSlider mobileSlider">
+            <div class="container">
+               <div class="row">
+                  <div class="col-sm-12">
+                     <div class="commonTitle">
+                        <h3>Project Screenshots</h3>
+                     </div>
+                  </div>
+                  <div class="col-sm-12">
+                     <div class="slider mobile">
+
+                        <?php
+                           $sImage = $get_portfolio_details[0]['slider_image'];
+                           $sliderImage  = (explode(',', $sImage));
+                           foreach ($sliderImage as $list) {
+                        ?>
+                           <div class="slide">
+                              <div class="cl">
+                                 <div class="mobileSlide">
+                                    <img src="<?php echo $url; ?>assets/portfolioimage/<?php echo $list ?>" alt="Peer to Peer Car Sharing Application" title="<?php echo str_replace(['.jpg', '.jpeg', '.png', '.gif'], '', $list) ?>">
+                                 </div>
+                              </div>
+                           </div>
+                        <?php 
+                           } 
+                        ?>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+   <?php
+
+      }
+   ?>
    <div class="backPortfolio">
       <a href="<?php echo $url; ?>portfolio">Back To Portfolio </a>
    </div>
