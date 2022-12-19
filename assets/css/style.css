@@ -2836,6 +2836,7 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .industries .innerThumbDesc ul li {
   font-size: 15px;
@@ -2843,9 +2844,8 @@
   position: relative;
   font-family: "open_sansregular";
   background: #fbfbfb;
-  padding-left: 28px;
-  margin: 10px 20px 10px 0;
-  width: 47%;
+  margin: 10px 0 10px 0;
+  width: 49%;
   padding: 7px 30px;
   transition: 0.5s;
 }
@@ -4283,6 +4283,7 @@
 }
 .tabs-domain input[type=radio] + label {
   background-color: #185ee0;
+  color: #fff;
 }
 .tabs-domain input[id=radio-1]:checked ~ .glider {
   transform: translateX(0);
