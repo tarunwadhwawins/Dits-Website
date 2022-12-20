@@ -325,15 +325,15 @@ if (isset($_POST['submit'])) {
     </script>
     <script src="https://unpkg.com/@jcubic/tagger@0.x.x/tagger.js"></script>
     <script>
-        var input = document.querySelector('[name="seo_keyword"]');
-        var seo_keyword = tagger(input, {
-            allow_duplicates: false,
-            allow_spaces: true,
-            wrap: true,
-            completion: {
-                list: ['foo', 'bar', 'tomato', 'tomato sause']
-            }
-        });
+        // var input = document.querySelector('[name="seo_keyword"]');
+        // var seo_keyword = tagger(input, {
+        //     allow_duplicates: false,
+        //     allow_spaces: true,
+        //     wrap: true,
+        //     completion: {
+        //         list: ['foo', 'bar', 'tomato', 'tomato sause']
+        //     }
+        // });
     </script>
 
 </body>
