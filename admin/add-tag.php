@@ -23,6 +23,7 @@ if(isset($_GET['id']) && $_GET['id']!='')
 if(isset($_POST['submit']))
 {
     $tag=get_safe_value($conn,$_POST['tag']);
+    $slug=get_safe_value($conn, str_replace(" ", "-", strtolower($_POST['tag'])));
 
     $res=mysqli_query($conn,"select * from tags where tag='$tag'");
     $check=mysqli_num_rows($res);
@@ -50,7 +51,7 @@ if(isset($_POST['submit']))
     {
         if(isset($_GET['id']) && $_GET['id']!='')
         {
-            mysqli_query($conn,"update tags set tag='$tag'  where id='$id'"); 
+            mysqli_query($conn,"update tags set tag='$tag',slug='$slug'  where id='$id'"); 
             session_start();
             $_SESSION['success_message'] = "Tags updated successfully.";   
             header('location:add-tag.php');
@@ -58,7 +59,7 @@ if(isset($_POST['submit']))
         }
         else
         {
-            mysqli_query($conn,"insert into tags(tag,status) values('$tag' ,'1')");
+            mysqli_query($conn,"insert into tags(tag,slug,status) values('$tag','$slug' ,'1')");
         }
         session_start();
         $_SESSION['success_message'] = "Tags inserted successfully.";   
