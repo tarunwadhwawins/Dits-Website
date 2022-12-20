@@ -63,7 +63,7 @@ $get_portfolio = get_portfolio($conn);
                            <div class="dropdown-menu tagsList" aria-labelledby="cat-tabs">
                            <div class="tabs-domain">
                                     <input type="radio" id="radio0" name="tabs" />
-                                    <label class="tab category All active" for="radio0" onclick="loadCategory('All', 'All', 'All')">All</label>
+                                    <label class="tab category all active" for="radio0" onclick="loadCategory('all', 'All', 'All')">All</label>
                                     <?php $get_category = get_category($conn);
                                     $i = 1;
                                     foreach ($get_category as $list) { ?>
@@ -81,7 +81,7 @@ $get_portfolio = get_portfolio($conn);
                         <div class="deskFilter">
                            <div class="tabs-domain">
                               <input type="radio" id="radio0" name="tabs" />
-                              <label class="tab category All active" for="radio0" onclick="loadCategory('All', 'All', 'All')">All</label>
+                              <label class="tab category all active" for="radio0" onclick="loadCategory('all', 'All', 'All')">All</label>
 
                               <?php
                               $get_category = get_category($conn);
@@ -110,14 +110,14 @@ $get_portfolio = get_portfolio($conn);
                                  <div class="tabs">
                                     <ul id="tabs" class="nav justify-content-center" role="tablist">
                                        <li class="nav-item">
-                                          <a id="tag-All" href="#pane-A" class="nav-link tag-All active" data-toggle="tab" role="tab" onclick="loadCategoryWithTag('All')">All</a>
+                                          <a id="tag-all" href="#pane-A" class="nav-link tag-all active" data-toggle="tab" role="tab" onclick="loadCategoryWithTag('all')">All</a>
                                        </li>
                                        <?php
                                        $get_tags = get_tags($conn);
                                        foreach ($get_tags as $tag) {
                                        ?>
                                           <li class="nav-item">
-                                             <a id="tag-<?php echo str_replace(" ", "-", $tag['tag']); ?>" href="#pane-ALL" class="nav-link tag-<?php echo str_replace(" ", "-", $tag['tag']); ?>" data-toggle="tab" role="tab" onclick="loadCategoryWithTag('<?php echo $tag['tag'] ?>')"><?php echo $tag['tag'] ?></a>
+                                             <a id="tag-<?php echo $tag['slug']; ?>" href="#pane-ALL" class="nav-link tag-<?php echo $tag['slug']; ?>" data-toggle="tab" role="tab" onclick="loadCategoryWithTag('<?php echo $tag['slug'] ?>')"><?php echo $tag['tag'] ?></a>
                                           </li>
                                        <?php } ?>
                                     </ul>
@@ -130,7 +130,7 @@ $get_portfolio = get_portfolio($conn);
                         <div class="tabs">
                            <ul id="tabs" class="nav nav-tabs justify-content-center" role="tablist">
                               <li class="nav-item">
-                                 <a id="tag-All" href="#pane-A" class="nav-link tag-All active" data-toggle="tab" role="tab" onclick="loadCategoryWithTag('All')">All</a>
+                                 <a id="tag-all" href="#pane-A" class="nav-link tag-all active" data-toggle="tab" role="tab" onclick="loadCategoryWithTag('all')">All</a>
                               </li>
 
                               <?php
@@ -138,7 +138,7 @@ $get_portfolio = get_portfolio($conn);
                               foreach ($get_tags as $tag) {
                               ?>
                                  <li class="nav-item">
-                                    <a id="tag-<?php echo str_replace(" ", "-", $tag['tag']); ?>" href="#pane-ALL" class="nav-link tag-<?php echo str_replace(" ", "-", $tag['tag']); ?>" data-toggle="tab" role="tab" onclick="loadCategoryWithTag('<?php echo $tag['tag'] ?>')"><?php echo $tag['tag'] ?></a>
+                                    <a id="tag-<?php echo $tag['slug']; ?>" href="#pane-ALL" class="nav-link tag-<?php echo $tag['slug']; ?>" data-toggle="tab" role="tab" onclick="loadCategoryWithTag('<?php echo $tag['slug'] ?>')"><?php echo $tag['tag'] ?></a>
                                  </li>
                               <?php } ?>
                            </ul>
@@ -222,7 +222,7 @@ $get_portfolio = get_portfolio($conn);
          }else{
       ?>
             var selected_category = "All";
-            var selected_category_slug = "All";
+            var selected_category_slug = "all";
             var selected_category_name = "All";
 
       <?php
@@ -233,10 +233,12 @@ $get_portfolio = get_portfolio($conn);
          if(isset($_GET['tag']) && $_GET['tag']!=''){
       ?>
             var selected_tag = "<?php echo str_replace("-", " ", $_GET['tag']); ?>";
+            var selected_tag_name = $(".tag-"+selected_tag)[0].innerHTML;
       <?php
          }else{
       ?>
-            var selected_tag = "All";
+            var selected_tag = "all";
+            var selected_tag_name = "All";
 
       <?php
          }
@@ -250,7 +252,7 @@ $get_portfolio = get_portfolio($conn);
       var element_position = $('#PortfolioContent');
       $(document).ready(function() {
          $(".load-more").hide();
-         if(selected_category_slug == "All"){
+         if(selected_category_slug == "all"){
             $('.tabs-domain label:first').addClass('active');
          }
          $(window).on('scroll', function() {
@@ -259,7 +261,7 @@ $get_portfolio = get_portfolio($conn);
 
             if (y_scroll_pos > scroll_pos_test) {
 
-              loadPortfolio(selected_category, selected_tag);
+              loadPortfolio(selected_category, selected_tag_name);
             }
          });
       });
@@ -272,18 +274,21 @@ $get_portfolio = get_portfolio($conn);
          $(".category").removeClass('active');
          $("." + Slug).addClass('active');
          $('.nav-link').removeClass('active');
-         
+          console.log(selected_tag);
          if(typeof selected_tag == 'undefined'){
-            selected_tag = "All";
+            selected_tag = "all";
+            selected_tag_name = "All";
          }
-         $(".tag-" + selected_tag.replace(" ","-")).addClass('active');
+         console.log(selected_tag);
+         $(".tag-" + selected_tag).addClass('active');
 
          $("#PortfolioContent").html("");
          selected_category = CategoryID;
          selected_category_slug = Slug;
+         selected_category_name = CatName;
          
          has_more = true;
-         loadPortfolio(CategoryID, selected_tag);
+         loadPortfolio(selected_category, selected_tag_name);
       }
 
       function loadCategoryWithTag(Tag, Category) {
@@ -294,12 +299,17 @@ $get_portfolio = get_portfolio($conn);
          var Category = $(".tabs-domain label.active").attr('id');
          if (!Category) {
             Category = "All";
+            selected_category = "All";
+            selected_category_slug = "all";
+            selected_category_name = "All";
          }
-         selected_category = Category;
+
+
          selected_tag = Tag;
+         selected_tag_name = $(".tag-"+selected_tag)[0].innerHTML;
          $("#PortfolioContent").html("");
          has_more = true;
-         loadPortfolio(Category, Tag)
+         loadPortfolio(selected_category, selected_tag_name)
       }
 
       function loadPortfolio(CategoryID, Tag) {
@@ -338,10 +348,10 @@ $get_portfolio = get_portfolio($conn);
             URL = URL.substring(0,index);
          }
          URL=URL+"portfolio"
-         if(selected_category_slug!='All' || selected_tag!='All'){
+         if(selected_category_slug!='all' || selected_tag!='all'){
             URL=URL+"/"+selected_category_slug+"/";
          }
-         if(selected_category_slug!='All' || selected_tag!='All'){
+         if(selected_category_slug!='all' || selected_tag!='all'){
             URL=URL+selected_tag.replace(" ","-");
          }
          console.log(URL);
