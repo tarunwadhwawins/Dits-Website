@@ -80,6 +80,7 @@ if (isset($_POST['submit'])) {
             mysqli_query($conn, $update_sql);
             session_start();
             $_SESSION['success_message'] = "Data Updated successfully.";
+            header('location:add-blog.php?id='.$id);
         } else {
             mysqli_query($conn, "insert into blogs (seo_title, seo_keyword, seo_desc, title, slug , short_desc ,desc1,  image, url , status, date) 
             values('$seo_title', '$seo_keyword', '$seo_desc',  '$title', '$slug' , '$short_desc' ,'$desc1', '$image', '$Blogurl' , '1', '$date' )");
@@ -87,9 +88,9 @@ if (isset($_POST['submit'])) {
 
             session_start();
             $_SESSION['success_message'] = "Data inserted successfully.";
+            header('location:add-blog.php');
         }
 
-        header('location:add-blog.php');
         die();
     }
 }
