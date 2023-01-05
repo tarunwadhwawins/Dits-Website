@@ -124,7 +124,7 @@ $current_page = $_SERVER['REQUEST_URI'];
         </div>
     </div>
     <div class="navigationMenus">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12">
                     <nav class="navbar navbar-expand-md">
@@ -143,132 +143,27 @@ $current_page = $_SERVER['REQUEST_URI'];
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Services <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                    <ul class="fullWidth">
-                                        <li class="columnFull">
-                                            <div class="row">
-                                                <div class="col-sm-2 pad-0">
-                                                    <div class="hireUs">
-                                                        <div class="thumbImage">
-                                                            <div class="hireusImage"></div>
-                                                            <!-- <img src="../assets/images/hireus.png" alt="image"/>-->
-                                                        </div>
-                                                        <div class="desc">
-                                                            <h4>Hire Us</h4>
-                                                            <p>Get Experienced <br> Developer</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="CallUs">
-                                                        <div class="thumbImage">
-                                                            <div class="CallUsImage"></div>
-                                                            <!-- <img src="../assets/images/callus.png" alt="image"/>-->
-                                                        </div>
-                                                        <div class="desc">
-                                                            <h4>Call Us</h4>
-                                                            <p><a href="tel:+91-623-942-1395">+91- (623)-942-1395 </a></p>
-                                                            <p><a href="tel:+91-172-4080477">+91172-4080477</a></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-7">
-                                                    <div class="serviceTitle">
-                                                        <label>Services</label>
-                                                        <span>Cost-Effective Software Development And Support Services</span>
-                                                    </div>
-                                                    <div class="serviceMenus">
-                                                        <div class="row">
-                                                            <div class="col-sm-6">
-                                                                <div class="serviceSubMenu">
-                                                                    <ul>
-                                                                        <li class="nav-item <?php echo $current_page == '/services/custom-application-development' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>services/custom-application-development"><i class="feather icon-arrow-right"></i>Custom application development</a></li>
-                                                                        <li class="nav-item <?php echo $current_page == '/services/software-development-services' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>services/software-development-services"><i class="feather icon-arrow-right"></i>Software development services</a></li>
-                                                                        <li class="nav-item <?php echo $current_page == '/services/full-stack-development-services' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>services/full-stack-development-services"><i class="feather icon-arrow-right"></i>Full-stack development Services</a></li>
-                                                                        <li class="nav-item  <?php echo $current_page == '/services/dedicated-development-team' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>services/dedicated-development-team"><i class="feather icon-arrow-right"></i>Dedicated development team</a></li>
-                                                                        <li class="nav-item "><a class="nav-link" href="https://whitewater.dev/mvpdevelopment" target="_blank"><i class="feather icon-arrow-right"></i>MVP Development</a></li>
-                                                                        <!---->
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-6">
-                                                                <div class="serviceSubMenu">
-                                                                    <ul>
-                                                                        <li class="nav-item <?php echo $current_page == '/services/hire-remote-developers' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>services/hire-remote-developers"><i class="feather icon-arrow-right"></i>Hire Remote Developers</a>
-                                                                            <ul>
-                                                                                <li class="nav-item <?php echo $current_page == '/services/hire-asp-net-developers' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>services/hire-asp-net-developers">Hire Asp.Net Developers</a></li>
-                                                                                <li class="nav-item <?php echo $current_page == '/services/hire-php-developers' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>services/hire-php-developers">Hire PHP Developers</a></li>
-                                                                                <li class="nav-item <?php echo $current_page == '/services/hiring-ui-ux-developers' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>services/hiring-ui-ux-developers">Hire UI/UX Developers</a></li>
-                                                                                <li class="nav-item <?php echo $current_page == '/services/front-end-development' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>services/front-end-development">Hire Front End Developers</a></li>
-                                                                                <!--
-                                                                                                                                            <li><a href="#">Hiring MEAN Developers</a></li>
-                                                                                                                                            <li><a href="#">Hiring Angular Developers</a></li>
-                                                                                                                                            <li><a href="#">Hiring SQL Developers</a></li>
-                                                                                -->
-                                                                            </ul>
-                                                                        </li>
-                                                                        <!---->
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="headerPortfolio">
-                                                        <h4>Portfolio</h4>
-                                                        <div class="portCarousel">
-                                                            <div class="owl-carousel owl-theme" id="portCarousel">
-                                                                <div class="item">
-                                                                    <div class="blogBox">
-                                                                        <img class="img-fluid" src="<?php echo $url; ?>assets/portfolioimage/sellout-banner.jpg" alt="image">
-                                                                        <h6><a href="<?php echo $url; ?>portfolio/saas-based-event-ticketing-platform">SAAS Based Event Ticketing Platform</a></h6>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="item">
-                                                                    <div class="blogBox">
-                                                                        <img class="img-fluid" src="<?php echo $url; ?>assets/portfolioimage/rhentit-banner.jpg" alt="image">
-                                                                        <h6><a href="<?php echo $url; ?>portfolio/saas-based-b2b2c-workflow-automation-for-rental-businesses-pos-and-market-place">B2B2C rental platform POS Rental Software and Marketplace</a></h6>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="item">
-                                                                    <div class="blogBox">
-                                                                        <img class="img-fluid" src="<?php echo $url; ?>assets/portfolioimage/164915352451_Drive-Shop-Portfolio-Banner.jpg" alt="image">
-                                                                        <h6><a href="<?php echo $url; ?>portfolio/saas-based-business-workflow-automation-suite-of-apps-for-automotive-industry">SAAS Based Business Workflow Automation Suit of Apps for Automotive Industry</a></h6>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="item">
-                                                                    <div class="blogBox">
-                                                                        <img class="img-fluid" src="<?php echo $url; ?>assets/portfolioimage/affiliate-marketing.jpg" alt="image">
-                                                                        <h6> <a href="<?php echo $url; ?>portfolio/affiliate-marketing-green-tech-platform">Affiliate Marketing Green Tech Platform</a></h6>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="item">
-                                                                    <div class="blogBox">
-                                                                        <img class="img-fluid" src="<?php echo $url; ?>assets/portfolioimage/blommruner-banner.jpg" alt="image">
-                                                                        <h6><a href="<?php echo $url; ?>portfolio/saas-based-e-commerce-marketplace-and-workflow-automation-solution">SAAS Based E-Commerce Marketplace and Workflow Automation Solution</a></h6>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <!--<div class="counters">-->
-                                                        <!--   <span class="counter-count wow fadeInDown">2</span>	-->
-                                                        <!--   <p>Years In Business </p>-->
-                                                        <!--</div>-->
-                                                        <!--<div class="counters">-->
-                                                        <!--   <span class="counter-count wow fadeInDown">20</span>	-->
-                                                        <!--   <p>Customers Served</p>-->
-                                                        <!--</div>-->
-                                                        <!--<div class="counters">-->
-                                                        <!--   <span class="counter-count wow fadeInDown">32</span>	-->
-                                                        <!--   <p> Projects Delivered</p>-->
-                                                        <!--</div>-->
-                                                        <!--<div class="counters">-->
-                                                        <!--   <span class="counter-count wow fadeInDown">30</span>	-->
-                                                        <!--   <p>Employees </p>-->
-                                                        <!--</div>-->
-                                                    </div>
-                                                </div>
-                                        </li>
+                                    <ul class="fullWidth industriesMenu">
+                                        <li class="heading">Full Stack Development</li>
+                                        <li class="nav-item <?php echo $current_page == '/services/custom-application-development' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>services/custom-application-development"><i class="feather icon-arrow-right"></i>Custom application development</a></li>
+                                        <li class="nav-item <?php echo $current_page == '/services/software-development-services' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>services/software-development-services"><i class="feather icon-arrow-right"></i>Software development services</a></li>
+                                        <li class="nav-item <?php echo $current_page == '/services/full-stack-development-services' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>services/full-stack-development-services"><i class="feather icon-arrow-right"></i>Full-stack development Services</a></li>
+                                        <li class="nav-item  <?php echo $current_page == '/services/dedicated-development-team' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>services/dedicated-development-team"><i class="feather icon-arrow-right"></i>Dedicated development team</a></li>
+                                        <li class="nav-item "><a class="nav-link" href="https://whitewater.dev/mvpdevelopment" target="_blank"><i class="feather icon-arrow-right"></i>MVP Development</a></li>
                                     </ul>
+
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Hire <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="fullWidth industriesMenu">
+                                        <li class="heading">Hire Developers</li>
+                                        <li class="nav-item <?php echo $current_page == '/services/hire-remote-developers' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>services/hire-remote-developers"><i class="feather icon-arrow-right"></i>Hire Remote Developers</a></li>
+                                        <li class="nav-item <?php echo $current_page == '/services/hire-asp-net-developers' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>services/hire-asp-net-developers"><i class="feather icon-arrow-right"></i>Hire Asp.Net Developers</a></li>
+                                        <li class="nav-item <?php echo $current_page == '/services/hire-php-developers' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>services/hire-php-developers"><i class="feather icon-arrow-right"></i>Hire PHP Developers</a></li>
+                                        <li class="nav-item <?php echo $current_page == '/services/hiring-ui-ux-developers' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>services/hiring-ui-ux-developers"><i class="feather icon-arrow-right"></i>Hire UI/UX Developers</a></li>
+                                        <li class="nav-item <?php echo $current_page == '/services/front-end-development' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>services/front-end-development"><i class="feather icon-arrow-right"></i>Hire Front End Developers</a></li>
+                                    </ul>
+
                                 </li>
                                 <li class="nav-item <?php echo $current_page == '/technology' ? 'active' : '' ?>">
                                     <a class="nav-link" href="<?php echo $url; ?>technology" title="Technology">Technology</a>
@@ -279,6 +174,7 @@ $current_page = $_SERVER['REQUEST_URI'];
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Industries <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                     <ul class="fullWidth industriesMenu">
+                                        <li class="heading">Industries</li>
                                         <li class="nav-item <?php echo $current_page == '/industries/healthcare' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>industries/healthcare"><i class="feather icon-arrow-right"></i>Healthcare</a></li>
                                         <li class="nav-item <?php echo $current_page == '/industries/business-and-workflow-automation' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>industries/business-and-workflow-automation"><i class="feather icon-arrow-right"></i>Business And Workflow Automation</a></li>
                                         <li class="nav-item <?php echo $current_page == '/industries/ed-tech' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $url; ?>industries/ed-tech"><i class="feather icon-arrow-right"></i>Ed-Tech</a></li>

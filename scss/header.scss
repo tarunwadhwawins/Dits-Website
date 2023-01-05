@@ -238,18 +238,23 @@
 							width: 310px;
 							position: absolute;
 							left: initial;
-							box-shadow: none;
 							background-color: #fff;
 							border-top: 3px solid #193370;
 							top: 57px;
 							li {
 								width: 100%;
-								border-bottom: 1px solid #e3e3e3;
-								&:last-child {
-									border: none;
+								&.heading {
+									font-size: 16px;
+									padding: 10px 25px;
+									color: #193370;
+									font-family: "dosismedium";
+									border-bottom: 1px solid #e3e3e3;
+									text-transform: capitalize;
 								}
-								&:hover {
-									a {
+
+								&:hover,
+								&.active {
+									> a {
 										padding-left: 15px;
 										transition: 0.5s;
 										color: #3095fb;
@@ -260,18 +265,45 @@
 									}
 								}
 								a {
-									line-height: 30px;
 									display: flex;
 									align-items: baseline;
-									padding: 8px 15px 8px 5px;
-									color: #193370;
+									padding: 0 15px 0 5px;
+									color: #333;
 									text-transform: capitalize;
 									transition: 0.5s;
-									font-family: 'dosismedium';
+									font-family: "dosisregular";
+									position: relative;
+									font-size: 15px;
+									line-height: 36px;
 									.feather {
 										visibility: hidden;
 										margin-right: 5px;
 										color: #3095fb;
+									}
+									.rightArrow {
+										position: absolute;
+										right: 20px;
+										top: 50%;
+										transform: translateY(-50%);
+										font-size: 20px;
+									}
+								}
+								&.hireRemote {
+									position: relative;
+									&:hover {
+										ul {
+											display: block;
+										}
+									}
+									ul {
+										position: absolute;
+										left: 100%;
+										width: 250px;
+										background: #fff;
+										top: 0;
+										// border-left: 1px solid #ddd;
+										display: none;
+										box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.1);
 									}
 								}
 							}

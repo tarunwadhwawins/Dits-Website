@@ -195,41 +195,68 @@
   width: 310px;
   position: absolute;
   left: initial;
-  box-shadow: none;
   background-color: #fff;
   border-top: 3px solid #193370;
   top: 57px;
 }
 .navigationMenus .navbar .collapse .navbar-nav li ul.fullWidth.industriesMenu li {
   width: 100%;
+}
+.navigationMenus .navbar .collapse .navbar-nav li ul.fullWidth.industriesMenu li.heading {
+  font-size: 16px;
+  padding: 10px 25px;
+  color: #193370;
+  font-family: "dosismedium";
   border-bottom: 1px solid #e3e3e3;
+  text-transform: capitalize;
 }
-.navigationMenus .navbar .collapse .navbar-nav li ul.fullWidth.industriesMenu li:last-child {
-  border: none;
-}
-.navigationMenus .navbar .collapse .navbar-nav li ul.fullWidth.industriesMenu li:hover a {
+.navigationMenus .navbar .collapse .navbar-nav li ul.fullWidth.industriesMenu li:hover > a, .navigationMenus .navbar .collapse .navbar-nav li ul.fullWidth.industriesMenu li.active > a {
   padding-left: 15px;
   transition: 0.5s;
   color: #3095fb;
 }
-.navigationMenus .navbar .collapse .navbar-nav li ul.fullWidth.industriesMenu li:hover a .feather {
+.navigationMenus .navbar .collapse .navbar-nav li ul.fullWidth.industriesMenu li:hover > a .feather, .navigationMenus .navbar .collapse .navbar-nav li ul.fullWidth.industriesMenu li.active > a .feather {
   visibility: visible;
   transition: 0.5s;
 }
 .navigationMenus .navbar .collapse .navbar-nav li ul.fullWidth.industriesMenu li a {
-  line-height: 30px;
   display: flex;
   align-items: baseline;
-  padding: 8px 15px 8px 5px;
-  color: #193370;
+  padding: 0 15px 0 5px;
+  color: #333;
   text-transform: capitalize;
   transition: 0.5s;
-  font-family: "dosismedium";
+  font-family: "dosisregular";
+  position: relative;
+  font-size: 15px;
+  line-height: 36px;
 }
 .navigationMenus .navbar .collapse .navbar-nav li ul.fullWidth.industriesMenu li a .feather {
   visibility: hidden;
   margin-right: 5px;
   color: #3095fb;
+}
+.navigationMenus .navbar .collapse .navbar-nav li ul.fullWidth.industriesMenu li a .rightArrow {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+.navigationMenus .navbar .collapse .navbar-nav li ul.fullWidth.industriesMenu li.hireRemote {
+  position: relative;
+}
+.navigationMenus .navbar .collapse .navbar-nav li ul.fullWidth.industriesMenu li.hireRemote:hover ul {
+  display: block;
+}
+.navigationMenus .navbar .collapse .navbar-nav li ul.fullWidth.industriesMenu li.hireRemote ul {
+  position: absolute;
+  left: 100%;
+  width: 250px;
+  background: #fff;
+  top: 0;
+  display: none;
+  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.1);
 }
 .navigationMenus .navbar .collapse .navbar-nav li ul.fullWidth li.columnFull {
   width: 100%;
